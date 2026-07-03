@@ -1,0 +1,40 @@
+---
+title: "9. Conclusion (open)"
+---
+
+> **Deliberately open.** Under CIS, conclusions are earned through evidence. At v0.1 the evidence is
+> synthetic and the confidence grades are C/D, so this chapter records *state and next steps*, not
+> verdicts.
+
+## What this paper has (and has not) established
+
+- **Has:** a governed method (CIS), a structured set of falsifiable claims, illustrative frameworks
+  that make those claims measurable, and a test suite guarding the machinery.
+- **Has not:** validated *any* of the three decision questions. No segment, positioning, or GTM
+  strategy is recommended yet.
+
+## Current state of the three decision questions
+
+| Question | Current state | Gate to advance |
+|---|---|---|
+| Q1 — First segment | Illustrative ranking only (grade C) | Discovery/pilot evidence for top segments (Ch. 5) |
+| Q2 — Positioning | Framing scored, untested on buyers (grade C) | Message-testing results (Ch. 4) |
+| Q3 — Evidence threshold | Threshold defined (grade B gate) | Instrument the register; meet the gate (Ch. 7) |
+
+## The central thesis
+
+The proposal's claim that the CRM is the foundation for AI readiness (**H-CRM-AI**) remains a
+hypothesis (grade D→C). The planned pilot (`EV-010`) is the pivotal next experiment.
+
+## What "done" looks like
+
+A conclusion is warranted when the relevant claims reach the confidence grade their decisions require
+(≥ B for a GTM commitment), with reproducible evidence in the register and a green test suite. Until
+then, this chapter stays open — by design.
+
+## Immediate next steps
+
+1. Run the AI-readiness pilot (`EV-010`) and record outcomes (Ch. 6).
+2. Run discovery calls for the top two segments (Ch. 5) and a message test for positioning (Ch. 4).
+3. Re-run the dashboards and the evidence summary; let the numbers move.
+4. Revisit this chapter only when evidence — not assertion — supports a verdict.

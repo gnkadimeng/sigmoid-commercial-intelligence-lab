@@ -1,0 +1,49 @@
+---
+title: "5. Market Prioritisation"
+---
+
+Addresses **Decision Question 1**. Companion tool:
+[Market Prioritisation Dashboard](../dashboards/market-prioritisation.qmd).
+
+## Question
+
+*Which market segment should Sigmoid target first for the CRM?*
+
+## Hypothesis
+
+Segments with **acute, funded pain and short sales cycles** (initial candidates: audit and
+professional-services firms) will out-perform large-but-diffuse segments (SMEs) and
+slow-procurement public-sector segments (municipalities) as a *first* target.
+
+**Falsifier:** discovery/pilot evidence showing a large-but-diffuse or public-sector segment
+converts faster and cheaper than professional-services firms.
+
+## Evidence needed
+
+- Per-segment: real pain acuteness, budget/willingness-to-pay, sales-cycle length, competitive
+  intensity, and strategic fit.
+- Conversion signal from a small number of discovery calls or a pilot per candidate segment.
+
+## Current evidence
+
+- Illustrative sub-scores for seven segments (synthetic) → priority ranking in the dashboard.
+- One discovery signal supporting audit firms — `EV-005` (n=1, grade C).
+- One signal cautioning against municipalities (procurement/budget) — `EV-006`.
+- SME size vs budget tension — `EV-009` (supports size, not budget).
+
+## Analysis plan
+
+1. Compute illustrative priority scores (done) to sequence which segments to *investigate* first.
+2. Collect real sub-score evidence for the top 2–3 segments; replace synthetic inputs.
+3. Re-run and test whether the ranking is stable under reasonable weight changes (sensitivity).
+
+## Limitations
+
+- The ranking currently reflects assumptions encoded as sub-scores, not observations.
+- `evidence_quality_score` down-weights poorly-known segments, which can entrench what we already
+  (think we) know — watch for this bias.
+
+## Next steps
+
+- Run discovery calls for the top two segments; register evidence.
+- Only then consider a first-target recommendation, at the confidence its evidence supports.

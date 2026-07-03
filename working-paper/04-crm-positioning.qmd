@@ -1,0 +1,49 @@
+---
+title: "4. CRM Positioning"
+---
+
+Addresses **Decision Question 2**. Companion tool:
+[Positioning Dashboard](../dashboards/positioning-dashboard.qmd).
+
+## Question
+
+*How should the product be positioned: as a CRM, a Revenue Operations Platform, or an AI Readiness
+Platform?*
+
+## Hypothesis
+
+A **Revenue Operations Platform** framing best balances clarity, differentiation, and pain alignment,
+while the **AI Readiness Platform** framing has the highest investor appeal but the weakest current
+evidence. *(This is a hypothesis to be tested against buyers, not a conclusion.)*
+
+**Falsifier:** buyer message-testing in which "CRM" (or "AI Readiness") consistently out-converts
+"RevOps" on comprehension *and* willingness to engage.
+
+## Evidence needed
+
+- Message-testing / A-B comprehension across the three framings, per segment.
+- Win/loss and discovery-call language: which frame do buyers repeat back?
+- Category evidence: which framing maps to a budget line buyers already hold?
+
+## Current evidence
+
+- Proposal RevOps/AI-readiness narrative — `EV-003` (grade D, mixed).
+- Internal note: "CRM" understood fastest but seen as commoditised — `EV-007`.
+- Illustrative Positioning Canvas scores (synthetic) in the dashboard.
+
+## Analysis plan
+
+1. Score each option on the Positioning Canvas (done, illustratively) to frame the debate.
+2. Run message tests; convert results into `evidence_strength` inputs and re-score.
+3. Check sensitivity of the ranking to the `evidence_strength` and `investor_appeal` weights.
+
+## Limitations
+
+- Current option scores are one analyst's synthetic judgement.
+- Investor appeal and customer pain can point in different directions; the weights encode a value
+  choice that should be made explicit with stakeholders.
+
+## Next steps
+
+- Design and run a message test for the top two framings.
+- Register results and re-run the dashboard; do not commit to a position at grade < B.

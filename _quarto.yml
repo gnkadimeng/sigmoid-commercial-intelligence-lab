@@ -1,0 +1,88 @@
+project:
+  type: website
+  output-dir: _site
+  execute-dir: project
+  render:
+    - "*.qmd"
+    - "working-paper/*.qmd"
+    - "dashboards/*.qmd"
+  preview:
+    port: 4321
+    browser: false
+
+website:
+  title: "Sigmoid Commercial Intelligence Lab"
+  description: "Evidence-based, testable commercial strategy governed by the Commercial Intelligence Specification (CIS)."
+  reader-mode: true
+  page-navigation: true
+  search: true
+  navbar:
+    background: primary
+    pinned: true
+    left:
+      - text: "Home"
+        file: index.qmd
+      - text: "Working Paper"
+        file: working-paper/index.qmd
+      - text: "Frameworks"
+        file: frameworks/index.qmd
+      - text: "Dashboards"
+        menu:
+          - text: "Market Prioritisation"
+            file: dashboards/market-prioritisation.qmd
+          - text: "AI Readiness Scorecard"
+            file: dashboards/ai-readiness-scorecard.qmd
+          - text: "Positioning Dashboard"
+            file: dashboards/positioning-dashboard.qmd
+      - text: "CIS"
+        file: cis/commercial-intelligence-specification.md
+      - text: "Decision Records"
+        file: docs/decision-records/index.qmd
+    right:
+      - icon: github
+        href: https://github.com/
+        aria-label: GitHub
+
+  sidebar:
+    - title: "Working Paper"
+      style: floating
+      collapse-level: 2
+      contents:
+        - working-paper/index.qmd
+        - working-paper/01-introduction.qmd
+        - working-paper/02-problem-context.qmd
+        - working-paper/03-commercial-intelligence-specification.qmd
+        - working-paper/04-crm-positioning.qmd
+        - working-paper/05-market-prioritisation.qmd
+        - working-paper/06-ai-readiness.qmd
+        - working-paper/07-go-to-market.qmd
+        - working-paper/08-validation-and-tests.qmd
+        - working-paper/09-conclusion.qmd
+
+  page-footer:
+    left: "Sigmoid Analytica — Commercial Intelligence Lab · v0.1 (hypothesis stage)"
+    right: "Governed by the Commercial Intelligence Specification (CIS)"
+
+format:
+  html:
+    theme:
+      - cosmo
+    css: assets/styles.css
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    code-tools: true
+    code-copy: true
+    smooth-scroll: true
+    fig-responsive: true
+    df-print: paged
+    execute:
+      warning: false
+
+bibliography: references/bibliography.bib
+
+execute:
+  freeze: auto
+  echo: true
+
+jupyter: python3

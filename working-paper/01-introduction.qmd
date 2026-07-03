@@ -1,0 +1,53 @@
+---
+title: "1. Introduction"
+---
+
+## Aim
+
+To convert the Sigmoid Analytica proposal into a testable commercial enquiry: a set of questions
+about market, positioning, readiness, and go-to-market that can be answered with evidence and revised
+as that evidence changes.
+
+## Question
+
+*What must be true for Sigmoid Analytica's CRM to become a defensible commercial and AI-readiness
+platform, and how will we know?*
+
+## Hypothesis
+
+The proposal's thesis — that the CRM is the foundation for AI readiness and a wedge into a broader
+revenue-operations offering — is a **coherent and plausible v0.1 hypothesis**, but its key claims
+(segment, positioning, pricing, readiness) are currently asserted rather than evidenced.
+
+## Evidence needed
+
+- The full set of falsifiable claims extracted from the proposal, each with an operational definition.
+- A baseline of which claims already have *any* supporting evidence and of what quality.
+
+## Current evidence
+
+- The proposal itself, registered as `source_type = proposal` (grade D) in the
+  [evidence register](../data/sample/README.md).
+- A small number of synthetic/illustrative discovery signals, clearly labelled as such.
+
+## Analysis plan
+
+1. Read the paper's structure (§ "How to read this").
+2. Extract claims into hypotheses (Chs. 4–7).
+3. Score the illustrative frameworks to make claims measurable (dashboards).
+4. Identify the highest-value evidence to collect next (Ch. 7).
+
+## Limitations
+
+- No real customer or market data at v0.1; all numbers are synthetic.
+- The proposal is a single source with high bias risk.
+
+## Next steps
+
+- Proceed to [Ch. 2](02-problem-context.qmd) for the commercial context.
+- Treat every subsequent number as illustrative until Ch. 8's validation is satisfied on real data.
+
+### How to read this paper
+
+Each chapter uses the fixed CIS structure. When a chapter states a hypothesis, read it as *"this is
+what we currently believe and intend to test"* — never as a finding.

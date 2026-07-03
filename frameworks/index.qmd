@@ -1,0 +1,51 @@
+---
+title: "Frameworks"
+subtitle: "Versioned, weighted scoring schemes — weights are data, not code"
+---
+
+Frameworks are the project's **models**: named, versioned schemes that turn defined inputs into a
+score. Their weights live in YAML so they can be tuned, audited, and version-controlled independently
+of the analysis code. Each framework's logic is implemented once in [`src/scoring.py`](../src/) and
+guarded by tests in `tests/`.
+
+> All framework weights at **v0.1 are starting hypotheses**, not validated models. Changing a weight
+> should be accompanied by a rationale and, ideally, evidence.
+
+## Registered frameworks
+
+| Framework | File | Decision question | Status |
+|---|---|---|---|
+| Market Prioritisation | `market_prioritisation.yml` | Which segment first for the CRM? | draft |
+| Customer Fit Score | `customer_fit_score.yml` | How good a fit is this customer now? | draft |
+| AI Readiness Index | `ai_readiness_index.yml` | How ready is this customer for AI on the CRM? | draft |
+| Positioning Canvas | `positioning_canvas.yml` | CRM vs RevOps vs AI Readiness platform? | draft |
+| Pricing Model | `pricing_model.yml` | Packaging and price points per segment? | **placeholder** |
+
+## Anatomy of a framework
+
+Each framework declares:
+
+- an `id` and `version`;
+- the `question` it answers and its position in the CIS `lifecycle_stage`;
+- a list of `criteria`, each with a `weight` (weights sum to 1.0) and a `direction`
+  (`higher_better` or `lower_better`, so penalties like long sales cycles invert correctly);
+- a `scale` (all producing scores in `0..100`);
+- a `status` (`draft` / `placeholder` / `active`).
+
+## How scoring works
+
+The relevant `src/scoring.py` function reads a data row, rescales each sub-score, applies the
+`direction`, multiplies by the criterion `weight`, sums, and returns a value in `[0, 100]`. Missing
+values are handled safely (treated as neutral) so a partial row never crashes the calculation.
+
+## Adding a framework
+
+See the [README](../README.md) — in short: add `frameworks/<name>.yml`, add a scoring function +
+test, register the question, and reference it from a dashboard or working-paper chapter.
+
+## Related
+
+- [Market Prioritisation dashboard](../dashboards/market-prioritisation.qmd)
+- [AI Readiness Scorecard](../dashboards/ai-readiness-scorecard.qmd)
+- [Positioning dashboard](../dashboards/positioning-dashboard.qmd)
+- [Commercial Intelligence Specification](../cis/commercial-intelligence-specification.md)

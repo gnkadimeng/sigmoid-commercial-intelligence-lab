@@ -1,0 +1,32 @@
+# Framework: Pricing Model (skeleton)
+# v0.1 placeholder. Pricing requires willingness-to-pay evidence we do not yet have.
+# This file defines the intended structure so pricing enters the lifecycle properly later.
+
+id: pricing_model
+version: "0.1.0"
+status: placeholder      # NOT a working model yet — evidence required first.
+question: "What packaging and price points should Sigmoid offer, per segment?"
+scale: "currency + tier"
+lifecycle_stage: hypothesis   # deliberately early: we lack evidence to model pricing.
+
+# Intended model shape once willingness-to-pay evidence exists.
+dimensions:
+  - name: packaging
+    options: [core_crm, revops_suite, ai_readiness_add_on]
+  - name: pricing_metric
+    candidates: [per_seat, per_workflow, per_active_record, flat_platform_fee]
+  - name: segment_tiering
+    note: "Prices likely differ by segment (see market_prioritisation.yml)."
+
+evidence_required:
+  - "Willingness-to-pay signals per segment (interviews, pilots)."
+  - "Competitor price benchmarks by category."
+  - "Cost-to-serve per packaging tier."
+  - "Price sensitivity / elasticity from pilots."
+
+guardrails:
+  - "Do NOT publish price points as recommendations until evidence_required is met (grade >= B)."
+  - "Any number here before then is a hypothesis (grade D) and must be labelled illustrative."
+
+notes:
+  - "Intentionally a placeholder to avoid fabricating a validated pricing conclusion at v0.1."

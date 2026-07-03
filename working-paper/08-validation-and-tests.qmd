@@ -1,0 +1,66 @@
+---
+title: "8. Validation & Tests"
+---
+
+## Question
+
+*How do we know the calculations and claims in this project can be trusted — and where a claim sits
+on the confidence scale?*
+
+## Hypothesis
+
+Enforcing structural validation (ranges, required columns, uniqueness) plus decision validation
+(evidence + provenance) plus an automated test suite is *sufficient at v0.1* to prevent unvalidated
+numbers from masquerading as findings.
+
+## The two validation layers (CIS §12)
+
+1. **Structural** — `src/validation.py`: score ranges `[0, 100]`, required columns, no negative
+   scores; sample-data integrity (unique ids, valid metadata) in `tests/test_data_integrity.py`.
+2. **Decision** — a recommendation is valid only with cited evidence + models and a confidence grade
+   consistent with evidence strength (`src/ontology.py::Recommendation.is_valid`).
+
+## Current evidence: live evidence-strength read
+
+The evidence register, aggregated by claim (supporting minus refuting weight → strength). This is the
+mechanism that keeps confidence honest.
+
+```{python}
+#| label: evidence-summary
+#| code-summary: "Aggregate the evidence register by claim"
+import sys, pathlib
+_root = pathlib.Path.cwd()
+while _root != _root.parent and not (_root / "src").is_dir():
+    _root = _root.parent
+sys.path.insert(0, str(_root))
+
+from src.utils import load_sample
+from src.evidence import summarise_evidence_by_claim
+
+register = load_sample("evidence_register.csv")
+summarise_evidence_by_claim(register)
+```
+
+Note how proposal-only claims land at **weak/none** strength — exactly as intended: a proposal raises
+a hypothesis, it does not validate one.
+
+## Evidence needed
+
+- Continued test coverage as new scoring/validation logic is added.
+- A check (future) that no published recommendation exceeds its evidence-supported grade.
+
+## Analysis plan
+
+- Run `pytest` before trusting any number (the suite covers scoring ranges, missing-value safety,
+  validation, and evidence aggregation).
+- Treat a red suite as a hard stop.
+
+## Limitations
+
+- Tests guard *logic and structure*, not the *truth* of synthetic inputs.
+- Decision-level validation is partly manual at v0.1.
+
+## Next steps
+
+- Add automated confidence-grade computation from the register (CIS §21).
+- Wire `pandera`/`pydantic` schemas once real data arrives.

@@ -1,0 +1,104 @@
+# Commercial Intelligence Specification — Object Model
+# Version 0.1.0
+# Field-level definition of each ontology object: types, identity, provenance requirements.
+# Types are advisory at v0.1 (CSV/YAML); pydantic/pandera enforcement is Future Work.
+
+meta:
+  spec: "Commercial Intelligence Specification"
+  artifact: "object-model"
+  version: "0.1.0"
+  status: draft
+
+common_fields:
+  id:       { type: string,  required: true,  identity: true, note: "Stable, unique within object type." }
+  version:  { type: string,  required: true,  default: "0.1.0" }
+  created:  { type: date,    required: true }
+  status:   { type: enum,    required: true,  values: [draft, active, superseded, retired] }
+
+# Objects that assert something about the world MUST carry provenance.
+provenance_fields:
+  produced_by: { type: string, required: true, note: "Person, role, or process." }
+  sources:     { type: list,   required: true, note: "Source ids or citations." }
+  as_of:       { type: date,   required: true }
+
+objects:
+
+  Question:
+    fields:
+      text:     { type: string, required: true }
+      domain:   { type: enum,   values: [market, positioning, pricing, ai_readiness, gtm, other] }
+      priority: { type: enum,   values: [low, medium, high] }
+    provenance: false
+
+  Hypothesis:
+    fields:
+      question_id: { type: string, required: true, ref: Question.id }
+      statement:   { type: string, required: true }
+      falsifier:   { type: string, required: true, note: "What observation would refute this." }
+    provenance: false
+
+  Evidence:
+    fields:
+      claim_id:       { type: string,  required: true, note: "Hypothesis or Recommendation id." }
+      source_type:    { type: enum,    required: true, values: [proposal, interview, survey, market_report, internal_data, experiment, public_stat] }
+      source_name:    { type: string,  required: true }
+      date_collected: { type: date,    required: true }
+      quality_score:  { type: float,   required: true, range: [0.0, 1.0] }
+      bias_risk:      { type: enum,    required: true, values: [low, medium, high] }
+      supports_claim: { type: enum,    required: true, values: [yes, no, mixed] }
+      notes:          { type: string,  required: false }
+    provenance: true
+    rules:
+      - "source_type 'proposal' implies quality_score <= 0.4 (a hypothesis source, not validation)."
+
+  Framework:
+    fields:
+      question: { type: string, required: true }
+      criteria: { type: list,   required: true, note: "Each: name, weight (0..1), direction." }
+      scale:    { type: string, required: true, default: "0..100" }
+    provenance: false
+    rules:
+      - "Sum of criterion weights == 1.0 (or a documented normalisation)."
+
+  Model:
+    fields:
+      kind:         { type: enum,   values: [framework, statistical, ml, rule_set] }
+      inputs:       { type: list,   required: true }
+      output:       { type: string, required: true }
+      framework_id: { type: string, required: false, ref: Framework.id }
+    provenance: true
+
+  Recommendation:
+    fields:
+      question_id: { type: string, required: true, ref: Question.id }
+      action:      { type: string, required: true }
+      confidence:  { type: enum,   required: true, values: [A, B, C, D] }
+      basis:       { type: string, required: true }
+      models:      { type: list,   required: true, note: "Model ids + versions cited." }
+      evidence:    { type: list,   required: true, note: "Evidence ids cited." }
+    provenance: true
+    rules:
+      - "confidence grade MUST NOT exceed aggregate evidence strength."
+      - "models and evidence lists MUST be non-empty."
+
+  Decision:
+    fields:
+      question_id:       { type: string, required: true, ref: Question.id }
+      recommendation_id: { type: string, required: true, ref: Recommendation.id }
+      owner:             { type: string, required: true }
+      date:              { type: date,   required: true }
+      confidence:        { type: enum,   values: [A, B, C, D] }
+      basis:             { type: string, required: true }
+      decision_status:   { type: enum,   values: [proposed, adopted, superseded, reversed] }
+    provenance: true
+    rules:
+      - "Append-only: supersede via a new Decision, never edit in place."
+
+  Metric:
+    fields:
+      decision_id: { type: string, required: true, ref: Decision.id }
+      name:        { type: string, required: true }
+      target:      { type: float,  required: false }
+      observed:    { type: float,  required: false }
+      period:      { type: string, required: true }
+    provenance: true

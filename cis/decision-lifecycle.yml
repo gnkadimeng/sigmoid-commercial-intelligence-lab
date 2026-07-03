@@ -1,0 +1,104 @@
+# Commercial Intelligence Specification — Decision Lifecycle
+# Version 0.1.0
+# The canonical stages every recommendation must pass through, with entry/exit criteria.
+
+meta:
+  spec: "Commercial Intelligence Specification"
+  artifact: "decision-lifecycle"
+  version: "0.1.0"
+  status: draft
+
+# Ordered stages. A recorded provenance MUST NOT skip a stage.
+stages:
+  - id: question
+    name: "Question"
+    intent: "Frame a commercial decision so it can be answered."
+    entry: "A live commercial uncertainty exists."
+    exit: "A clear, answerable Question object is registered."
+    produces: Question
+
+  - id: hypothesis
+    name: "Hypothesis"
+    intent: "State a provisional, falsifiable answer."
+    entry: "A registered Question."
+    exit: "One or more Hypotheses with explicit falsifiers."
+    produces: Hypothesis
+
+  - id: operational_definition
+    name: "Operational Definition"
+    intent: "Define how the hypothesis terms are measured."
+    entry: "A Hypothesis."
+    exit: "Measures, units, and instruments specified."
+    produces: OperationalDefinition
+
+  - id: evidence_collection
+    name: "Evidence Collection"
+    intent: "Gather dated, sourced observations for/against the claim."
+    entry: "An Operational Definition."
+    exit: "Evidence registered with quality and bias metadata."
+    produces: Evidence
+
+  - id: analysis
+    name: "Analysis"
+    intent: "Interrogate the evidence; compute descriptive results."
+    entry: "Sufficient Evidence to analyse."
+    exit: "Analysis notebook/page with reproducible outputs."
+    produces: analysis_artifact
+
+  - id: model
+    name: "Model"
+    intent: "Apply a framework or statistical model to produce a score/output."
+    entry: "Analysed evidence + a chosen Framework/Model."
+    exit: "A scored output with framework id + version attached."
+    produces: Model
+
+  - id: validation
+    name: "Validation"
+    intent: "Check structural integrity and decision validity; run tests."
+    entry: "A Model output."
+    exit: "Validation passes (tests green, ranges valid, provenance complete)."
+    produces: validation_result
+
+  - id: recommendation
+    name: "Recommendation"
+    intent: "Propose an action with a confidence grade and basis."
+    entry: "A validated Model output."
+    exit: "A Recommendation citing models + evidence, graded A–D."
+    produces: Recommendation
+
+  - id: implementation
+    name: "Implementation"
+    intent: "Adopt and act on the recommendation."
+    entry: "An adopted Decision."
+    exit: "Action taken; Decision recorded with owner."
+    produces: Decision
+
+  - id: monitoring
+    name: "Monitoring"
+    intent: "Observe post-decision metrics against expectations."
+    entry: "An implemented Decision."
+    exit: "Metric observations recorded for the decision."
+    produces: Metric
+
+  - id: learning
+    name: "Learning"
+    intent: "Compare outcomes to expectations; revise beliefs."
+    entry: "Monitored Metrics."
+    exit: "Hypotheses/Questions updated; loop re-entered."
+    produces: learning_note
+    loops_to: [question, hypothesis]
+
+rules:
+  - "A Recommendation whose provenance omits evidence_collection or validation is INVALID."
+  - "Each repository artifact SHOULD declare the stage id it advances."
+  - "learning is not terminal; it feeds back to question/hypothesis."
+  - "Confidence grade at the recommendation stage must be consistent with evidence strength."
+
+confidence_grades:
+  D: "Hypothesis — asserted, not yet evidenced (e.g. proposal claim only)."
+  C: "Indicative — weak/illustrative evidence, often synthetic sample data."
+  B: "Substantiated — moderate, corroborated evidence, validated method."
+  A: "Validated — strong convergent evidence, validated method, monitored in production."
+
+current_project_state:
+  note: "At v0.1 the lab exercises the full lifecycle on SYNTHETIC data. Nearly all outputs are grade C or D."

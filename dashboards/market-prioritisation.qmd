@@ -1,0 +1,99 @@
+---
+title: "Market Prioritisation"
+subtitle: "Decision Question 1 — Which segment should Sigmoid target first for the CRM?"
+---
+
+> **Illustrative, not validated (confidence grade C).** These scores are computed from *synthetic*
+> sample data using the [Market Prioritisation framework](../frameworks/market_prioritisation.yml).
+> They demonstrate the machinery; they are not a market recommendation. See the
+> [CIS](../cis/commercial-intelligence-specification.md) on confidence grades.
+
+This page operationalises **Decision Question 1**. It loads the candidate segments, applies the
+transparent weighted [scoring function](../src/) (`calculate_market_priority_score`), and ranks them.
+Competition and sales-cycle length act as penalties (`lower_better`). Change the weights in the
+framework YAML and re-render to see the ranking move.
+
+```{python}
+#| label: setup
+#| code-summary: "Imports and project path bootstrap"
+import sys, pathlib
+# Find the project root (the dir containing src/) regardless of execution dir.
+_root = pathlib.Path.cwd()
+while _root != _root.parent and not (_root / "src").is_dir():
+    _root = _root.parent
+sys.path.insert(0, str(_root))
+
+import pandas as pd
+import plotly.express as px
+
+from src.utils import load_sample, load_framework
+from src.scoring import calculate_market_priority_score
+
+pd.options.display.float_format = lambda v: f"{v:,.1f}"
+```
+
+```{python}
+#| label: score
+#| code-summary: "Load segments and compute priority scores"
+segments = load_sample("market_segments.csv").copy()
+segments["priority_score"] = segments.apply(calculate_market_priority_score, axis=1)
+ranked = segments.sort_values("priority_score", ascending=False).reset_index(drop=True)
+ranked.insert(0, "rank", ranked.index + 1)
+```
+
+## Ranked segments
+
+The table is sortable (click a column header) and paged.
+
+```{python}
+#| label: table
+display_cols = [
+    "rank", "segment_name", "industry", "priority_score",
+    "market_size_score", "pain_score", "budget_score",
+    "competition_score", "sales_cycle_score", "strategic_fit_score", "evidence_quality_score",
+]
+ranked[display_cols]
+```
+
+## Priority scores by segment
+
+```{python}
+#| label: bar
+fig = px.bar(
+    ranked.sort_values("priority_score"),
+    x="priority_score",
+    y="segment_name",
+    orientation="h",
+    color="priority_score",
+    color_continuous_scale="Blues",
+    labels={"priority_score": "Priority score (0–100)", "segment_name": ""},
+    title="Market priority score by segment (illustrative)",
+)
+fig.update_layout(coloraxis_showscale=False, height=420, margin=dict(l=10, r=10, t=50, b=10))
+fig.show()
+```
+
+## What drives the ranking
+
+```{python}
+#| label: weights
+framework = load_framework("market_prioritisation")
+weights = pd.DataFrame(framework["criteria"])[["name", "weight", "direction", "rationale"]]
+weights
+```
+
+## How to read this
+
+- A high score means a segment scores well on the **weighted** blend of size, pain, budget, and fit,
+  after **penalising** competition and long sales cycles.
+- `evidence_quality_score` deliberately discounts segments we know little about — a hedge against
+  ranking on guesswork.
+- **Nothing here is a decision.** To promote any segment to a recommendation, it must pass through
+  evidence collection and validation (see [Working Paper Ch.5](../working-paper/05-market-prioritisation.qmd)).
+
+::: {.callout-note}
+## Next step in the lifecycle
+Collect real evidence for the top-ranked segments (interviews, pilots), register it in the
+[evidence register](../cis/commercial-intelligence-specification.md), and re-run. The ranking should
+change as evidence — not assumptions — accumulates.
+:::

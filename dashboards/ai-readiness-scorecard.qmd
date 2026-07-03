@@ -1,0 +1,128 @@
+---
+title: "AI Readiness Scorecard"
+subtitle: "Operationalising the proposal's core claim — 'the CRM is the foundation for AI readiness'"
+---
+
+> **Illustrative, not validated (confidence grade C/D).** Scores use *synthetic* customer data and the
+> [AI Readiness Index](../frameworks/ai_readiness_index.yml). The underlying claim — that CRM/data
+> maturity predicts AI value — is **Hypothesis H-CRM-AI** and is not yet validated.
+
+This scorecard scores each synthetic customer on AI readiness via `calculate_ai_readiness_score`,
+where **data quality** carries the heaviest weight. It exists to make the proposal's central thesis
+*measurable* so it can later be tested against real outcomes.
+
+```{python}
+#| label: setup
+#| code-summary: "Imports and project path bootstrap"
+import sys, pathlib
+_root = pathlib.Path.cwd()
+while _root != _root.parent and not (_root / "src").is_dir():
+    _root = _root.parent
+sys.path.insert(0, str(_root))
+
+import pandas as pd
+import plotly.express as px
+
+from src.utils import load_sample
+from src.scoring import calculate_ai_readiness_score, calculate_customer_fit_score
+```
+
+```{python}
+#| label: score
+#| code-summary: "Load customers and compute readiness + fit scores"
+customers = load_sample("customer_profiles.csv").copy()
+customers["ai_readiness_score"] = customers.apply(calculate_ai_readiness_score, axis=1)
+customers["customer_fit_score"] = customers.apply(calculate_customer_fit_score, axis=1)
+
+def band(score):
+    if score >= 66:
+        return "High"
+    if score >= 40:
+        return "Medium"
+    return "Low"
+
+customers["readiness_band"] = customers["ai_readiness_score"].map(band)
+ranked = customers.sort_values("ai_readiness_score", ascending=False).reset_index(drop=True)
+```
+
+## Customer readiness table
+
+```{python}
+#| label: table
+cols = [
+    "customer_id", "company_name", "industry", "employee_band",
+    "ai_readiness_score", "readiness_band", "customer_fit_score",
+    "data_quality", "analytics_maturity", "workflow_maturity", "ai_readiness",
+]
+ranked[cols]
+```
+
+## Readiness distribution
+
+```{python}
+#| label: distribution
+fig = px.histogram(
+    customers,
+    x="ai_readiness_score",
+    nbins=8,
+    labels={"ai_readiness_score": "AI readiness score (0–100)"},
+    title="Distribution of AI readiness across the (synthetic) customer base",
+)
+fig.update_layout(height=360, bargap=0.08, margin=dict(l=10, r=10, t=50, b=10))
+fig.show()
+```
+
+## Readiness vs fit
+
+Do the customers most *ready* for AI also *fit* the CRM best? This scatter frames that question; the
+answer is an empirical matter, not something to assert.
+
+```{python}
+#| label: scatter
+fig = px.scatter(
+    customers,
+    x="customer_fit_score",
+    y="ai_readiness_score",
+    color="readiness_band",
+    hover_name="company_name",
+    size="data_quality",
+    labels={
+        "customer_fit_score": "Customer fit score (0–100)",
+        "ai_readiness_score": "AI readiness score (0–100)",
+        "readiness_band": "Readiness",
+    },
+    title="AI readiness vs CRM fit (bubble size = data quality)",
+    category_orders={"readiness_band": ["High", "Medium", "Low"]},
+)
+fig.update_layout(height=440, margin=dict(l=10, r=10, t=50, b=10))
+fig.show()
+```
+
+## Maturity profile of the customer base
+
+```{python}
+#| label: maturity
+maturity_cols = ["current_crm_maturity", "workflow_maturity", "data_quality",
+                 "analytics_maturity", "ai_readiness"]
+profile = customers[maturity_cols].mean().reset_index()
+profile.columns = ["dimension", "mean_score_0_10"]
+fig = px.bar(
+    profile,
+    x="mean_score_0_10",
+    y="dimension",
+    orientation="h",
+    range_x=[0, 10],
+    title="Average maturity by dimension (0–10, synthetic)",
+    labels={"mean_score_0_10": "Mean (0–10)", "dimension": ""},
+)
+fig.update_layout(height=340, margin=dict(l=10, r=10, t=50, b=10))
+fig.show()
+```
+
+::: {.callout-important}
+## The claim under test
+`data_quality` is the load-bearing input of this index because the proposal asserts AI value flows
+from the data/CRM foundation. That assertion is **Hypothesis H-CRM-AI (grade D→C)**. Validating it
+requires linking readiness scores to *actual* AI outcomes in a pilot — see
+[Working Paper Ch.6](../working-paper/06-ai-readiness.qmd).
+:::

@@ -1,0 +1,47 @@
+---
+title: "Working Paper"
+subtitle: "Sigmoid Analytica CRM & Commercial Strategy — an evidence-building enquiry"
+---
+
+> **This is a working paper, not a report.** It states open questions and the evidence needed to
+> answer them. It deliberately reaches **no final conclusions** at v0.1. The source proposal is
+> treated as **Hypothesis v0.1** throughout.
+
+## Purpose
+
+This paper structures the commercial strategy for Sigmoid Analytica's CRM as a set of *questions
+under investigation*, governed by the [Commercial Intelligence Specification](../cis/commercial-intelligence-specification.md).
+Each chapter follows the same discipline so that reasoning stays honest and reviewable:
+
+```text
+Question · Hypothesis · Evidence Needed · Current Evidence · Analysis Plan · Limitations · Next Steps
+```
+
+Nothing is asserted as settled until it has passed through evidence collection and validation
+(CIS §9, §12).
+
+## Chapters
+
+| # | Chapter | Focus |
+|---|---|---|
+| 1 | [Introduction](01-introduction.qmd) | Aim, scope, and how to read this paper |
+| 2 | [Problem Context](02-problem-context.qmd) | The commercial situation and the proposal as Hypothesis v0.1 |
+| 3 | [Commercial Intelligence Specification](03-commercial-intelligence-specification.qmd) | The governing method, in brief |
+| 4 | [CRM Positioning](04-crm-positioning.qmd) | Decision Q2 — how to position the product |
+| 5 | [Market Prioritisation](05-market-prioritisation.qmd) | Decision Q1 — which segment first |
+| 6 | [AI Readiness](06-ai-readiness.qmd) | Testing the "CRM as AI foundation" thesis |
+| 7 | [Go-to-Market](07-go-to-market.qmd) | Decision Q3 — evidence threshold before committing |
+| 8 | [Validation & Tests](08-validation-and-tests.qmd) | How claims and calculations are checked |
+| 9 | [Conclusion](09-conclusion.qmd) | Deliberately open — current state, not verdicts |
+
+## The three decision questions
+
+1. **Market entry** — Which market segment should Sigmoid target first for the CRM? *(Ch. 5)*
+2. **Positioning** — CRM, Revenue Operations Platform, or AI Readiness Platform? *(Ch. 4)*
+3. **Evidence threshold** — What evidence is required before committing to a go-to-market strategy? *(Ch. 7)*
+
+## Status of evidence
+
+All quantitative content in this paper is computed from **synthetic sample data** and carries
+confidence grade **C or D**. The paper's value at v0.1 is in *framing the questions correctly* and
+*specifying what would answer them* — not in the numbers.

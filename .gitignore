@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Quarto
+/.quarto/
+/_site/
+/_freeze/
+*_files/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Data — keep sample and READMEs, ignore working data drops
+data/raw/*
+data/processed/*
+data/external/*
+!data/raw/README.md
+!data/processed/README.md
+!data/external/README.md
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+
+# Secrets
+.env
+*.local
+
+**/*.quarto_ipynb

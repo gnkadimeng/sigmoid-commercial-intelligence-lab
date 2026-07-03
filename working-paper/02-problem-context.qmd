@@ -1,0 +1,43 @@
+---
+title: "2. Problem Context"
+---
+
+## Question
+
+*What commercial situation is Sigmoid Analytica actually in, and which of the proposal's framings of
+that situation are load-bearing?*
+
+## Hypothesis
+
+Sigmoid operates in a crowded CRM/analytics space where "CRM" alone is commoditised, but where a
+credible **data-and-AI-readiness** angle could differentiate — *if* customers feel the underlying
+pain and can act on it. The proposal treats this as given; here it is a hypothesis.
+
+## Evidence needed
+
+- Market structure: incumbents, substitutes, and how buyers currently frame their need.
+- Buyer pain: is CRM/data disorganisation an acute, funded problem for the target segments?
+- Sigmoid's actual differentiators (capability, data assets, relationships), not aspirational ones.
+
+## Current evidence
+
+- Proposal narrative (grade D) positioning CRM as the AI foundation — `EV-001`, `EV-003`.
+- One internal signal that prospects grasp "CRM" fastest but see it as commoditised — `EV-007`.
+- No independent market-structure evidence yet.
+
+## Analysis plan
+
+1. Map the competitive set and buyer language for each candidate segment.
+2. Separate *proposal assertions* from *observed signals* in the evidence register.
+3. Feed the pain/competition reads into the market-prioritisation framework as inputs to test
+   sensitivity.
+
+## Limitations
+
+- The proposal is persuasive by design; its framing may bias which problems we look for.
+- Competitive and buyer evidence is currently absent.
+
+## Next steps
+
+- Extract the specific commercial claims into hypotheses in Chs. 4–7.
+- Prioritise collecting buyer-pain evidence for the top segments (Ch. 5).

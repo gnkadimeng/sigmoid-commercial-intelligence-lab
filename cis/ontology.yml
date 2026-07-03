@@ -1,0 +1,83 @@
+# Commercial Intelligence Specification — Core Ontology
+# Version 0.1.0
+# Normative definition of the objects the decision system reasons about.
+# Relationships use cardinality notation: 1, 0..1, 1..*, 0..*.
+
+meta:
+  spec: "Commercial Intelligence Specification"
+  artifact: "ontology"
+  version: "0.1.0"
+  status: draft
+
+objects:
+  Question:
+    definition: >
+      A commercial decision to be made, phrased so that it can be answered with evidence.
+    key_attributes: [id, text, domain, status, priority]
+    example: "Which market segment should Sigmoid target first for the CRM?"
+
+  Hypothesis:
+    definition: >
+      A falsifiable, provisional answer to a Question. Must state what would prove it wrong.
+    key_attributes: [id, question_id, statement, falsifier, status]
+    example: "Audit firms are the highest-priority first segment for the CRM."
+
+  OperationalDefinition:
+    definition: >
+      Specifies how the terms of a Hypothesis are measured — what counts, in what units, via which
+      instrument or dataset.
+    key_attributes: [id, hypothesis_id, measure, unit, instrument]
+
+  Evidence:
+    definition: >
+      A dated, sourced observation that supports, refutes, or qualifies a claim. Carries quality and
+      bias metadata. A proposal assertion is Evidence of type 'proposal' and cannot validate a claim.
+    key_attributes: [id, claim_id, source_type, quality_score, bias_risk, supports_claim, date]
+
+  Framework:
+    definition: >
+      A named, versioned, weighted scoring scheme that turns defined inputs into a score in [0, 100].
+      Weights are data, not code.
+    key_attributes: [id, version, question, criteria, scale, status]
+
+  Model:
+    definition: >
+      A computation — a framework, statistical model, or rule set — that consumes evidence/data and
+      produces an output. Every model passes through Validation and carries provenance.
+    key_attributes: [id, version, kind, inputs, output, framework_id]
+
+  Recommendation:
+    definition: >
+      A proposed action derived from models and evidence, carrying a confidence grade and its basis.
+      Invalid unless its provenance includes Evidence and Validation.
+    key_attributes: [id, question_id, action, confidence, basis, models, evidence]
+
+  Decision:
+    definition: >
+      A recorded choice to act (or not), adopting a Recommendation. Append-only; superseded, never
+      deleted.
+    key_attributes: [id, question_id, recommendation_id, owner, date, status, confidence]
+
+  Metric:
+    definition: >
+      A quantity monitored after a Decision to test whether the recommendation held in reality.
+    key_attributes: [id, decision_id, name, target, observed, period]
+
+relationships:
+  - { from: Question,             verb: has,               to: Hypothesis,           cardinality: "1..*" }
+  - { from: Hypothesis,           verb: measured_by,       to: OperationalDefinition, cardinality: "1" }
+  - { from: Hypothesis,           verb: supported_or_refuted_by, to: Evidence,        cardinality: "0..*" }
+  - { from: Framework,            verb: instantiated_as,   to: Model,                cardinality: "1..*" }
+  - { from: Model,                verb: consumes,          to: Evidence,             cardinality: "0..*" }
+  - { from: Model,                verb: produces,          to: Recommendation,       cardinality: "0..*" }
+  - { from: Recommendation,       verb: cites,             to: Evidence,             cardinality: "1..*" }
+  - { from: Recommendation,       verb: cites,             to: Model,                cardinality: "1..*" }
+  - { from: Decision,             verb: adopts,            to: Recommendation,       cardinality: "1" }
+  - { from: Decision,             verb: answers,           to: Question,             cardinality: "1" }
+  - { from: Decision,             verb: monitored_by,      to: Metric,               cardinality: "0..*" }
+
+invariants:
+  - "Every object has a unique id and a version."
+  - "A Recommendation whose provenance lacks Evidence or Validation is invalid."
+  - "Evidence of source_type 'proposal' cannot raise a claim above confidence grade C."
+  - "A claim_id referenced by Evidence must resolve to a Hypothesis or Recommendation."

@@ -1,0 +1,133 @@
+---
+title: "Positioning Dashboard"
+subtitle: "Decision Question 2 — CRM vs Revenue Operations Platform vs AI Readiness Platform"
+---
+
+> **Illustrative, not validated (confidence grade C).** The per-option scores below are an initial,
+> synthetic assessment against the [Positioning Canvas](../frameworks/positioning_canvas.yml). They
+> structure the debate; they do not settle it.
+
+This page compares the three candidate positionings on six weighted criteria and ranks them. The
+`evidence_strength` criterion keeps aspirational framing honest — a position that sounds exciting but
+has no evidence is penalised.
+
+```{python}
+#| label: setup
+#| code-summary: "Imports and project path bootstrap"
+import sys, pathlib
+_root = pathlib.Path.cwd()
+while _root != _root.parent and not (_root / "src").is_dir():
+    _root = _root.parent
+sys.path.insert(0, str(_root))
+
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+
+from src.utils import load_framework, weights_from_framework
+from src.scoring import weighted_score
+```
+
+```{python}
+#| label: assessment
+#| code-summary: "Analyst assessment of each option (synthetic, 0–10 per criterion)"
+# Rows = positioning options; columns = the Positioning Canvas criteria (each 0–10).
+# These are an initial analyst judgement to be revised as evidence accrues.
+assessment = pd.DataFrame(
+    [
+        # option,                       clarity, diff, pain, investor, scale, evidence
+        ["CRM Platform",                     9,    4,     7,       5,     6,     6],
+        ["Revenue Operations Platform",      6,    7,     8,       7,     8,     5],
+        ["AI Readiness Platform",            5,    8,     6,       9,     8,     3],
+    ],
+    columns=[
+        "option", "clarity", "differentiation", "customer_pain_alignment",
+        "investor_appeal", "scalability", "evidence_strength",
+    ],
+)
+```
+
+```{python}
+#| label: score
+#| code-summary: "Apply the Positioning Canvas weights to each option"
+framework = load_framework("positioning_canvas")
+weights = weights_from_framework(framework)
+
+assessment["positioning_score"] = assessment.apply(
+    lambda row: weighted_score(row, weights), axis=1
+)
+ranked = assessment.sort_values("positioning_score", ascending=False).reset_index(drop=True)
+ranked.insert(0, "rank", ranked.index + 1)
+```
+
+## Ranking
+
+```{python}
+#| label: table
+ranked[[
+    "rank", "option", "positioning_score",
+    "clarity", "differentiation", "customer_pain_alignment",
+    "investor_appeal", "scalability", "evidence_strength",
+]]
+```
+
+```{python}
+#| label: bar
+fig = px.bar(
+    ranked.sort_values("positioning_score"),
+    x="positioning_score",
+    y="option",
+    orientation="h",
+    color="positioning_score",
+    color_continuous_scale="Teal",
+    range_x=[0, 100],
+    labels={"positioning_score": "Positioning score (0–100)", "option": ""},
+    title="Weighted positioning score (illustrative)",
+)
+fig.update_layout(coloraxis_showscale=False, height=340, margin=dict(l=10, r=10, t=50, b=10))
+fig.show()
+```
+
+## Criterion-by-criterion profile
+
+```{python}
+#| label: radar
+criteria = ["clarity", "differentiation", "customer_pain_alignment",
+            "investor_appeal", "scalability", "evidence_strength"]
+fig = go.Figure()
+for _, row in assessment.iterrows():
+    fig.add_trace(go.Scatterpolar(
+        r=[row[c] for c in criteria] + [row[criteria[0]]],
+        theta=criteria + [criteria[0]],
+        fill="toself",
+        name=row["option"],
+    ))
+fig.update_layout(
+    polar=dict(radialaxis=dict(visible=True, range=[0, 10])),
+    height=460, margin=dict(l=40, r=40, t=40, b=40),
+    title="Positioning profiles across criteria (0–10, synthetic)",
+)
+fig.show()
+```
+
+## Weights applied
+
+```{python}
+#| label: weights
+pd.DataFrame(framework["criteria"])[["name", "weight", "direction", "rationale"]]
+```
+
+## Interpretation (provisional)
+
+- **CRM Platform** wins on *clarity* but is weak on *differentiation* — buyers get it instantly, yet
+  see it as commoditised (cf. evidence EV-007).
+- **Revenue Operations Platform** balances differentiation, pain alignment, and scalability.
+- **AI Readiness Platform** scores highest on *investor appeal* but lowest on *evidence strength* —
+  the most exciting story is the least evidenced today (cf. Hypothesis H-CRM-AI).
+
+::: {.callout-warning}
+## This is a framing tool, not a verdict
+The scores are one analyst's synthetic judgement. Positioning should be decided against **customer
+evidence** — message testing, win/loss analysis, discovery calls — not an internal scoring exercise.
+See [Working Paper Ch.4](../working-paper/04-crm-positioning.qmd).
+:::

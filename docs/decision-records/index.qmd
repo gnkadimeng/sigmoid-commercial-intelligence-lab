@@ -1,0 +1,26 @@
+---
+title: "Decision Records (ADRs)"
+subtitle: "Architecture and governance decisions — append-only"
+---
+
+Architecture Decision Records capture significant, hard-to-reverse choices and *why* they were made.
+They are **append-only**: a superseded decision is marked as such and replaced by a new record, never
+edited away. This gives the project a durable memory of its own reasoning.
+
+## Records
+
+| ADR | Title | Status |
+|---|---|---|
+| [ADR-0001](ADR-0001-project-architecture.md) | Project architecture | Accepted |
+| [ADR-0002](ADR-0002-cis-as-governance-model.md) | CIS as governance model; PDF as hypothesis source | Accepted |
+
+## Adding a record
+
+1. Copy an existing ADR to `ADR-XXXX-<slug>.md` (next number).
+2. Use the standard headings: **Status, Context, Decision, Consequences, Alternatives considered**.
+3. Link it in the table above.
+4. To change a past decision, add a new ADR that **supersedes** it and update the old one's Status.
+
+See the [README](../../README.md) and the
+[Governance section of the CIS](../../cis/commercial-intelligence-specification.md) for the full
+process.

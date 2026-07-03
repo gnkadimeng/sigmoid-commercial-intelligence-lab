@@ -1,0 +1,40 @@
+# Framework: Customer Fit Score
+# Scores an individual customer/company for CRM fit on a 0..100 scale.
+
+id: customer_fit_score
+version: "0.1.0"
+status: draft
+question: "How good a fit is this customer for the Sigmoid CRM right now?"
+scale: "0..100"
+lifecycle_stage: model
+
+# Criteria map to columns in data/sample/customer_profiles.csv (each 0..10 unless noted).
+criteria:
+  - name: current_crm_maturity
+    weight: 0.10
+    direction: lower_better
+    rationale: "Low existing maturity = more headroom for our CRM to add value."
+  - name: workflow_maturity
+    weight: 0.15
+    direction: higher_better
+    rationale: "Defined workflows make CRM adoption stick."
+  - name: data_quality
+    weight: 0.15
+    direction: higher_better
+    rationale: "Clean data is the substrate the CRM organises."
+  - name: budget_signal
+    weight: 0.20
+    direction: higher_better
+    rationale: "Willingness/ability to pay."
+  - name: urgency_signal
+    weight: 0.22
+    direction: higher_better
+    rationale: "Felt urgency drives the deal forward."
+  - name: decision_complexity
+    weight: 0.18
+    direction: lower_better
+    rationale: "Fewer stakeholders / simpler buying = faster, more winnable."
+
+notes:
+  - "Weights sum to 1.0."
+  - "current_crm_maturity and decision_complexity are inverted (lower is better)."

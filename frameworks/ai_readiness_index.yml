@@ -1,0 +1,37 @@
+# Framework: AI Readiness Index
+# Scores how ready a customer is to derive value from AI on top of the CRM (0..100).
+# Central to the proposal's thesis: "CRM is the foundation for AI readiness."
+
+id: ai_readiness_index
+version: "0.1.0"
+status: draft
+question: "How ready is this customer to derive value from AI, given their CRM/data foundation?"
+scale: "0..100"
+lifecycle_stage: model
+
+# Criteria map to columns in data/sample/customer_profiles.csv (each 0..10).
+criteria:
+  - name: data_quality
+    weight: 0.28
+    direction: higher_better
+    rationale: "AI value is bounded by data quality; this is the load-bearing input."
+  - name: workflow_maturity
+    weight: 0.18
+    direction: higher_better
+    rationale: "AI augments workflows; undefined workflows have nothing to augment."
+  - name: analytics_maturity
+    weight: 0.22
+    direction: higher_better
+    rationale: "Existing analytics practice predicts ability to operationalise AI."
+  - name: current_crm_maturity
+    weight: 0.12
+    direction: higher_better
+    rationale: "A used CRM is the structured substrate AI reads from."
+  - name: ai_readiness
+    weight: 0.20
+    direction: higher_better
+    rationale: "Self-/assessed organisational readiness (skills, appetite, governance)."
+
+notes:
+  - "Weights sum to 1.0."
+  - "This index operationalises the proposal's core claim and is therefore a priority for validation."

@@ -1,0 +1,90 @@
+---
+title: "Sigmoid Commercial Intelligence Lab"
+subtitle: "Turning commercial strategy into evidence-based, versioned, testable intelligence"
+toc: false
+---
+
+## What this project is
+
+The **Sigmoid Commercial Intelligence Lab** is a reproducible research and decision-intelligence
+project. It takes the Sigmoid Analytica investor/operator proposal — which positions the CRM as the
+foundation for AI readiness — and converts it into a *living system* where commercial strategy can be
+questioned, measured, tested, and revised as evidence accumulates.
+
+It is not a rewrite of the proposal. It is the machinery for deciding whether the proposal's claims
+are true, and under what conditions.
+
+> **Status: v0.1 — hypothesis stage.**
+> No recommendation on this site is validated. Every figure, score, and ranking is *illustrative*
+> until it has passed through the evidence and validation stages of the CIS decision lifecycle.
+
+## Why the PDF is treated as Hypothesis v0.1
+
+The source proposal is a strong articulation of a commercial thesis. But a proposal is, by
+definition, an argument made *before* the evidence is in. Treating it as settled truth would bake in
+untested assumptions about which market to target, how to position the CRM, and what customers will
+pay.
+
+So we treat the PDF as **Hypothesis v0.1**: a structured set of falsifiable claims. Each claim is
+extracted into the evidence register, given an operational definition, and scheduled for validation.
+The proposal earns its authority by surviving scrutiny — not by being the first document written.
+
+## What CIS is
+
+The project is governed by the **Commercial Intelligence Specification (CIS)** — a specification that
+treats commercial strategy as a *computational decision system*. Under CIS, no recommendation is
+legitimate unless it can trace its lineage through a fixed lifecycle:
+
+```text
+Question → Hypothesis → Operational Definition → Evidence Collection → Analysis
+        → Model → Validation → Recommendation → Implementation → Monitoring → Learning
+```
+
+Every artifact in this repository — a score, a framework, a dashboard, a chapter of the working
+paper — is expected to name where it sits in that lifecycle. See the full
+[Commercial Intelligence Specification](cis/commercial-intelligence-specification.md).
+
+## How strategy becomes testable intelligence
+
+| Traditional strategy deck | Commercial Intelligence Lab |
+|---|---|
+| Claims asserted once | Claims registered, dated, and scored for evidence quality |
+| Numbers chosen to persuade | Numbers computed by transparent, versioned functions |
+| Conclusions fixed at print time | Conclusions recomputed as evidence changes |
+| No way to check the reasoning | Scoring logic under automated test (`pytest`) |
+| Positioning by intuition | Positioning by explicit, weighted criteria |
+
+Concretely, the lab provides: transparent [scoring frameworks](frameworks/index.qmd) with editable
+weights, [interactive dashboards](dashboards/market-prioritisation.qmd) that recompute on the sample
+data, an [evidence register](cis/commercial-intelligence-specification.md) that separates hypothesis
+from fact, a [working paper](working-paper/index.qmd) that structures each open question, and a test
+suite that guards the integrity of every calculation.
+
+## The first three decision questions
+
+CIS is driven by questions, not conclusions. The lab opens with three:
+
+1. **Market entry** — *Which market segment should Sigmoid target first for the CRM?*
+   Explored in the [Market Prioritisation dashboard](dashboards/market-prioritisation.qmd) and
+   [Working Paper Ch.5](working-paper/05-market-prioritisation.qmd).
+
+2. **Positioning** — *How should the CRM be positioned: as a CRM, a Revenue Operations Platform, or
+   an AI Readiness Platform?* Explored in the
+   [Positioning dashboard](dashboards/positioning-dashboard.qmd) and
+   [Working Paper Ch.4](working-paper/04-crm-positioning.qmd).
+
+3. **Evidence threshold** — *What evidence is required before committing to a go-to-market strategy?*
+   Explored in [Working Paper Ch.7](working-paper/07-go-to-market.qmd) and
+   [Ch.8](working-paper/08-validation-and-tests.qmd).
+
+These are deliberately unanswered here. The purpose of the lab is to answer them *with evidence*, in
+public, in a way anyone can re-run.
+
+## Where to start
+
+- **New collaborators:** read the [README](README.md) for setup, then the
+  [CIS](cis/commercial-intelligence-specification.md).
+- **Reviewers of the thesis:** start with the [Working Paper](working-paper/index.qmd).
+- **Analysts:** open the [dashboards](dashboards/market-prioritisation.qmd) and the
+  [frameworks](frameworks/index.qmd).
+- **Architects:** read the [Decision Records](docs/decision-records/index.qmd).

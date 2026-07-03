@@ -1,0 +1,13 @@
+customer_id,company_name,industry,employee_band,current_crm_maturity,workflow_maturity,data_quality,analytics_maturity,ai_readiness,budget_signal,urgency_signal,decision_complexity
+CUST-001,Meridian Audit Partners,Professional Services,51-200,3,6,6,5,4,7,7,4
+CUST-002,Kopano Mining Supplies,Mining & Industrials,201-500,2,5,4,3,3,7,6,6
+CUST-003,Rustenburg Local Municipality,Public Sector,501-1000,2,3,3,2,2,4,5,9
+CUST-004,Aurora Advisory Group,Professional Services,11-50,4,7,7,6,6,6,6,3
+CUST-005,Thuso SME Collective,Cross-industry,1-10,1,4,3,2,3,3,6,2
+CUST-006,National Skills SETA,Public Sector / Skills,201-500,3,5,5,4,5,6,8,7
+CUST-007,Transnet-adjacent Logistics SOE,Public Sector,1000+,3,4,4,3,3,6,7,9
+CUST-008,Halcyon Chartered Accountants,Professional Services,51-200,4,7,7,6,5,7,7,4
+CUST-009,Veld Industrial Components,Mining & Industrials,51-200,2,5,5,4,4,6,5,5
+CUST-010,Cape Professional Services Ltd,Professional Services,201-500,5,7,8,7,7,7,6,5
+CUST-011,Boland Municipal District,Public Sector,501-1000,1,3,2,2,2,4,6,9
+CUST-012,Ignition Tech SME,Cross-industry,11-50,2,5,4,4,5,5,8,2
