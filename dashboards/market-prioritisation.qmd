@@ -1,17 +1,28 @@
 ---
 title: "Market Prioritisation"
-subtitle: "Decision Question 1 — Which segment should Sigmoid target first for the CRM?"
+subtitle: "Decision 1 — Which segment should Sigmoid target first for the CRM?"
+page-layout: full
 ---
 
-> **Illustrative, not validated (confidence grade C).** These scores are computed from *synthetic*
-> sample data using the [Market Prioritisation framework](../frameworks/market_prioritisation.yml).
-> They demonstrate the machinery; they are not a market recommendation. See the
-> [CIS](../cis/commercial-intelligence-specification.md) on confidence grades.
+::: {.page-context}
+::: {.pc-crumb}
+Dashboards <span class="sep">›</span> Market Prioritisation
+:::
+::: {.pc-supports}
+**Supports** [Decision 1 · Market Entry](../decisions/market-entry.qmd) — which segment should Sigmoid
+target first for the CRM?
+:::
+::: {.pc-row}
+<span class="chip chip-grade-c">Confidence C · Illustrative</span>
+<span class="chip chip-neutral no-dot">Synthetic data</span>
+<span class="pc-next">Related: [Framework](../frameworks/index.qmd) · [Evidence Register](../evidence/evidence-register.qmd)</span>
+:::
+:::
 
-This page operationalises **Decision Question 1**. It loads the candidate segments, applies the
-transparent weighted [scoring function](../src/) (`calculate_market_priority_score`), and ranks them.
-Competition and sales-cycle length act as penalties (`lower_better`). Change the weights in the
-framework YAML and re-render to see the ranking move.
+> **Illustrative, not validated.** These scores are computed from *synthetic* sample data using the
+> [Market Prioritisation framework](../frameworks/index.qmd). They demonstrate the machinery; they are
+> not a market recommendation. Change the weights in the framework YAML and re-render, and the ranking
+> moves. Competition and sales-cycle length act as penalties (`lower_better`).
 
 ```{python}
 #| label: setup
@@ -25,11 +36,13 @@ sys.path.insert(0, str(_root))
 
 import pandas as pd
 import plotly.express as px
+from IPython.display import HTML
 
 from src.utils import load_sample, load_framework
 from src.scoring import calculate_market_priority_score
 
-pd.options.display.float_format = lambda v: f"{v:,.1f}"
+PLOTLY_TEMPLATE = "plotly_white"
+ACCENT = "#2f6bb0"
 ```
 
 ```{python}
@@ -39,6 +52,28 @@ segments = load_sample("market_segments.csv").copy()
 segments["priority_score"] = segments.apply(calculate_market_priority_score, axis=1)
 ranked = segments.sort_values("priority_score", ascending=False).reset_index(drop=True)
 ranked.insert(0, "rank", ranked.index + 1)
+```
+
+```{python}
+#| label: metrics
+#| code-summary: "Build summary metrics (computed, not hardcoded)"
+top = ranked.iloc[0]
+runner_up = ranked.iloc[1]
+lead = top["priority_score"] - runner_up["priority_score"]
+
+def metric(label, value, sub=""):
+    sub_html = f'<div class="metric-sub">{sub}</div>' if sub else ""
+    return (f'<div class="metric"><div class="metric-label">{label}</div>'
+            f'<div class="metric-value">{value}</div>{sub_html}</div>')
+
+HTML(
+    '<div class="metric-row">'
+    + metric("Segments evaluated", len(ranked), "candidate markets scored")
+    + metric("Top-ranked segment", top["segment_name"], f'{top["industry"]}')
+    + metric("Top priority score", f'{top["priority_score"]:.1f}', "out of 100 (illustrative)")
+    + metric("Lead over #2", f'+{lead:.1f}', f'vs {runner_up["segment_name"]}')
+    + "</div>"
+)
 ```
 
 ## Ranked segments
@@ -67,9 +102,10 @@ fig = px.bar(
     color="priority_score",
     color_continuous_scale="Blues",
     labels={"priority_score": "Priority score (0–100)", "segment_name": ""},
-    title="Market priority score by segment (illustrative)",
+    template=PLOTLY_TEMPLATE,
 )
-fig.update_layout(coloraxis_showscale=False, height=420, margin=dict(l=10, r=10, t=50, b=10))
+fig.update_layout(coloraxis_showscale=False, height=420, margin=dict(l=10, r=10, t=20, b=10),
+                  font=dict(family="Inter, system-ui, sans-serif", size=13))
 fig.show()
 ```
 
@@ -82,18 +118,26 @@ weights = pd.DataFrame(framework["criteria"])[["name", "weight", "direction", "r
 weights
 ```
 
-## How to read this
+## Interpretation
 
 - A high score means a segment scores well on the **weighted** blend of size, pain, budget, and fit,
   after **penalising** competition and long sales cycles.
 - `evidence_quality_score` deliberately discounts segments we know little about — a hedge against
   ranking on guesswork.
-- **Nothing here is a decision.** To promote any segment to a recommendation, it must pass through
-  evidence collection and validation (see [Working Paper Ch.5](../working-paper/05-market-prioritisation.qmd)).
+- The lead over #2 is a scan of **robustness**: a small margin means the top choice is sensitive to
+  weight changes and should not be over-read.
 
-::: {.callout-note}
+::: {.callout-warning appearance="simple"}
+## Limitations
+- Sub-scores are **assumptions encoded as numbers**, not observations; the ranking inherits their
+  bias.
+- Synthetic data only — nothing here is a decision. Promoting a segment to a recommendation requires
+  evidence collection and validation (see [Working Paper Ch. 5](../working-paper/05-market-prioritisation.qmd)).
+:::
+
+::: {.callout-note appearance="simple"}
 ## Next step in the lifecycle
 Collect real evidence for the top-ranked segments (interviews, pilots), register it in the
-[evidence register](../cis/commercial-intelligence-specification.md), and re-run. The ranking should
-change as evidence — not assumptions — accumulates.
+[evidence register](../data/sample/README.md), and re-run. The ranking should change as evidence —
+not assumptions — accumulates.
 :::

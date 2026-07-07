@@ -1,90 +1,137 @@
 ---
-title: "Sigmoid Commercial Intelligence Lab"
-subtitle: "Turning commercial strategy into evidence-based, versioned, testable intelligence"
+title: ""
+pagetitle: "Sigmoid Commercial Intelligence Lab"
 toc: false
+anchor-sections: false
+code-tools: false
 ---
 
-## What this project is
+::: {.hero}
+::: {.hero-eyebrow}
+<span class="chip chip-grade-c no-dot">v0.1 · Hypothesis stage</span>
+<span>A commercial decision system, not a documentation site</span>
+:::
 
-The **Sigmoid Commercial Intelligence Lab** is a reproducible research and decision-intelligence
-project. It takes the Sigmoid Analytica investor/operator proposal — which positions the CRM as the
-foundation for AI readiness — and converts it into a *living system* where commercial strategy can be
-questioned, measured, tested, and revised as evidence accumulates.
+# Sigmoid Commercial Intelligence Lab {.hero-title}
 
-It is not a rewrite of the proposal. It is the machinery for deciding whether the proposal's claims
-are true, and under what conditions.
+::: {.hero-sub}
+Commercial strategy as an evidence-based decision system: three strategic decisions, the evidence
+behind them, the frameworks that score them, and the dashboards that bring them to life — all honest
+about how much is still unproven.
+:::
 
-> **Status: v0.1 — hypothesis stage.**
-> No recommendation on this site is validated. Every figure, score, and ranking is *illustrative*
-> until it has passed through the evidence and validation stages of the CIS decision lifecycle.
+::: {.hero-actions}
+[Start here](start-here/index.qmd){.btn-cil .btn-cil-primary}
+[View the decisions](decisions/index.qmd){.btn-cil .btn-cil-ghost}
+[Open dashboards](dashboards/index.qmd){.btn-cil .btn-cil-ghost}
+[Read the CIS](cis/commercial-intelligence-specification.md){.btn-cil .btn-cil-ghost}
+:::
 
-## Why the PDF is treated as Hypothesis v0.1
+::: {.hero-meta}
+<span>Governed by the Commercial Intelligence Specification</span>
+<span>Synthetic data — nothing validated yet</span>
+:::
+:::
 
-The source proposal is a strong articulation of a commercial thesis. But a proposal is, by
-definition, an argument made *before* the evidence is in. Treating it as settled truth would bake in
-untested assumptions about which market to target, how to position the CRM, and what customers will
-pay.
+## How this lab works
 
-So we treat the PDF as **Hypothesis v0.1**: a structured set of falsifiable claims. Each claim is
-extracted into the evidence register, given an operational definition, and scheduled for validation.
-The proposal earns its authority by surviving scrutiny — not by being the first document written.
+::: {.section-lead}
+The whole site is one workflow. You start from a **decision**, weigh the **evidence**, score it with a
+**framework**, explore it in a **dashboard**, and only then — when evidence is strong enough — reach a
+**recommendation**. New to it? [**Start here**](start-here/index.qmd).
+:::
 
-## What CIS is
+::: {.lifecycle}
+<li><span class="stage"><span class="num">1</span>Decisions</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">2</span>Evidence</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">3</span>Frameworks</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">4</span>Dashboards</span></li>
+<li><span class="arrow">→</span><span class="stage is-loop"><span class="num">5</span>Recommendations</span></li>
+:::
 
-The project is governed by the **Commercial Intelligence Specification (CIS)** — a specification that
-treats commercial strategy as a *computational decision system*. Under CIS, no recommendation is
-legitimate unless it can trace its lineage through a fixed lifecycle:
+## The three decisions {.mt-section}
 
-```text
-Question → Hypothesis → Operational Definition → Evidence Collection → Analysis
-        → Model → Validation → Recommendation → Implementation → Monitoring → Learning
-```
+::: {.section-lead}
+The lab exists to answer three questions. Everything else supports them.
+:::
 
-Every artifact in this repository — a score, a framework, a dashboard, a chapter of the working
-paper — is expected to name where it sits in that lifecycle. See the full
-[Commercial Intelligence Specification](cis/commercial-intelligence-specification.md).
+::: {.cil-cards}
+::: {.cil-card}
+<div class="card-kicker">Decision 1 · Market entry</div>
+<div class="card-title">Which segment should Sigmoid target first?</div>
+<p>Seven candidate segments, scored on a transparent weighted framework.</p>
+<span class="card-go">Open decision</span>
+[](decisions/market-entry.qmd){.stretched-link aria-label="Open Market Entry decision"}
+:::
+::: {.cil-card}
+<div class="card-kicker">Decision 2 · Positioning</div>
+<div class="card-title">CRM, Revenue Operations, or AI Readiness Platform?</div>
+<p>Three framings compared across six weighted criteria — evidence strength included.</p>
+<span class="card-go">Open decision</span>
+[](decisions/positioning.qmd){.stretched-link aria-label="Open Positioning decision"}
+:::
+::: {.cil-card}
+<div class="card-kicker">Decision 3 · GTM gate</div>
+<div class="card-title">What evidence is required before committing to GTM?</div>
+<p>A confidence gate that keeps an unvalidated thesis from being scaled prematurely.</p>
+<span class="card-go">Open decision</span>
+[](decisions/gtm-evidence-gate.qmd){.stretched-link aria-label="Open GTM Evidence Gate decision"}
+:::
+:::
 
-## How strategy becomes testable intelligence
+## Choose your path {.mt-section}
 
-| Traditional strategy deck | Commercial Intelligence Lab |
-|---|---|
-| Claims asserted once | Claims registered, dated, and scored for evidence quality |
-| Numbers chosen to persuade | Numbers computed by transparent, versioned functions |
-| Conclusions fixed at print time | Conclusions recomputed as evidence changes |
-| No way to check the reasoning | Scoring logic under automated test (`pytest`) |
-| Positioning by intuition | Positioning by explicit, weighted criteria |
+::: {.section-lead}
+Three ways in, depending on why you came.
+:::
 
-Concretely, the lab provides: transparent [scoring frameworks](frameworks/index.qmd) with editable
-weights, [interactive dashboards](dashboards/market-prioritisation.qmd) that recompute on the sample
-data, an [evidence register](cis/commercial-intelligence-specification.md) that separates hypothesis
-from fact, a [working paper](working-paper/index.qmd) that structures each open question, and a test
-suite that guards the integrity of every calculation.
+::: {.cil-cards}
+::: {.cil-card}
+<div class="card-kicker">Investor / Operator</div>
+<h3>See the thesis under test</h3>
+<p>The pitch, the decisions in play, and where the evidence stands today.</p>
+::: {.path-route}
+<span class="step is-start">Product Brief</span><span class="arw">→</span><span class="step">Decisions</span><span class="arw">→</span><span class="step">Dashboards</span><span class="arw">→</span><span class="step">Status</span>
+:::
+<span class="card-go">Read the Product Brief</span>
+[](start-here/product-brief.qmd){.stretched-link aria-label="Investor path"}
+:::
+::: {.cil-card}
+<div class="card-kicker">Product / Commercial</div>
+<h3>Work the decisions</h3>
+<p>Open the decisions, tune the framework weights, track what would move each one.</p>
+::: {.path-route}
+<span class="step is-start">Decisions</span><span class="arw">→</span><span class="step">Frameworks</span><span class="arw">→</span><span class="step">Dashboards</span><span class="arw">→</span><span class="step">Evidence</span>
+:::
+<span class="card-go">Open the Decisions</span>
+[](decisions/index.qmd){.stretched-link aria-label="Product path"}
+:::
+::: {.cil-card}
+<div class="card-kicker">Research / Data Science</div>
+<h3>Inspect the machinery</h3>
+<p>The governing standard, the evidence model, the frameworks, and the tests that guard them.</p>
+::: {.path-route}
+<span class="step is-start">CIS</span><span class="arw">→</span><span class="step">Evidence</span><span class="arw">→</span><span class="step">Frameworks</span><span class="arw">→</span><span class="step">Tests</span>
+:::
+<span class="card-go">Read the CIS</span>
+[](cis/commercial-intelligence-specification.md){.stretched-link aria-label="Research path"}
+:::
+:::
 
-## The first three decision questions
+## Why the proposal is Hypothesis v0.1 {.mt-section}
 
-CIS is driven by questions, not conclusions. The lab opens with three:
+::: {.section-lead}
+The source proposal is a persuasive argument made *before* the evidence is in. Treating it as truth
+would bake in untested assumptions.
+:::
 
-1. **Market entry** — *Which market segment should Sigmoid target first for the CRM?*
-   Explored in the [Market Prioritisation dashboard](dashboards/market-prioritisation.qmd) and
-   [Working Paper Ch.5](working-paper/05-market-prioritisation.qmd).
+So it enters the lab as **Hypothesis v0.1**: a set of falsifiable claims, each registered and
+scheduled for validation. Proposal-sourced claims carry low quality and high bias — they can *raise* a
+hypothesis, never *validate* one. See exactly which claims rest on the proposal under
+[Evidence › Hypothesis v0.1](evidence/proposal-hypothesis-v01.qmd).
 
-2. **Positioning** — *How should the CRM be positioned: as a CRM, a Revenue Operations Platform, or
-   an AI Readiness Platform?* Explored in the
-   [Positioning dashboard](dashboards/positioning-dashboard.qmd) and
-   [Working Paper Ch.4](working-paper/04-crm-positioning.qmd).
-
-3. **Evidence threshold** — *What evidence is required before committing to a go-to-market strategy?*
-   Explored in [Working Paper Ch.7](working-paper/07-go-to-market.qmd) and
-   [Ch.8](working-paper/08-validation-and-tests.qmd).
-
-These are deliberately unanswered here. The purpose of the lab is to answer them *with evidence*, in
-public, in a way anyone can re-run.
-
-## Where to start
-
-- **New collaborators:** read the [README](README.md) for setup, then the
-  [CIS](cis/commercial-intelligence-specification.md).
-- **Reviewers of the thesis:** start with the [Working Paper](working-paper/index.qmd).
-- **Analysts:** open the [dashboards](dashboards/market-prioritisation.qmd) and the
-  [frameworks](frameworks/index.qmd).
-- **Architects:** read the [Decision Records](docs/decision-records/index.qmd).
+::: {.callout-note appearance="simple" icon=false}
+**What this means in practice.** Every score, ranking, and figure on this site is computed from
+*synthetic* sample data and carries confidence grade **C or D**. Nothing is presented as a validated
+market fact. See the live picture on [Current Status](start-here/current-status.qmd).
+:::

@@ -1,0 +1,50 @@
+---
+title: "Decision 2 · Positioning"
+subtitle: "CRM, Revenue Operations Platform, or AI Readiness Platform?"
+---
+
+::: {.page-context}
+::: {.pc-crumb}
+Decisions <span class="sep">›</span> Positioning
+:::
+::: {.pc-supports}
+**This page supports:** how should the product be positioned to buyers and investors?
+:::
+::: {.pc-row}
+<span class="chip chip-neutral no-dot">Register-driven · D2</span>
+<span class="pc-next">[Open the Positioning dashboard](../dashboards/positioning-dashboard.qmd)</span>
+:::
+:::
+
+The decision record below reads live from `data/sample/decision_register.csv`; its claims read from
+`data/sample/claim_register.csv`.
+
+```{python}
+#| label: decision-record
+#| echo: false
+import sys, pathlib
+_root = pathlib.Path.cwd()
+while _root != _root.parent and not (_root / "src").is_dir():
+    _root = _root.parent
+sys.path.insert(0, str(_root))
+from IPython.display import HTML
+from src.registers import render_decision_record, render_claim_cards
+HTML(render_decision_record("D2"))
+```
+
+## Claims behind this decision
+
+Each claim is a **hypothesis**. It advances toward grade B only when real discovery evidence meets the
+bar shown.
+
+```{python}
+#| label: claims
+#| echo: false
+HTML(render_claim_cards("D2"))
+```
+
+::: {.callout-note appearance="simple" icon=false}
+**Go deeper.** Long-form reasoning is in
+[Working Paper › CRM Positioning](../working-paper/04-crm-positioning.qmd). The AI-readiness claims are
+discussed in [Working Paper › AI Readiness](../working-paper/06-ai-readiness.qmd).
+:::

@@ -1,0 +1,57 @@
+---
+title: "Governance"
+subtitle: "The standard, the record of decisions, and the tests that keep it all honest"
+---
+
+::: {.page-context}
+::: {.pc-crumb}
+Governance <span class="sep">›</span> Overview
+:::
+::: {.pc-supports}
+**This section is how the lab governs itself.** It holds the rules, the record of past choices, and
+the automated checks.
+:::
+::: {.pc-row}
+<span class="chip chip-grade-b no-dot">Process is enforced</span>
+<span class="pc-next">[Read the standard](../cis/commercial-intelligence-specification.md)</span>
+:::
+:::
+
+Governance answers "by what authority?" for everything else on the site. It has three pillars: the
+**standard** that defines how strategy is reasoned about, the **decision records** that capture why
+the project is built the way it is, and the **testing standard** that guards every calculation.
+
+::: {.cil-cards}
+::: {.cil-card}
+<div class="card-kicker">The standard</div>
+<h3>Commercial Intelligence Specification</h3>
+<p>The normative document: lifecycle, ontology, evidence model, confidence grades, and mandatory
+rules. This is the technical standard itself.</p>
+<span class="card-go">Read the CIS</span>
+[](../cis/commercial-intelligence-specification.md){.stretched-link aria-label="Open the CIS"}
+:::
+
+::: {.cil-card}
+<div class="card-kicker">The record</div>
+<h3>Decision Records</h3>
+<p>Append-only Architecture Decision Records — why the lab uses this architecture and why CIS governs
+it.</p>
+<span class="card-go">Read the ADRs</span>
+[](../docs/decision-records/index.qmd){.stretched-link aria-label="Open Decision Records"}
+:::
+
+::: {.cil-card}
+<div class="card-kicker">The guardrail</div>
+<h3>Testing Standard</h3>
+<p>What the automated test suite guarantees, what it covers, and how to run it.</p>
+<span class="card-go">See the tests</span>
+[](testing-standard.qmd){.stretched-link aria-label="Open Testing Standard"}
+:::
+:::
+
+::: {.callout-note appearance="simple" icon=false}
+**Two views of the CIS, deliberately distinct.** The version here in Governance is the **standard**
+itself. The [Working Paper's CIS chapter](../working-paper/03-commercial-intelligence-specification.qmd)
+is a shorter **discussion of how the standard is applied** to this project. Read the standard for the
+rules; read the chapter for the application.
+:::

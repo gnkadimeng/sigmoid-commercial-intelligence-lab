@@ -1,0 +1,50 @@
+---
+title: "Decision 1 · Market Entry"
+subtitle: "Which market segment should Sigmoid target first for the CRM?"
+---
+
+::: {.page-context}
+::: {.pc-crumb}
+Decisions <span class="sep">›</span> Market Entry
+:::
+::: {.pc-supports}
+**This page supports:** which segment should Sigmoid target first for the CRM?
+:::
+::: {.pc-row}
+<span class="chip chip-neutral no-dot">Register-driven · D1</span>
+<span class="pc-next">[Open the Market Prioritisation dashboard](../dashboards/market-prioritisation.qmd)</span>
+:::
+:::
+
+The decision record below reads live from `data/sample/decision_register.csv`; its claims read from
+`data/sample/claim_register.csv`. Edit those files and re-render, and this page updates.
+
+```{python}
+#| label: decision-record
+#| echo: false
+import sys, pathlib
+_root = pathlib.Path.cwd()
+while _root != _root.parent and not (_root / "src").is_dir():
+    _root = _root.parent
+sys.path.insert(0, str(_root))
+from IPython.display import HTML
+from src.registers import render_decision_record, render_claim_cards
+HTML(render_decision_record("D1"))
+```
+
+## Claims behind this decision
+
+Each claim is a **hypothesis**. It advances toward grade B only when real discovery evidence meets the
+bar shown — not before.
+
+```{python}
+#| label: claims
+#| echo: false
+HTML(render_claim_cards("D1"))
+```
+
+::: {.callout-note appearance="simple" icon=false}
+**Go deeper.** Long-form reasoning, analysis plan, and limitations:
+[Working Paper › Market Prioritisation](../working-paper/05-market-prioritisation.qmd). To move a
+claim, add real evidence via the [Evidence Register](../evidence/evidence-register.qmd).
+:::

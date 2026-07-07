@@ -1,0 +1,4 @@
+# Applies to every chapter in working-paper/.
+# Chapters are short and card-structured, so an in-page TOC adds little; the
+# left sidebar already provides chapter navigation.
+toc: false

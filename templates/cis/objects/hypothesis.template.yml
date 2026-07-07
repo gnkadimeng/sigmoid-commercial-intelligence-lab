@@ -1,0 +1,32 @@
+# =============================================================================
+# CIS Object Template · HYPOTHESIS          Standard: CIS §5.1, §6.2
+# Job: Author — a proposed answer/recommendation awaiting validation (§6.2).
+# How to use: copy to  hypotheses/<id>.yml , fill EVERY field.
+# =============================================================================
+
+id: ""             # e.g. H-001
+question_id: ""    # the Question this hypothesis answers
+statement: ""      # the proposed answer, e.g. "Audit firms are the highest-value early market."
+falsifier: ""      # what observation would prove this wrong (testability, §2 Principle 4)
+
+confidence: "D"    # D hypothesis | C indicative | B substantiated | A validated  (or 0.00–1.00, §15)
+status: "draft"    # draft | testing | supported | refuted | superseded
+
+assumptions: []    # explicit assumptions this rests on (no hidden variables, §9)
+evidence: []       # evidence ids that support / refute this (link to Evidence objects)
+
+owner: ""
+created: ""        # YYYY-MM-DD
+updated: ""        # YYYY-MM-DD
+
+# What must be true to advance the grade (make the bar explicit)
+evidence_needed_for_B: ""   # e.g. "2+ independent, low-bias interviews pointing the same way"
+evidence_needed_for_A: ""   # e.g. "a pilot with measured, positive outcome"
+
+# Governance (§12)
+governance:
+  owner: ""
+  reviewer: ""
+  approver: ""
+  version: "0.1"
+  dependencies: []

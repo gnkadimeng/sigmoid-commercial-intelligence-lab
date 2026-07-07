@@ -1,0 +1,95 @@
+---
+title: "Evidence Register"
+subtitle: "Processed evidence records from discovery interviews"
+page-layout: full
+---
+
+::: {.page-context}
+::: {.pc-crumb}
+Evidence <span class="sep">›</span> Evidence Register
+:::
+::: {.pc-supports}
+**This is the real evidence layer.** Claim strengths across the site are computed from the records
+here.
+:::
+::: {.pc-row}
+<span class="chip chip-neutral no-dot">Empty at v0.1 — awaiting fieldwork</span>
+<span class="pc-next">[See how it rolls up](claims-confidence.qmd)</span>
+:::
+:::
+
+Each record maps a discovery interview to a **claim** and a **decision**. To add evidence, run an
+interview (`templates/discovery_interview_template.md`), log it in
+`data/raw/discovery_interviews.csv`, then create records in `data/processed/discovery_evidence.csv`
+using `templates/evidence_capture_template.md`. **Do not label a proposal assertion as validated
+evidence.**
+
+```{python}
+#| label: setup
+#| echo: false
+import sys, pathlib
+_root = pathlib.Path.cwd()
+while _root != _root.parent and not (_root / "src").is_dir():
+    _root = _root.parent
+sys.path.insert(0, str(_root))
+from IPython.display import HTML
+from src.registers import load_discovery_evidence
+from src.utils import load_raw
+
+evidence = load_discovery_evidence()
+interviews = load_raw("discovery_interviews.csv")
+
+def metric(label, value, sub=""):
+    sub_html = f'<div class="metric-sub">{sub}</div>' if sub else ""
+    return (f'<div class="metric"><div class="metric-label">{label}</div>'
+            f'<div class="metric-value">{value}</div>{sub_html}</div>')
+
+HTML(
+    '<div class="metric-row">'
+    + metric("Discovery interviews", len(interviews), "logged")
+    + metric("Evidence records", len(evidence), "mapped to claims")
+    + metric("Claims with evidence", 0 if evidence.empty else evidence["claim_id"].nunique(),
+             "supported or refuted")
+    + "</div>"
+)
+```
+
+## Discovery evidence records
+
+```{python}
+#| label: register-table
+#| echo: false
+if evidence.empty:
+    HTML('<div class="callout callout-note"><div class="callout-body" '
+         'style="padding:1rem 1.2rem">No evidence records yet. The pipeline is ready and validated; '
+         'it is waiting for the first discovery interview. The table will populate here once '
+         '<code>data/processed/discovery_evidence.csv</code> has rows.</div></div>')
+else:
+    display(evidence)
+```
+
+The expected columns are: `evidence_id`, `interview_id`, `decision_id`, `claim_id`, `source_type`,
+`source_name`, `date_collected`, `quality_score`, `bias_risk`, `supports_or_refutes`,
+`evidence_summary`, `confidence_impact`, `notes`.
+
+## Legacy synthetic register (illustrative only)
+
+The original scaffold shipped a small **synthetic** register to exercise the scoring machinery. It is
+kept here for continuity and to demonstrate the roll-up computation, but it is **not real evidence**
+and does not feed the decision pages.
+
+```{python}
+#| label: legacy
+#| echo: false
+from src.utils import load_sample
+from src.evidence import summarise_evidence_by_claim
+
+legacy = load_sample("evidence_register.csv")
+summarise_evidence_by_claim(legacy)
+```
+
+::: {.callout-warning appearance="simple" icon=false}
+**Two layers, kept distinct.** The **discovery evidence** above is the real operating layer (empty at
+v0.1). The **legacy synthetic register** is illustrative scaffolding with older claim ids
+(`H-CRM-AI`, …). Real claims live in `data/sample/claim_register.csv`.
+:::

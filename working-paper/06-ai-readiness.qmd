@@ -1,51 +1,69 @@
 ---
 title: "6. AI Readiness"
+subtitle: "Testing the proposal's central thesis — the CRM as the foundation for AI readiness"
 ---
 
-Tests the proposal's central thesis. Companion tool:
-[AI Readiness Scorecard](../dashboards/ai-readiness-scorecard.qmd).
+::: {.chapter-chips}
+<span class="chip chip-neutral no-dot">Hypothesis H-CRM-AI</span>
+<span class="chip chip-grade-d">Confidence D → C</span>
+<span class="chip chip-neutral no-dot">Companion: <a href="../dashboards/ai-readiness-scorecard.qmd">AI Readiness Scorecard</a></span>
+:::
 
-## Question
-
-*Is the CRM genuinely the foundation for AI readiness — i.e. does CRM/data maturity predict the value
-a customer derives from AI?*
-
-## Hypothesis (H-CRM-AI)
-
-Customers with higher CRM/data and analytics maturity realise more value from AI features built on
-top of the CRM; therefore an **AI Readiness Index** anchored on data quality is a useful predictor of
+::: {.wp-thesis}
+::: {.wp-t-cell}
+::: {.wp-t-label}
+Decision question
+:::
+Is the CRM genuinely the foundation for AI readiness — i.e. does CRM/data maturity predict the value a
+customer derives from AI?
+:::
+::: {.wp-t-cell}
+::: {.wp-t-label}
+Hypothesis (H-CRM-AI)
+:::
+Customers with higher CRM/data and analytics maturity realise more value from AI features built on top
+of the CRM; therefore an **AI Readiness Index** anchored on data quality is a useful predictor of
 downstream AI value.
 
 **Falsifier:** a pilot in which AI-derived value is uncorrelated with (or inversely related to)
 pre-pilot readiness scores.
+:::
+:::
 
-## Evidence needed
-
-- A defined, measurable **AI value outcome** (e.g. time saved, conversion lift, forecast accuracy).
-- Paired data: pre-pilot readiness score and post-pilot realised value, across several customers.
-- Enough spread in readiness to detect a relationship.
-
-## Current evidence
-
+::: {.wp-fields}
+::: {.wp-field}
+### Current evidence
 - Proposal assertion of the thesis — `EV-001` (grade D).
 - Indirect secondary benchmark linking data maturity to AI value — `EV-004` (grade C, medium bias).
 - A *planned* internal pilot to test the thesis — `EV-010` (not yet run).
 - Illustrative readiness scores across synthetic customers (dashboard).
+:::
 
-## Analysis plan
+::: {.wp-field}
+### Evidence needed
+- A defined, measurable **AI value outcome** (e.g. time saved, conversion lift, forecast accuracy).
+- Paired data: pre-pilot readiness score and post-pilot realised value, across several customers.
+- Enough spread in readiness to detect a relationship.
+:::
 
+::: {.wp-field}
+### Analysis plan
 1. Finalise the operational definition of "AI value" (the outcome variable).
 2. Run the pilot; record pre-pilot readiness and post-pilot value.
-3. Test association (readiness vs value); check whether `data_quality` weight is justified.
+3. Test association (readiness vs value); check whether the `data_quality` weight is justified.
 4. Recalibrate the index weights from evidence, not assumption.
+:::
 
-## Limitations
+::: {.wp-field}
+### Next steps
+- Execute `EV-010` (the pilot). Until then, H-CRM-AI stays at grade D → C and must be labelled as such
+  everywhere it appears.
+:::
+:::
 
+::: {.wp-field .is-caution .is-full}
+### Limitations
 - The index currently *encodes* the thesis (data quality heavily weighted) rather than *testing* it;
   circularity must be avoided when validating.
 - Small pilot n will limit statistical confidence.
-
-## Next steps
-
-- Execute `EV-010` (the pilot). Until then, H-CRM-AI stays at grade D→C and must be labelled as such
-  everywhere it appears.
+:::

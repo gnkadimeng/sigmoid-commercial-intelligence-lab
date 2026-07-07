@@ -1,0 +1,38 @@
+# =============================================================================
+# CIS Object Template · FRAMEWORK           Standard: CIS §5.3, §6.3
+# Job: Author — a structured reasoning system.
+# NOTE: Frameworks define LOGIC; they do NOT calculate (§6.3). Calculation is a
+#       Model (§6.4). Keep the two separate.
+# How to use: copy to  frameworks/<id>.yml , fill EVERY field.
+# =============================================================================
+
+id: ""            # e.g. market_prioritisation
+title: ""         # human name
+purpose: ""       # the question this framework helps reason about
+version: "0.1"
+owner: ""
+status: "draft"   # draft | active | deprecated
+
+inputs: []        # named required inputs — declare ALL of them (no hidden variables, §9)
+                  # e.g. [market_size, growth, sales_cycle, deal_size, competition, digital_maturity]
+outputs: []       # what it yields, e.g. ["priority_score 0–100", "segment ranking"]
+
+assumptions: []   # the reasoning assumptions this framework encodes
+limitations: []   # where it should NOT be trusted
+
+# Testing Standard (§14) — a framework that cannot be tested is incomplete (§2 Principle 4)
+tests:
+  - "Required variables exist"
+  - "Missing values handled safely"
+  - "Scores between 0 and 100"
+  - "Rankings deterministic"
+  - "Historical validation passes"
+  - "Sensitivity within threshold"
+
+# Governance (§12)
+governance:
+  owner: ""
+  reviewer: ""
+  approver: ""
+  version: "0.1"
+  dependencies: []

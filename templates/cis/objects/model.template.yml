@@ -1,0 +1,45 @@
+# =============================================================================
+# CIS Object Template · MODEL               Standard: CIS §5.3, §6.4
+# Job: Author — an executable calculation (§6.4).
+# A Model implements a Framework's logic as computation. Examples: Customer Fit
+# Score, Market Prioritisation, AI Readiness Index, CLV, Churn Prediction.
+# How to use: copy to  models/<id>.yml , fill EVERY field.
+# =============================================================================
+
+id: ""             # e.g. market_prioritisation_v1
+title: ""
+framework_id: ""   # the Framework whose logic this model executes
+algorithm: ""      # method — e.g. weighted score | logistic regression | simulation | forecast
+version: "0.1"
+owner: ""
+status: "draft"    # draft | active | deprecated
+
+variables: []      # input variables (map to the Framework's declared inputs — no hidden variables, §9)
+outputs: []        # produced outputs, e.g. ["score 0–100", "probability 0–1"]
+
+# Validation (§10) — record the outcome at each of the six levels
+validation:
+  logical: ""       # do the equations execute correctly?
+  statistical: ""   # do the data support the hypothesis?
+  historical: ""    # would past outcomes have been predicted?
+  expert: ""        # do experienced practitioners agree?
+  operational: ""   # does implementation improve business outcomes?
+  continuous: ""    # has new evidence changed the result?
+
+performance: ""     # metrics — e.g. accuracy / AUC / MAE / R² / sensitivity band
+
+# Testing Standard (§14)
+tests:
+  - "Required variables exist"
+  - "Missing values handled safely"
+  - "Outputs within declared range"
+  - "Deterministic given identical inputs"
+  - "Sensitivity within threshold"
+
+# Governance (§12)
+governance:
+  owner: ""
+  reviewer: ""
+  approver: ""
+  version: "0.1"
+  dependencies: []

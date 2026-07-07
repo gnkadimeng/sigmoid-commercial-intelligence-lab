@@ -1,15 +1,28 @@
 ---
 title: "Positioning Dashboard"
-subtitle: "Decision Question 2 — CRM vs Revenue Operations Platform vs AI Readiness Platform"
+subtitle: "Decision 2 — CRM vs Revenue Operations Platform vs AI Readiness Platform"
+page-layout: full
 ---
 
-> **Illustrative, not validated (confidence grade C).** The per-option scores below are an initial,
-> synthetic assessment against the [Positioning Canvas](../frameworks/positioning_canvas.yml). They
-> structure the debate; they do not settle it.
+::: {.page-context}
+::: {.pc-crumb}
+Dashboards <span class="sep">›</span> Positioning
+:::
+::: {.pc-supports}
+**Supports** [Decision 2 · Positioning](../decisions/positioning.qmd) — CRM, Revenue Operations, or AI
+Readiness Platform?
+:::
+::: {.pc-row}
+<span class="chip chip-grade-c">Confidence C · Illustrative</span>
+<span class="chip chip-neutral no-dot">Synthetic analyst assessment</span>
+<span class="pc-next">Related: [Positioning Canvas](../frameworks/index.qmd) · [Claims &amp; Confidence](../evidence/claims-confidence.qmd)</span>
+:::
+:::
 
-This page compares the three candidate positionings on six weighted criteria and ranks them. The
-`evidence_strength` criterion keeps aspirational framing honest — a position that sounds exciting but
-has no evidence is penalised.
+> **Illustrative, not validated.** The per-option scores below are an initial, *synthetic* assessment
+> against the [Positioning Canvas](../frameworks/index.qmd). They structure the debate; they do not
+> settle it. The `evidence_strength` criterion keeps aspirational framing honest — a position that
+> sounds exciting but has no evidence is penalised.
 
 ```{python}
 #| label: setup
@@ -23,9 +36,17 @@ sys.path.insert(0, str(_root))
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+from IPython.display import HTML
 
 from src.utils import load_framework, weights_from_framework
 from src.scoring import weighted_score
+
+PLOTLY_TEMPLATE = "plotly_white"
+OPTION_COLORS = {
+    "CRM Platform": "#6b7684",
+    "Revenue Operations Platform": "#2f6bb0",
+    "AI Readiness Platform": "#7a4fb0",
+}
 ```
 
 ```{python}
@@ -60,6 +81,29 @@ ranked = assessment.sort_values("positioning_score", ascending=False).reset_inde
 ranked.insert(0, "rank", ranked.index + 1)
 ```
 
+```{python}
+#| label: metrics
+#| code-summary: "Build summary metrics (computed, not hardcoded)"
+leader = ranked.iloc[0]
+second = ranked.iloc[1]
+margin = leader["positioning_score"] - second["positioning_score"]
+weakest_evidence = assessment.sort_values("evidence_strength").iloc[0]
+
+def metric(label, value, sub=""):
+    sub_html = f'<div class="metric-sub">{sub}</div>' if sub else ""
+    return (f'<div class="metric"><div class="metric-label">{label}</div>'
+            f'<div class="metric-value">{value}</div>{sub_html}</div>')
+
+HTML(
+    '<div class="metric-row">'
+    + metric("Options compared", len(ranked), "candidate positionings")
+    + metric("Leading framing", leader["option"], f'score {leader["positioning_score"]:.1f}')
+    + metric("Margin over #2", f'+{margin:.1f}', f'vs {second["option"]}')
+    + metric("Weakest evidence", weakest_evidence["option"], "least-evidenced framing")
+    + "</div>"
+)
+```
+
 ## Ranking
 
 ```{python}
@@ -78,13 +122,14 @@ fig = px.bar(
     x="positioning_score",
     y="option",
     orientation="h",
-    color="positioning_score",
-    color_continuous_scale="Teal",
+    color="option",
+    color_discrete_map=OPTION_COLORS,
     range_x=[0, 100],
     labels={"positioning_score": "Positioning score (0–100)", "option": ""},
-    title="Weighted positioning score (illustrative)",
+    template=PLOTLY_TEMPLATE,
 )
-fig.update_layout(coloraxis_showscale=False, height=340, margin=dict(l=10, r=10, t=50, b=10))
+fig.update_layout(showlegend=False, height=300, margin=dict(l=10, r=10, t=20, b=10),
+                  font=dict(family="Inter, system-ui, sans-serif", size=13))
 fig.show()
 ```
 
@@ -101,11 +146,14 @@ for _, row in assessment.iterrows():
         theta=criteria + [criteria[0]],
         fill="toself",
         name=row["option"],
+        line=dict(color=OPTION_COLORS.get(row["option"])),
     ))
 fig.update_layout(
     polar=dict(radialaxis=dict(visible=True, range=[0, 10])),
-    height=460, margin=dict(l=40, r=40, t=40, b=40),
-    title="Positioning profiles across criteria (0–10, synthetic)",
+    height=460, margin=dict(l=40, r=40, t=30, b=40),
+    template=PLOTLY_TEMPLATE,
+    font=dict(family="Inter, system-ui, sans-serif", size=13),
+    legend=dict(orientation="h", yanchor="bottom", y=-0.15, xanchor="center", x=0.5),
 )
 fig.show()
 ```
@@ -120,14 +168,14 @@ pd.DataFrame(framework["criteria"])[["name", "weight", "direction", "rationale"]
 ## Interpretation (provisional)
 
 - **CRM Platform** wins on *clarity* but is weak on *differentiation* — buyers get it instantly, yet
-  see it as commoditised (cf. evidence EV-007).
+  see it as commoditised (cf. evidence `EV-007`).
 - **Revenue Operations Platform** balances differentiation, pain alignment, and scalability.
 - **AI Readiness Platform** scores highest on *investor appeal* but lowest on *evidence strength* —
   the most exciting story is the least evidenced today (cf. Hypothesis H-CRM-AI).
 
-::: {.callout-warning}
+::: {.callout-warning appearance="simple"}
 ## This is a framing tool, not a verdict
 The scores are one analyst's synthetic judgement. Positioning should be decided against **customer
 evidence** — message testing, win/loss analysis, discovery calls — not an internal scoring exercise.
-See [Working Paper Ch.4](../working-paper/04-crm-positioning.qmd).
+See [Working Paper Ch. 4](../working-paper/04-crm-positioning.qmd).
 :::

@@ -1,15 +1,29 @@
 ---
 title: "AI Readiness Scorecard"
-subtitle: "Operationalising the proposal's core claim — 'the CRM is the foundation for AI readiness'"
+subtitle: "Operationalising the proposal's core claim — the CRM as the foundation for AI readiness"
+page-layout: full
 ---
 
-> **Illustrative, not validated (confidence grade C/D).** Scores use *synthetic* customer data and the
-> [AI Readiness Index](../frameworks/ai_readiness_index.yml). The underlying claim — that CRM/data
-> maturity predicts AI value — is **Hypothesis H-CRM-AI** and is not yet validated.
+::: {.page-context}
+::: {.pc-crumb}
+Dashboards <span class="sep">›</span> AI Readiness Scorecard
+:::
+::: {.pc-supports}
+**Supports** the thesis **H-CRM-AI** — is the CRM the foundation for AI readiness? Context in
+[Working Paper › AI Readiness](../working-paper/06-ai-readiness.qmd).
+:::
+::: {.pc-row}
+<span class="chip chip-grade-d">Confidence D → C</span>
+<span class="chip chip-neutral no-dot">Synthetic data</span>
+<span class="pc-next">Related: [Framework](../frameworks/index.qmd) · [Evidence Register](../evidence/evidence-register.qmd)</span>
+:::
+:::
 
-This scorecard scores each synthetic customer on AI readiness via `calculate_ai_readiness_score`,
-where **data quality** carries the heaviest weight. It exists to make the proposal's central thesis
-*measurable* so it can later be tested against real outcomes.
+> **Illustrative, not validated.** Scores use *synthetic* customer data and the
+> [AI Readiness Index](../frameworks/index.qmd), where **data quality** carries the heaviest weight.
+> The underlying claim — that CRM/data maturity predicts AI value — is **Hypothesis H-CRM-AI** and is
+> not yet validated. This scorecard exists to make that thesis *measurable*, so it can later be tested
+> against real outcomes.
 
 ```{python}
 #| label: setup
@@ -22,9 +36,12 @@ sys.path.insert(0, str(_root))
 
 import pandas as pd
 import plotly.express as px
+from IPython.display import HTML
 
 from src.utils import load_sample
 from src.scoring import calculate_ai_readiness_score, calculate_customer_fit_score
+
+PLOTLY_TEMPLATE = "plotly_white"
 ```
 
 ```{python}
@@ -43,6 +60,30 @@ def band(score):
 
 customers["readiness_band"] = customers["ai_readiness_score"].map(band)
 ranked = customers.sort_values("ai_readiness_score", ascending=False).reset_index(drop=True)
+```
+
+```{python}
+#| label: metrics
+#| code-summary: "Build summary metrics (computed, not hardcoded)"
+n = len(customers)
+mean_readiness = customers["ai_readiness_score"].mean()
+high_n = int((customers["readiness_band"] == "High").sum())
+high_pct = 100 * high_n / n
+top = ranked.iloc[0]
+
+def metric(label, value, sub=""):
+    sub_html = f'<div class="metric-sub">{sub}</div>' if sub else ""
+    return (f'<div class="metric"><div class="metric-label">{label}</div>'
+            f'<div class="metric-value">{value}</div>{sub_html}</div>')
+
+HTML(
+    '<div class="metric-row">'
+    + metric("Customers scored", n, "synthetic profiles")
+    + metric("Mean AI readiness", f"{mean_readiness:.1f}", "out of 100 (illustrative)")
+    + metric("High-readiness share", f"{high_pct:.0f}%", f"{high_n} of {n} customers")
+    + metric("Most ready", top["company_name"], f'score {top["ai_readiness_score"]:.1f}')
+    + "</div>"
+)
 ```
 
 ## Customer readiness table
@@ -66,9 +107,11 @@ fig = px.histogram(
     x="ai_readiness_score",
     nbins=8,
     labels={"ai_readiness_score": "AI readiness score (0–100)"},
-    title="Distribution of AI readiness across the (synthetic) customer base",
+    template=PLOTLY_TEMPLATE,
+    color_discrete_sequence=["#2f6bb0"],
 )
-fig.update_layout(height=360, bargap=0.08, margin=dict(l=10, r=10, t=50, b=10))
+fig.update_layout(height=340, bargap=0.08, margin=dict(l=10, r=10, t=20, b=10),
+                  font=dict(family="Inter, system-ui, sans-serif", size=13))
 fig.show()
 ```
 
@@ -91,10 +134,12 @@ fig = px.scatter(
         "ai_readiness_score": "AI readiness score (0–100)",
         "readiness_band": "Readiness",
     },
-    title="AI readiness vs CRM fit (bubble size = data quality)",
     category_orders={"readiness_band": ["High", "Medium", "Low"]},
+    color_discrete_map={"High": "#2f8158", "Medium": "#b07a1e", "Low": "#6b7684"},
+    template=PLOTLY_TEMPLATE,
 )
-fig.update_layout(height=440, margin=dict(l=10, r=10, t=50, b=10))
+fig.update_layout(height=440, margin=dict(l=10, r=10, t=20, b=10),
+                  font=dict(family="Inter, system-ui, sans-serif", size=13))
 fig.show()
 ```
 
@@ -112,17 +157,34 @@ fig = px.bar(
     y="dimension",
     orientation="h",
     range_x=[0, 10],
-    title="Average maturity by dimension (0–10, synthetic)",
     labels={"mean_score_0_10": "Mean (0–10)", "dimension": ""},
+    template=PLOTLY_TEMPLATE,
+    color_discrete_sequence=["#2f6bb0"],
 )
-fig.update_layout(height=340, margin=dict(l=10, r=10, t=50, b=10))
+fig.update_layout(height=320, margin=dict(l=10, r=10, t=20, b=10),
+                  font=dict(family="Inter, system-ui, sans-serif", size=13))
 fig.show()
 ```
 
-::: {.callout-important}
+## Interpretation
+
+- `data_quality` is the load-bearing input of this index because the proposal asserts AI value flows
+  from the data/CRM foundation.
+- A wide readiness distribution is *useful*: it gives the eventual pilot enough spread to detect
+  whether readiness actually predicts AI value.
+- Readiness and fit are scored independently — treat any apparent relationship in the scatter as a
+  question to test, not a finding.
+
+::: {.callout-important appearance="simple"}
 ## The claim under test
-`data_quality` is the load-bearing input of this index because the proposal asserts AI value flows
-from the data/CRM foundation. That assertion is **Hypothesis H-CRM-AI (grade D→C)**. Validating it
-requires linking readiness scores to *actual* AI outcomes in a pilot — see
-[Working Paper Ch.6](../working-paper/06-ai-readiness.qmd).
+The heavy `data_quality` weight makes this index a restatement of **Hypothesis H-CRM-AI (grade
+D → C)**. Validating it requires linking readiness scores to *actual* AI outcomes in a pilot — see
+[Working Paper Ch. 6](../working-paper/06-ai-readiness.qmd).
+:::
+
+::: {.callout-warning appearance="simple"}
+## Limitations
+- Synthetic customers only; scores exercise the machinery, they do not describe a real book of
+  business.
+- The index *encodes* the thesis rather than testing it — avoid circular reasoning when validating.
 :::

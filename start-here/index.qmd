@@ -1,0 +1,96 @@
+---
+title: "Start Here"
+subtitle: "What the Commercial Intelligence Lab is, and how to move through it"
+---
+
+::: {.page-context}
+::: {.pc-crumb}
+Start Here <span class="sep">›</span> Overview
+:::
+::: {.pc-supports}
+**This page orients you.** It explains what the lab is, what is validated versus not, and the fastest
+route in for your role.
+:::
+::: {.pc-row}
+<span class="chip chip-grade-c no-dot">v0.1 · Hypothesis stage</span>
+<span class="chip chip-neutral no-dot">Nothing here is validated yet</span>
+<span class="pc-next">[Read the Product Brief](product-brief.qmd)</span>
+:::
+:::
+
+The Commercial Intelligence Lab turns the Sigmoid Analytica CRM proposal into a **decision system**:
+a place where our commercial strategy is broken into concrete decisions, scored with transparent
+frameworks, and held to an explicit standard for what counts as evidence. You are not browsing
+documentation — you are moving through a workflow.
+
+## The mental model
+
+Everything on this site serves one loop. Read it left to right:
+
+::: {.lifecycle}
+<li><span class="stage"><span class="num">1</span>Decisions</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">2</span>Evidence</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">3</span>Frameworks</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">4</span>Dashboards</span></li>
+<li><span class="arrow">→</span><span class="stage is-loop"><span class="num">5</span>Recommendations</span></li>
+:::
+
+We start from a **decision**, ask what **evidence** bears on it, score it with a **framework**,
+explore it in a **dashboard**, and only then — when evidence is strong enough — reach a
+**recommendation**. The [Working Paper](../working-paper/index.qmd) is the long-form discussion behind
+these steps; it supports the workflow, it does not lead it.
+
+## What is validated, and what is not
+
+::: {.callout-important appearance="simple" icon=false}
+**Read this before trusting any number.** Every score, ranking, and figure on this site is computed
+from **synthetic sample data** and carries confidence grade **C or D**. Nothing is a validated market
+fact. The source proposal is treated as **Hypothesis v0.1** — it can *raise* a hypothesis, never
+*validate* one. See [Claims & Confidence](../evidence/claims-confidence.qmd) for the live status of
+every claim.
+:::
+
+## Choose your path
+
+::: {.cil-cards}
+::: {.cil-card}
+<div class="card-kicker">Investor / Operator</div>
+<h3>See the thesis under test</h3>
+<p>Understand the pitch, the decisions in play, and where the evidence stands today.</p>
+::: {.path-route}
+<span class="step is-start">Home</span><span class="arw">→</span><span class="step">Product Brief</span><span class="arw">→</span><span class="step">Decisions</span><span class="arw">→</span><span class="step">Dashboards</span><span class="arw">→</span><span class="step">Current Status</span>
+:::
+<span class="card-go">Start with the Product Brief</span>
+[](product-brief.qmd){.stretched-link aria-label="Investor path: Product Brief"}
+:::
+
+::: {.cil-card}
+<div class="card-kicker">Product / Commercial</div>
+<h3>Work the decisions</h3>
+<p>Open the decisions, adjust the framework weights, and track what evidence would move each one.</p>
+::: {.path-route}
+<span class="step is-start">Home</span><span class="arw">→</span><span class="step">Decisions</span><span class="arw">→</span><span class="step">Frameworks</span><span class="arw">→</span><span class="step">Dashboards</span><span class="arw">→</span><span class="step">Evidence Register</span>
+:::
+<span class="card-go">Start with the Decisions</span>
+[](../decisions/index.qmd){.stretched-link aria-label="Product path: Decisions"}
+:::
+
+::: {.cil-card}
+<div class="card-kicker">Research / Data Science</div>
+<h3>Inspect the machinery</h3>
+<p>Read the governing standard, the evidence model, the frameworks, and the tests that guard them.</p>
+::: {.path-route}
+<span class="step is-start">Home</span><span class="arw">→</span><span class="step">CIS</span><span class="arw">→</span><span class="step">Evidence</span><span class="arw">→</span><span class="step">Frameworks</span><span class="arw">→</span><span class="step">Tests</span><span class="arw">→</span><span class="step">Working Paper</span>
+:::
+<span class="card-go">Start with the CIS</span>
+[](../cis/commercial-intelligence-specification.md){.stretched-link aria-label="Research path: CIS"}
+:::
+:::
+
+## In this section
+
+- [Product Brief](product-brief.qmd) — what we built, in one read.
+- [How to Use This Lab](how-to-use.qmd) — the workflow, confidence grades, and common tasks.
+- [First Evidence Sprint](first-evidence-sprint.qmd) — the first real fieldwork: run interviews, log
+  evidence, review claims.
+- [Current Status](current-status.qmd) — where the three decisions stand right now (live).

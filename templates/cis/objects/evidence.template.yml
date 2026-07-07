@@ -1,0 +1,34 @@
+# =============================================================================
+# CIS Object Template · EVIDENCE RECORD      Standard: CIS §5.2, §8
+# Job: Author — one dated, sourced observation for/against a claim.
+# Evidence is the foundation of every recommendation (§8). Do NOT record an
+# assertion (proposal/opinion) as validated evidence.
+# How to use: copy to  evidence/<id>.yml , fill EVERY field.
+# =============================================================================
+
+id: ""            # e.g. EV-001
+claim_id: ""      # the Hypothesis or Recommendation this evidence bears on
+summary: ""       # one line: what this says about the claim
+
+source: ""        # where it came from (name it)
+type: ""          # crm_data | financial | internal_analytics | interview | survey |
+                  # market_report | industry_news | expert_opinion
+author: ""        # who produced / collected it
+date: ""          # YYYY-MM-DD
+
+# Confidence by source type (§8 category table): Very High → Low
+confidence: ""    # Very High | High | Medium | Low
+sample_size: ""   # n (or "n/a")
+quality_score: "" # 0.00–1.00 (rigour × directness × recency)
+bias: ""          # low | medium | high   — and name the bias mechanism in `limitations`
+limitations: ""   # caveats; why this could be wrong or partial
+
+supports: ""      # supports | refutes | mixed | neutral
+
+# Governance (§12)
+governance:
+  owner: ""
+  reviewer: ""
+  approver: ""
+  version: "0.1"
+  dependencies: []

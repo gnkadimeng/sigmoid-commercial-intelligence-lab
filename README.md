@@ -110,6 +110,55 @@ lifecycle. Sample datasets are synthetic.
 
 ---
 
+## How to Add Real Evidence
+
+The **Evidence Operating Layer** turns real customer discovery into structured evidence that moves
+claims and, in turn, decisions. The flow is: **interview → evidence record → claim → decision**. The
+registers are the single source of truth; the decision and claims pages recompute from them.
+
+> **Rules:** do not invent real evidence, do not mark anything as validated, and keep the project at
+> v0.1 hypothesis stage. A claim only reaches grade **B** when multiple independent, low-bias items
+> converge — one interview is never enough.
+
+1. **Complete a discovery interview.** Use `templates/discovery_interview_template.md` to run it and
+   score the signals honestly (including `evidence_quality_score` and `bias_risk`).
+2. **Add the interview** as one row in `data/raw/discovery_interviews.csv` (schema columns:
+   `interview_id … supports_or_refutes`).
+3. **Map the interview to claims** by adding one row per claim to
+   `data/processed/discovery_evidence.csv`, using `templates/evidence_capture_template.md`. Each row
+   links an `evidence_id` to a `claim_id` (from `data/sample/claim_register.csv`) and a `decision_id`.
+4. **Run the tests:**
+
+   ```bash
+   pytest
+   ```
+
+   The validators check required columns, that confidence grades are only A/B/C/D, that
+   `supports_or_refutes` is only supports/refutes/mixed/neutral, and that score fields are in range.
+5. **Render the site:**
+
+   ```bash
+   quarto render
+   ```
+
+6. **Review whether claim confidence changed.** Open **Evidence → Claims & Confidence** and the
+   relevant **Decision** page; the real-evidence counts recompute from your new records.
+7. **Update decision status if needed.** If a claim clears its `evidence_needed_for_B`, update that
+   claim's `current_confidence_grade` in `data/sample/claim_register.csv` and the decision's
+   `current_status` / `current_confidence_grade` in `data/sample/decision_register.csv`. Record *why*
+   (an ADR or a note) — grade changes are decisions, not edits.
+
+**Registers at a glance**
+
+| File | Role |
+|---|---|
+| `data/sample/decision_register.csv` | The three decisions, their status, confidence, and required grade |
+| `data/sample/claim_register.csv` | The hypotheses behind each decision, and what evidence each needs |
+| `data/raw/discovery_interviews.csv` | Raw fieldwork — one row per interview |
+| `data/processed/discovery_evidence.csv` | Evidence records mapping interviews → claims → decisions |
+
+---
+
 ## Quick reference
 
 ```bash

@@ -1,5 +1,11 @@
 # ADR-0002: CIS as the governance model; the PDF as a hypothesis source
 
+::: {.chapter-chips}
+<span class="chip chip-grade-a">Status · Accepted</span>
+<span class="chip chip-neutral no-dot">2026-07-03</span>
+<span class="chip chip-neutral no-dot">Related · ADR-0001</span>
+:::
+
 - **Status:** Accepted
 - **Date:** 2026-07-03
 - **Deciders:** Sigmoid Commercial Intelligence Lab

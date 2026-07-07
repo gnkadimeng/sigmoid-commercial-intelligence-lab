@@ -1,0 +1,96 @@
+---
+title: "Decisions"
+subtitle: "The strategic decisions the lab exists to make — driven by the decision register"
+---
+
+::: {.page-context}
+::: {.pc-crumb}
+Decisions <span class="sep">›</span> Overview
+:::
+::: {.pc-supports}
+**This is the spine of the lab.** Every framework, dashboard, and claim exists to answer one of the
+decisions below.
+:::
+::: {.pc-row}
+<span class="chip chip-grade-c no-dot">All at hypothesis stage</span>
+<span class="pc-next">[Start with Market Entry](market-entry.qmd)</span>
+:::
+:::
+
+We organise the project around decisions, not documents. The table below reads live from
+`data/sample/decision_register.csv` — the register is the source of truth, and each decision links to
+its claims, frameworks, and dashboards.
+
+```{python}
+#| label: decisions-summary
+#| echo: false
+import sys, pathlib
+_root = pathlib.Path.cwd()
+while _root != _root.parent and not (_root / "src").is_dir():
+    _root = _root.parent
+sys.path.insert(0, str(_root))
+from IPython.display import HTML
+from src.registers import (load_decision_register, load_claim_register,
+                           _grade_chip, _esc)
+
+decisions = load_decision_register()
+claims = load_claim_register()
+
+def metric(label, value, sub=""):
+    sub_html = f'<div class="metric-sub">{sub}</div>' if sub else ""
+    return (f'<div class="metric"><div class="metric-label">{label}</div>'
+            f'<div class="metric-value">{value}</div>{sub_html}</div>')
+
+HTML(
+    '<div class="metric-row">'
+    + metric("Decisions", len(decisions), "under active enquiry")
+    + metric("Claims", len(claims), "all hypotheses (grade C/D)")
+    + metric("Recommendations", "0", "grade B+ — none yet, by design")
+    + "</div>"
+)
+```
+
+```{python}
+#| label: decisions-table
+#| echo: false
+slug = {"D1": "market-entry", "D2": "positioning", "D3": "gtm-evidence-gate"}
+rows = []
+for _, d in decisions.iterrows():
+    did = d["decision_id"]
+    link = f'<a href="{slug.get(did, "index")}.html">{_esc(d["decision_name"])}</a>'
+    n_claims = int((claims["decision_id"] == did).sum())
+    rows.append(
+        "<tr>"
+        f'<td>{_esc(did)}</td>'
+        f'<td>{link}<br><span class="text-muted-sig">{_esc(d["decision_question"])}</span></td>'
+        f'<td>{_esc(d["current_status"])}</td>'
+        f'<td>{_grade_chip(d["current_confidence_grade"])} → {_grade_chip(d["required_confidence_grade"])}</td>'
+        f'<td>{n_claims}</td>'
+        "</tr>"
+    )
+
+HTML(
+    '<table class="table"><thead><tr>'
+    '<th>ID</th><th>Decision</th><th>Status</th><th>Confidence → required</th><th>Claims</th>'
+    '</tr></thead><tbody>' + "".join(rows) + '</tbody></table>'
+)
+```
+
+## How a decision advances
+
+::: {.lifecycle}
+<li><span class="stage">Hypothesis</span></li>
+<li><span class="arrow">→</span><span class="stage">Discovery evidence</span></li>
+<li><span class="arrow">→</span><span class="stage">Claim reaches grade B</span></li>
+<li><span class="arrow">→</span><span class="stage is-loop">Recommendation</span></li>
+:::
+
+A decision cannot become a recommendation until its claims clear **grade B**. Evidence is collected
+through the [Evidence Operating Layer](../evidence/index.qmd): a discovery interview becomes structured
+evidence, which supports or refutes a claim, which supports a decision.
+
+::: {.callout-note appearance="simple" icon=false}
+**Nothing is validated.** Every decision is at hypothesis stage. See the live claim strengths on
+[Claims & Confidence](../evidence/claims-confidence.qmd) and the current picture on
+[Current Status](../start-here/current-status.qmd).
+:::

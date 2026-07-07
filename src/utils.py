@@ -17,6 +17,8 @@ from typing import Any, Mapping
 PROJECT_ROOT: Path = Path(__file__).resolve().parents[1]
 DATA_DIR: Path = PROJECT_ROOT / "data"
 SAMPLE_DIR: Path = DATA_DIR / "sample"
+RAW_DIR: Path = DATA_DIR / "raw"
+PROCESSED_DIR: Path = DATA_DIR / "processed"
 FRAMEWORKS_DIR: Path = PROJECT_ROOT / "frameworks"
 
 
@@ -78,6 +80,32 @@ def load_sample(name: str):
 
     path = SAMPLE_DIR / name
     return pd.read_csv(path)
+
+
+def load_raw(name: str):
+    """Load a CSV from data/raw/ into a DataFrame.
+
+    Handles header-only template files (returns an empty DataFrame with the declared columns)
+    rather than raising — this is the expected state until real evidence is collected.
+    """
+    import pandas as pd
+
+    path = RAW_DIR / name
+    try:
+        return pd.read_csv(path)
+    except pd.errors.EmptyDataError:
+        return pd.DataFrame()
+
+
+def load_processed(name: str):
+    """Load a CSV from data/processed/ into a DataFrame (empty-safe, like ``load_raw``)."""
+    import pandas as pd
+
+    path = PROCESSED_DIR / name
+    try:
+        return pd.read_csv(path)
+    except pd.errors.EmptyDataError:
+        return pd.DataFrame()
 
 
 def load_framework(name: str) -> dict:

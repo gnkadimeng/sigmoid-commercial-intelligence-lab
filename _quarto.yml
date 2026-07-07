@@ -3,9 +3,22 @@ project:
   output-dir: _site
   execute-dir: project
   render:
-    - "*.qmd"
-    - "working-paper/*.qmd"
+    - "index.qmd"
+    - "start-here/*.qmd"
+    - "decisions/*.qmd"
+    - "evidence/*.qmd"
+    - "frameworks/index.qmd"
     - "dashboards/*.qmd"
+    - "working-paper/*.qmd"
+    - "governance/*.qmd"
+    - "cis/commercial-intelligence-specification.md"
+    - "docs/decision-records/*.qmd"
+    - "docs/decision-records/*.md"
+    # Only the three sprint instruments are rendered so they are linkable from the site.
+    # discovery_interview_template.md and evidence_capture_template.md stay repo-only operator docs.
+    - "templates/discovery_interview_script.md"
+    - "templates/discovery_interview_scoring_guide.md"
+    - "templates/positioning_message_test.md"
   preview:
     port: 4321
     browser: false
@@ -17,47 +30,140 @@ website:
   page-navigation: true
   search: true
   navbar:
-    background: primary
+    title: "Sigmoid CIL"
+    background: dark
     pinned: true
+    collapse-below: lg
     left:
       - text: "Home"
         file: index.qmd
-      - text: "Working Paper"
-        file: working-paper/index.qmd
+      - text: "Start Here"
+        file: start-here/index.qmd
+      - text: "Decisions"
+        file: decisions/index.qmd
+      - text: "Evidence"
+        file: evidence/index.qmd
       - text: "Frameworks"
         file: frameworks/index.qmd
       - text: "Dashboards"
-        menu:
-          - text: "Market Prioritisation"
-            file: dashboards/market-prioritisation.qmd
-          - text: "AI Readiness Scorecard"
-            file: dashboards/ai-readiness-scorecard.qmd
-          - text: "Positioning Dashboard"
-            file: dashboards/positioning-dashboard.qmd
-      - text: "CIS"
-        file: cis/commercial-intelligence-specification.md
-      - text: "Decision Records"
-        file: docs/decision-records/index.qmd
+        file: dashboards/index.qmd
+      - text: "Working Paper"
+        file: working-paper/index.qmd
+      - text: "Governance"
+        file: governance/index.qmd
     right:
       - icon: github
         href: https://github.com/
-        aria-label: GitHub
+        aria-label: GitHub repository
 
+  # One contextual sidebar per section — answers "where am I?" everywhere.
   sidebar:
-    - title: "Working Paper"
+    - id: start-here
+      title: "Start Here"
       style: floating
       collapse-level: 2
       contents:
-        - working-paper/index.qmd
-        - working-paper/01-introduction.qmd
-        - working-paper/02-problem-context.qmd
-        - working-paper/03-commercial-intelligence-specification.qmd
-        - working-paper/04-crm-positioning.qmd
-        - working-paper/05-market-prioritisation.qmd
-        - working-paper/06-ai-readiness.qmd
-        - working-paper/07-go-to-market.qmd
-        - working-paper/08-validation-and-tests.qmd
-        - working-paper/09-conclusion.qmd
+        - text: "Overview"
+          file: start-here/index.qmd
+        - text: "Product Brief"
+          file: start-here/product-brief.qmd
+        - text: "How to Use This Lab"
+          file: start-here/how-to-use.qmd
+        - text: "First Evidence Sprint"
+          file: start-here/first-evidence-sprint.qmd
+        - text: "Current Status"
+          file: start-here/current-status.qmd
+
+    - id: decisions
+      title: "Decisions"
+      style: floating
+      contents:
+        - text: "Overview"
+          file: decisions/index.qmd
+        - text: "1 · Market Entry"
+          file: decisions/market-entry.qmd
+        - text: "2 · Positioning"
+          file: decisions/positioning.qmd
+        - text: "3 · GTM Evidence Gate"
+          file: decisions/gtm-evidence-gate.qmd
+
+    - id: evidence
+      title: "Evidence"
+      style: floating
+      contents:
+        - text: "Overview"
+          file: evidence/index.qmd
+        - text: "Claims & Confidence"
+          file: evidence/claims-confidence.qmd
+        - text: "Evidence Register"
+          file: evidence/evidence-register.qmd
+        - text: "Hypothesis v0.1 · Proposal Source"
+          file: evidence/proposal-hypothesis-v01.qmd
+
+    - id: frameworks
+      title: "Frameworks"
+      style: floating
+      contents:
+        - text: "All Frameworks"
+          file: frameworks/index.qmd
+
+    - id: dashboards
+      title: "Dashboards"
+      style: floating
+      contents:
+        - text: "Overview"
+          file: dashboards/index.qmd
+        - text: "Market Prioritisation"
+          file: dashboards/market-prioritisation.qmd
+        - text: "AI Readiness Scorecard"
+          file: dashboards/ai-readiness-scorecard.qmd
+        - text: "Positioning Dashboard"
+          file: dashboards/positioning-dashboard.qmd
+
+    - id: working-paper
+      title: "Working Paper"
+      style: floating
+      collapse-level: 2
+      contents:
+        - text: "Overview"
+          file: working-paper/index.qmd
+        - text: "1 · Introduction"
+          file: working-paper/01-introduction.qmd
+        - text: "2 · Problem Context"
+          file: working-paper/02-problem-context.qmd
+        - text: "3 · CIS in Practice"
+          file: working-paper/03-commercial-intelligence-specification.qmd
+        - text: "4 · CRM Positioning"
+          file: working-paper/04-crm-positioning.qmd
+        - text: "5 · Market Prioritisation"
+          file: working-paper/05-market-prioritisation.qmd
+        - text: "6 · AI Readiness"
+          file: working-paper/06-ai-readiness.qmd
+        - text: "7 · Go-to-Market"
+          file: working-paper/07-go-to-market.qmd
+        - text: "8 · Validation & Tests"
+          file: working-paper/08-validation-and-tests.qmd
+        - text: "9 · Conclusion"
+          file: working-paper/09-conclusion.qmd
+
+    - id: governance
+      title: "Governance"
+      style: floating
+      contents:
+        - text: "Overview"
+          file: governance/index.qmd
+        - text: "Commercial Intelligence Specification"
+          file: cis/commercial-intelligence-specification.md
+        - section: "Decision Records"
+          contents:
+            - text: "All Records"
+              file: docs/decision-records/index.qmd
+            - text: "Project Architecture"
+              file: docs/decision-records/ADR-0001-project-architecture.md
+            - text: "CIS as Governance Model"
+              file: docs/decision-records/ADR-0002-cis-as-governance-model.md
+        - text: "Testing Standard"
+          file: governance/testing-standard.qmd
 
   page-footer:
     left: "Sigmoid Analytica — Commercial Intelligence Lab · v0.1 (hypothesis stage)"
@@ -67,15 +173,19 @@ format:
   html:
     theme:
       - cosmo
-    css: assets/styles.css
+      - styles.scss
     toc: true
     toc-depth: 3
+    toc-title: "On this page"
+    anchor-sections: true
     code-fold: true
     code-tools: true
     code-copy: true
+    code-summary: "Show code"
     smooth-scroll: true
     fig-responsive: true
     df-print: paged
+    link-external-newwindow: true
     execute:
       warning: false
 

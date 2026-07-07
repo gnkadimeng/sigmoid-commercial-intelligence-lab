@@ -1,49 +1,67 @@
 ---
 title: "5. Market Prioritisation"
+subtitle: "Decision 1 · Which market segment should Sigmoid target first for the CRM?"
 ---
 
-Addresses **Decision Question 1**. Companion tool:
-[Market Prioritisation Dashboard](../dashboards/market-prioritisation.qmd).
+::: {.chapter-chips}
+<span class="chip chip-neutral no-dot">Decision 1 · Market entry</span>
+<span class="chip chip-grade-c">Confidence C · Indicative</span>
+<span class="chip chip-neutral no-dot">Companion: <a href="../dashboards/market-prioritisation.qmd">Market Prioritisation dashboard</a></span>
+:::
 
-## Question
-
-*Which market segment should Sigmoid target first for the CRM?*
-
-## Hypothesis
-
+::: {.wp-thesis}
+::: {.wp-t-cell}
+::: {.wp-t-label}
+Decision question
+:::
+Which market segment should Sigmoid target first for the CRM?
+:::
+::: {.wp-t-cell}
+::: {.wp-t-label}
+Hypothesis
+:::
 Segments with **acute, funded pain and short sales cycles** (initial candidates: audit and
-professional-services firms) will out-perform large-but-diffuse segments (SMEs) and
-slow-procurement public-sector segments (municipalities) as a *first* target.
+professional-services firms) will out-perform large-but-diffuse segments (SMEs) and slow-procurement
+public-sector segments (municipalities) as a *first* target.
 
-**Falsifier:** discovery/pilot evidence showing a large-but-diffuse or public-sector segment
+**Falsifier:** discovery or pilot evidence showing a large-but-diffuse or public-sector segment
 converts faster and cheaper than professional-services firms.
+:::
+:::
 
-## Evidence needed
-
-- Per-segment: real pain acuteness, budget/willingness-to-pay, sales-cycle length, competitive
-  intensity, and strategic fit.
-- Conversion signal from a small number of discovery calls or a pilot per candidate segment.
-
-## Current evidence
-
+::: {.wp-fields}
+::: {.wp-field}
+### Current evidence
 - Illustrative sub-scores for seven segments (synthetic) → priority ranking in the dashboard.
-- One discovery signal supporting audit firms — `EV-005` (n=1, grade C).
-- One signal cautioning against municipalities (procurement/budget) — `EV-006`.
-- SME size vs budget tension — `EV-009` (supports size, not budget).
+- One discovery signal supporting audit firms — `EV-005` (n = 1, grade C).
+- One signal cautioning against municipalities on procurement/budget — `EV-006`.
+- SME size-vs-budget tension — `EV-009` (supports size, not budget).
+:::
 
-## Analysis plan
+::: {.wp-field}
+### Evidence needed
+- Per-segment: real pain acuteness, budget / willingness-to-pay, sales-cycle length, competitive
+  intensity, and strategic fit.
+- Conversion signal from a handful of discovery calls or a pilot per candidate segment.
+:::
 
+::: {.wp-field}
+### Analysis plan
 1. Compute illustrative priority scores (done) to sequence which segments to *investigate* first.
 2. Collect real sub-score evidence for the top 2–3 segments; replace synthetic inputs.
 3. Re-run and test whether the ranking is stable under reasonable weight changes (sensitivity).
+:::
 
-## Limitations
+::: {.wp-field}
+### Next steps
+- Run discovery calls for the top two segments; register the evidence.
+- Only then consider a first-target recommendation, at the confidence its evidence supports.
+:::
+:::
 
+::: {.wp-field .is-caution .is-full}
+### Limitations
 - The ranking currently reflects assumptions encoded as sub-scores, not observations.
 - `evidence_quality_score` down-weights poorly-known segments, which can entrench what we already
   (think we) know — watch for this bias.
-
-## Next steps
-
-- Run discovery calls for the top two segments; register evidence.
-- Only then consider a first-target recommendation, at the confidence its evidence supports.
+:::

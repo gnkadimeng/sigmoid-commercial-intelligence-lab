@@ -1,47 +1,74 @@
 ---
 title: "Working Paper"
 subtitle: "Sigmoid Analytica CRM & Commercial Strategy — an evidence-building enquiry"
+toc: false
 ---
 
-> **This is a working paper, not a report.** It states open questions and the evidence needed to
-> answer them. It deliberately reaches **no final conclusions** at v0.1. The source proposal is
-> treated as **Hypothesis v0.1** throughout.
+::: {.chapter-chips}
+<span class="chip chip-grade-c no-dot">v0.1 · Hypothesis stage</span>
+<span class="chip chip-neutral no-dot">No final conclusions drawn</span>
+:::
 
-## Purpose
+::: {.section-lead}
+This is a working paper, not a report. It states open questions and the evidence needed to answer
+them — and deliberately reaches **no final conclusions** at v0.1. The source proposal is treated as
+**Hypothesis v0.1** throughout.
+:::
 
-This paper structures the commercial strategy for Sigmoid Analytica's CRM as a set of *questions
-under investigation*, governed by the [Commercial Intelligence Specification](../cis/commercial-intelligence-specification.md).
-Each chapter follows the same discipline so that reasoning stays honest and reviewable:
+Each chapter follows the same discipline, so the reasoning stays honest and scannable:
 
-```text
-Question · Hypothesis · Evidence Needed · Current Evidence · Analysis Plan · Limitations · Next Steps
-```
+::: {.lifecycle}
+<li><span class="stage">Question</span></li>
+<li><span class="arrow">→</span><span class="stage">Hypothesis</span></li>
+<li><span class="arrow">→</span><span class="stage">Current evidence</span></li>
+<li><span class="arrow">→</span><span class="stage">Evidence needed</span></li>
+<li><span class="arrow">→</span><span class="stage">Analysis plan</span></li>
+<li><span class="arrow">→</span><span class="stage">Limitations</span></li>
+<li><span class="arrow">→</span><span class="stage">Next steps</span></li>
+:::
 
-Nothing is asserted as settled until it has passed through evidence collection and validation
-(CIS §9, §12).
+## The three decision questions
 
-## Chapters
+::: {.cil-cards}
+::: {.cil-card}
+<div class="card-kicker">Decision 1 · Ch. 5</div>
+<div class="card-title">Which segment should Sigmoid target first?</div>
+<p>Market prioritisation across seven candidate segments.</p>
+<span class="card-go">Read chapter 5</span>
+[](05-market-prioritisation.qmd){.stretched-link aria-label="Open chapter 5"}
+:::
+::: {.cil-card}
+<div class="card-kicker">Decision 2 · Ch. 4</div>
+<div class="card-title">How should the CRM be positioned?</div>
+<p>CRM vs Revenue Operations vs AI Readiness Platform.</p>
+<span class="card-go">Read chapter 4</span>
+[](04-crm-positioning.qmd){.stretched-link aria-label="Open chapter 4"}
+:::
+::: {.cil-card}
+<div class="card-kicker">Decision 3 · Ch. 7</div>
+<div class="card-title">What evidence is required before GTM?</div>
+<p>The confidence threshold that gates a go-to-market commitment.</p>
+<span class="card-go">Read chapter 7</span>
+[](07-go-to-market.qmd){.stretched-link aria-label="Open chapter 7"}
+:::
+:::
+
+## All chapters {.mt-section}
 
 | # | Chapter | Focus |
 |---|---|---|
 | 1 | [Introduction](01-introduction.qmd) | Aim, scope, and how to read this paper |
-| 2 | [Problem Context](02-problem-context.qmd) | The commercial situation and the proposal as Hypothesis v0.1 |
+| 2 | [Problem Context](02-problem-context.qmd) | The commercial situation; the proposal as Hypothesis v0.1 |
 | 3 | [Commercial Intelligence Specification](03-commercial-intelligence-specification.qmd) | The governing method, in brief |
-| 4 | [CRM Positioning](04-crm-positioning.qmd) | Decision Q2 — how to position the product |
-| 5 | [Market Prioritisation](05-market-prioritisation.qmd) | Decision Q1 — which segment first |
+| 4 | [CRM Positioning](04-crm-positioning.qmd) | Decision 2 — how to position the product |
+| 5 | [Market Prioritisation](05-market-prioritisation.qmd) | Decision 1 — which segment first |
 | 6 | [AI Readiness](06-ai-readiness.qmd) | Testing the "CRM as AI foundation" thesis |
-| 7 | [Go-to-Market](07-go-to-market.qmd) | Decision Q3 — evidence threshold before committing |
+| 7 | [Go-to-Market](07-go-to-market.qmd) | Decision 3 — evidence threshold before committing |
 | 8 | [Validation & Tests](08-validation-and-tests.qmd) | How claims and calculations are checked |
 | 9 | [Conclusion](09-conclusion.qmd) | Deliberately open — current state, not verdicts |
 
-## The three decision questions
-
-1. **Market entry** — Which market segment should Sigmoid target first for the CRM? *(Ch. 5)*
-2. **Positioning** — CRM, Revenue Operations Platform, or AI Readiness Platform? *(Ch. 4)*
-3. **Evidence threshold** — What evidence is required before committing to a go-to-market strategy? *(Ch. 7)*
-
-## Status of evidence
-
-All quantitative content in this paper is computed from **synthetic sample data** and carries
-confidence grade **C or D**. The paper's value at v0.1 is in *framing the questions correctly* and
-*specifying what would answer them* — not in the numbers.
+::: {.callout-note appearance="simple" icon=false}
+**Status of evidence.** All quantitative content in this paper is computed from **synthetic sample
+data** and carries confidence grade **C or D**. The paper's value at v0.1 is in *framing the questions
+correctly* and *specifying what would answer them* — not in the numbers.
+:::

@@ -5,14 +5,24 @@ version: "0.1.0"
 status: "Draft — hypothesis stage"
 ---
 
-# Commercial Intelligence Specification (CIS)
+::: {.chapter-chips}
+<span class="chip chip-neutral no-dot">Version 0.1.0</span>
+<span class="chip chip-grade-d">Status · Draft</span>
+<span class="chip chip-neutral no-dot">Normative · governs process</span>
+:::
 
-**Version 0.1.0 · Draft · Governing specification for the Sigmoid Commercial Intelligence Lab.**
+::: {.section-lead}
+A technical specification, not marketing material. It defines how commercial strategy is represented,
+reasoned about, evidenced, validated, and revised inside this project. Where the specification and any
+deck, PDF, or narrative disagree, this specification governs the *process*; the narrative is treated
+as input — a hypothesis source, not an authority.
+:::
 
-This is a technical specification, not marketing material. It defines how commercial strategy is
-represented, reasoned about, evidenced, validated, and revised inside this project. Where the
-specification and any deck, PDF, or narrative disagree, this specification governs the *process*; the
-narrative is treated as input (a hypothesis source), not as an authority.
+::: {.callout-note appearance="simple" icon=false}
+**Normative language.** **MUST** / **MUST NOT** denote hard requirements enforced by review and tests;
+**SHOULD** denotes a strong default. A recommendation that violates a MUST is *invalid* under CIS,
+regardless of how persuasive its narrative is.
+:::
 
 ---
 
@@ -117,29 +127,31 @@ identity rule, and required provenance. Normative requirements:
 
 ## 9. Decision lifecycle
 
-The canonical lifecycle, specified in [`cis/decision-lifecycle.yml`](decision-lifecycle.yml):
+The canonical lifecycle, specified in [`cis/decision-lifecycle.yml`](decision-lifecycle.yml). Every
+recommendation must be able to trace its provenance through these eleven stages in order:
 
-```text
-Question
-  → Hypothesis
-    → Operational Definition
-      → Evidence Collection
-        → Analysis
-          → Model
-            → Validation
-              → Recommendation
-                → Implementation
-                  → Monitoring
-                    → Learning ⟲ (feeds back to Question/Hypothesis)
-```
+::: {.lifecycle}
+<li><span class="stage"><span class="num">01</span>Question</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">02</span>Hypothesis</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">03</span>Operational Definition</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">04</span>Evidence Collection</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">05</span>Analysis</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">06</span>Model</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">07</span>Validation</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">08</span>Recommendation</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">09</span>Implementation</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">10</span>Monitoring</span></li>
+<li><span class="arrow">→</span><span class="stage is-loop"><span class="num">11</span>Learning ⟲</span></li>
+:::
 
-Rules:
+::: {.callout-important appearance="simple" icon=false}
+**Mandatory.** A stage **MUST NOT** be skipped in the recorded provenance. A Recommendation whose
+provenance lacks **Evidence Collection** and **Validation** is **invalid** under CIS.
+:::
 
-- A stage MUST NOT be skipped in the recorded provenance. A Recommendation whose provenance lacks
-  Evidence and Validation is **invalid** under CIS.
-- Each artifact in the repository SHOULD declare the lifecycle stage it advances.
-- **Learning** is not a terminus: it revises questions and hypotheses, re-entering the loop. This is
-  what makes the strategy "living".
+- Each artifact in the repository **SHOULD** declare the lifecycle stage it advances.
+- **Learning** is not a terminus: it revises questions and hypotheses, re-entering the loop at stage
+  01. This feedback is what makes the strategy "living".
 
 ## 10. Evidence model
 

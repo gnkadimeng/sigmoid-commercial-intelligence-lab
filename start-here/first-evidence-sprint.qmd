@@ -1,0 +1,206 @@
+---
+title: "First Evidence Sprint"
+subtitle: "The first real fieldwork — turning discovery interviews into structured evidence"
+---
+
+::: {.page-context}
+::: {.pc-crumb}
+Start Here <span class="sep">›</span> First Evidence Sprint
+:::
+::: {.pc-supports}
+**This page runs the first evidence sprint.** It is the working interface for collecting real
+discovery evidence in the audit and professional-services segments.
+:::
+::: {.pc-row}
+<span class="chip chip-grade-c no-dot">Planned · v0.1</span>
+<span class="chip chip-neutral no-dot">No interviews logged yet</span>
+<span class="pc-next">[Open the interview script](../templates/discovery_interview_script.md)</span>
+:::
+:::
+
+This is the moment the lab stops running on synthetic data and starts collecting **real** discovery
+evidence. It changes no scoring model, no dashboards, and no confidence grades — it only collects
+evidence. The full plan also lives in the repo at `docs/FIRST_EVIDENCE_SPRINT.md`; this page is its
+working, in-browser version.
+
+## Sprint at a glance
+
+::: {.purpose-grid}
+::: {.pg-cell}
+::: {.pg-label}
+Goal
+:::
+::: {.pg-val}
+First real evidence on the [Market Entry](../decisions/market-entry.qmd) and
+[Positioning](../decisions/positioning.qmd) claims — signal, not verdicts.
+:::
+:::
+::: {.pg-cell}
+::: {.pg-label}
+Target segments
+:::
+::: {.pg-val}
+Audit firms · Professional services firms
+:::
+:::
+::: {.pg-cell}
+::: {.pg-label}
+Interview target
+:::
+::: {.pg-val}
+8–10 total (~5 audit + ~4 professional services)
+:::
+:::
+::: {.pg-cell}
+::: {.pg-label}
+Minimum evidence threshold
+:::
+::: {.pg-val}
+≥ 3 per segment with `evidence_quality_score ≥ 40` and `bias_risk ≤ 66`
+:::
+:::
+:::
+
+::: {.callout-important appearance="simple" icon=false}
+**Sprint goal.** Replace the "no real evidence yet" state on the Decision 1 and Decision 2 claims with
+the first set of real, structured discovery evidence. **Not a goal:** validating any claim, moving any
+claim to grade A, or committing to a segment or positioning.
+:::
+
+## Claims under test
+
+The claims below read live from `data/sample/claim_register.csv` (Decisions 1 and 2). Each is a
+**hypothesis** — the sprint gathers first signal on it, nothing more.
+
+```{python}
+#| label: claims-under-test
+#| echo: false
+import sys, pathlib
+_root = pathlib.Path.cwd()
+while _root != _root.parent and not (_root / "src").is_dir():
+    _root = _root.parent
+sys.path.insert(0, str(_root))
+from IPython.display import HTML
+from src.registers import load_claim_register, claim_evidence_counts, _grade_chip, _esc
+
+claims = load_claim_register()
+under_test = claims[claims["decision_id"].isin(["D1", "D2"])]
+
+rows = []
+for _, c in under_test.iterrows():
+    counts = claim_evidence_counts(c["claim_id"])
+    rows.append(
+        "<tr>"
+        f'<td><code>{_esc(c["claim_id"])}</code></td>'
+        f'<td>{_esc(c["decision_id"])}</td>'
+        f'<td>{_esc(c["claim_type"])}</td>'
+        f'<td>{_esc(c["claim_text"])}</td>'
+        f'<td>{_grade_chip(c["current_confidence_grade"])}</td>'
+        f'<td>{counts["total"]}</td>'
+        "</tr>"
+    )
+HTML(
+    '<table class="table"><thead><tr>'
+    '<th>Claim</th><th>Decision</th><th>Type</th><th>Hypothesis</th><th>Grade</th>'
+    '<th>Real evidence</th></tr></thead><tbody>' + "".join(rows) + '</tbody></table>'
+)
+```
+
+Decision 3 ([GTM Evidence Gate](../decisions/gtm-evidence-gate.qmd)) is *observed* via the
+`sales_cycle_signal` and follow-up permission, but is not a primary target this sprint.
+
+## The fieldwork workflow
+
+::: {.lifecycle}
+<li><span class="stage"><span class="num">1</span>Conduct interview</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">2</span>Enter raw data</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">3</span>Map to evidence</span></li>
+<li><span class="arrow">→</span><span class="stage"><span class="num">4</span>Review claims</span></li>
+<li><span class="arrow">→</span><span class="stage is-loop"><span class="num">5</span>Decide if status moves</span></li>
+:::
+
+### 1 · How to conduct an interview
+
+1. Run the call with the [**discovery interview script**](../templates/discovery_interview_script.md)
+   (~40 min, 13 sections from respondent context to permission to follow up). Every question maps to a
+   decision, a claim, and a CSV field.
+2. Run the [**positioning message test**](../templates/positioning_message_test.md) inside the call to
+   test the three framings (CRM · Revenue Operations · AI Readiness).
+3. Score the interview the same day with the
+   [**scoring guide**](../templates/discovery_interview_scoring_guide.md) — anchored 0–100 rubrics for
+   every signal, plus quality and bias.
+
+::: {.callout-note appearance="simple" icon=false}
+**Interviewer discipline.** Do not lead the witness; ask open questions first. Record what was
+actually said (verbatim in `notes`). One interview is a single data point — it never validates a
+claim. Leave a field blank if it was not covered; **do not fabricate it**.
+:::
+
+### 2 · How to enter raw interview data
+
+Add **one row per interview** to `data/raw/discovery_interviews.csv`, filling every covered field:
+
+```text
+interview_id, date, company_segment, company_size, respondent_role, decision_linked, claim_linked,
+pain_score, budget_signal, urgency_signal, current_tooling, crm_maturity, workflow_maturity,
+ai_readiness_maturity, positioning_preference, willingness_to_pay_signal, sales_cycle_signal, notes,
+evidence_quality_score, bias_risk, supports_or_refutes
+```
+
+All signal scores are **0–100** (see the scoring guide). Set `decision_linked`, `claim_linked`, and
+`supports_or_refutes` (`supports` / `refutes` / `mixed` / `neutral`) for the primary claim.
+
+### 3 · How to map interview data into processed evidence
+
+Using the evidence-capture step, add **one row per claim** the interview bears on to
+`data/processed/discovery_evidence.csv`:
+
+```text
+evidence_id, interview_id, decision_id, claim_id, source_type, source_name, date_collected,
+quality_score, bias_risk, supports_or_refutes, evidence_summary, confidence_impact, notes
+```
+
+Apply the conversions from the scoring guide:
+
+| Raw interview field (0–100) | Processed field | Conversion |
+|---|---|---|
+| `evidence_quality_score` | `quality_score` | ÷ 100 → 0.0–1.0 |
+| `bias_risk` | `bias_risk` | `low` (0–33) · `medium` (34–66) · `high` (67–100) |
+| `supports_or_refutes` | `supports_or_refutes` | copy unchanged |
+
+Set `source_type = interview` and `confidence_impact` = `raises` / `lowers` / `none` (direction only —
+never a grade). The [Evidence Register](../evidence/evidence-register.qmd) is where these records land.
+
+### 4 · How to run pytest and quarto render
+
+```bash
+source .venv/bin/activate
+pytest            # validators check columns, grades (A–D), supports/refutes, and score ranges
+quarto render     # the decision + Claims & Confidence pages recompute from the new records
+```
+
+Both must pass before you trust anything. A red suite is a hard stop.
+
+### 5 · How to review results
+
+- [**Claims & Confidence**](../evidence/claims-confidence.qmd) — each tested claim now shows a real
+  evidence count and a supports/refutes split instead of "none yet".
+- [**Market Entry**](../decisions/market-entry.qmd) and
+  [**Positioning**](../decisions/positioning.qmd) — the claim cards reflect the new evidence.
+- [**Current Status**](current-status.qmd) — the top-level read of where the decisions stand.
+- Ask, per claim: did independent interviews *converge*, or does the signal conflict?
+
+## What not to conclude yet
+
+::: {.callout-warning appearance="simple" icon=false}
+- **Do not** declare a first-target segment or a positioning — a handful of interviews is grade-C
+  signal at best.
+- **Do not** move any claim to grade A (validated); that needs a pilot with measured impact.
+- **Do not** treat a stated positioning preference as a won deal.
+- **Do not** let an enthusiastic-but-biased interview carry a claim — that is what `bias_risk` is for.
+- If a claim's `evidence_needed_for_B` bar is genuinely met, change its grade **deliberately** and
+  record why (a note or an ADR). Grade changes are decisions, not edits.
+:::
+
+*This sprint produces evidence, not verdicts. The lab stays at v0.1 hypothesis stage until the
+evidence earns otherwise.*
