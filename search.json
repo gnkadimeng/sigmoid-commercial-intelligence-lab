@@ -1,0 +1,1643 @@
+[
+  {
+    "objectID": "templates/positioning_message_test.html",
+    "href": "templates/positioning_message_test.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "templates/positioning_message_test.html#how-to-administer",
+    "href": "templates/positioning_message_test.html#how-to-administer",
+    "title": "",
+    "section": "How to administer",
+    "text": "How to administer\n\nRead all three one-line descriptions in a randomised order (rotate first position across interviews to reduce order bias — note the order in notes).\nAsk: “Which of these sounds most like something your firm needs — and why?”\nThen ask: “Is anything here overpromised or not credible?”\nRecord the chosen framing in positioning_preference and the reasoning verbatim in notes.\nDo not editorialise or defend a framing — you are measuring reaction, not selling.\n\n\nBias control. Never reveal which framing is “ours”. If the respondent asks, say all three are under consideration. Leading here corrupts the single most important D2 signal — reflect any leading in a higher bias_risk score."
+  },
+  {
+    "objectID": "templates/positioning_message_test.html#option-1-crm-platform",
+    "href": "templates/positioning_message_test.html#option-1-crm-platform",
+    "title": "",
+    "section": "Option 1 — CRM Platform",
+    "text": "Option 1 — CRM Platform\nShort description (read aloud): &gt; “A system of record for your clients and pipeline — contacts, deals, and activity in one place, so &gt; nothing falls through the cracks.”\n\nWhat we are testing: whether “CRM” is instantly understood but perceived as generic / commoditised.\nInterpretation: high comprehension + low excitement = clear but generic. If chosen mainly because it’s familiar (not because it’s compelling), that supports H-POS-CRM-01. Genuine enthusiasm would refute it.\nInforms claim: H-POS-CRM-01 — “CRM positioning may be clear but too generic.”"
+  },
+  {
+    "objectID": "templates/positioning_message_test.html#option-2-revenue-operations-platform",
+    "href": "templates/positioning_message_test.html#option-2-revenue-operations-platform",
+    "title": "",
+    "section": "Option 2 — Revenue Operations Platform",
+    "text": "Option 2 — Revenue Operations Platform\nShort description (read aloud): &gt; “A platform that connects your commercial workflow end-to-end — pipeline, delivery, and the handoffs &gt; between them — so you can see and improve how revenue actually gets made.”\n\nWhat we are testing: whether a RevOps framing expresses business value better than “CRM” without losing clarity.\nInterpretation: preference for this framing because it maps to a felt operational problem supports H-POS-REVOPS-01. Confusion about what it means (needs explaining) is a caution — note it. Watch for respondents who like the words but can’t say what it does.\nInforms claim: H-POS-REVOPS-01 — “Revenue Operations Platform positioning may better express business value.”"
+  },
+  {
+    "objectID": "templates/positioning_message_test.html#option-3-ai-readiness-platform",
+    "href": "templates/positioning_message_test.html#option-3-ai-readiness-platform",
+    "title": "",
+    "section": "Option 3 — AI Readiness Platform",
+    "text": "Option 3 — AI Readiness Platform\nShort description (read aloud): &gt; “A platform that gets your client and commercial data structured and clean, so your firm is ready to &gt; use AI to work faster and smarter.”\n\nWhat we are testing: whether the AI framing is differentiated and exciting or overpromising and not credible for this buyer today.\nInterpretation: excitement + belief = differentiated (note it). Excitement + scepticism (“sounds like hype”, “we’re nowhere near that”) supports H-POS-AI-01 (differentiated but may overpromise). Reasoning about their own data readiness also informs H-AI-READY-01/02 — capture it.\nInforms claim: H-POS-AI-01 — “AI Readiness Platform positioning may be differentiated but could overpromise.” (Secondary: H-AI-READY-01, H-AI-READY-02.)"
+  },
+  {
+    "objectID": "templates/positioning_message_test.html#recording-the-result",
+    "href": "templates/positioning_message_test.html#recording-the-result",
+    "title": "",
+    "section": "Recording the result",
+    "text": "Recording the result\n\n\n\n\n\n\n\n\nObservation\npositioning_preference\nAlso note in notes\n\n\n\n\nClear single preference\nCRM / RevOps / AI Readiness\nthe reason, verbatim\n\n\nLikes two roughly equally\nthe stronger one\nthe trade-off they described\n\n\nNo clear preference / confused\nunclear\nwhat confused them\n\n\n\nThen, when creating evidence records (templates/evidence_capture_template.md), write one record per positioning claim the answer bears on, each with supports / refutes / mixed / neutral and a one-line evidence_summary."
+  },
+  {
+    "objectID": "templates/positioning_message_test.html#what-this-test-cannot-do-yet",
+    "href": "templates/positioning_message_test.html#what-this-test-cannot-do-yet",
+    "title": "",
+    "section": "What this test cannot do (yet)",
+    "text": "What this test cannot do (yet)\n\nIt is comprehension + stated preference, not behaviour. A stated preference is weaker than a won deal. Treat results as grade-C signal at best until corroborated across many interviews.\nIt does not price the offering — willingness-to-pay is probed separately (script Q11.3).\nDo not conclude a positioning from the sprint. The gate for D2 is grade B across converging message tests; a handful of interviews cannot clear it."
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html",
+    "href": "templates/discovery_interview_script.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#interviewer-setup-before-the-call",
+    "href": "templates/discovery_interview_script.html#interviewer-setup-before-the-call",
+    "title": "",
+    "section": "0. Interviewer setup (before the call)",
+    "text": "0. Interviewer setup (before the call)\n\nAssign interview_id (e.g. INT-0001), record date (YYYY-MM-DD).\nConfirm the segment: company_segment = Audit or Professional Services.\nPrimary decision under test this sprint: D1 (Market Entry) and D2 (Positioning).\n\nOpen neutrally: “We’re researching how firms like yours run commercial and client operations. There are no right answers — we’re trying to learn, not sell. May I take notes?”"
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#respondent-context",
+    "href": "templates/discovery_interview_script.html#respondent-context",
+    "title": "",
+    "section": "1. Respondent context",
+    "text": "1. Respondent context\nPurpose: establish who is speaking and how much weight their view carries (feeds bias_risk and evidence_quality_score).\nQ1.1 — “Tell me about your firm and your role in it.” - Why: sizing and authority; a partner’s budget view differs from an analyst’s. - → context · — · company_size, respondent_role · capture band + role verbatim.\nQ1.2 — “How many people touch client acquisition or delivery operations?” - Why: scale of the workflow problem. - → D1 · H-SEG-PROF-01 · notes · qualitative."
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#current-commercial-process",
+    "href": "templates/discovery_interview_script.html#current-commercial-process",
+    "title": "",
+    "section": "2. Current commercial process",
+    "text": "2. Current commercial process\nPurpose: understand how they actually win and deliver work today — the substrate a CRM would organise.\nQ2.1 — “Walk me through how a new client goes from first contact to signed engagement.” - Why: reveals pipeline structure (or its absence) and hand-off pain. - → D1 · H-SEG-PROF-01 · notes, contributes to workflow_maturity.\nQ2.2 — “Where in that process do things most often slip or get lost?” - Why: locates the acute pain without naming it for them. - → D1 · H-SEG-AUDIT-01, H-SEG-PROF-01 · notes, contributes to pain_score."
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#current-tooling",
+    "href": "templates/discovery_interview_script.html#current-tooling",
+    "title": "",
+    "section": "3. Current tooling",
+    "text": "3. Current tooling\nPurpose: what they use now, and how mature it is.\nQ3.1 — “What tools do you use to track clients, pipeline, and work in progress?” - Why: baseline; distinguishes spreadsheet-shops from CRM-shops. - → D1/D2 · H-POS-CRM-01, H-AI-READY-01 · current_tooling (free text) → informs crm_maturity.\nQ3.2 — “What do those tools do well, and where do they fall short?” - Why: separates a tooling-gap from a discipline-gap. - → D1 · H-SEG-PROF-01 · notes."
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#pain-points",
+    "href": "templates/discovery_interview_script.html#pain-points",
+    "title": "",
+    "section": "4. Pain points",
+    "text": "4. Pain points\nPurpose: the core of D1 — is there acute, specific, felt pain?\nQ4.1 — “What’s the single most frustrating part of running your commercial workflow?” - Why: the headline pain, in their words. - → D1 · H-SEG-AUDIT-01 (audit), H-SEG-PROF-01 (prof. services) · notes → pain_score.\nQ4.2 — “How often does that happen, and who does it affect?” - Why: frequency and blast radius separate a nuisance from a priority. - → D1 · H-SEG-AUDIT-01 · contributes to pain_score."
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#cost-of-pain",
+    "href": "templates/discovery_interview_script.html#cost-of-pain",
+    "title": "",
+    "section": "5. Cost of pain",
+    "text": "5. Cost of pain\nPurpose: convert pain into money/time — the bridge from pain to budget and urgency.\nQ5.1 — “If you had to estimate, what does that problem cost you — in hours, missed work, or rework?” - Why: quantifies pain; a costed problem is a fundable one. - → D1 · H-SEG-AUDIT-01, H-SEG-AUDIT-02 · notes → raises pain_score and budget_signal.\nQ5.2 — “Has anyone tried to fix it before? What happened?” - Why: prior spend signals real budget and reveals switching costs. - → D1 · H-SEG-AUDIT-02 · notes → budget_signal."
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#crm-workflow-maturity",
+    "href": "templates/discovery_interview_script.html#crm-workflow-maturity",
+    "title": "",
+    "section": "6. CRM / workflow maturity",
+    "text": "6. CRM / workflow maturity\nPurpose: score how defined and adopted their processes and CRM are (feeds D2 AI-readiness thesis).\nQ6.1 — “How standardised are your commercial workflows — same every time, or person-dependent?” - Why: defined workflows are what a CRM (and later AI) can act on. - → D2 · H-AI-READY-02 · workflow_maturity · score 0–100.\nQ6.2 — “If you have a CRM today, how much of the team actually lives in it?” - Why: adoption, not ownership, is the real maturity signal. - → D2 · H-POS-CRM-01, H-AI-READY-02 · crm_maturity · score 0–100."
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#analytics-ai-readiness",
+    "href": "templates/discovery_interview_script.html#analytics-ai-readiness",
+    "title": "",
+    "section": "7. Analytics / AI readiness",
+    "text": "7. Analytics / AI readiness\nPurpose: test the AI-readiness claims — do they have structured data, and would a CRM improve it?\nQ7.1 — “How do you currently use your data to make commercial decisions?” - Why: existing analytics practice predicts ability to operationalise AI. - → D2 · H-AI-READY-01 · ai_readiness_maturity · score 0–100.\nQ7.2 — “Is your client and pipeline data structured and in one place, or scattered?” - Why: directly tests H-AI-READY-01 (customers may lack structured data). - → D2 · H-AI-READY-01 · notes → ai_readiness_maturity.\nQ7.3 — “If your CRM were well-adopted, do you think it would make you more ‘AI-ready’? Why?” - Why: tests H-AI-READY-02 (CRM implementation may improve AI readiness). Probe reasoning, not a yes/no. - → D2 · H-AI-READY-02 · notes."
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#budget-signal",
+    "href": "templates/discovery_interview_script.html#budget-signal",
+    "title": "",
+    "section": "8. Budget signal",
+    "text": "8. Budget signal\nPurpose: is there money and a buyer? (D1 · H-SEG-AUDIT-02.)\nQ8.1 — “Who would own the budget for a tool like this, and is there budget this year?” - Why: identifies buyer + budget line; distinguishes interest from intent. - → D1 · H-SEG-AUDIT-02 · budget_signal · score 0–100."
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#urgency-signal",
+    "href": "templates/discovery_interview_script.html#urgency-signal",
+    "title": "",
+    "section": "9. Urgency signal",
+    "text": "9. Urgency signal\nPurpose: is there a compelling reason to act now? (D1.)\nQ9.1 — “Is this a ‘this quarter’ problem or a ‘someday’ problem? What makes it urgent, or not?” - Why: urgency drives the deal; absence of it predicts stall. - → D1 · H-SEG-AUDIT-01 · urgency_signal · score 0–100."
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#sales-cycle-decision-complexity",
+    "href": "templates/discovery_interview_script.html#sales-cycle-decision-complexity",
+    "title": "",
+    "section": "10. Sales cycle & decision complexity",
+    "text": "10. Sales cycle & decision complexity\nPurpose: how hard/long is it to buy? (D1 sequencing, D3 gate.)\nQ10.1 — “If you decided to adopt something, how long would it take and who would need to sign off?” - Why: short cycles and few stakeholders make a better first segment. - → D1/D3 · H-GTM-GATE-01 · sales_cycle_signal · score 0–100 (higher = shorter/simpler)."
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#positioning-test",
+    "href": "templates/discovery_interview_script.html#positioning-test",
+    "title": "",
+    "section": "11. Positioning test",
+    "text": "11. Positioning test\nPurpose: test how the three framings land. Use the full script in templates/positioning_message_test.md; record the outcome here.\nQ11.1 — Read the three one-line descriptions (CRM / Revenue Operations / AI Readiness) and ask: “Which of these sounds most like something your firm needs — and why?” - Why: tests the D2 positioning claims against a real buyer. - → D2 · H-POS-CRM-01, H-POS-REVOPS-01, H-POS-AI-01 · positioning_preference (CRM / RevOps / AI Readiness / unclear).\nQ11.2 — “Is there anything in those that sounds overpromised or not credible?” - Why: tests H-POS-AI-01 (AI framing may overpromise). - → D2 · H-POS-AI-01 · notes.\nQ11.3 (optional WTP probe) — “If one of those solved your headline problem, what would that be worth per month to your firm?” - Why: light willingness-to-pay read; keep it directional, do not anchor. - → D1/D3 · H-SEG-AUDIT-02 · willingness_to_pay_signal · score 0–100."
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#closing-question",
+    "href": "templates/discovery_interview_script.html#closing-question",
+    "title": "",
+    "section": "12. Closing question",
+    "text": "12. Closing question\nQ12.1 — “If you had a magic wand for your commercial operations, what’s the first thing you’d fix?” - Why: an unprompted priority; often the truest signal of the day. - → D1/D2 · H-SEG-AUDIT-01, H-SEG-PROF-01 · notes."
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#permission-to-follow-up",
+    "href": "templates/discovery_interview_script.html#permission-to-follow-up",
+    "title": "",
+    "section": "13. Permission to follow up",
+    "text": "13. Permission to follow up\nQ13.1 — “May we come back to you as this develops, and would you be open to trying an early version?” - Why: a soft commitment is itself a signal; also enables the pilot that could reach grade A. - → D3 · H-GTM-GATE-01 · notes."
+  },
+  {
+    "objectID": "templates/discovery_interview_script.html#after-the-interview-interviewer-same-day",
+    "href": "templates/discovery_interview_script.html#after-the-interview-interviewer-same-day",
+    "title": "",
+    "section": "After the interview (interviewer, same day)",
+    "text": "After the interview (interviewer, same day)\n\nFill every covered field in one row of data/raw/discovery_interviews.csv.\nScore pain_score, budget_signal, urgency_signal, crm_maturity, workflow_maturity, ai_readiness_maturity, willingness_to_pay_signal, sales_cycle_signal, evidence_quality_score, bias_risk using templates/discovery_interview_scoring_guide.md (all 0–100).\nSet decision_linked, claim_linked, and supports_or_refutes (supports / refutes / mixed / neutral) for the primary claim the interview bore on. (Secondary claims are captured when you create evidence records.)\nMap the interview into data/processed/discovery_evidence.csv — one record per claim — using templates/evidence_capture_template.md."
+  },
+  {
+    "objectID": "docs/decision-records/ADR-0001-project-architecture.html",
+    "href": "docs/decision-records/ADR-0001-project-architecture.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "Governance",
+      "Decision Records",
+      "Project Architecture"
+    ]
+  },
+  {
+    "objectID": "docs/decision-records/ADR-0001-project-architecture.html#context",
+    "href": "docs/decision-records/ADR-0001-project-architecture.html#context",
+    "title": "",
+    "section": "Context",
+    "text": "Context\nWe are converting a commercial-strategy proposal into a reproducible, collaborative, testable research project — not a slide deck or a static document site. The architecture must let strategy be questioned, computed, tested, and revised as evidence accumulates, and must keep unvalidated numbers from being mistaken for findings.",
+    "crumbs": [
+      "Governance",
+      "Decision Records",
+      "Project Architecture"
+    ]
+  },
+  {
+    "objectID": "docs/decision-records/ADR-0001-project-architecture.html#decision",
+    "href": "docs/decision-records/ADR-0001-project-architecture.html#decision",
+    "title": "",
+    "section": "Decision",
+    "text": "Decision\nAdopt the following stack and structure:\n\nQuarto (website project) — one artifact renders the working paper, dashboards, frameworks, CIS, and decision records together; prose and executable analysis live side by side and stay in sync.\nPython + Jupyter execution for .qmd — analysis is code, re-run on every render; results are reproducible rather than pasted.\nPandas + Plotly — tabular data handling and interactive charts with a light dependency set.\nA src/ package as the single source of computational truth — scoring, validation, evidence, and ontology logic implemented once and imported by dashboards, notebooks, and tests. No re-implementation of scoring in analysis pages.\nYAML specifications (cis/, frameworks/) — ontology, object model, lifecycle, and framework weights are data, editable and auditable independently of code.\nSynthetic sample data (data/sample/) — exercises the machinery and renders the site without claiming any real market fact; raw/processed/external zones are reserved for real data later.\nModular scoring functions with dictionary weights — transparent, tunable, and individually testable; every score is a pure function returning [0, 100].\nPytest — scoring ranges, missing-value safety, validation, evidence aggregation, and data integrity are all under automated test; a red suite is a hard stop.\nGit-friendly layout — small text files, clear boundaries, append-only decision records.",
+    "crumbs": [
+      "Governance",
+      "Decision Records",
+      "Project Architecture"
+    ]
+  },
+  {
+    "objectID": "docs/decision-records/ADR-0001-project-architecture.html#consequences",
+    "href": "docs/decision-records/ADR-0001-project-architecture.html#consequences",
+    "title": "",
+    "section": "Consequences",
+    "text": "Consequences\nPositive\n\nAny number can be traced to the code, data, and framework that produced it, and re-run.\nContributors change behaviour by editing weights/data, not by rewriting analysis prose.\nTests catch regressions in the load-bearing logic before results are trusted.\nThe same repository serves reviewers, analysts, and architects.\n\nNegative / costs\n\nContributors need Python + Quarto installed; a pure-Markdown contributor cannot touch the analysis.\nKeeping the scoring weight dicts in src/ in sync with the framework YAML is a manual discipline at v0.1 (mitigated by utils.weights_from_framework and tests).",
+    "crumbs": [
+      "Governance",
+      "Decision Records",
+      "Project Architecture"
+    ]
+  },
+  {
+    "objectID": "docs/decision-records/ADR-0001-project-architecture.html#alternatives-considered",
+    "href": "docs/decision-records/ADR-0001-project-architecture.html#alternatives-considered",
+    "title": "",
+    "section": "Alternatives considered",
+    "text": "Alternatives considered\n\nA static docs site (MkDocs/plain Markdown). Rejected: no executable analysis, no reproducibility, and it would invite pasted, un-checkable numbers.\nA notebook-only project. Rejected: notebooks are hard to review and diff, and encourage logic duplicated across cells rather than a tested shared core.\nA BI dashboard tool. Rejected at v0.1: heavier, less version-controllable, and it separates the reasoning (prose) from the computation.",
+    "crumbs": [
+      "Governance",
+      "Decision Records",
+      "Project Architecture"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html",
+    "href": "cis/commercial-intelligence-specification.html",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "",
+    "text": "Version 0.1.0 Status · Draft Normative · governs process",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#introduction",
+    "href": "cis/commercial-intelligence-specification.html#introduction",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "1. Introduction",
+    "text": "1. Introduction\nCommercial strategy is normally recorded as prose and slides: assertions about markets, customers, positioning, and pricing, chosen partly to persuade. Such artifacts are difficult to test, difficult to revise coherently, and give no account of why one recommendation was preferred over another.\nThe Commercial Intelligence Specification (CIS) defines an alternative: commercial strategy expressed as a computational decision system. Under CIS, strategic claims are structured objects with identity and provenance; recommendations are outputs of transparent, versioned computation over evidence; and the entire chain from question to monitored outcome is reproducible.\nCIS is deliberately modest at v0.1. It specifies structure and discipline, not advanced modelling. Sophisticated models can be added later without changing the governance contract.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#purpose",
+    "href": "cis/commercial-intelligence-specification.html#purpose",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "2. Purpose",
+    "text": "2. Purpose\nThe purpose of CIS is to ensure that every commercial recommendation produced in this project is:\n\nTraceable — it can name the question, hypothesis, and evidence it derives from.\nReproducible — its numbers are produced by code and data anyone can re-run.\nFalsifiable — it states what would prove it wrong.\nRevisable — it updates coherently as evidence changes, without silent rewriting of history.\nHonest about confidence — it distinguishes hypothesis, weak evidence, and validated fact.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#vision",
+    "href": "cis/commercial-intelligence-specification.html#vision",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "3. Vision",
+    "text": "3. Vision\nA commercial strategy that behaves like a well-run experiment programme rather than a fixed argument. Decisions are versioned. Evidence accumulates. Confidence is measured, not asserted. New information moves recommendations in a documented way. The organisation can always answer: what do we believe, how strongly, and why?",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#guiding-principles",
+    "href": "cis/commercial-intelligence-specification.html#guiding-principles",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "4. Guiding principles",
+    "text": "4. Guiding principles\n\nClaims before conclusions. Nothing is concluded until it has been stated as a falsifiable claim and tested.\nEvidence over eloquence. A well-argued assertion with no evidence outranks nothing.\nTransparency of computation. Every score is produced by inspectable code with named weights.\nSeparation of hypothesis and fact. The proposal PDF is Hypothesis v0.1; it is never silently promoted to evidence.\nWeights are data, not code. Tunable parameters live in YAML/config so they can be changed and audited independently of logic.\nReproducibility is non-negotiable. If a result cannot be re-run, it does not exist.\nConfidence is explicit. Every recommendation carries a confidence grade and its basis.\nHistory is append-only. Decisions and evidence are superseded, not deleted.\nSimplicity first. Prefer the simplest model that answers the question; defer complexity until evidence demands it.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#scope",
+    "href": "cis/commercial-intelligence-specification.html#scope",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "5. Scope",
+    "text": "5. Scope\nIn scope (v0.1): market prioritisation, CRM positioning, customer/segment fit, AI readiness assessment, evidence tracking, decision provenance, and the testing standard that guards them.\nOut of scope (v0.1): live CRM data integration, production ML pipelines, automated data collection, pricing optimisation at scale, and organisation-wide rollout tooling. These are named in Future Work and must not be faked with unvalidated numbers.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#core-philosophy",
+    "href": "cis/commercial-intelligence-specification.html#core-philosophy",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "6. Core philosophy",
+    "text": "6. Core philosophy\nCIS treats a commercial strategy as a decision system: a directed process that transforms questions into monitored recommendations through explicit, inspectable stages. The unit of work is not “the strategy” but “the decision” — a single question carried through the lifecycle.\nStrategy, in this view, is the accumulated set of decisions plus their evidence and confidence. It is never finished; it is the current best state of a continuing enquiry.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#core-ontology",
+    "href": "cis/commercial-intelligence-specification.html#core-ontology",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "7. Core ontology",
+    "text": "7. Core ontology\nThe ontology defines the objects the system reasons about. It is specified normatively in cis/ontology.yml. Summary:\n\n\n\n\n\n\n\nObject\nMeaning\n\n\n\n\nQuestion\nA commercial decision to be made, phrased so it can be answered.\n\n\nHypothesis\nA falsifiable, provisional answer to a Question.\n\n\nOperational Definition\nHow a hypothesis’s terms are measured (what counts, in what units).\n\n\nEvidence\nA dated, sourced observation that supports, refutes, or qualifies a claim.\n\n\nFramework\nA named, weighted scoring scheme that turns inputs into a score.\n\n\nModel\nA computation (framework, statistical model, or rule set) producing an output.\n\n\nRecommendation\nA proposed action derived from models + evidence, with confidence.\n\n\nDecision\nA recorded choice to act (or not), with its provenance and owner.\n\n\nMetric\nA quantity monitored after a decision to test whether it held.\n\n\n\nRelationships (see ontology.yml for cardinality): a Question has many Hypotheses; a Hypothesis has an Operational Definition and is supported/refuted by Evidence; Frameworks and Models consume Evidence and produce scores; a Recommendation cites Models and Evidence; a Decision adopts a Recommendation and is monitored by Metrics.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#object-model",
+    "href": "cis/commercial-intelligence-specification.html#object-model",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "8. Object model",
+    "text": "8. Object model\nThe object model in cis/object-model.yml gives each object its fields, types, identity rule, and required provenance. Normative requirements:\n\nEvery object has a stable id and a version.\nEvery object records created and status (draft → active → superseded/retired).\nObjects that assert something about the world (Evidence, Recommendation, Decision) MUST carry provenance: who/what produced them, from which sources, when.\nScores are stored with the framework_id and framework_version that produced them, so a score is never orphaned from its method.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#decision-lifecycle",
+    "href": "cis/commercial-intelligence-specification.html#decision-lifecycle",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "9. Decision lifecycle",
+    "text": "9. Decision lifecycle\nThe canonical lifecycle, specified in cis/decision-lifecycle.yml. Every recommendation must be able to trace its provenance through these eleven stages in order:\n\n\n01Question\n\n\n→02Hypothesis\n\n\n→03Operational Definition\n\n\n→04Evidence Collection\n\n\n→05Analysis\n\n\n→06Model\n\n\n→07Validation\n\n\n→08Recommendation\n\n\n→09Implementation\n\n\n→10Monitoring\n\n\n→11Learning ⟲\n\n\n\n\n\n\n\n\nMandatory. A stage MUST NOT be skipped in the recorded provenance. A Recommendation whose provenance lacks Evidence Collection and Validation is invalid under CIS.\n\n\n\n\nEach artifact in the repository SHOULD declare the lifecycle stage it advances.\nLearning is not a terminus: it revises questions and hypotheses, re-entering the loop at stage\n\nThis feedback is what makes the strategy “living”.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#evidence-model",
+    "href": "cis/commercial-intelligence-specification.html#evidence-model",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "10. Evidence model",
+    "text": "10. Evidence model\nEvidence is the currency of the system. Specified operationally in src/evidence.py and the evidence_register.csv schema.\n\nEach Evidence item links to a claim_id and states supports_claim ∈ {yes, no, mixed}.\nEach item has a quality_score ∈ [0, 1] (source rigour, recency, directness) and a bias_risk ∈ {low, medium, high}.\nEvidence weight = quality_score × bias_adjustment, where bias adjustment penalises higher bias risk. Refuting evidence carries the same weight machinery as supporting evidence.\nEvidence strength for a claim is a classification (none / weak / moderate / strong) derived from the aggregate weight of non-conflicting evidence.\nA proposal assertion enters as Evidence only with source_type = proposal and is capped in quality; it can raise a hypothesis, not validate one.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#data-model",
+    "href": "cis/commercial-intelligence-specification.html#data-model",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "11. Data model",
+    "text": "11. Data model\n\nTabular data is the primary representation (CSV at v0.1; a database later). Each dataset has a documented schema and a README describing provenance and limitations.\nSample data is synthetic and labelled as such. It exists to exercise the machinery, never to stand in as market fact.\nZones: data/raw (immutable inputs), data/processed (derived, reproducible from raw + code), data/external (third-party), data/sample (synthetic, versioned).\nIdentity columns (segment_id, customer_id, evidence_id, claim_id) MUST be unique within their table.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#validation-model",
+    "href": "cis/commercial-intelligence-specification.html#validation-model",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "12. Validation model",
+    "text": "12. Validation model\nTwo layers, both specified in src/validation.py and enforced by tests/:\n\nStructural validation — required columns present, identity columns unique, score columns within range [0, 100], no negative scores where the scale forbids them. Optionally enforced with pandera schemas / pydantic models where available.\nDecision validation — a Recommendation is valid only if its provenance includes Evidence and a Validation step, and its confidence grade is consistent with the aggregate evidence strength.\n\nValidation failures are errors, not warnings: they block promotion of a score or recommendation.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#decision-provenance",
+    "href": "cis/commercial-intelligence-specification.html#decision-provenance",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "13. Decision provenance",
+    "text": "13. Decision provenance\nEvery Decision records:\n\nthe question_id it answers and the recommendation_id it adopts;\nthe models and evidence cited, each by id and version;\nthe owner (accountable person/role) and the date;\nthe confidence grade and the basis for it;\nthe status (proposed / adopted / superseded / reversed).\n\nProvenance is what allows the project to answer “why did we decide this, on what basis, and has it changed?” without archaeology.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#governance",
+    "href": "cis/commercial-intelligence-specification.html#governance",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "14. Governance",
+    "text": "14. Governance\n\nCIS governs process; it does not dictate conclusions.\nChanges to CIS itself are made through Architecture Decision Records (docs/decision-records/) and version bumps to this document.\nFramework weight changes are versioned in the framework YAML and require a note of rationale.\nNo artifact may present an unvalidated number as validated. Reviewers enforce this.\nThe append-only rule applies to Decisions, Evidence, and ADRs.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#computational-architecture",
+    "href": "cis/commercial-intelligence-specification.html#computational-architecture",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "15. Computational architecture",
+    "text": "15. Computational architecture\ndata/ (CSV, synthetic sample)      frameworks/ (YAML weights)      cis/ (ontology, lifecycle)\n        │                                   │                              │\n        └───────────────┬───────────────────┴──────────────┬──────────────┘\n                        ▼                                   ▼\n                    src/  (scoring · validation · evidence · ontology · utils)\n                        │\n          ┌─────────────┼──────────────┐\n          ▼             ▼              ▼\n      tests/       dashboards/*.qmd   working-paper/*.qmd\n   (pytest guards)  (Plotly, live)     (structured enquiry)\n                        │\n                        ▼\n                  Quarto site (_site/)\n\nsrc/ is the single source of computational truth. Dashboards and notebooks import from it; they do not re-implement scoring.\nframeworks/ holds tunable parameters as data.\ntests/ guards src/ and data integrity; nothing downstream is trusted if tests fail.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#testing-standard",
+    "href": "cis/commercial-intelligence-specification.html#testing-standard",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "16. Testing standard",
+    "text": "16. Testing standard\n\nEvery scoring function MUST be tested for: output range [0, 100], missing-value safety, and monotonicity/sanity on at least one clear case.\nEvery validation function MUST be tested on both a passing and a failing input.\nEvidence classification and aggregation MUST be tested against known inputs.\nSample datasets MUST have an integrity test (required columns present, ids unique, scores in range). The suite runs with pytest and must be green before results are trusted.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#decision-confidence",
+    "href": "cis/commercial-intelligence-specification.html#decision-confidence",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "17. Decision confidence",
+    "text": "17. Decision confidence\nEvery Recommendation carries a confidence grade:\n\n\n\n\n\n\n\n\nGrade\nMeaning\nTypical basis\n\n\n\n\nD — Hypothesis\nAsserted, not yet evidenced.\nProposal claim only.\n\n\nC — Indicative\nWeak evidence, illustrative computation.\nSample/synthetic data, single source.\n\n\nB — Substantiated\nModerate, corroborated evidence.\nMultiple independent sources, validated method.\n\n\nA — Validated\nStrong evidence, method validated, monitored.\nConvergent evidence + live metrics.\n\n\n\nAt v0.1 essentially everything is grade C or D. A recommendation’s grade MUST NOT exceed what its aggregate evidence strength (see §10) supports.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#continuous-learning",
+    "href": "cis/commercial-intelligence-specification.html#continuous-learning",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "18. Continuous learning",
+    "text": "18. Continuous learning\nThe Monitoring and Learning stages close the loop. Post-decision Metric observations are compared to the expectations the Recommendation stated. Divergence triggers revision: hypotheses are updated, evidence re-weighted, and, if needed, the Question re-opened. Learning is recorded, so the project has memory of what changed and why.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#extension-model",
+    "href": "cis/commercial-intelligence-specification.html#extension-model",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "19. Extension model",
+    "text": "19. Extension model\nCIS is extended without breaking the governance contract by:\n\nNew frameworks — add a YAML file + scoring function + test; register its question.\nNew objects — extend ontology.yml and object-model.yml with a version bump; add an ADR.\nNew models — a statistical/ML model is a Model object; it must still pass through Validation and carry provenance. Advanced ML does not bypass the lifecycle.\nNew data sources — documented schema + README + integrity test.\n\nExtensions MUST preserve: traceability, reproducibility, the hypothesis/fact separation, and the testing standard.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#success-criteria",
+    "href": "cis/commercial-intelligence-specification.html#success-criteria",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "20. Success criteria",
+    "text": "20. Success criteria\nCIS is succeeding when:\n\nEvery published recommendation can name its lifecycle provenance and confidence grade.\nNo unvalidated claim is presented as fact.\nRe-running the repository reproduces every score and figure.\nThe test suite is green and covers all scoring/validation/evidence logic.\nEvidence accumulates over time and visibly moves recommendations.\nA newcomer can trace any conclusion back to its question and evidence unaided.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "cis/commercial-intelligence-specification.html#future-work",
+    "href": "cis/commercial-intelligence-specification.html#future-work",
+    "title": "Commercial Intelligence Specification (CIS)",
+    "section": "21. Future work",
+    "text": "21. Future work\n\nLive CRM / RevOps data integration replacing synthetic samples.\npandera/pydantic schemas enforced in CI on real data.\nSegmentation models (scikit-learn) as first-class Model objects.\nPricing and willingness-to-pay models with proper elasticity evidence.\nA persistent decision store (database) with provenance queries.\nAutomated confidence-grade computation from the evidence register.\nKnowledge-graph representation of the ontology (networkx → graph DB).\n\n\nDocument status: v0.1.0, Draft. This specification will itself evolve through ADRs and version bumps. Its authority is over process; conclusions remain earned through evidence.",
+    "crumbs": [
+      "Governance",
+      "Commercial Intelligence Specification"
+    ]
+  },
+  {
+    "objectID": "governance/index.html",
+    "href": "governance/index.html",
+    "title": "Governance",
+    "section": "",
+    "text": "Governance › Overview\n\n\nThis section is how the lab governs itself. It holds the rules, the record of past choices, and the automated checks.\n\n\nProcess is enforced Read the standard\n\n\nGovernance answers “by what authority?” for everything else on the site. It has three pillars: the standard that defines how strategy is reasoned about, the decision records that capture why the project is built the way it is, and the testing standard that guards every calculation.\n\n\n\nThe standard\n\n\nCommercial Intelligence Specification\n\n\nThe normative document: lifecycle, ontology, evidence model, confidence grades, and mandatory rules. This is the technical standard itself.\n\nRead the CIS \n\n\n\nThe record\n\n\nDecision Records\n\n\nAppend-only Architecture Decision Records — why the lab uses this architecture and why CIS governs it.\n\nRead the ADRs \n\n\n\nThe guardrail\n\n\nTesting Standard\n\n\nWhat the automated test suite guarantees, what it covers, and how to run it.\n\nSee the tests \n\n\n\n\n\n\n\n\nTwo views of the CIS, deliberately distinct. The version here in Governance is the standard itself. The Working Paper’s CIS chapter is a shorter discussion of how the standard is applied to this project. Read the standard for the rules; read the chapter for the application.",
+    "crumbs": [
+      "Governance",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "working-paper/09-conclusion.html",
+    "href": "working-paper/09-conclusion.html",
+    "title": "9. Conclusion",
+    "section": "",
+    "text": "Open · grades C/D No conclusions drawn by design",
+    "crumbs": [
+      "Working Paper",
+      "9 · Conclusion"
+    ]
+  },
+  {
+    "objectID": "working-paper/09-conclusion.html#what-this-paper-has-and-has-not-established",
+    "href": "working-paper/09-conclusion.html#what-this-paper-has-and-has-not-established",
+    "title": "9. Conclusion",
+    "section": "What this paper has (and has not) established",
+    "text": "What this paper has (and has not) established\n\n\nHas\nA governed method (CIS), a structured set of falsifiable claims, illustrative frameworks that make those claims measurable, and a test suite guarding the machinery.\n\n\nHas not\nValidated any of the three decision questions. No segment, positioning, or GTM strategy is recommended yet.",
+    "crumbs": [
+      "Working Paper",
+      "9 · Conclusion"
+    ]
+  },
+  {
+    "objectID": "working-paper/09-conclusion.html#current-state-of-the-three-decision-questions",
+    "href": "working-paper/09-conclusion.html#current-state-of-the-three-decision-questions",
+    "title": "9. Conclusion",
+    "section": "Current state of the three decision questions",
+    "text": "Current state of the three decision questions\n\n\n\n\n\n\n\n\nQuestion\nCurrent state\nGate to advance\n\n\n\n\nQ1 — First segment\nIllustrative ranking only (grade C)\nDiscovery / pilot evidence for top segments (Ch. 5)\n\n\nQ2 — Positioning\nFraming scored, untested on buyers (grade C)\nMessage-testing results (Ch. 4)\n\n\nQ3 — Evidence threshold\nThreshold defined (grade B gate)\nInstrument the register; meet the gate (Ch. 7)",
+    "crumbs": [
+      "Working Paper",
+      "9 · Conclusion"
+    ]
+  },
+  {
+    "objectID": "working-paper/09-conclusion.html#the-central-thesis",
+    "href": "working-paper/09-conclusion.html#the-central-thesis",
+    "title": "9. Conclusion",
+    "section": "The central thesis",
+    "text": "The central thesis\nThe proposal’s claim that the CRM is the foundation for AI readiness (H-CRM-AI) remains a hypothesis (grade D → C). The planned pilot (EV-010) is the pivotal next experiment.\n\n\n\nWhat “done” looks like\n\nA conclusion is warranted when the relevant claims reach the confidence grade their decisions require (≥ B for a GTM commitment), with reproducible evidence in the register and a green test suite. Until then, this chapter stays open — by design.",
+    "crumbs": [
+      "Working Paper",
+      "9 · Conclusion"
+    ]
+  },
+  {
+    "objectID": "working-paper/09-conclusion.html#immediate-next-steps",
+    "href": "working-paper/09-conclusion.html#immediate-next-steps",
+    "title": "9. Conclusion",
+    "section": "Immediate next steps",
+    "text": "Immediate next steps\n\n\nNext steps\n\nRun the AI-readiness pilot (EV-010) and record outcomes (Ch. 6).\nRun discovery calls for the top two segments (Ch. 5) and a message test for positioning (Ch. 4).\nRe-run the dashboards and the evidence summary; let the numbers move.\nRevisit this chapter only when evidence — not assertion — supports a verdict.",
+    "crumbs": [
+      "Working Paper",
+      "9 · Conclusion"
+    ]
+  },
+  {
+    "objectID": "working-paper/07-go-to-market.html",
+    "href": "working-paper/07-go-to-market.html",
+    "title": "7. Go-to-Market",
+    "section": "",
+    "text": "Decision 3 · Evidence threshold Gate at grade B\n\n\n\n\nDecision question\n\nWhat evidence is required before Sigmoid commits to a go-to-market (GTM) strategy — segment, positioning, motion, and pricing?\n\n\n\nHypothesis\n\nA GTM commitment should be gated on reaching confidence grade B (substantiated) on three linked claims: the first-target segment (Ch. 5), the positioning (Ch. 4), and a defensible price/packaging. Committing earlier risks scaling an unvalidated thesis.\nFalsifier: evidence that a fast, cheap commitment on weaker signal outperforms the gated approach (e.g. speed-to-market dominates in this category).\n\n\n\n\nCurrent evidence\n\nProposal-level GTM and pricing assertions only — EV-003, EV-008 (grade D).\nNo willingness-to-pay evidence collected yet; the pricing framework is deliberately a placeholder.\n\n\n\nEvidence needed\n\nSegment: discovery / pilot conversion evidence (Ch. 5) at grade ≥ B.\nPositioning: message-testing results (Ch. 4) at grade ≥ B.\nPricing: willingness-to-pay signals and competitor benchmarks (pricing_model.yml) — currently absent (EV-008, grade D).\nMotion: whether the sale is founder-led, inbound, or partner-led for the chosen segment.\n\n\n\nAnalysis plan\n\nDefine the evidence threshold (grade B on the three linked claims) as the commit gate.\nTrack each claim’s evidence strength via the register and summarise_evidence_by_claim.\nOnly when all three clear the gate, draft a GTM recommendation with explicit confidence and basis.\n\n\n\nNext steps\n\nInstrument the evidence register so the three gate-claims’ strengths are visible at a glance.\nDo not publish a GTM recommendation until the threshold is met.\n\n\n\n\nLimitations\n\nGrades depend on the quality / bias metadata being recorded honestly.\nThe three claims interact (positioning affects segment affects price); they may not clear the gate independently.",
+    "crumbs": [
+      "Working Paper",
+      "7 · Go-to-Market"
+    ]
+  },
+  {
+    "objectID": "working-paper/05-market-prioritisation.html",
+    "href": "working-paper/05-market-prioritisation.html",
+    "title": "5. Market Prioritisation",
+    "section": "",
+    "text": "Decision 1 · Market entry Confidence C · Indicative Companion: Market Prioritisation dashboard\n\n\n\n\nDecision question\n\nWhich market segment should Sigmoid target first for the CRM?\n\n\n\nHypothesis\n\nSegments with acute, funded pain and short sales cycles (initial candidates: audit and professional-services firms) will out-perform large-but-diffuse segments (SMEs) and slow-procurement public-sector segments (municipalities) as a first target.\nFalsifier: discovery or pilot evidence showing a large-but-diffuse or public-sector segment converts faster and cheaper than professional-services firms.\n\n\n\n\nCurrent evidence\n\nIllustrative sub-scores for seven segments (synthetic) → priority ranking in the dashboard.\nOne discovery signal supporting audit firms — EV-005 (n = 1, grade C).\nOne signal cautioning against municipalities on procurement/budget — EV-006.\nSME size-vs-budget tension — EV-009 (supports size, not budget).\n\n\n\nEvidence needed\n\nPer-segment: real pain acuteness, budget / willingness-to-pay, sales-cycle length, competitive intensity, and strategic fit.\nConversion signal from a handful of discovery calls or a pilot per candidate segment.\n\n\n\nAnalysis plan\n\nCompute illustrative priority scores (done) to sequence which segments to investigate first.\nCollect real sub-score evidence for the top 2–3 segments; replace synthetic inputs.\nRe-run and test whether the ranking is stable under reasonable weight changes (sensitivity).\n\n\n\nNext steps\n\nRun discovery calls for the top two segments; register the evidence.\nOnly then consider a first-target recommendation, at the confidence its evidence supports.\n\n\n\n\nLimitations\n\nThe ranking currently reflects assumptions encoded as sub-scores, not observations.\nevidence_quality_score down-weights poorly-known segments, which can entrench what we already (think we) know — watch for this bias.",
+    "crumbs": [
+      "Working Paper",
+      "5 · Market Prioritisation"
+    ]
+  },
+  {
+    "objectID": "working-paper/03-commercial-intelligence-specification.html",
+    "href": "working-paper/03-commercial-intelligence-specification.html",
+    "title": "3. Commercial Intelligence Specification",
+    "section": "",
+    "text": "Working Paper · applied discussion\n\n\n\n\n\n\n\nThis chapter vs. the standard. This is the applied discussion — how the CIS method is used in this project. For the normative standard itself (lifecycle, ontology, evidence model, mandatory rules), see Governance › Commercial Intelligence Specification.\n\n\n\n\n\n\nQuestion\n\nHow do we ensure every commercial recommendation in this project is traceable, reproducible, falsifiable, and honest about its confidence?\n\n\n\nHypothesis\n\nTreating commercial strategy as a computational decision system — with a fixed lifecycle, an evidence model, and an enforced testing standard — produces better, more revisable decisions than narrative strategy documents.\n\n\n\nThe method in brief\n\n\n\nLifecycle\nQuestion → Hypothesis → Operational Definition → Evidence → Analysis → Model → Validation → Recommendation → Implementation → Monitoring → Learning.\n\n\nOntology & object model\nEvery claim, score, and decision is a typed object with identity and provenance (ontology.yml, object-model.yml).\n\n\nEvidence model\nItems are weighted by quality × bias adjustment; each claim gets a strength grade.\n\n\nConfidence grades\nD (hypothesis) → C (indicative) → B (substantiated) → A (validated). All logic under pytest.\n\n\n\n\nCurrent evidence\n\nThe specification, ontology, object model, and lifecycle YAML exist and are internally consistent.\nThe test suite passes (see Ch. 8).\n\n\n\nEvidence needed\n\nEvidence that the method is actually followed (provenance present on recommendations).\nA green test suite as a precondition for trusting any number.\n\n\n\nAnalysis plan\nAudit each downstream chapter for lifecycle compliance: does each recommendation-in-waiting name its evidence and validation? Flag any number presented above its earned confidence grade.\n\n\nNext steps\nApply the method to the three decision questions (Chs. 4–7).\n\n\n\nLimitations\n\nv0.1 enforces structure, not advanced modelling; sophistication is deferred (CIS §21).",
+    "crumbs": [
+      "Working Paper",
+      "3 · CIS in Practice"
+    ]
+  },
+  {
+    "objectID": "working-paper/01-introduction.html",
+    "href": "working-paper/01-introduction.html",
+    "title": "1. Introduction",
+    "section": "",
+    "text": "Confidence D · Framing Sets up Chapters 4–9\n\n\n\n\nGuiding question\n\nWhat must be true for Sigmoid Analytica’s CRM to become a defensible commercial and AI-readiness platform, and how will we know?\n\n\n\nHypothesis\n\nThe proposal’s thesis — that the CRM is the foundation for AI readiness and a wedge into a broader revenue-operations offering — is a coherent and plausible v0.1 hypothesis, but its key claims (segment, positioning, pricing, readiness) are currently asserted rather than evidenced.\n\n\n\nThe aim is to convert the proposal into a testable commercial enquiry: a set of questions about market, positioning, readiness, and go-to-market that can be answered with evidence and revised as that evidence changes.\n\n\n\nCurrent evidence\n\nThe proposal itself, registered as source_type = proposal (grade D) in the evidence register.\nA small number of synthetic / illustrative discovery signals, clearly labelled as such.\n\n\n\nEvidence needed\n\nThe full set of falsifiable claims extracted from the proposal, each with an operational definition.\nA baseline of which claims already have any supporting evidence, and of what quality.\n\n\n\nAnalysis plan\n\nRead the paper’s structure (see below).\nExtract claims into hypotheses (Chs. 4–7).\nScore the illustrative frameworks to make claims measurable (dashboards).\nIdentify the highest-value evidence to collect next (Ch. 7).\n\n\n\nNext steps\n\nProceed to Ch. 2 for the commercial context.\nTreat every subsequent number as illustrative until Ch. 8’s validation is satisfied on real data.\n\n\n\n\nLimitations\n\nNo real customer or market data at v0.1; all numbers are synthetic.\nThe proposal is a single source with high bias risk.\n\n\n\n\n\n\n\n\nHow to read this paper. Each chapter uses the same fixed structure. When a chapter states a hypothesis, read it as “this is what we currently believe and intend to test” — never as a finding.",
+    "crumbs": [
+      "Working Paper",
+      "1 · Introduction"
+    ]
+  },
+  {
+    "objectID": "dashboards/market-prioritisation.html",
+    "href": "dashboards/market-prioritisation.html",
+    "title": "Market Prioritisation",
+    "section": "",
+    "text": "Dashboards › Market Prioritisation\n\n\nSupports Decision 1 · Market Entry — which segment should Sigmoid target first for the CRM?\n\n\nConfidence C · Illustrative Synthetic data Related: Framework · Evidence Register\nImports and project path bootstrap\nimport sys, pathlib\n# Find the project root (the dir containing src/) regardless of execution dir.\n_root = pathlib.Path.cwd()\nwhile _root != _root.parent and not (_root / \"src\").is_dir():\n    _root = _root.parent\nsys.path.insert(0, str(_root))\n\nimport pandas as pd\nimport plotly.express as px\nfrom IPython.display import HTML\n\nfrom src.utils import load_sample, load_framework\nfrom src.scoring import calculate_market_priority_score\n\nPLOTLY_TEMPLATE = \"plotly_white\"\nACCENT = \"#2f6bb0\"\nLoad segments and compute priority scores\nsegments = load_sample(\"market_segments.csv\").copy()\nsegments[\"priority_score\"] = segments.apply(calculate_market_priority_score, axis=1)\nranked = segments.sort_values(\"priority_score\", ascending=False).reset_index(drop=True)\nranked.insert(0, \"rank\", ranked.index + 1)\nBuild summary metrics (computed, not hardcoded)\ntop = ranked.iloc[0]\nrunner_up = ranked.iloc[1]\nlead = top[\"priority_score\"] - runner_up[\"priority_score\"]\n\ndef metric(label, value, sub=\"\"):\n    sub_html = f'&lt;div class=\"metric-sub\"&gt;{sub}&lt;/div&gt;' if sub else \"\"\n    return (f'&lt;div class=\"metric\"&gt;&lt;div class=\"metric-label\"&gt;{label}&lt;/div&gt;'\n            f'&lt;div class=\"metric-value\"&gt;{value}&lt;/div&gt;{sub_html}&lt;/div&gt;')\n\nHTML(\n    '&lt;div class=\"metric-row\"&gt;'\n    + metric(\"Segments evaluated\", len(ranked), \"candidate markets scored\")\n    + metric(\"Top-ranked segment\", top[\"segment_name\"], f'{top[\"industry\"]}')\n    + metric(\"Top priority score\", f'{top[\"priority_score\"]:.1f}', \"out of 100 (illustrative)\")\n    + metric(\"Lead over #2\", f'+{lead:.1f}', f'vs {runner_up[\"segment_name\"]}')\n    + \"&lt;/div&gt;\"\n)\n\n\nSegments evaluated7candidate markets scoredTop-ranked segmentAudit FirmsProfessional ServicesTop priority score65.6out of 100 (illustrative)Lead over #2+5.4vs Mining Suppliers",
+    "crumbs": [
+      "Dashboards",
+      "Market Prioritisation"
+    ]
+  },
+  {
+    "objectID": "dashboards/market-prioritisation.html#ranked-segments",
+    "href": "dashboards/market-prioritisation.html#ranked-segments",
+    "title": "Market Prioritisation",
+    "section": "Ranked segments",
+    "text": "Ranked segments\nThe table is sortable (click a column header) and paged.\n\n\nShow code\ndisplay_cols = [\n    \"rank\", \"segment_name\", \"industry\", \"priority_score\",\n    \"market_size_score\", \"pain_score\", \"budget_score\",\n    \"competition_score\", \"sales_cycle_score\", \"strategic_fit_score\", \"evidence_quality_score\",\n]\nranked[display_cols]\n\n\n\n\n\n\n\n\n\nrank\nsegment_name\nindustry\npriority_score\nmarket_size_score\npain_score\nbudget_score\ncompetition_score\nsales_cycle_score\nstrategic_fit_score\nevidence_quality_score\n\n\n\n\n0\n1\nAudit Firms\nProfessional Services\n65.6\n6\n8\n7\n5\n4\n8\n4\n\n\n1\n2\nMining Suppliers\nMining & Industrials\n60.2\n7\n7\n7\n6\n6\n7\n3\n\n\n2\n3\nProfessional Services Firms\nProfessional Services\n59.2\n7\n7\n6\n7\n5\n7\n4\n\n\n3\n4\nSMEs\nCross-industry\n58.2\n9\n6\n4\n8\n3\n6\n5\n\n\n4\n5\nSETAs\nPublic Sector / Skills\n56.8\n4\n8\n6\n3\n8\n6\n5\n\n\n5\n6\nState-Owned Enterprises\nPublic Sector\n55.6\n7\n7\n6\n4\n9\n5\n3\n\n\n6\n7\nMunicipalities\nPublic Sector\n52.2\n8\n6\n4\n4\n9\n5\n3",
+    "crumbs": [
+      "Dashboards",
+      "Market Prioritisation"
+    ]
+  },
+  {
+    "objectID": "dashboards/market-prioritisation.html#priority-scores-by-segment",
+    "href": "dashboards/market-prioritisation.html#priority-scores-by-segment",
+    "title": "Market Prioritisation",
+    "section": "Priority scores by segment",
+    "text": "Priority scores by segment\n\n\nShow code\nfig = px.bar(\n    ranked.sort_values(\"priority_score\"),\n    x=\"priority_score\",\n    y=\"segment_name\",\n    orientation=\"h\",\n    color=\"priority_score\",\n    color_continuous_scale=\"Blues\",\n    labels={\"priority_score\": \"Priority score (0–100)\", \"segment_name\": \"\"},\n    template=PLOTLY_TEMPLATE,\n)\nfig.update_layout(coloraxis_showscale=False, height=420, margin=dict(l=10, r=10, t=20, b=10),\n                  font=dict(family=\"Inter, system-ui, sans-serif\", size=13))\nfig.show()",
+    "crumbs": [
+      "Dashboards",
+      "Market Prioritisation"
+    ]
+  },
+  {
+    "objectID": "dashboards/market-prioritisation.html#what-drives-the-ranking",
+    "href": "dashboards/market-prioritisation.html#what-drives-the-ranking",
+    "title": "Market Prioritisation",
+    "section": "What drives the ranking",
+    "text": "What drives the ranking\n\n\nShow code\nframework = load_framework(\"market_prioritisation\")\nweights = pd.DataFrame(framework[\"criteria\"])[[\"name\", \"weight\", \"direction\", \"rationale\"]]\nweights\n\n\n\n\n\n\n\n\n\nname\nweight\ndirection\nrationale\n\n\n\n\n0\nmarket_size_score\n0.20\nhigher_better\nLarger addressable segments offer more room to...\n\n\n1\npain_score\n0.22\nhigher_better\nAcute, felt pain shortens the path to adoption.\n\n\n2\nbudget_score\n0.16\nhigher_better\nAbility and willingness to pay.\n\n\n3\ncompetition_score\n0.12\nlower_better\nCrowded segments are harder and cheaper-to-lose.\n\n\n4\nsales_cycle_score\n0.10\nlower_better\nShorter cycles mean faster feedback and cash.\n\n\n5\nstrategic_fit_score\n0.12\nhigher_better\nAlignment with Sigmoid's capabilities and narr...\n\n\n6\nevidence_quality_score\n0.08\nhigher_better\nHow much we actually know about this segment (...",
+    "crumbs": [
+      "Dashboards",
+      "Market Prioritisation"
+    ]
+  },
+  {
+    "objectID": "dashboards/market-prioritisation.html#interpretation",
+    "href": "dashboards/market-prioritisation.html#interpretation",
+    "title": "Market Prioritisation",
+    "section": "Interpretation",
+    "text": "Interpretation\n\nA high score means a segment scores well on the weighted blend of size, pain, budget, and fit, after penalising competition and long sales cycles.\nevidence_quality_score deliberately discounts segments we know little about — a hedge against ranking on guesswork.\nThe lead over #2 is a scan of robustness: a small margin means the top choice is sensitive to weight changes and should not be over-read.\n\n\n\n\n\n\n\nWarningLimitations\n\n\n\n\nSub-scores are assumptions encoded as numbers, not observations; the ranking inherits their bias.\nSynthetic data only — nothing here is a decision. Promoting a segment to a recommendation requires evidence collection and validation (see Working Paper Ch. 5).\n\n\n\n\n\n\n\n\n\nNoteNext step in the lifecycle\n\n\n\nCollect real evidence for the top-ranked segments (interviews, pilots), register it in the evidence register, and re-run. The ranking should change as evidence — not assumptions — accumulates.",
+    "crumbs": [
+      "Dashboards",
+      "Market Prioritisation"
+    ]
+  },
+  {
+    "objectID": "dashboards/ai-readiness-scorecard.html",
+    "href": "dashboards/ai-readiness-scorecard.html",
+    "title": "AI Readiness Scorecard",
+    "section": "",
+    "text": "Dashboards › AI Readiness Scorecard\n\n\nSupports the thesis H-CRM-AI — is the CRM the foundation for AI readiness? Context in Working Paper › AI Readiness.\n\n\nConfidence D → C Synthetic data Related: Framework · Evidence Register\nImports and project path bootstrap\nimport sys, pathlib\n_root = pathlib.Path.cwd()\nwhile _root != _root.parent and not (_root / \"src\").is_dir():\n    _root = _root.parent\nsys.path.insert(0, str(_root))\n\nimport pandas as pd\nimport plotly.express as px\nfrom IPython.display import HTML\n\nfrom src.utils import load_sample\nfrom src.scoring import calculate_ai_readiness_score, calculate_customer_fit_score\n\nPLOTLY_TEMPLATE = \"plotly_white\"\nLoad customers and compute readiness + fit scores\ncustomers = load_sample(\"customer_profiles.csv\").copy()\ncustomers[\"ai_readiness_score\"] = customers.apply(calculate_ai_readiness_score, axis=1)\ncustomers[\"customer_fit_score\"] = customers.apply(calculate_customer_fit_score, axis=1)\n\ndef band(score):\n    if score &gt;= 66:\n        return \"High\"\n    if score &gt;= 40:\n        return \"Medium\"\n    return \"Low\"\n\ncustomers[\"readiness_band\"] = customers[\"ai_readiness_score\"].map(band)\nranked = customers.sort_values(\"ai_readiness_score\", ascending=False).reset_index(drop=True)\nBuild summary metrics (computed, not hardcoded)\nn = len(customers)\nmean_readiness = customers[\"ai_readiness_score\"].mean()\nhigh_n = int((customers[\"readiness_band\"] == \"High\").sum())\nhigh_pct = 100 * high_n / n\ntop = ranked.iloc[0]\n\ndef metric(label, value, sub=\"\"):\n    sub_html = f'&lt;div class=\"metric-sub\"&gt;{sub}&lt;/div&gt;' if sub else \"\"\n    return (f'&lt;div class=\"metric\"&gt;&lt;div class=\"metric-label\"&gt;{label}&lt;/div&gt;'\n            f'&lt;div class=\"metric-value\"&gt;{value}&lt;/div&gt;{sub_html}&lt;/div&gt;')\n\nHTML(\n    '&lt;div class=\"metric-row\"&gt;'\n    + metric(\"Customers scored\", n, \"synthetic profiles\")\n    + metric(\"Mean AI readiness\", f\"{mean_readiness:.1f}\", \"out of 100 (illustrative)\")\n    + metric(\"High-readiness share\", f\"{high_pct:.0f}%\", f\"{high_n} of {n} customers\")\n    + metric(\"Most ready\", top[\"company_name\"], f'score {top[\"ai_readiness_score\"]:.1f}')\n    + \"&lt;/div&gt;\"\n)\n\n\nCustomers scored12synthetic profilesMean AI readiness42.9out of 100 (illustrative)High-readiness share8%1 of 12 customersMost readyCape Professional Services Ltdscore 70.4",
+    "crumbs": [
+      "Dashboards",
+      "AI Readiness Scorecard"
+    ]
+  },
+  {
+    "objectID": "dashboards/ai-readiness-scorecard.html#customer-readiness-table",
+    "href": "dashboards/ai-readiness-scorecard.html#customer-readiness-table",
+    "title": "AI Readiness Scorecard",
+    "section": "Customer readiness table",
+    "text": "Customer readiness table\n\n\nShow code\ncols = [\n    \"customer_id\", \"company_name\", \"industry\", \"employee_band\",\n    \"ai_readiness_score\", \"readiness_band\", \"customer_fit_score\",\n    \"data_quality\", \"analytics_maturity\", \"workflow_maturity\", \"ai_readiness\",\n]\nranked[cols]\n\n\n\n\n\n\n\n\n\ncustomer_id\ncompany_name\nindustry\nemployee_band\nai_readiness_score\nreadiness_band\ncustomer_fit_score\ndata_quality\nanalytics_maturity\nworkflow_maturity\nai_readiness\n\n\n\n\n0\nCUST-010\nCape Professional Services Ltd\nProfessional Services\n201-500\n70.4\nHigh\n63.7\n8\n7\n7\n7\n\n\n1\nCUST-004\nAurora Advisory Group\nProfessional Services\n11-50\n62.2\nMedium\n64.8\n7\n6\n7\n6\n\n\n2\nCUST-008\nHalcyon Chartered Accountants\nProfessional Services\n51-200\n60.2\nMedium\n67.2\n7\n6\n7\n5\n\n\n3\nCUST-001\nMeridian Audit Partners\nProfessional Services\n51-200\n50.2\nMedium\n65.2\n6\n5\n6\n4\n\n\n4\nCUST-006\nNational Skills SETA\nPublic Sector / Skills\n201-500\n45.4\nMedium\n57.0\n5\n4\n5\n5\n\n\n5\nCUST-009\nVeld Industrial Components\nMining & Industrials\n51-200\n42.2\nMedium\n55.0\n5\n4\n5\n4\n\n\n6\nCUST-012\nIgnition Tech SME\nCross-industry\n11-50\n41.4\nMedium\n63.5\n4\n4\n5\n5\n\n\n7\nCUST-002\nKopano Mining Supplies\nMining & Industrials\n201-500\n35.2\nLow\n55.9\n4\n3\n5\n3\n\n\n8\nCUST-007\nTransnet-adjacent Logistics SOE\nPublic Sector\n1000+\n34.6\nLow\n48.2\n4\n3\n4\n3\n\n\n9\nCUST-005\nThuso SME Collective\nCross-industry\n1-10\n27.2\nLow\n53.1\n3\n2\n4\n3\n\n\n10\nCUST-003\nRustenburg Local Municipality\nPublic Sector\n501-1000\n24.6\nLow\n37.8\n3\n2\n3\n2\n\n\n11\nCUST-011\nBoland Municipal District\nPublic Sector\n501-1000\n20.6\nLow\n39.5\n2\n2\n3\n2",
+    "crumbs": [
+      "Dashboards",
+      "AI Readiness Scorecard"
+    ]
+  },
+  {
+    "objectID": "dashboards/ai-readiness-scorecard.html#readiness-distribution",
+    "href": "dashboards/ai-readiness-scorecard.html#readiness-distribution",
+    "title": "AI Readiness Scorecard",
+    "section": "Readiness distribution",
+    "text": "Readiness distribution\n\n\nShow code\nfig = px.histogram(\n    customers,\n    x=\"ai_readiness_score\",\n    nbins=8,\n    labels={\"ai_readiness_score\": \"AI readiness score (0–100)\"},\n    template=PLOTLY_TEMPLATE,\n    color_discrete_sequence=[\"#2f6bb0\"],\n)\nfig.update_layout(height=340, bargap=0.08, margin=dict(l=10, r=10, t=20, b=10),\n                  font=dict(family=\"Inter, system-ui, sans-serif\", size=13))\nfig.show()",
+    "crumbs": [
+      "Dashboards",
+      "AI Readiness Scorecard"
+    ]
+  },
+  {
+    "objectID": "dashboards/ai-readiness-scorecard.html#readiness-vs-fit",
+    "href": "dashboards/ai-readiness-scorecard.html#readiness-vs-fit",
+    "title": "AI Readiness Scorecard",
+    "section": "Readiness vs fit",
+    "text": "Readiness vs fit\nDo the customers most ready for AI also fit the CRM best? This scatter frames that question; the answer is an empirical matter, not something to assert.\n\n\nShow code\nfig = px.scatter(\n    customers,\n    x=\"customer_fit_score\",\n    y=\"ai_readiness_score\",\n    color=\"readiness_band\",\n    hover_name=\"company_name\",\n    size=\"data_quality\",\n    labels={\n        \"customer_fit_score\": \"Customer fit score (0–100)\",\n        \"ai_readiness_score\": \"AI readiness score (0–100)\",\n        \"readiness_band\": \"Readiness\",\n    },\n    category_orders={\"readiness_band\": [\"High\", \"Medium\", \"Low\"]},\n    color_discrete_map={\"High\": \"#2f8158\", \"Medium\": \"#b07a1e\", \"Low\": \"#6b7684\"},\n    template=PLOTLY_TEMPLATE,\n)\nfig.update_layout(height=440, margin=dict(l=10, r=10, t=20, b=10),\n                  font=dict(family=\"Inter, system-ui, sans-serif\", size=13))\nfig.show()",
+    "crumbs": [
+      "Dashboards",
+      "AI Readiness Scorecard"
+    ]
+  },
+  {
+    "objectID": "dashboards/ai-readiness-scorecard.html#maturity-profile-of-the-customer-base",
+    "href": "dashboards/ai-readiness-scorecard.html#maturity-profile-of-the-customer-base",
+    "title": "AI Readiness Scorecard",
+    "section": "Maturity profile of the customer base",
+    "text": "Maturity profile of the customer base\n\n\nShow code\nmaturity_cols = [\"current_crm_maturity\", \"workflow_maturity\", \"data_quality\",\n                 \"analytics_maturity\", \"ai_readiness\"]\nprofile = customers[maturity_cols].mean().reset_index()\nprofile.columns = [\"dimension\", \"mean_score_0_10\"]\nfig = px.bar(\n    profile,\n    x=\"mean_score_0_10\",\n    y=\"dimension\",\n    orientation=\"h\",\n    range_x=[0, 10],\n    labels={\"mean_score_0_10\": \"Mean (0–10)\", \"dimension\": \"\"},\n    template=PLOTLY_TEMPLATE,\n    color_discrete_sequence=[\"#2f6bb0\"],\n)\nfig.update_layout(height=320, margin=dict(l=10, r=10, t=20, b=10),\n                  font=dict(family=\"Inter, system-ui, sans-serif\", size=13))\nfig.show()",
+    "crumbs": [
+      "Dashboards",
+      "AI Readiness Scorecard"
+    ]
+  },
+  {
+    "objectID": "dashboards/ai-readiness-scorecard.html#interpretation",
+    "href": "dashboards/ai-readiness-scorecard.html#interpretation",
+    "title": "AI Readiness Scorecard",
+    "section": "Interpretation",
+    "text": "Interpretation\n\ndata_quality is the load-bearing input of this index because the proposal asserts AI value flows from the data/CRM foundation.\nA wide readiness distribution is useful: it gives the eventual pilot enough spread to detect whether readiness actually predicts AI value.\nReadiness and fit are scored independently — treat any apparent relationship in the scatter as a question to test, not a finding.\n\n\n\n\n\n\n\nImportantThe claim under test\n\n\n\nThe heavy data_quality weight makes this index a restatement of Hypothesis H-CRM-AI (grade D → C). Validating it requires linking readiness scores to actual AI outcomes in a pilot — see Working Paper Ch. 6.\n\n\n\n\n\n\n\n\nWarningLimitations\n\n\n\n\nSynthetic customers only; scores exercise the machinery, they do not describe a real book of business.\nThe index encodes the thesis rather than testing it — avoid circular reasoning when validating.",
+    "crumbs": [
+      "Dashboards",
+      "AI Readiness Scorecard"
+    ]
+  },
+  {
+    "objectID": "evidence/proposal-hypothesis-v01.html",
+    "href": "evidence/proposal-hypothesis-v01.html",
+    "title": "Hypothesis v0.1 · Proposal Source",
+    "section": "",
+    "text": "Evidence › Hypothesis v0.1 (Proposal Source)\n\n\nThis page answers “what is asserted but not evidenced?” — the claims that currently rest only on the proposal.\n\n\nProposal = grade D See all claims\nThe source proposal is a persuasive investor/operator document — an argument made before the evidence is in. Treating it as truth would bake in untested assumptions. So it enters the lab as Hypothesis v0.1: a structured set of falsifiable claims. Under the CIS evidence model, proposal-sourced items carry low quality and high bias risk, so they can raise a claim but never lift it above confidence grade C on their own.\nProposal-sourced items440% of the registerMax quality allowed0.40capped for proposal sourceClaims raised4hypotheses, not facts",
+    "crumbs": [
+      "Evidence",
+      "Hypothesis v0.1 · Proposal Source"
+    ]
+  },
+  {
+    "objectID": "evidence/proposal-hypothesis-v01.html#claims-that-currently-rest-on-the-proposal",
+    "href": "evidence/proposal-hypothesis-v01.html#claims-that-currently-rest-on-the-proposal",
+    "title": "Hypothesis v0.1 · Proposal Source",
+    "section": "Claims that currently rest on the proposal",
+    "text": "Claims that currently rest on the proposal\nThese are the items whose source_type is proposal. Each is a hypothesis to be tested, not a fact — note the low quality_score and high bias_risk.\n\n\n\n\n\n\n\n\n\nevidence_id\nclaim_id\nsource_name\ndate_collected\nquality_score\nbias_risk\nsupports_claim\nnotes\n\n\n\n\n0\nEV-001\nH-CRM-AI\nSigmoid Analytica Proposal PDF\n2026-05-10\n0.35\nhigh\nyes\nHYPOTHESIS ONLY: proposal claims CRM is the fo...\n\n\n1\nEV-002\nH-SEG-AUDIT\nSigmoid Analytica Proposal PDF\n2026-05-10\n0.30\nhigh\nyes\nHYPOTHESIS ONLY: proposal implies audit/profes...\n\n\n2\nEV-003\nH-POS-REVOPS\nSigmoid Analytica Proposal PDF\n2026-05-10\n0.30\nhigh\nmixed\nHYPOTHESIS ONLY: proposal frames a RevOps/AI-r...\n\n\n7\nEV-008\nH-PRICE-WTP\nSigmoid Analytica Proposal PDF\n2026-05-10\n0.25\nhigh\nyes\nHYPOTHESIS ONLY: pricing assumptions asserted;...",
+    "crumbs": [
+      "Evidence",
+      "Hypothesis v0.1 · Proposal Source"
+    ]
+  },
+  {
+    "objectID": "evidence/proposal-hypothesis-v01.html#what-would-change-a-grade",
+    "href": "evidence/proposal-hypothesis-v01.html#what-would-change-a-grade",
+    "title": "Hypothesis v0.1 · Proposal Source",
+    "section": "What would change a grade",
+    "text": "What would change a grade\nA proposal claim moves off grade D only when independent evidence arrives — an interview, a survey, a market report, or (decisively) an experiment/pilot.\nThis discipline now runs through the evidence operating layer: the current hypotheses are tracked in data/sample/claim_register.csv (see Claims & Confidence), and each is raised toward grade B only when real discovery evidence — logged via the Evidence Register — meets its stated bar. The proposal seeds the hypotheses; it never validates them.\n\n\n\n\n\n\nThis separation of hypothesis source from evidence is the reason the whole lab exists. The full rationale is recorded in Decision Record ADR-0002.",
+    "crumbs": [
+      "Evidence",
+      "Hypothesis v0.1 · Proposal Source"
+    ]
+  },
+  {
+    "objectID": "evidence/evidence-register.html",
+    "href": "evidence/evidence-register.html",
+    "title": "Evidence Register",
+    "section": "",
+    "text": "Evidence › Evidence Register\n\n\nThis is the real evidence layer. Claim strengths across the site are computed from the records here.\n\n\nEmpty at v0.1 — awaiting fieldwork See how it rolls up\nEach record maps a discovery interview to a claim and a decision. To add evidence, run an interview (templates/discovery_interview_template.md), log it in data/raw/discovery_interviews.csv, then create records in data/processed/discovery_evidence.csv using templates/evidence_capture_template.md. Do not label a proposal assertion as validated evidence.\nDiscovery interviews0loggedEvidence records0mapped to claimsClaims with evidence0supported or refuted",
+    "crumbs": [
+      "Evidence",
+      "Evidence Register"
+    ]
+  },
+  {
+    "objectID": "evidence/evidence-register.html#discovery-evidence-records",
+    "href": "evidence/evidence-register.html#discovery-evidence-records",
+    "title": "Evidence Register",
+    "section": "Discovery evidence records",
+    "text": "Discovery evidence records\nThe expected columns are: evidence_id, interview_id, decision_id, claim_id, source_type, source_name, date_collected, quality_score, bias_risk, supports_or_refutes, evidence_summary, confidence_impact, notes.",
+    "crumbs": [
+      "Evidence",
+      "Evidence Register"
+    ]
+  },
+  {
+    "objectID": "evidence/evidence-register.html#legacy-synthetic-register-illustrative-only",
+    "href": "evidence/evidence-register.html#legacy-synthetic-register-illustrative-only",
+    "title": "Evidence Register",
+    "section": "Legacy synthetic register (illustrative only)",
+    "text": "Legacy synthetic register (illustrative only)\nThe original scaffold shipped a small synthetic register to exercise the scoring machinery. It is kept here for continuity and to demonstrate the roll-up computation, but it is not real evidence and does not feed the decision pages.\n\n\n\n\n\n\n\n\n\nclaim_id\nn_evidence\ntotal_weight\nsupporting_weight\nrefuting_weight\nnet_weight\nstrength\n\n\n\n\n0\nH-CRM-AI\n3\n0.665\n0.525\n0.000\n0.525\nmoderate\n\n\n1\nH-SEG-AUDIT\n2\n0.470\n0.470\n0.000\n0.470\nweak\n\n\n2\nH-PRICE-WTP\n1\n0.100\n0.100\n0.000\n0.100\nweak\n\n\n3\nH-POS-CRM\n1\n0.160\n0.000\n0.000\n0.000\nnone\n\n\n4\nH-POS-REVOPS\n1\n0.120\n0.000\n0.000\n0.000\nnone\n\n\n5\nH-SEG-SME\n1\n0.600\n0.000\n0.000\n0.000\nnone\n\n\n6\nH-SEG-MUNI\n1\n0.315\n0.000\n0.315\n-0.315\nnone\n\n\n\n\n\n\n\n\n\n\n\n\n\nTwo layers, kept distinct. The discovery evidence above is the real operating layer (empty at v0.1). The legacy synthetic register is illustrative scaffolding with older claim ids (H-CRM-AI, …). Real claims live in data/sample/claim_register.csv.",
+    "crumbs": [
+      "Evidence",
+      "Evidence Register"
+    ]
+  },
+  {
+    "objectID": "decisions/positioning.html",
+    "href": "decisions/positioning.html",
+    "title": "Decision 2 · Positioning",
+    "section": "",
+    "text": "Decisions › Positioning\n\n\nThis page supports: how should the product be positioned to buyers and investors?\n\n\nRegister-driven · D2 Open the Positioning dashboard\nThe decision record below reads live from data/sample/decision_register.csv; its claims read from data/sample/claim_register.csv.\nDecision questionShould the platform be positioned as a CRM, Revenue Operations Platform, or AI Readiness Platform?Current hypothesis · grade CA Revenue Operations Platform framing best balances clarity, differentiation, and pain alignment; AI Readiness has the highest investor appeal but the weakest evidence.StatusHypothesisConfidenceC → requires BFrameworks usedPositioning CanvasDashboards linkedPositioning DashboardNext experimentMessage-test the three framings with target buyers and record comprehension and willingness to engage.Owner · last reviewedCommercial Intelligence Lab · 2026-07-03",
+    "crumbs": [
+      "Decisions",
+      "2 · Positioning"
+    ]
+  },
+  {
+    "objectID": "decisions/positioning.html#claims-behind-this-decision",
+    "href": "decisions/positioning.html#claims-behind-this-decision",
+    "title": "Decision 2 · Positioning",
+    "section": "Claims behind this decision",
+    "text": "Claims behind this decision\nEach claim is a hypothesis. It advances toward grade B only when real discovery evidence meets the bar shown.\n\n\nH-POS-CRM-01DpositioningCRM positioning may be clear but too generic.Real evidenceNo real evidence yet — hypothesis. Awaiting discovery interviews.Needed for grade BMessage-test showing 'CRM' is understood but rated undifferentiated.Needed for grade AWin/loss data showing 'CRM' framing loses on differentiation.H-POS-REVOPS-01DpositioningRevenue Operations Platform positioning may better express business value.Real evidenceNo real evidence yet — hypothesis. Awaiting discovery interviews.Needed for grade BMessage-test where 'RevOps' out-scores CRM on value and engagement.Needed for grade AConversion data showing the RevOps framing wins deals.H-POS-AI-01DpositioningAI Readiness Platform positioning may be differentiated but could overpromise.Real evidenceNo real evidence yet — hypothesis. Awaiting discovery interviews.Needed for grade BMessage-test measuring differentiation vs credibility risk of the AI framing.Needed for grade APost-sale data showing the AI framing did not create unmet expectations.H-AI-READY-01Dai_readinessTarget customers may lack structured customer data.Real evidenceNo real evidence yet — hypothesis. Awaiting discovery interviews.Needed for grade BData-maturity assessment across several target customers.Needed for grade ALongitudinal data linking data structure to realised AI value.H-AI-READY-02Dai_readinessCRM implementation may improve AI readiness.Real evidenceNo real evidence yet — hypothesis. Awaiting discovery interviews.Needed for grade BA before/after readiness measure across early CRM adopters.Needed for grade AA pilot showing CRM adoption raised AI-derived value.\n\n\n\n\n\n\n\n\nGo deeper. Long-form reasoning is in Working Paper › CRM Positioning. The AI-readiness claims are discussed in Working Paper › AI Readiness.",
+    "crumbs": [
+      "Decisions",
+      "2 · Positioning"
+    ]
+  },
+  {
+    "objectID": "decisions/index.html",
+    "href": "decisions/index.html",
+    "title": "Decisions",
+    "section": "",
+    "text": "Decisions › Overview\n\n\nThis is the spine of the lab. Every framework, dashboard, and claim exists to answer one of the decisions below.\n\n\nAll at hypothesis stage Start with Market Entry\nWe organise the project around decisions, not documents. The table below reads live from data/sample/decision_register.csv — the register is the source of truth, and each decision links to its claims, frameworks, and dashboards.\nDecisions3under active enquiryClaims9all hypotheses (grade C/D)Recommendations0grade B+ — none yet, by design\nID\nDecision\nStatus\nConfidence → required\nClaims\n\n\n\n\nD1\nMarket Entry\nWhich segment should Sigmoid target first for the CRM?\nHypothesis\nC → B\n3\n\n\nD2\nPositioning\nShould the platform be positioned as a CRM, Revenue Operations Platform, or AI Readiness Platform?\nHypothesis\nC → B\n5\n\n\nD3\nGTM Evidence Gate\nWhat evidence is required before committing to a go-to-market strategy?\nGate defined\nD → B\n1",
+    "crumbs": [
+      "Decisions",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "decisions/index.html#how-a-decision-advances",
+    "href": "decisions/index.html#how-a-decision-advances",
+    "title": "Decisions",
+    "section": "How a decision advances",
+    "text": "How a decision advances\n\n\nHypothesis\n\n\n→Discovery evidence\n\n\n→Claim reaches grade B\n\n\n→Recommendation\n\n\nA decision cannot become a recommendation until its claims clear grade B. Evidence is collected through the Evidence Operating Layer: a discovery interview becomes structured evidence, which supports or refutes a claim, which supports a decision.\n\n\n\n\n\n\nNothing is validated. Every decision is at hypothesis stage. See the live claim strengths on Claims & Confidence and the current picture on Current Status.",
+    "crumbs": [
+      "Decisions",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "start-here/product-brief.html",
+    "href": "start-here/product-brief.html",
+    "title": "Product Brief",
+    "section": "",
+    "text": "Start Here › Product Brief\n\n\nAudience: investors, operators, and anyone who wants the whole picture without the machinery.\n\n\nv0.1 · Hypothesis stage See the Decisions",
+    "crumbs": [
+      "Start Here",
+      "Product Brief"
+    ]
+  },
+  {
+    "objectID": "start-here/product-brief.html#the-one-paragraph-version",
+    "href": "start-here/product-brief.html#the-one-paragraph-version",
+    "title": "Product Brief",
+    "section": "The one-paragraph version",
+    "text": "The one-paragraph version\nWe took the Sigmoid Analytica CRM proposal and turned it from a slide-deck argument into a living decision system — a site where commercial strategy is broken into concrete decisions, scored with transparent, adjustable frameworks, and held to an explicit standard for what counts as evidence. It runs on real code with an automated test suite, so every number can be re-run and audited. Crucially, it is honest about what it does not yet know: nothing is presented as a validated fact.",
+    "crumbs": [
+      "Start Here",
+      "Product Brief"
+    ]
+  },
+  {
+    "objectID": "start-here/product-brief.html#why-it-is-built-this-way",
+    "href": "start-here/product-brief.html#why-it-is-built-this-way",
+    "title": "Product Brief",
+    "section": "Why it is built this way",
+    "text": "Why it is built this way\nA proposal is an argument made before the evidence is in. If we treat it as truth, we bake in untested assumptions about market, positioning, and pricing. So the project is governed by one rule set — the Commercial Intelligence Specification (CIS) — that treats the proposal as Hypothesis v0.1 and forces every recommendation through a fixed lifecycle before it can claim authority. Every claim carries a confidence grade: D (asserted) → C (illustrative) → B (substantiated) → A (validated). Today everything is C or D, by design.",
+    "crumbs": [
+      "Start Here",
+      "Product Brief"
+    ]
+  },
+  {
+    "objectID": "start-here/product-brief.html#the-three-decisions-the-whole-thing-exists-to-make",
+    "href": "start-here/product-brief.html#the-three-decisions-the-whole-thing-exists-to-make",
+    "title": "Product Brief",
+    "section": "The three decisions the whole thing exists to make",
+    "text": "The three decisions the whole thing exists to make\n\n\n\nDecision\nQuestion\nStatus\n\n\n\n\nMarket Entry\nWhich segment should we target first for the CRM?\nHypothesis (C)\n\n\nPositioning\nCRM, Revenue Operations, or AI Readiness Platform?\nHypothesis (C)\n\n\nGTM Evidence Gate\nWhat evidence is required before we commit to GTM?\nGate defined (D)",
+    "crumbs": [
+      "Start Here",
+      "Product Brief"
+    ]
+  },
+  {
+    "objectID": "start-here/product-brief.html#what-is-in-it-the-surfaces",
+    "href": "start-here/product-brief.html#what-is-in-it-the-surfaces",
+    "title": "Product Brief",
+    "section": "What is in it — the surfaces",
+    "text": "What is in it — the surfaces\n\n\n\nSurface\nWhat it is\n\n\n\n\nDecisions\nThe three strategic decisions, each linked to its evidence, framework, and dashboard\n\n\nEvidence\nThe register of claims, their confidence, and what still needs proving\n\n\nFrameworks\nFive transparent scoring models with editable weights\n\n\nDashboards\nThree interactive tools that recompute from the data\n\n\nWorking Paper\nThe long-form discussion behind each decision\n\n\nGovernance\nThe standard (CIS), decision records, and testing standard",
+    "crumbs": [
+      "Start Here",
+      "Product Brief"
+    ]
+  },
+  {
+    "objectID": "start-here/product-brief.html#the-engine-why-the-numbers-are-trustworthy",
+    "href": "start-here/product-brief.html#the-engine-why-the-numbers-are-trustworthy",
+    "title": "Product Brief",
+    "section": "The engine (why the numbers are trustworthy)",
+    "text": "The engine (why the numbers are trustworthy)\n\nAll scoring/validation/evidence logic lives once in src/; dashboards import it, they do not reinvent it.\nWeights live in YAML, not code — change a weight, re-render, the ranking moves.\n53 automated tests guard every calculation. A red suite is a hard stop.\nAll sample data is synthetic and labelled as such.",
+    "crumbs": [
+      "Start Here",
+      "Product Brief"
+    ]
+  },
+  {
+    "objectID": "start-here/product-brief.html#honest-status",
+    "href": "start-here/product-brief.html#honest-status",
+    "title": "Product Brief",
+    "section": "Honest status",
+    "text": "Honest status\nv0.1, hypothesis stage. No segment, positioning, or GTM strategy is recommended yet. The pivotal next experiment is the AI-readiness pilot. See Current Status for the live picture and How to Use This Lab to start working with it.",
+    "crumbs": [
+      "Start Here",
+      "Product Brief"
+    ]
+  },
+  {
+    "objectID": "start-here/how-to-use.html",
+    "href": "start-here/how-to-use.html",
+    "title": "How to Use This Lab",
+    "section": "",
+    "text": "Start Here › How to Use This Lab\n\n\nThis page is the manual. It explains how to navigate, how to read confidence, and how to run the three common tasks.\n\n\nOpen the Decisions",
+    "crumbs": [
+      "Start Here",
+      "How to Use This Lab"
+    ]
+  },
+  {
+    "objectID": "start-here/how-to-use.html#how-to-navigate",
+    "href": "start-here/how-to-use.html#how-to-navigate",
+    "title": "How to Use This Lab",
+    "section": "How to navigate",
+    "text": "How to navigate\nThe navbar follows the workflow, not the folders. Move left to right as your thinking matures:\n\n\nDecisions\n\n\n→Evidence\n\n\n→Frameworks\n\n\n→Dashboards\n\n\n→Recommendations\n\n\nEach section carries its own left sidebar, and every major page opens with a context banner that tells you where you are, which decision the page supports, its confidence, and where to go next.",
+    "crumbs": [
+      "Start Here",
+      "How to Use This Lab"
+    ]
+  },
+  {
+    "objectID": "start-here/how-to-use.html#how-to-read-confidence-grades",
+    "href": "start-here/how-to-use.html#how-to-read-confidence-grades",
+    "title": "How to Use This Lab",
+    "section": "How to read confidence grades",
+    "text": "How to read confidence grades\nEvery claim and recommendation carries a grade. Do not read a number without reading its grade.\n\n\n\n\n\n\n\n\nGrade\nMeaning\nTypical basis\n\n\n\n\nD\nHypothesis — asserted, not evidenced\nProposal claim only\n\n\nC\nIndicative — weak / illustrative\nSynthetic data, single source\n\n\nB\nSubstantiated — corroborated\nMultiple independent sources, validated method\n\n\nA\nValidated — proven and monitored\nConvergent evidence + live metrics\n\n\n\nAt v0.1, essentially everything is C or D. The Claims & Confidence page shows the live grade for every claim.",
+    "crumbs": [
+      "Start Here",
+      "How to Use This Lab"
+    ]
+  },
+  {
+    "objectID": "start-here/how-to-use.html#the-three-tasks-you-will-actually-do",
+    "href": "start-here/how-to-use.html#the-three-tasks-you-will-actually-do",
+    "title": "How to Use This Lab",
+    "section": "The three tasks you will actually do",
+    "text": "The three tasks you will actually do\n\n\n\n1 · Read the state\n\n\nOpen a decision or dashboard to see the current illustrative ranking and the reasoning behind it.\n\n\n\n\n2 · Stress-test it\n\n\nEdit a framework’s weights in its YAML file, re-render, and watch the ranking move. This is how you challenge “why is this #1?”.\n\n\n\n\n3 · Add evidence\n\n\nAdd a row to the Evidence Register; the claim’s strength and grade recompute automatically.",
+    "crumbs": [
+      "Start Here",
+      "How to Use This Lab"
+    ]
+  },
+  {
+    "objectID": "start-here/how-to-use.html#the-rule-that-keeps-it-honest",
+    "href": "start-here/how-to-use.html#the-rule-that-keeps-it-honest",
+    "title": "How to Use This Lab",
+    "section": "The rule that keeps it honest",
+    "text": "The rule that keeps it honest\nA decision cannot become a recommendation until its evidence clears grade B. Each decision page states exactly what evidence it still needs. Until then, the decision stays open — by design.",
+    "crumbs": [
+      "Start Here",
+      "How to Use This Lab"
+    ]
+  },
+  {
+    "objectID": "start-here/how-to-use.html#where-to-go-next",
+    "href": "start-here/how-to-use.html#where-to-go-next",
+    "title": "How to Use This Lab",
+    "section": "Where to go next",
+    "text": "Where to go next\n\nCurrent Status — the live state of all three decisions.\nDecisions — start working.\nGovernance › Testing Standard — how the numbers are guarded.",
+    "crumbs": [
+      "Start Here",
+      "How to Use This Lab"
+    ]
+  },
+  {
+    "objectID": "start-here/current-status.html",
+    "href": "start-here/current-status.html",
+    "title": "Current Status",
+    "section": "",
+    "text": "Start Here › Current Status\n\n\nThis page is the live dashboard of the whole project. It shows the confidence state of each decision and the current strength of every claim.\n\n\nv0.1 · Hypothesis stage Inspect the evidence",
+    "crumbs": [
+      "Start Here",
+      "Current Status"
+    ]
+  },
+  {
+    "objectID": "start-here/current-status.html#the-three-decisions",
+    "href": "start-here/current-status.html#the-three-decisions",
+    "title": "Current Status",
+    "section": "The three decisions",
+    "text": "The three decisions\n\n\n\nDecision\nCurrent state\nConfidence\nGate to advance\n\n\n\n\nMarket Entry\nIllustrative ranking only\nC\nDiscovery / pilot evidence for the top segments\n\n\nPositioning\nFraming scored, untested on buyers\nC\nMessage-testing results\n\n\nGTM Evidence Gate\nGate defined; not met\nD\nAll three claims at grade B + willingness-to-pay evidence",
+    "crumbs": [
+      "Start Here",
+      "Current Status"
+    ]
+  },
+  {
+    "objectID": "start-here/current-status.html#live-evidence-strength-by-claim",
+    "href": "start-here/current-status.html#live-evidence-strength-by-claim",
+    "title": "Current Status",
+    "section": "Live evidence strength by claim",
+    "text": "Live evidence strength by claim\nThe table below is computed directly from the evidence register each time the site is rendered. Strength is the net supporting weight (supporting minus refuting, each discounted by source bias). Proposal-only claims correctly land at weak / none.\n\n\nEvidence items10in the registerClaims tracked7under active enquiryProposal-sourced4grade-D items (hypothesis only)Validated claims0grade A — none yet, by design\n\n\n\n\n\n\n\n\n\n\n\nclaim_id\nn_evidence\ntotal_weight\nsupporting_weight\nrefuting_weight\nnet_weight\nstrength\n\n\n\n\n0\nH-CRM-AI\n3\n0.665\n0.525\n0.000\n0.525\nmoderate\n\n\n1\nH-SEG-AUDIT\n2\n0.470\n0.470\n0.000\n0.470\nweak\n\n\n2\nH-PRICE-WTP\n1\n0.100\n0.100\n0.000\n0.100\nweak\n\n\n3\nH-POS-CRM\n1\n0.160\n0.000\n0.000\n0.000\nnone\n\n\n4\nH-POS-REVOPS\n1\n0.120\n0.000\n0.000\n0.000\nnone\n\n\n5\nH-SEG-SME\n1\n0.600\n0.000\n0.000\n0.000\nnone\n\n\n6\nH-SEG-MUNI\n1\n0.315\n0.000\n0.315\n-0.315\nnone",
+    "crumbs": [
+      "Start Here",
+      "Current Status"
+    ]
+  },
+  {
+    "objectID": "start-here/current-status.html#the-central-thesis",
+    "href": "start-here/current-status.html#the-central-thesis",
+    "title": "Current Status",
+    "section": "The central thesis",
+    "text": "The central thesis\nThe proposal’s claim that the CRM is the foundation for AI readiness (H-CRM-AI) remains a hypothesis (grade D → C). The planned pilot (EV-010) is the pivotal next experiment — see AI Readiness context in the working paper’s AI Readiness chapter.",
+    "crumbs": [
+      "Start Here",
+      "Current Status"
+    ]
+  },
+  {
+    "objectID": "start-here/current-status.html#immediate-next-steps",
+    "href": "start-here/current-status.html#immediate-next-steps",
+    "title": "Current Status",
+    "section": "Immediate next steps",
+    "text": "Immediate next steps\n\nRun the AI-readiness pilot (EV-010) and record outcomes.\nRun discovery calls for the top two segments and a message-test for positioning.\nRe-run the dashboards and this page; let the numbers move as real evidence replaces synthetic inputs.\n\n\n\n\n\n\n\nNothing on this page is a recommendation. It is a status read. A decision only becomes a recommendation when its evidence clears grade B — see the individual decision pages.",
+    "crumbs": [
+      "Start Here",
+      "Current Status"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sigmoid Commercial Intelligence Lab",
+    "section": "",
+    "text": "v0.1 · Hypothesis stage A commercial decision system, not a documentation site\n\n\n\n\nCommercial strategy as an evidence-based decision system: three strategic decisions, the evidence behind them, the frameworks that score them, and the dashboards that bring them to life — all honest about how much is still unproven.\n\n\nStart here View the decisions Open dashboards Read the CIS\n\n\nGoverned by the Commercial Intelligence Specification Synthetic data — nothing validated yet"
+  },
+  {
+    "objectID": "index.html#how-this-lab-works",
+    "href": "index.html#how-this-lab-works",
+    "title": "Sigmoid Commercial Intelligence Lab",
+    "section": "How this lab works",
+    "text": "How this lab works\n\nThe whole site is one workflow. You start from a decision, weigh the evidence, score it with a framework, explore it in a dashboard, and only then — when evidence is strong enough — reach a recommendation. New to it? Start here.\n\n\n\n1Decisions\n\n\n→2Evidence\n\n\n→3Frameworks\n\n\n→4Dashboards\n\n\n→5Recommendations"
+  },
+  {
+    "objectID": "index.html#the-three-decisions",
+    "href": "index.html#the-three-decisions",
+    "title": "Sigmoid Commercial Intelligence Lab",
+    "section": "The three decisions",
+    "text": "The three decisions\n\nThe lab exists to answer three questions. Everything else supports them.\n\n\n\n\nDecision 1 · Market entry\n\n\nWhich segment should Sigmoid target first?\n\n\nSeven candidate segments, scored on a transparent weighted framework.\n\nOpen decision \n\n\n\nDecision 2 · Positioning\n\n\nCRM, Revenue Operations, or AI Readiness Platform?\n\n\nThree framings compared across six weighted criteria — evidence strength included.\n\nOpen decision \n\n\n\nDecision 3 · GTM gate\n\n\nWhat evidence is required before committing to GTM?\n\n\nA confidence gate that keeps an unvalidated thesis from being scaled prematurely.\n\nOpen decision"
+  },
+  {
+    "objectID": "index.html#choose-your-path",
+    "href": "index.html#choose-your-path",
+    "title": "Sigmoid Commercial Intelligence Lab",
+    "section": "Choose your path",
+    "text": "Choose your path\n\nThree ways in, depending on why you came.\n\n\n\n\nInvestor / Operator\n\n\nSee the thesis under test\n\n\nThe pitch, the decisions in play, and where the evidence stands today.\n\n\nProduct Brief→Decisions→Dashboards→Status\n\nRead the Product Brief \n\n\n\nProduct / Commercial\n\n\nWork the decisions\n\n\nOpen the decisions, tune the framework weights, track what would move each one.\n\n\nDecisions→Frameworks→Dashboards→Evidence\n\nOpen the Decisions \n\n\n\nResearch / Data Science\n\n\nInspect the machinery\n\n\nThe governing standard, the evidence model, the frameworks, and the tests that guard them.\n\n\nCIS→Evidence→Frameworks→Tests\n\nRead the CIS"
+  },
+  {
+    "objectID": "index.html#why-the-proposal-is-hypothesis-v0.1",
+    "href": "index.html#why-the-proposal-is-hypothesis-v0.1",
+    "title": "Sigmoid Commercial Intelligence Lab",
+    "section": "Why the proposal is Hypothesis v0.1",
+    "text": "Why the proposal is Hypothesis v0.1\n\nThe source proposal is a persuasive argument made before the evidence is in. Treating it as truth would bake in untested assumptions.\n\nSo it enters the lab as Hypothesis v0.1: a set of falsifiable claims, each registered and scheduled for validation. Proposal-sourced claims carry low quality and high bias — they can raise a hypothesis, never validate one. See exactly which claims rest on the proposal under Evidence › Hypothesis v0.1.\n\n\n\n\n\n\nWhat this means in practice. Every score, ranking, and figure on this site is computed from synthetic sample data and carries confidence grade C or D. Nothing is presented as a validated market fact. See the live picture on Current Status."
+  },
+  {
+    "objectID": "start-here/first-evidence-sprint.html",
+    "href": "start-here/first-evidence-sprint.html",
+    "title": "First Evidence Sprint",
+    "section": "",
+    "text": "Start Here › First Evidence Sprint\n\n\nThis page runs the first evidence sprint. It is the working interface for collecting real discovery evidence in the audit and professional-services segments.\n\n\nPlanned · v0.1 No interviews logged yet Open the interview script\nThis is the moment the lab stops running on synthetic data and starts collecting real discovery evidence. It changes no scoring model, no dashboards, and no confidence grades — it only collects evidence. The full plan also lives in the repo at docs/FIRST_EVIDENCE_SPRINT.md; this page is its working, in-browser version.",
+    "crumbs": [
+      "Start Here",
+      "First Evidence Sprint"
+    ]
+  },
+  {
+    "objectID": "start-here/first-evidence-sprint.html#sprint-at-a-glance",
+    "href": "start-here/first-evidence-sprint.html#sprint-at-a-glance",
+    "title": "First Evidence Sprint",
+    "section": "Sprint at a glance",
+    "text": "Sprint at a glance\n\n\n\nGoal\n\n\nFirst real evidence on the Market Entry and Positioning claims — signal, not verdicts.\n\n\n\n\nTarget segments\n\n\nAudit firms · Professional services firms\n\n\n\n\nInterview target\n\n\n8–10 total (~5 audit + ~4 professional services)\n\n\n\n\nMinimum evidence threshold\n\n\n≥ 3 per segment with evidence_quality_score ≥ 40 and bias_risk ≤ 66\n\n\n\n\n\n\n\n\n\nSprint goal. Replace the “no real evidence yet” state on the Decision 1 and Decision 2 claims with the first set of real, structured discovery evidence. Not a goal: validating any claim, moving any claim to grade A, or committing to a segment or positioning.",
+    "crumbs": [
+      "Start Here",
+      "First Evidence Sprint"
+    ]
+  },
+  {
+    "objectID": "start-here/first-evidence-sprint.html#claims-under-test",
+    "href": "start-here/first-evidence-sprint.html#claims-under-test",
+    "title": "First Evidence Sprint",
+    "section": "Claims under test",
+    "text": "Claims under test\nThe claims below read live from data/sample/claim_register.csv (Decisions 1 and 2). Each is a hypothesis — the sprint gathers first signal on it, nothing more.\n\n\n\n\n\nClaim\nDecision\nType\nHypothesis\nGrade\nReal evidence\n\n\n\n\nH-SEG-AUDIT-01\nD1\nsegment_pain\nAudit firms may have strong workflow pain.\nD\n0\n\n\nH-SEG-AUDIT-02\nD1\nbudget\nAudit firms may have budget for CRM/workflow tools.\nD\n0\n\n\nH-SEG-PROF-01\nD1\nsegment_pain\nProfessional services firms may need better pipeline visibility.\nD\n0\n\n\nH-POS-CRM-01\nD2\npositioning\nCRM positioning may be clear but too generic.\nD\n0\n\n\nH-POS-REVOPS-01\nD2\npositioning\nRevenue Operations Platform positioning may better express business value.\nD\n0\n\n\nH-POS-AI-01\nD2\npositioning\nAI Readiness Platform positioning may be differentiated but could overpromise.\nD\n0\n\n\nH-AI-READY-01\nD2\nai_readiness\nTarget customers may lack structured customer data.\nD\n0\n\n\nH-AI-READY-02\nD2\nai_readiness\nCRM implementation may improve AI readiness.\nD\n0\n\n\n\n\n\nDecision 3 (GTM Evidence Gate) is observed via the sales_cycle_signal and follow-up permission, but is not a primary target this sprint.",
+    "crumbs": [
+      "Start Here",
+      "First Evidence Sprint"
+    ]
+  },
+  {
+    "objectID": "start-here/first-evidence-sprint.html#the-fieldwork-workflow",
+    "href": "start-here/first-evidence-sprint.html#the-fieldwork-workflow",
+    "title": "First Evidence Sprint",
+    "section": "The fieldwork workflow",
+    "text": "The fieldwork workflow\n\n\n1Conduct interview\n\n\n→2Enter raw data\n\n\n→3Map to evidence\n\n\n→4Review claims\n\n\n→5Decide if status moves\n\n\n\n1 · How to conduct an interview\n\nRun the call with the discovery interview script (~40 min, 13 sections from respondent context to permission to follow up). Every question maps to a decision, a claim, and a CSV field.\nRun the positioning message test inside the call to test the three framings (CRM · Revenue Operations · AI Readiness).\nScore the interview the same day with the scoring guide — anchored 0–100 rubrics for every signal, plus quality and bias.\n\n\n\n\n\n\n\nInterviewer discipline. Do not lead the witness; ask open questions first. Record what was actually said (verbatim in notes). One interview is a single data point — it never validates a claim. Leave a field blank if it was not covered; do not fabricate it.\n\n\n\n\n\n2 · How to enter raw interview data\nAdd one row per interview to data/raw/discovery_interviews.csv, filling every covered field:\ninterview_id, date, company_segment, company_size, respondent_role, decision_linked, claim_linked,\npain_score, budget_signal, urgency_signal, current_tooling, crm_maturity, workflow_maturity,\nai_readiness_maturity, positioning_preference, willingness_to_pay_signal, sales_cycle_signal, notes,\nevidence_quality_score, bias_risk, supports_or_refutes\nAll signal scores are 0–100 (see the scoring guide). Set decision_linked, claim_linked, and supports_or_refutes (supports / refutes / mixed / neutral) for the primary claim.\n\n\n3 · How to map interview data into processed evidence\nUsing the evidence-capture step, add one row per claim the interview bears on to data/processed/discovery_evidence.csv:\nevidence_id, interview_id, decision_id, claim_id, source_type, source_name, date_collected,\nquality_score, bias_risk, supports_or_refutes, evidence_summary, confidence_impact, notes\nApply the conversions from the scoring guide:\n\n\n\n\n\n\n\n\nRaw interview field (0–100)\nProcessed field\nConversion\n\n\n\n\nevidence_quality_score\nquality_score\n÷ 100 → 0.0–1.0\n\n\nbias_risk\nbias_risk\nlow (0–33) · medium (34–66) · high (67–100)\n\n\nsupports_or_refutes\nsupports_or_refutes\ncopy unchanged\n\n\n\nSet source_type = interview and confidence_impact = raises / lowers / none (direction only — never a grade). The Evidence Register is where these records land.\n\n\n4 · How to run pytest and quarto render\nsource .venv/bin/activate\npytest            # validators check columns, grades (A–D), supports/refutes, and score ranges\nquarto render     # the decision + Claims & Confidence pages recompute from the new records\nBoth must pass before you trust anything. A red suite is a hard stop.\n\n\n5 · How to review results\n\nClaims & Confidence — each tested claim now shows a real evidence count and a supports/refutes split instead of “none yet”.\nMarket Entry and Positioning — the claim cards reflect the new evidence.\nCurrent Status — the top-level read of where the decisions stand.\nAsk, per claim: did independent interviews converge, or does the signal conflict?",
+    "crumbs": [
+      "Start Here",
+      "First Evidence Sprint"
+    ]
+  },
+  {
+    "objectID": "start-here/first-evidence-sprint.html#what-not-to-conclude-yet",
+    "href": "start-here/first-evidence-sprint.html#what-not-to-conclude-yet",
+    "title": "First Evidence Sprint",
+    "section": "What not to conclude yet",
+    "text": "What not to conclude yet\n\n\n\n\n\n\n\nDo not declare a first-target segment or a positioning — a handful of interviews is grade-C signal at best.\nDo not move any claim to grade A (validated); that needs a pilot with measured impact.\nDo not treat a stated positioning preference as a won deal.\nDo not let an enthusiastic-but-biased interview carry a claim — that is what bias_risk is for.\nIf a claim’s evidence_needed_for_B bar is genuinely met, change its grade deliberately and record why (a note or an ADR). Grade changes are decisions, not edits.\n\n\n\n\nThis sprint produces evidence, not verdicts. The lab stays at v0.1 hypothesis stage until the evidence earns otherwise.",
+    "crumbs": [
+      "Start Here",
+      "First Evidence Sprint"
+    ]
+  },
+  {
+    "objectID": "start-here/index.html",
+    "href": "start-here/index.html",
+    "title": "Start Here",
+    "section": "",
+    "text": "Start Here › Overview\n\n\nThis page orients you. It explains what the lab is, what is validated versus not, and the fastest route in for your role.\n\n\nv0.1 · Hypothesis stage Nothing here is validated yet Read the Product Brief\nThe Commercial Intelligence Lab turns the Sigmoid Analytica CRM proposal into a decision system: a place where our commercial strategy is broken into concrete decisions, scored with transparent frameworks, and held to an explicit standard for what counts as evidence. You are not browsing documentation — you are moving through a workflow.",
+    "crumbs": [
+      "Start Here",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "start-here/index.html#the-mental-model",
+    "href": "start-here/index.html#the-mental-model",
+    "title": "Start Here",
+    "section": "The mental model",
+    "text": "The mental model\nEverything on this site serves one loop. Read it left to right:\n\n\n1Decisions\n\n\n→2Evidence\n\n\n→3Frameworks\n\n\n→4Dashboards\n\n\n→5Recommendations\n\n\nWe start from a decision, ask what evidence bears on it, score it with a framework, explore it in a dashboard, and only then — when evidence is strong enough — reach a recommendation. The Working Paper is the long-form discussion behind these steps; it supports the workflow, it does not lead it.",
+    "crumbs": [
+      "Start Here",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "start-here/index.html#what-is-validated-and-what-is-not",
+    "href": "start-here/index.html#what-is-validated-and-what-is-not",
+    "title": "Start Here",
+    "section": "What is validated, and what is not",
+    "text": "What is validated, and what is not\n\n\n\n\n\n\nRead this before trusting any number. Every score, ranking, and figure on this site is computed from synthetic sample data and carries confidence grade C or D. Nothing is a validated market fact. The source proposal is treated as Hypothesis v0.1 — it can raise a hypothesis, never validate one. See Claims & Confidence for the live status of every claim.",
+    "crumbs": [
+      "Start Here",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "start-here/index.html#choose-your-path",
+    "href": "start-here/index.html#choose-your-path",
+    "title": "Start Here",
+    "section": "Choose your path",
+    "text": "Choose your path\n\n\n\nInvestor / Operator\n\n\nSee the thesis under test\n\n\nUnderstand the pitch, the decisions in play, and where the evidence stands today.\n\n\nHome→Product Brief→Decisions→Dashboards→Current Status\n\nStart with the Product Brief \n\n\n\nProduct / Commercial\n\n\nWork the decisions\n\n\nOpen the decisions, adjust the framework weights, and track what evidence would move each one.\n\n\nHome→Decisions→Frameworks→Dashboards→Evidence Register\n\nStart with the Decisions \n\n\n\nResearch / Data Science\n\n\nInspect the machinery\n\n\nRead the governing standard, the evidence model, the frameworks, and the tests that guard them.\n\n\nHome→CIS→Evidence→Frameworks→Tests→Working Paper\n\nStart with the CIS",
+    "crumbs": [
+      "Start Here",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "start-here/index.html#in-this-section",
+    "href": "start-here/index.html#in-this-section",
+    "title": "Start Here",
+    "section": "In this section",
+    "text": "In this section\n\nProduct Brief — what we built, in one read.\nHow to Use This Lab — the workflow, confidence grades, and common tasks.\nFirst Evidence Sprint — the first real fieldwork: run interviews, log evidence, review claims.\nCurrent Status — where the three decisions stand right now (live).",
+    "crumbs": [
+      "Start Here",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "decisions/gtm-evidence-gate.html",
+    "href": "decisions/gtm-evidence-gate.html",
+    "title": "Decision 3 · GTM Evidence Gate",
+    "section": "",
+    "text": "Decisions › GTM Evidence Gate\n\n\nThis page supports: what must be true before we commit resources to a go-to-market motion?\n\n\nRegister-driven · D3 Review Claims & Confidence\nThe decision record below reads live from data/sample/decision_register.csv; its claims read from data/sample/claim_register.csv.\nDecision questionWhat evidence is required before committing to a go-to-market strategy?Current hypothesis · grade DCommit to GTM only once the first-target segment (D1), the positioning (D2), and a defensible price each reach confidence grade B.StatusGate definedConfidenceD → requires BFrameworks usedPricing ModelDashboards linked—Next experimentInstrument the register so the gate-claims' strengths are visible; then run the D1 and D2 experiments.Owner · last reviewedCommercial Intelligence Lab · 2026-07-03",
+    "crumbs": [
+      "Decisions",
+      "3 · GTM Evidence Gate"
+    ]
+  },
+  {
+    "objectID": "decisions/gtm-evidence-gate.html#the-gate-in-one-line",
+    "href": "decisions/gtm-evidence-gate.html#the-gate-in-one-line",
+    "title": "Decision 3 · GTM Evidence Gate",
+    "section": "The gate, in one line",
+    "text": "The gate, in one line\nThis is a meta-decision: it does not pick an option, it sets the rule for when Decisions 1 and 2 (plus a defensible price) are allowed to become commitments. The bar is grade B on each.",
+    "crumbs": [
+      "Decisions",
+      "3 · GTM Evidence Gate"
+    ]
+  },
+  {
+    "objectID": "decisions/gtm-evidence-gate.html#claims-behind-this-decision",
+    "href": "decisions/gtm-evidence-gate.html#claims-behind-this-decision",
+    "title": "Decision 3 · GTM Evidence Gate",
+    "section": "Claims behind this decision",
+    "text": "Claims behind this decision\n\n\nH-GTM-GATE-01DgateGTM commitment should wait until core claims reach at least grade B.Real evidenceNo real evidence yet — hypothesis. Awaiting discovery interviews.Needed for grade BAgreement on the gate plus a tracked view of the three gate-claims' grades.Needed for grade AEvidence that the gated approach outperformed committing earlier.\n\n\n\n\n\n\n\n\nGo deeper. The threshold logic and limitations are in Working Paper › Go-to-Market. Progress is tracked on Claims & Confidence.",
+    "crumbs": [
+      "Decisions",
+      "3 · GTM Evidence Gate"
+    ]
+  },
+  {
+    "objectID": "decisions/market-entry.html",
+    "href": "decisions/market-entry.html",
+    "title": "Decision 1 · Market Entry",
+    "section": "",
+    "text": "Decisions › Market Entry\n\n\nThis page supports: which segment should Sigmoid target first for the CRM?\n\n\nRegister-driven · D1 Open the Market Prioritisation dashboard\nThe decision record below reads live from data/sample/decision_register.csv; its claims read from data/sample/claim_register.csv. Edit those files and re-render, and this page updates.\nDecision questionWhich segment should Sigmoid target first for the CRM?Current hypothesis · grade CAudit and professional-services firms are the strongest first target — acute, funded workflow pain and shorter sales cycles.StatusHypothesisConfidenceC → requires BFrameworks usedMarket PrioritisationDashboards linkedMarket PrioritisationNext experimentRun discovery calls with 5 audit / professional-services firms and register the evidence.Owner · last reviewedCommercial Intelligence Lab · 2026-07-03",
+    "crumbs": [
+      "Decisions",
+      "1 · Market Entry"
+    ]
+  },
+  {
+    "objectID": "decisions/market-entry.html#claims-behind-this-decision",
+    "href": "decisions/market-entry.html#claims-behind-this-decision",
+    "title": "Decision 1 · Market Entry",
+    "section": "Claims behind this decision",
+    "text": "Claims behind this decision\nEach claim is a hypothesis. It advances toward grade B only when real discovery evidence meets the bar shown — not before.\n\n\nH-SEG-AUDIT-01Dsegment_painAudit firms may have strong workflow pain.Real evidenceNo real evidence yet — hypothesis. Awaiting discovery interviews.Needed for grade B2+ independent audit-firm interviews citing acute, specific workflow pain.Needed for grade AA pilot in which the CRM measurably reduces that workflow pain.H-SEG-AUDIT-02DbudgetAudit firms may have budget for CRM/workflow tools.Real evidenceNo real evidence yet — hypothesis. Awaiting discovery interviews.Needed for grade B2+ audit-firm interviews confirming a real budget line and buyer.Needed for grade AA closed pilot/paid engagement at the expected price point.H-SEG-PROF-01Dsegment_painProfessional services firms may need better pipeline visibility.Real evidenceNo real evidence yet — hypothesis. Awaiting discovery interviews.Needed for grade B2+ professional-services interviews naming pipeline visibility as a priority.Needed for grade AA pilot showing improved pipeline visibility drives a business outcome.\n\n\n\n\n\n\n\n\nGo deeper. Long-form reasoning, analysis plan, and limitations: Working Paper › Market Prioritisation. To move a claim, add real evidence via the Evidence Register.",
+    "crumbs": [
+      "Decisions",
+      "1 · Market Entry"
+    ]
+  },
+  {
+    "objectID": "evidence/claims-confidence.html",
+    "href": "evidence/claims-confidence.html",
+    "title": "Claims & Confidence",
+    "section": "",
+    "text": "Evidence › Claims & Confidence\n\n\nThis page answers “what is still unvalidated?” for every claim, and what it would take to change that.\n\n\nFrom the claim register Open the Evidence Register\nEach claim below reads from data/sample/claim_register.csv. Its declared grade is what we currently believe; its real evidence count reads from data/processed/discovery_evidence.csv. A claim only advances to grade B when the “needed for B” bar is met by independent, low-bias evidence.",
+    "crumbs": [
+      "Evidence",
+      "Claims & Confidence"
+    ]
+  },
+  {
+    "objectID": "evidence/claims-confidence.html#confidence-summary",
+    "href": "evidence/claims-confidence.html#confidence-summary",
+    "title": "Claims & Confidence",
+    "section": "Confidence summary",
+    "text": "Confidence summary\n\n\n\n\n\nClaim\nDecision\nType\nGrade\nStatus\nReal evidence\n\n\n\n\nH-SEG-AUDIT-01\nD1\nsegment_pain\nD\nhypothesis\n0\n\n\nH-SEG-AUDIT-02\nD1\nbudget\nD\nhypothesis\n0\n\n\nH-SEG-PROF-01\nD1\nsegment_pain\nD\nhypothesis\n0\n\n\nH-POS-CRM-01\nD2\npositioning\nD\nhypothesis\n0\n\n\nH-POS-REVOPS-01\nD2\npositioning\nD\nhypothesis\n0\n\n\nH-POS-AI-01\nD2\npositioning\nD\nhypothesis\n0\n\n\nH-AI-READY-01\nD2\nai_readiness\nD\nhypothesis\n0\n\n\nH-AI-READY-02\nD2\nai_readiness\nD\nhypothesis\n0\n\n\nH-GTM-GATE-01\nD3\ngate\nD\nhypothesis\n0",
+    "crumbs": [
+      "Evidence",
+      "Claims & Confidence"
+    ]
+  },
+  {
+    "objectID": "evidence/claims-confidence.html#claim-by-claim",
+    "href": "evidence/claims-confidence.html#claim-by-claim",
+    "title": "Claims & Confidence",
+    "section": "Claim by claim",
+    "text": "Claim by claim\nFor each claim: its declared grade, what real evidence currently exists (from discovery interviews), and what is still needed to reach grades B and A.\n\n\nH-SEG-AUDIT-01DD1 · segment_painAudit firms may have strong workflow pain.Real evidence todaynone yet — hypothesisNeeded for grade B2+ independent audit-firm interviews citing acute, specific workflow pain.Needed for grade AA pilot in which the CRM measurably reduces that workflow pain.H-SEG-AUDIT-02DD1 · budgetAudit firms may have budget for CRM/workflow tools.Real evidence todaynone yet — hypothesisNeeded for grade B2+ audit-firm interviews confirming a real budget line and buyer.Needed for grade AA closed pilot/paid engagement at the expected price point.H-SEG-PROF-01DD1 · segment_painProfessional services firms may need better pipeline visibility.Real evidence todaynone yet — hypothesisNeeded for grade B2+ professional-services interviews naming pipeline visibility as a priority.Needed for grade AA pilot showing improved pipeline visibility drives a business outcome.H-POS-CRM-01DD2 · positioningCRM positioning may be clear but too generic.Real evidence todaynone yet — hypothesisNeeded for grade BMessage-test showing 'CRM' is understood but rated undifferentiated.Needed for grade AWin/loss data showing 'CRM' framing loses on differentiation.H-POS-REVOPS-01DD2 · positioningRevenue Operations Platform positioning may better express business value.Real evidence todaynone yet — hypothesisNeeded for grade BMessage-test where 'RevOps' out-scores CRM on value and engagement.Needed for grade AConversion data showing the RevOps framing wins deals.H-POS-AI-01DD2 · positioningAI Readiness Platform positioning may be differentiated but could overpromise.Real evidence todaynone yet — hypothesisNeeded for grade BMessage-test measuring differentiation vs credibility risk of the AI framing.Needed for grade APost-sale data showing the AI framing did not create unmet expectations.H-AI-READY-01DD2 · ai_readinessTarget customers may lack structured customer data.Real evidence todaynone yet — hypothesisNeeded for grade BData-maturity assessment across several target customers.Needed for grade ALongitudinal data linking data structure to realised AI value.H-AI-READY-02DD2 · ai_readinessCRM implementation may improve AI readiness.Real evidence todaynone yet — hypothesisNeeded for grade BA before/after readiness measure across early CRM adopters.Needed for grade AA pilot showing CRM adoption raised AI-derived value.H-GTM-GATE-01DD3 · gateGTM commitment should wait until core claims reach at least grade B.Real evidence todaynone yet — hypothesisNeeded for grade BAgreement on the gate plus a tracked view of the three gate-claims' grades.Needed for grade AEvidence that the gated approach outperformed committing earlier.\n\n\n\n\n\n\n\n\nReading the grades. Every claim is currently a hypothesis (grade C or D). None is validated (grade A), and none is substantiated (grade B) — because the real evidence layer is empty. This is the honest state at v0.1. Proposal-sourced reasoning is capped at grade C: see Hypothesis v0.1.",
+    "crumbs": [
+      "Evidence",
+      "Claims & Confidence"
+    ]
+  },
+  {
+    "objectID": "evidence/index.html",
+    "href": "evidence/index.html",
+    "title": "Evidence",
+    "section": "",
+    "text": "Evidence › Overview\n\n\nThis section is the project’s conscience. It turns real interviews into structured evidence and shows the confidence of every claim.\n\n\nReal evidence layer · v0.1 See Claims & Confidence\nThe evidence operating layer connects fieldwork to decisions. The pipeline is deliberately simple:\nA customer interview becomes structured evidence; that evidence supports or refutes a claim; that claim supports a decision; and the decision shows whether we are still at hypothesis stage or moving toward a recommendation.\nDecisions3under enquiryClaims9all hypothesesDiscovery interviews0real fieldwork loggedReal evidence records0mapped to claims",
+    "crumbs": [
+      "Evidence",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "evidence/index.html#in-this-section",
+    "href": "evidence/index.html#in-this-section",
+    "title": "Evidence",
+    "section": "In this section",
+    "text": "In this section\n\n\n\nConfidence\n\n\nClaims & Confidence\n\n\nEvery claim, its declared grade, what evidence would move it, and how much real evidence exists today — computed from the registers.\n\nInspect claims \n\n\n\nRegister\n\n\nEvidence Register\n\n\nThe processed evidence records from discovery interviews — plus how to add the next one.\n\nOpen register \n\n\n\nSource\n\n\nHypothesis v0.1 · Proposal Source\n\n\nWhy the proposal is a hypothesis source, and why proposal claims are capped at grade C.\n\nUnderstand the source",
+    "crumbs": [
+      "Evidence",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "evidence/index.html#the-templates",
+    "href": "evidence/index.html#the-templates",
+    "title": "Evidence",
+    "section": "The templates",
+    "text": "The templates\nCollecting real evidence uses two operator templates in templates/:\n\nDiscovery interview — run and log an interview → one row in data/raw/discovery_interviews.csv.\nEvidence capture — turn that interview into evidence records → rows in data/processed/discovery_evidence.csv, each linked to a claim and a decision.",
+    "crumbs": [
+      "Evidence",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "frameworks/index.html",
+    "href": "frameworks/index.html",
+    "title": "Frameworks",
+    "section": "",
+    "text": "5 frameworks All draft / illustrative\nThe cards below are generated directly from the framework YAML files — a single source of truth, not a hand-maintained copy.\nMarket Prioritisationdraftv0.1.0Which market segment should Sigmoid target first for the CRM?PurposeWhich market segment should Sigmoid target first for the CRM?Inputsmarket_size_score, pain_score, budget_score, competition_score, sales_cycle_score, strategic_fit_score, evidence_quality_scoreOutputPriority score, 0–100 (one per market segment)AssumptionsCriterion weights sum to 1.0; lower_better criteria are inverted before weighting. Sub-scores on a 0–10 scale.Teststests/test_scoring.py · tests/test_data_integrity.pyLimitationsWeights sum to 1.0.All sub-scores are on a 0..10 scale in the sample data; the function rescales to 0..100.v0.1 weights are a starting hypothesis, not a validated model.Owner · Commercial Intelligence LabStage · modelFile · frameworks/market_prioritisation.ymlCustomer Fit Scoredraftv0.1.0How good a fit is this customer for the Sigmoid CRM right now?PurposeHow good a fit is this customer for the Sigmoid CRM right now?Inputscurrent_crm_maturity, workflow_maturity, data_quality, budget_signal, urgency_signal, decision_complexityOutputFit score, 0–100 (one per customer)AssumptionsCriterion weights sum to 1.0; lower_better criteria are inverted before weighting. Sub-scores on a 0–10 scale.Teststests/test_scoring.pyLimitationsWeights sum to 1.0.current_crm_maturity and decision_complexity are inverted (lower is better).Owner · Commercial Intelligence LabStage · modelFile · frameworks/customer_fit_score.ymlAI Readiness Indexdraftv0.1.0How ready is this customer to derive value from AI, given their CRM/data foundation?PurposeHow ready is this customer to derive value from AI, given their CRM/data foundation?Inputsdata_quality, workflow_maturity, analytics_maturity, current_crm_maturity, ai_readinessOutputReadiness score, 0–100 (one per customer)AssumptionsCriterion weights sum to 1.0; lower_better criteria are inverted before weighting. Sub-scores on a 0–10 scale.Teststests/test_scoring.pyLimitationsWeights sum to 1.0.This index operationalises the proposal's core claim and is therefore a priority for validation.Owner · Commercial Intelligence LabStage · modelFile · frameworks/ai_readiness_index.ymlPositioning Canvasdraftv0.1.0How should the CRM be positioned: CRM, Revenue Operations Platform, or AI Readiness Platform?PurposeHow should the CRM be positioned: CRM, Revenue Operations Platform, or AI Readiness Platform?Inputsclarity, differentiation, customer_pain_alignment, investor_appeal, scalability, evidence_strengthOutputPositioning score, 0–100 (one per candidate framing)AssumptionsCriterion weights sum to 1.0; lower_better criteria are inverted before weighting. Sub-scores on a 0–10 scale.Teststests/test_scoring.py (weighted_score)LimitationsWeights sum to 1.0.evidence_strength deliberately keeps aspirational positioning honest.Owner · Commercial Intelligence LabStage · modelFile · frameworks/positioning_canvas.ymlPricing Modelplaceholderv0.1.0What packaging and price points should Sigmoid offer, per segment?PurposeWhat packaging and price points should Sigmoid offer, per segment?Inputspackaging, pricing_metric, segment_tieringOutputPackaging + price tiers (structure only at v0.1)AssumptionsNo working model yet; requires willingness-to-pay evidence first.Tests— (placeholder; no scoring logic yet)LimitationsIntentionally a placeholder to avoid fabricating a validated pricing conclusion at v0.1.Owner · Commercial Intelligence LabStage · hypothesisFile · frameworks/pricing_model.yml",
+    "crumbs": [
+      "Frameworks",
+      "All Frameworks"
+    ]
+  },
+  {
+    "objectID": "frameworks/index.html#how-scoring-works",
+    "href": "frameworks/index.html#how-scoring-works",
+    "title": "Frameworks",
+    "section": "How scoring works",
+    "text": "How scoring works\nThe relevant src/scoring.py function reads a data row, rescales each sub-score, applies the direction (higher_better or lower_better), multiplies by the criterion weight, sums, and returns a value in [0, 100]. Missing values are handled safely (treated as the neutral midpoint) so a partial row never crashes the calculation.",
+    "crumbs": [
+      "Frameworks",
+      "All Frameworks"
+    ]
+  },
+  {
+    "objectID": "frameworks/index.html#adding-a-framework",
+    "href": "frameworks/index.html#adding-a-framework",
+    "title": "Frameworks",
+    "section": "Adding a framework",
+    "text": "Adding a framework\n\nCreate frameworks/&lt;name&gt;.yml following the shape above (id, version, question, criteria with weight + direction, scale, status).\nEnsure the weights sum to 1.0 (or document the normalisation rule).\nIf it introduces a new score, add a scoring function to src/scoring.py and a test to tests/test_scoring.py asserting the 0–100 range and missing-value safety.\nReference the framework from a dashboard and/or working-paper chapter.",
+    "crumbs": [
+      "Frameworks",
+      "All Frameworks"
+    ]
+  },
+  {
+    "objectID": "frameworks/index.html#related",
+    "href": "frameworks/index.html#related",
+    "title": "Frameworks",
+    "section": "Related",
+    "text": "Related\n\nMarket Prioritisation dashboard\nAI Readiness Scorecard\nPositioning dashboard\nCommercial Intelligence Specification",
+    "crumbs": [
+      "Frameworks",
+      "All Frameworks"
+    ]
+  },
+  {
+    "objectID": "dashboards/index.html",
+    "href": "dashboards/index.html",
+    "title": "Dashboards",
+    "section": "",
+    "text": "Dashboards › Overview\n\n\nDashboards are where decisions meet data. Each recomputes from the sample data and links back to the decision it serves.\n\n\nIllustrative · synthetic data Open Market Prioritisation\n\n\nEach dashboard imports its scoring logic from src/ and computes live — nothing is hardcoded. Change a framework’s weights and re-render, and the numbers move. Every dashboard names the decision it supports and links back to it.\n\n\n\nSupports Decision 1\n\n\nMarket Prioritisation\n\n\nRanks seven candidate segments on a weighted priority score, with live metric cards and a sensitivity view.\n\n\nDecision: Market Entry·Framework\n\nOpen dashboard \n\n\n\nSupports the AI thesis\n\n\nAI Readiness Scorecard\n\n\nTurns the “CRM is the foundation for AI readiness” claim into a measurable, testable index across customers.\n\n\nClaim: H-CRM-AI·Framework\n\nOpen scorecard \n\n\n\nSupports Decision 2\n\n\nPositioning Dashboard\n\n\nCompares the three positioning framings across six weighted criteria, with an interactive radar profile.\n\n\nDecision: Positioning·Framework\n\nOpen dashboard \n\n\n\n\n\n\n\n\nIllustrative only. All dashboard scores are computed from synthetic sample data and carry confidence grade C. They demonstrate the machinery and frame the debate; they are not recommendations. The evidence that would make them trustworthy is tracked under Evidence.",
+    "crumbs": [
+      "Dashboards",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "dashboards/positioning-dashboard.html",
+    "href": "dashboards/positioning-dashboard.html",
+    "title": "Positioning Dashboard",
+    "section": "",
+    "text": "Dashboards › Positioning\n\n\nSupports Decision 2 · Positioning — CRM, Revenue Operations, or AI Readiness Platform?\n\n\nConfidence C · Illustrative Synthetic analyst assessment Related: Positioning Canvas · Claims & Confidence\nImports and project path bootstrap\nimport sys, pathlib\n_root = pathlib.Path.cwd()\nwhile _root != _root.parent and not (_root / \"src\").is_dir():\n    _root = _root.parent\nsys.path.insert(0, str(_root))\n\nimport pandas as pd\nimport plotly.express as px\nimport plotly.graph_objects as go\nfrom IPython.display import HTML\n\nfrom src.utils import load_framework, weights_from_framework\nfrom src.scoring import weighted_score\n\nPLOTLY_TEMPLATE = \"plotly_white\"\nOPTION_COLORS = {\n    \"CRM Platform\": \"#6b7684\",\n    \"Revenue Operations Platform\": \"#2f6bb0\",\n    \"AI Readiness Platform\": \"#7a4fb0\",\n}\nAnalyst assessment of each option (synthetic, 0–10 per criterion)\n# Rows = positioning options; columns = the Positioning Canvas criteria (each 0–10).\n# These are an initial analyst judgement to be revised as evidence accrues.\nassessment = pd.DataFrame(\n    [\n        # option,                       clarity, diff, pain, investor, scale, evidence\n        [\"CRM Platform\",                     9,    4,     7,       5,     6,     6],\n        [\"Revenue Operations Platform\",      6,    7,     8,       7,     8,     5],\n        [\"AI Readiness Platform\",            5,    8,     6,       9,     8,     3],\n    ],\n    columns=[\n        \"option\", \"clarity\", \"differentiation\", \"customer_pain_alignment\",\n        \"investor_appeal\", \"scalability\", \"evidence_strength\",\n    ],\n)\nApply the Positioning Canvas weights to each option\nframework = load_framework(\"positioning_canvas\")\nweights = weights_from_framework(framework)\n\nassessment[\"positioning_score\"] = assessment.apply(\n    lambda row: weighted_score(row, weights), axis=1\n)\nranked = assessment.sort_values(\"positioning_score\", ascending=False).reset_index(drop=True)\nranked.insert(0, \"rank\", ranked.index + 1)\nBuild summary metrics (computed, not hardcoded)\nleader = ranked.iloc[0]\nsecond = ranked.iloc[1]\nmargin = leader[\"positioning_score\"] - second[\"positioning_score\"]\nweakest_evidence = assessment.sort_values(\"evidence_strength\").iloc[0]\n\ndef metric(label, value, sub=\"\"):\n    sub_html = f'&lt;div class=\"metric-sub\"&gt;{sub}&lt;/div&gt;' if sub else \"\"\n    return (f'&lt;div class=\"metric\"&gt;&lt;div class=\"metric-label\"&gt;{label}&lt;/div&gt;'\n            f'&lt;div class=\"metric-value\"&gt;{value}&lt;/div&gt;{sub_html}&lt;/div&gt;')\n\nHTML(\n    '&lt;div class=\"metric-row\"&gt;'\n    + metric(\"Options compared\", len(ranked), \"candidate positionings\")\n    + metric(\"Leading framing\", leader[\"option\"], f'score {leader[\"positioning_score\"]:.1f}')\n    + metric(\"Margin over #2\", f'+{margin:.1f}', f'vs {second[\"option\"]}')\n    + metric(\"Weakest evidence\", weakest_evidence[\"option\"], \"least-evidenced framing\")\n    + \"&lt;/div&gt;\"\n)\n\n\nOptions compared3candidate positioningsLeading framingRevenue Operations Platformscore 69.9Margin over #2+3.2vs AI Readiness PlatformWeakest evidenceAI Readiness Platformleast-evidenced framing",
+    "crumbs": [
+      "Dashboards",
+      "Positioning Dashboard"
+    ]
+  },
+  {
+    "objectID": "dashboards/positioning-dashboard.html#ranking",
+    "href": "dashboards/positioning-dashboard.html#ranking",
+    "title": "Positioning Dashboard",
+    "section": "Ranking",
+    "text": "Ranking\n\n\nShow code\nranked[[\n    \"rank\", \"option\", \"positioning_score\",\n    \"clarity\", \"differentiation\", \"customer_pain_alignment\",\n    \"investor_appeal\", \"scalability\", \"evidence_strength\",\n]]\n\n\n\n\n\n\n\n\n\nrank\noption\npositioning_score\nclarity\ndifferentiation\ncustomer_pain_alignment\ninvestor_appeal\nscalability\nevidence_strength\n\n\n\n\n0\n1\nRevenue Operations Platform\n69.9\n6\n7\n8\n7\n8\n5\n\n\n1\n2\nAI Readiness Platform\n66.7\n5\n8\n6\n9\n8\n3\n\n\n2\n3\nCRM Platform\n62.1\n9\n4\n7\n5\n6\n6\n\n\n\n\n\n\n\n\n\nShow code\nfig = px.bar(\n    ranked.sort_values(\"positioning_score\"),\n    x=\"positioning_score\",\n    y=\"option\",\n    orientation=\"h\",\n    color=\"option\",\n    color_discrete_map=OPTION_COLORS,\n    range_x=[0, 100],\n    labels={\"positioning_score\": \"Positioning score (0–100)\", \"option\": \"\"},\n    template=PLOTLY_TEMPLATE,\n)\nfig.update_layout(showlegend=False, height=300, margin=dict(l=10, r=10, t=20, b=10),\n                  font=dict(family=\"Inter, system-ui, sans-serif\", size=13))\nfig.show()",
+    "crumbs": [
+      "Dashboards",
+      "Positioning Dashboard"
+    ]
+  },
+  {
+    "objectID": "dashboards/positioning-dashboard.html#criterion-by-criterion-profile",
+    "href": "dashboards/positioning-dashboard.html#criterion-by-criterion-profile",
+    "title": "Positioning Dashboard",
+    "section": "Criterion-by-criterion profile",
+    "text": "Criterion-by-criterion profile\n\n\nShow code\ncriteria = [\"clarity\", \"differentiation\", \"customer_pain_alignment\",\n            \"investor_appeal\", \"scalability\", \"evidence_strength\"]\nfig = go.Figure()\nfor _, row in assessment.iterrows():\n    fig.add_trace(go.Scatterpolar(\n        r=[row[c] for c in criteria] + [row[criteria[0]]],\n        theta=criteria + [criteria[0]],\n        fill=\"toself\",\n        name=row[\"option\"],\n        line=dict(color=OPTION_COLORS.get(row[\"option\"])),\n    ))\nfig.update_layout(\n    polar=dict(radialaxis=dict(visible=True, range=[0, 10])),\n    height=460, margin=dict(l=40, r=40, t=30, b=40),\n    template=PLOTLY_TEMPLATE,\n    font=dict(family=\"Inter, system-ui, sans-serif\", size=13),\n    legend=dict(orientation=\"h\", yanchor=\"bottom\", y=-0.15, xanchor=\"center\", x=0.5),\n)\nfig.show()",
+    "crumbs": [
+      "Dashboards",
+      "Positioning Dashboard"
+    ]
+  },
+  {
+    "objectID": "dashboards/positioning-dashboard.html#weights-applied",
+    "href": "dashboards/positioning-dashboard.html#weights-applied",
+    "title": "Positioning Dashboard",
+    "section": "Weights applied",
+    "text": "Weights applied\n\n\nShow code\npd.DataFrame(framework[\"criteria\"])[[\"name\", \"weight\", \"direction\", \"rationale\"]]\n\n\n\n\n\n\n\n\n\nname\nweight\ndirection\nrationale\n\n\n\n\n0\nclarity\n0.18\nhigher_better\nCan a buyer instantly understand what it is?\n\n\n1\ndifferentiation\n0.20\nhigher_better\nDoes it separate Sigmoid from incumbents?\n\n\n2\ncustomer_pain_alignment\n0.22\nhigher_better\nDoes it name a pain the customer already feels?\n\n\n3\ninvestor_appeal\n0.15\nhigher_better\nDoes it map to a category investors fund?\n\n\n4\nscalability\n0.15\nhigher_better\nDoes the position hold as the product and mark...\n\n\n5\nevidence_strength\n0.10\nhigher_better\nHow much evidence backs this positioning today...",
+    "crumbs": [
+      "Dashboards",
+      "Positioning Dashboard"
+    ]
+  },
+  {
+    "objectID": "dashboards/positioning-dashboard.html#interpretation-provisional",
+    "href": "dashboards/positioning-dashboard.html#interpretation-provisional",
+    "title": "Positioning Dashboard",
+    "section": "Interpretation (provisional)",
+    "text": "Interpretation (provisional)\n\nCRM Platform wins on clarity but is weak on differentiation — buyers get it instantly, yet see it as commoditised (cf. evidence EV-007).\nRevenue Operations Platform balances differentiation, pain alignment, and scalability.\nAI Readiness Platform scores highest on investor appeal but lowest on evidence strength — the most exciting story is the least evidenced today (cf. Hypothesis H-CRM-AI).\n\n\n\n\n\n\n\nWarningThis is a framing tool, not a verdict\n\n\n\nThe scores are one analyst’s synthetic judgement. Positioning should be decided against customer evidence — message testing, win/loss analysis, discovery calls — not an internal scoring exercise. See Working Paper Ch. 4.",
+    "crumbs": [
+      "Dashboards",
+      "Positioning Dashboard"
+    ]
+  },
+  {
+    "objectID": "working-paper/02-problem-context.html",
+    "href": "working-paper/02-problem-context.html",
+    "title": "2. Problem Context",
+    "section": "",
+    "text": "Confidence D · Framing\n\n\n\n\nQuestion\n\nWhat commercial situation is Sigmoid Analytica actually in, and which of the proposal’s framings of that situation are load-bearing?\n\n\n\nHypothesis\n\nSigmoid operates in a crowded CRM/analytics space where “CRM” alone is commoditised, but where a credible data-and-AI-readiness angle could differentiate — if customers feel the underlying pain and can act on it. The proposal treats this as given; here it is a hypothesis.\n\n\n\n\nCurrent evidence\n\nProposal narrative (grade D) positioning CRM as the AI foundation — EV-001, EV-003.\nOne internal signal that prospects grasp “CRM” fastest but see it as commoditised — EV-007.\nNo independent market-structure evidence yet.\n\n\n\nEvidence needed\n\nMarket structure: incumbents, substitutes, and how buyers currently frame their need.\nBuyer pain: is CRM/data disorganisation an acute, funded problem for the target segments?\nSigmoid’s actual differentiators (capability, data assets, relationships), not aspirational ones.\n\n\n\nAnalysis plan\n\nMap the competitive set and buyer language for each candidate segment.\nSeparate proposal assertions from observed signals in the evidence register.\nFeed the pain / competition reads into the market-prioritisation framework to test sensitivity.\n\n\n\nNext steps\n\nExtract the specific commercial claims into hypotheses in Chs. 4–7.\nPrioritise collecting buyer-pain evidence for the top segments (Ch. 5).\n\n\n\n\nLimitations\n\nThe proposal is persuasive by design; its framing may bias which problems we look for.\nCompetitive and buyer evidence is currently absent.",
+    "crumbs": [
+      "Working Paper",
+      "2 · Problem Context"
+    ]
+  },
+  {
+    "objectID": "working-paper/04-crm-positioning.html",
+    "href": "working-paper/04-crm-positioning.html",
+    "title": "4. CRM Positioning",
+    "section": "",
+    "text": "Decision 2 · Positioning Confidence C · Indicative Companion: Positioning dashboard\n\n\n\n\nDecision question\n\nHow should the product be positioned: as a CRM, a Revenue Operations Platform, or an AI Readiness Platform?\n\n\n\nHypothesis\n\nA Revenue Operations Platform framing best balances clarity, differentiation, and pain alignment, while the AI Readiness Platform framing has the highest investor appeal but the weakest current evidence. This is a hypothesis to be tested against buyers, not a conclusion.\nFalsifier: buyer message-testing in which “CRM” (or “AI Readiness”) consistently out-converts “RevOps” on comprehension and willingness to engage.\n\n\n\n\nCurrent evidence\n\nProposal RevOps / AI-readiness narrative — EV-003 (grade D, mixed).\nInternal note: “CRM” is understood fastest but seen as commoditised — EV-007.\nIllustrative Positioning Canvas scores (synthetic) in the dashboard.\n\n\n\nEvidence needed\n\nMessage-testing / A-B comprehension across the three framings, per segment.\nWin/loss and discovery-call language: which frame do buyers repeat back?\nCategory evidence: which framing maps to a budget line buyers already hold?\n\n\n\nAnalysis plan\n\nScore each option on the Positioning Canvas (done, illustratively) to frame the debate.\nRun message tests; convert results into evidence_strength inputs and re-score.\nCheck sensitivity of the ranking to the evidence_strength and investor_appeal weights.\n\n\n\nNext steps\n\nDesign and run a message test for the top two framings.\nRegister the results and re-run the dashboard; do not commit to a position at grade &lt; B.\n\n\n\n\nLimitations\n\nCurrent option scores are one analyst’s synthetic judgement.\nInvestor appeal and customer pain can point in different directions; the weights encode a value choice that should be made explicit with stakeholders.",
+    "crumbs": [
+      "Working Paper",
+      "4 · CRM Positioning"
+    ]
+  },
+  {
+    "objectID": "working-paper/06-ai-readiness.html",
+    "href": "working-paper/06-ai-readiness.html",
+    "title": "6. AI Readiness",
+    "section": "",
+    "text": "Hypothesis H-CRM-AI Confidence D → C Companion: AI Readiness Scorecard\n\n\n\n\nDecision question\n\nIs the CRM genuinely the foundation for AI readiness — i.e. does CRM/data maturity predict the value a customer derives from AI?\n\n\n\nHypothesis (H-CRM-AI)\n\nCustomers with higher CRM/data and analytics maturity realise more value from AI features built on top of the CRM; therefore an AI Readiness Index anchored on data quality is a useful predictor of downstream AI value.\nFalsifier: a pilot in which AI-derived value is uncorrelated with (or inversely related to) pre-pilot readiness scores.\n\n\n\n\nCurrent evidence\n\nProposal assertion of the thesis — EV-001 (grade D).\nIndirect secondary benchmark linking data maturity to AI value — EV-004 (grade C, medium bias).\nA planned internal pilot to test the thesis — EV-010 (not yet run).\nIllustrative readiness scores across synthetic customers (dashboard).\n\n\n\nEvidence needed\n\nA defined, measurable AI value outcome (e.g. time saved, conversion lift, forecast accuracy).\nPaired data: pre-pilot readiness score and post-pilot realised value, across several customers.\nEnough spread in readiness to detect a relationship.\n\n\n\nAnalysis plan\n\nFinalise the operational definition of “AI value” (the outcome variable).\nRun the pilot; record pre-pilot readiness and post-pilot value.\nTest association (readiness vs value); check whether the data_quality weight is justified.\nRecalibrate the index weights from evidence, not assumption.\n\n\n\nNext steps\n\nExecute EV-010 (the pilot). Until then, H-CRM-AI stays at grade D → C and must be labelled as such everywhere it appears.\n\n\n\n\nLimitations\n\nThe index currently encodes the thesis (data quality heavily weighted) rather than testing it; circularity must be avoided when validating.\nSmall pilot n will limit statistical confidence.",
+    "crumbs": [
+      "Working Paper",
+      "6 · AI Readiness"
+    ]
+  },
+  {
+    "objectID": "working-paper/08-validation-and-tests.html",
+    "href": "working-paper/08-validation-and-tests.html",
+    "title": "8. Validation & Tests",
+    "section": "",
+    "text": "Method · validated logic Live evidence read below",
+    "crumbs": [
+      "Working Paper",
+      "8 · Validation & Tests"
+    ]
+  },
+  {
+    "objectID": "working-paper/08-validation-and-tests.html#current-evidence-live-evidence-strength-read",
+    "href": "working-paper/08-validation-and-tests.html#current-evidence-live-evidence-strength-read",
+    "title": "8. Validation & Tests",
+    "section": "Current evidence: live evidence-strength read",
+    "text": "Current evidence: live evidence-strength read\nThe evidence register, aggregated by claim (supporting minus refuting weight → strength). This is the mechanism that keeps confidence honest.\n\n\nAggregate the evidence register by claim\nimport sys, pathlib\n_root = pathlib.Path.cwd()\nwhile _root != _root.parent and not (_root / \"src\").is_dir():\n    _root = _root.parent\nsys.path.insert(0, str(_root))\n\nfrom src.utils import load_sample\nfrom src.evidence import summarise_evidence_by_claim\n\nregister = load_sample(\"evidence_register.csv\")\nsummarise_evidence_by_claim(register)\n\n\n\n\n\n\n\n\n\nclaim_id\nn_evidence\ntotal_weight\nsupporting_weight\nrefuting_weight\nnet_weight\nstrength\n\n\n\n\n0\nH-CRM-AI\n3\n0.665\n0.525\n0.000\n0.525\nmoderate\n\n\n1\nH-SEG-AUDIT\n2\n0.470\n0.470\n0.000\n0.470\nweak\n\n\n2\nH-PRICE-WTP\n1\n0.100\n0.100\n0.000\n0.100\nweak\n\n\n3\nH-POS-CRM\n1\n0.160\n0.000\n0.000\n0.000\nnone\n\n\n4\nH-POS-REVOPS\n1\n0.120\n0.000\n0.000\n0.000\nnone\n\n\n5\nH-SEG-SME\n1\n0.600\n0.000\n0.000\n0.000\nnone\n\n\n6\nH-SEG-MUNI\n1\n0.315\n0.000\n0.315\n-0.315\nnone\n\n\n\n\n\n\n\n\n\n\n\n\n\nProposal-only claims land at weak / none strength — exactly as intended. A proposal raises a hypothesis; it does not validate one.\n\n\n\n\n\nAnalysis plan\n\nRun pytest before trusting any number (the suite covers scoring ranges, missing-value safety, validation, and evidence aggregation).\nTreat a red suite as a hard stop.\n\n\n\nNext steps\n\nAdd automated confidence-grade computation from the register (CIS §21).\nWire pandera / pydantic schemas once real data arrives.\n\n\n\n\nLimitations\n\nTests guard logic and structure, not the truth of synthetic inputs.\nDecision-level validation is partly manual at v0.1.",
+    "crumbs": [
+      "Working Paper",
+      "8 · Validation & Tests"
+    ]
+  },
+  {
+    "objectID": "working-paper/index.html",
+    "href": "working-paper/index.html",
+    "title": "Working Paper",
+    "section": "",
+    "text": "v0.1 · Hypothesis stage No final conclusions drawn\nEach chapter follows the same discipline, so the reasoning stays honest and scannable:",
+    "crumbs": [
+      "Working Paper",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "working-paper/index.html#the-three-decision-questions",
+    "href": "working-paper/index.html#the-three-decision-questions",
+    "title": "Working Paper",
+    "section": "The three decision questions",
+    "text": "The three decision questions\n\n\n\nDecision 1 · Ch. 5\n\n\nWhich segment should Sigmoid target first?\n\n\nMarket prioritisation across seven candidate segments.\n\nRead chapter 5 \n\n\n\nDecision 2 · Ch. 4\n\n\nHow should the CRM be positioned?\n\n\nCRM vs Revenue Operations vs AI Readiness Platform.\n\nRead chapter 4 \n\n\n\nDecision 3 · Ch. 7\n\n\nWhat evidence is required before GTM?\n\n\nThe confidence threshold that gates a go-to-market commitment.\n\nRead chapter 7",
+    "crumbs": [
+      "Working Paper",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "working-paper/index.html#all-chapters",
+    "href": "working-paper/index.html#all-chapters",
+    "title": "Working Paper",
+    "section": "All chapters",
+    "text": "All chapters\n\n\n\n#\nChapter\nFocus\n\n\n\n\n1\nIntroduction\nAim, scope, and how to read this paper\n\n\n2\nProblem Context\nThe commercial situation; the proposal as Hypothesis v0.1\n\n\n3\nCommercial Intelligence Specification\nThe governing method, in brief\n\n\n4\nCRM Positioning\nDecision 2 — how to position the product\n\n\n5\nMarket Prioritisation\nDecision 1 — which segment first\n\n\n6\nAI Readiness\nTesting the “CRM as AI foundation” thesis\n\n\n7\nGo-to-Market\nDecision 3 — evidence threshold before committing\n\n\n8\nValidation & Tests\nHow claims and calculations are checked\n\n\n9\nConclusion\nDeliberately open — current state, not verdicts\n\n\n\n\n\n\n\n\n\nStatus of evidence. All quantitative content in this paper is computed from synthetic sample data and carries confidence grade C or D. The paper’s value at v0.1 is in framing the questions correctly and specifying what would answer them — not in the numbers.",
+    "crumbs": [
+      "Working Paper",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "governance/testing-standard.html",
+    "href": "governance/testing-standard.html",
+    "title": "Testing Standard",
+    "section": "",
+    "text": "Governance › Testing Standard\n\n\nThis page answers “can I trust the numbers?” It documents the checks that guard every calculation.\n\n\nGreen suite required Read the CIS standard\nUnder CIS §16, no score or recommendation is trusted unless the test suite is green. Tests guard the logic and structure of the project — a red suite is a hard stop, not a warning.",
+    "crumbs": [
+      "Governance",
+      "Testing Standard"
+    ]
+  },
+  {
+    "objectID": "governance/testing-standard.html#what-the-suite-guarantees",
+    "href": "governance/testing-standard.html#what-the-suite-guarantees",
+    "title": "Testing Standard",
+    "section": "What the suite guarantees",
+    "text": "What the suite guarantees\n\n\n\nRange safety\n\n\nEvery scoring function returns a value in 0–100, on full and partial rows.\n\n\n\n\nMissing-value safety\n\n\nMissing, null, or non-numeric inputs never crash a score — they fall back to a neutral midpoint.\n\n\n\n\nStructural validation\n\n\nRequired columns present, identity columns unique, no negative scores where the scale forbids them.\n\n\n\n\nEvidence integrity\n\n\nEvidence weighting, strength classification, and per-claim aggregation match known inputs.",
+    "crumbs": [
+      "Governance",
+      "Testing Standard"
+    ]
+  },
+  {
+    "objectID": "governance/testing-standard.html#what-each-test-file-covers",
+    "href": "governance/testing-standard.html#what-each-test-file-covers",
+    "title": "Testing Standard",
+    "section": "What each test file covers",
+    "text": "What each test file covers\n\n\n\n\n\n\n\nTest file\nCovers\n\n\n\n\ntests/test_scoring.py\nMarket/customer/AI scores stay in 0–100; missing values are safe; weights behave (higher pain ↑, penalties ↓)\n\n\ntests/test_validation.py\nScore-range predicate; required-columns check; negative-score guard\n\n\ntests/test_evidence.py\nEvidence weight = quality × bias; strength classification bands; per-claim aggregation and sorting\n\n\ntests/test_data_integrity.py\nSample data loads; required columns present; ids unique; computed scores in range",
+    "crumbs": [
+      "Governance",
+      "Testing Standard"
+    ]
+  },
+  {
+    "objectID": "governance/testing-standard.html#how-to-run-it",
+    "href": "governance/testing-standard.html#how-to-run-it",
+    "title": "Testing Standard",
+    "section": "How to run it",
+    "text": "How to run it\npython -m venv .venv\nsource .venv/bin/activate\npip install -r requirements.txt\npytest\nThe suite currently holds 53 tests, all passing. Add a test whenever you add a scoring function or a framework — assert its 0–100 range and its missing-value safety at minimum.\n\n\n\n\n\n\nScope, honestly. Tests verify that the code and structure are correct. They do not verify that the synthetic inputs reflect reality — that is what the Evidence section and the eventual pilots are for.",
+    "crumbs": [
+      "Governance",
+      "Testing Standard"
+    ]
+  },
+  {
+    "objectID": "docs/decision-records/index.html",
+    "href": "docs/decision-records/index.html",
+    "title": "Decision Records",
+    "section": "",
+    "text": "2 records Append-only",
+    "crumbs": [
+      "Governance",
+      "Decision Records",
+      "All Records"
+    ]
+  },
+  {
+    "objectID": "docs/decision-records/index.html#adding-a-record",
+    "href": "docs/decision-records/index.html#adding-a-record",
+    "title": "Decision Records",
+    "section": "Adding a record",
+    "text": "Adding a record\n\nCopy an existing ADR to ADR-XXXX-&lt;slug&gt;.md (next number).\nUse the standard headings: Status, Context, Decision, Consequences, Alternatives considered.\nLink it in the cards above.\nTo change a past decision, add a new ADR that supersedes it and update the old one’s Status.\n\nSee the README and the Governance section of the CIS for the full process.",
+    "crumbs": [
+      "Governance",
+      "Decision Records",
+      "All Records"
+    ]
+  },
+  {
+    "objectID": "docs/decision-records/ADR-0002-cis-as-governance-model.html",
+    "href": "docs/decision-records/ADR-0002-cis-as-governance-model.html",
+    "title": "",
+    "section": "",
+    "text": "Code",
+    "crumbs": [
+      "Governance",
+      "Decision Records",
+      "CIS as Governance Model"
+    ]
+  },
+  {
+    "objectID": "docs/decision-records/ADR-0002-cis-as-governance-model.html#context",
+    "href": "docs/decision-records/ADR-0002-cis-as-governance-model.html#context",
+    "title": "",
+    "section": "Context",
+    "text": "Context\nThe project’s inputs include a persuasive investor/operator proposal. Persuasive documents are written to argue a position before the evidence is in, and they mix genuine insight with untested assumptions about market, positioning, and pricing. We need an explicit rule for how such a document enters the project, and a governing model that keeps recommendations honest as evidence accumulates.",
+    "crumbs": [
+      "Governance",
+      "Decision Records",
+      "CIS as Governance Model"
+    ]
+  },
+  {
+    "objectID": "docs/decision-records/ADR-0002-cis-as-governance-model.html#decision",
+    "href": "docs/decision-records/ADR-0002-cis-as-governance-model.html#decision",
+    "title": "",
+    "section": "Decision",
+    "text": "Decision\n\nAdopt the Commercial Intelligence Specification (CIS) as the governance model for the project. CIS treats commercial strategy as a computational decision system with a fixed lifecycle (Question → … → Monitoring → Learning), a typed ontology and object model, an evidence model, a validation model, confidence grades (D–A), and a testing standard.\nTreat the proposal PDF as Hypothesis v0.1 — a hypothesis source, not validated evidence. Its claims are extracted into falsifiable hypotheses and registered as evidence of source_type = proposal, capped at low quality and high bias risk. Under the evidence model such items can raise a hypothesis but cannot lift a claim above confidence grade C on their own.\nCIS governs process, not conclusions. It dictates how claims are evidenced, validated, and graded — never what the answer must be. Where narrative and specification disagree about process, the specification wins; the narrative remains an input.",
+    "crumbs": [
+      "Governance",
+      "Decision Records",
+      "CIS as Governance Model"
+    ]
+  },
+  {
+    "objectID": "docs/decision-records/ADR-0002-cis-as-governance-model.html#consequences",
+    "href": "docs/decision-records/ADR-0002-cis-as-governance-model.html#consequences",
+    "title": "",
+    "section": "Consequences",
+    "text": "Consequences\nPositive\n\nNo claim — however well-argued in the proposal — is presented as fact without an evidence trail.\nConfidence is explicit and bounded by evidence strength, so readers can calibrate trust.\nThe strategy becomes revisable: as evidence arrives, grades and recommendations change in a documented way rather than by silent rewriting.\nReviewers have a concrete standard to enforce (“what stage, what evidence, what grade?”).\n\nNegative / costs\n\nMore upfront discipline: every recommendation must name its provenance and grade.\nIt can feel slow to stakeholders expecting immediate answers from a compelling deck; this is the intended trade of speed for defensibility.",
+    "crumbs": [
+      "Governance",
+      "Decision Records",
+      "CIS as Governance Model"
+    ]
+  },
+  {
+    "objectID": "docs/decision-records/ADR-0002-cis-as-governance-model.html#alternatives-considered",
+    "href": "docs/decision-records/ADR-0002-cis-as-governance-model.html#alternatives-considered",
+    "title": "",
+    "section": "Alternatives considered",
+    "text": "Alternatives considered\n\nTreat the proposal as the project’s conclusions and build support around it. Rejected: this bakes in untested assumptions and defeats the purpose of an evidence-based lab.\nAd-hoc review with no formal model. Rejected: without a fixed lifecycle and confidence scale, “how sure are we?” gets answered inconsistently, and unvalidated numbers leak into decisions.",
+    "crumbs": [
+      "Governance",
+      "Decision Records",
+      "CIS as Governance Model"
+    ]
+  },
+  {
+    "objectID": "docs/decision-records/ADR-0002-cis-as-governance-model.html#notes",
+    "href": "docs/decision-records/ADR-0002-cis-as-governance-model.html#notes",
+    "title": "",
+    "section": "Notes",
+    "text": "Notes\nChanges to CIS itself are made through new ADRs and version bumps to cis/commercial-intelligence-specification.md. This record is append-only; supersede rather than edit.",
+    "crumbs": [
+      "Governance",
+      "Decision Records",
+      "CIS as Governance Model"
+    ]
+  },
+  {
+    "objectID": "templates/discovery_interview_scoring_guide.html",
+    "href": "templates/discovery_interview_scoring_guide.html",
+    "title": "",
+    "section": "",
+    "text": "Code"
+  },
+  {
+    "objectID": "templates/discovery_interview_scoring_guide.html#signal-scores-0100",
+    "href": "templates/discovery_interview_scoring_guide.html#signal-scores-0100",
+    "title": "",
+    "section": "Signal scores (0–100)",
+    "text": "Signal scores (0–100)\n\npain_score — how acute and specific is the pain\n\n0–20 No real pain; “we manage fine.”\n21–40 Mild annoyance; generic grumbling, no cost attached.\n41–60 Real, recurring pain named specifically, but tolerated.\n61–80 Acute pain with a felt cost (time, rework, lost work) and frequency.\n81–100 Severe, frequent, costed pain the respondent raised unprompted.\nClaims: H-SEG-AUDIT-01, H-SEG-PROF-01 (D1).\n\n\n\nbudget_signal — is there money and a buyer\n\n0–20 No budget, no owner, “we wouldn’t pay for this.”\n21–40 Vague interest, no budget line identified.\n41–60 A plausible owner named; budget “might exist.”\n61–80 Clear budget owner + budget this year + prior spend on adjacent tools.\n81–100 Active budget, named buyer, explicit intent to allocate.\nClaim: H-SEG-AUDIT-02 (D1).\n\n\n\nurgency_signal — is there a reason to act now\n\n0–20 “Someday” problem; no timeline.\n21–40 Would like to fix eventually.\n41–60 On the roadmap, no compelling event.\n61–80 This-quarter priority with a driver (growth, audit season, a failure).\n81–100 Urgent, compelling event with a deadline.\nClaim: H-SEG-AUDIT-01 (D1).\n\n\n\ncrm_maturity — sophistication and adoption of current CRM\n\n0–20 Spreadsheets / email only; no CRM.\n21–40 A CRM exists but is barely used.\n41–60 CRM used by some of the team, inconsistently.\n61–80 CRM well-adopted across the commercial team.\n81–100 Mature, disciplined CRM practice with clean data.\nClaims: H-POS-CRM-01, H-AI-READY-02 (D2).\n\n\n\nworkflow_maturity — how defined and standardised the commercial workflow is\n\n0–20 Ad hoc; everything person-dependent.\n21–40 Loose conventions, not written down.\n41–60 Defined process, unevenly followed.\n61–80 Standardised, documented, mostly followed.\n81–100 Fully standardised and instrumented.\nClaim: H-AI-READY-02 (D2).\n\n\n\nai_readiness_maturity — data structure + analytics practice\n\n0–20 Data scattered; no analytics.\n21–40 Some reports, mostly manual, data siloed.\n41–60 Structured data in places; basic dashboards.\n61–80 Clean, centralised data; regular analytics.\n81–100 Strong data foundation, ready to operationalise AI.\nClaims: H-AI-READY-01, H-AI-READY-02 (D2).\n\n\n\nwillingness_to_pay_signal — directional price reaction\n\n0–20 Would not pay; expects free.\n21–40 Would pay only a token amount.\n41–60 Open to paying; no figure given.\n61–80 Named a plausible monthly figure at/near expectations.\n81–100 Named a figure at or above target, with conviction.\nClaim: H-SEG-AUDIT-02 (D1). Keep directional — do not anchor the respondent.\n\n\n\nsales_cycle_signal — ease/speed of buying (higher = shorter and simpler)\n\n0–20 Very long cycle, many sign-offs, procurement-heavy.\n21–40 Long cycle, committee decision.\n41–60 Moderate; a couple of stakeholders.\n61–80 Short; one or two decision-makers.\n81–100 Fast; a single owner can decide.\nClaim: H-GTM-GATE-01 (D1/D3). Note the inversion: high score = easy to buy."
+  },
+  {
+    "objectID": "templates/discovery_interview_scoring_guide.html#evidence-quality-scores-0100",
+    "href": "templates/discovery_interview_scoring_guide.html#evidence-quality-scores-0100",
+    "title": "",
+    "section": "Evidence-quality scores (0–100)",
+    "text": "Evidence-quality scores (0–100)\n\nevidence_quality_score — how much weight this single source deserves\nJudges rigour, directness, and recency of this interview. - 0–20 Hearsay, off-topic, or a very junior/uninformed respondent. - 21–40 Relevant but indirect; respondent generalising. - 41–60 Direct, first-hand account from a relevant role (typical ceiling for one discovery call). - 61–80 First-hand, decision-maker, specific and corroborated within the call. - 81–100 Rare for an interview — reserve for documented, verifiable evidence. - A one-off discovery call should seldom exceed 50.\n\n\nbias_risk — how much this evidence may be distorted (higher = more biased = worse)\nConsider: did we lead the witness? Is the respondent incentivised to please us? Selection bias in who we reached? Recall bias? - 0–20 Low risk: neutral questioning, disinterested respondent, representative selection. - 21–40 Some risk: minor leading, friendly respondent. - 41–66 Medium risk: warm intro, respondent wants to help us, some leading. - 67–85 High risk: clearly leading, respondent invested in our success. - 86–100 Severe: respondent is a friend/investor, or answers were coached."
+  },
+  {
+    "objectID": "templates/discovery_interview_scoring_guide.html#direction-supports_or_refutes",
+    "href": "templates/discovery_interview_scoring_guide.html#direction-supports_or_refutes",
+    "title": "",
+    "section": "Direction: supports_or_refutes",
+    "text": "Direction: supports_or_refutes\nFor each claim the interview touches, decide the direction (recorded in the interview row for the primary claim, and per-claim in the evidence records):\n\nsupports — the evidence makes the claim more likely true.\nrefutes — the evidence makes the claim less likely true.\nmixed — genuinely cuts both ways.\nneutral — touched on but uninformative."
+  },
+  {
+    "objectID": "templates/discovery_interview_scoring_guide.html#converting-raw-scores-processed-evidence-records",
+    "href": "templates/discovery_interview_scoring_guide.html#converting-raw-scores-processed-evidence-records",
+    "title": "",
+    "section": "Converting raw scores → processed evidence records",
+    "text": "Converting raw scores → processed evidence records\ndata/processed/discovery_evidence.csv uses the conventions the evidence model expects. Convert as follows when you create evidence records (see templates/evidence_capture_template.md):\n\n\n\n\n\n\n\n\nRaw interview field (0–100)\nProcessed evidence field\nConversion\n\n\n\n\nevidence_quality_score\nquality_score\ndivide by 100 → 0.0–1.0\n\n\nbias_risk\nbias_risk\nband → low (0–33) · medium (34–66) · high (67–100)\n\n\nsupports_or_refutes\nsupports_or_refutes\ncopy unchanged (supports / refutes / mixed / neutral)\n\n\n\nThe 0–100 signal scores (pain_score, budget_signal, …) stay in the interview row; they inform your narrative evidence_summary and confidence_impact but are not re-stored in the evidence record.\n\nReminder. These scores describe one source. Confidence grades in the registers change only by deliberate review when the evidence_needed_for_B bar is met by multiple independent, low-bias items — never automatically, and never from a single interview."
+  }
+]

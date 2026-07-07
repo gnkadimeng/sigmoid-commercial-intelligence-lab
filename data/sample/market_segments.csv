@@ -1,8 +1,0 @@
-segment_id,segment_name,industry,market_size_score,pain_score,budget_score,competition_score,sales_cycle_score,strategic_fit_score,evidence_quality_score
-SEG-01,Audit Firms,Professional Services,6,8,7,5,4,8,4
-SEG-02,Mining Suppliers,Mining & Industrials,7,7,7,6,6,7,3
-SEG-03,Municipalities,Public Sector,8,6,4,4,9,5,3
-SEG-04,Professional Services Firms,Professional Services,7,7,6,7,5,7,4
-SEG-05,SMEs,Cross-industry,9,6,4,8,3,6,5
-SEG-06,SETAs,Public Sector / Skills,4,8,6,3,8,6,5
-SEG-07,State-Owned Enterprises,Public Sector,7,7,6,4,9,5,3

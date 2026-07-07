@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>First Evidence Sprint – Sigmoid Commercial Intelligence Lab</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../start-here/current-status.html" rel="next">
+<link href="../start-here/how-to-use.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d5e38a914b3c82e0fd0f1a828f36ba15.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Sigmoid CIL</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../start-here/index.html" aria-current="page"> 
+<span class="menu-text">Start Here</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../decisions/index.html"> 
+<span class="menu-text">Decisions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../evidence/index.html"> 
+<span class="menu-text">Evidence</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../frameworks/index.html"> 
+<span class="menu-text">Frameworks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../dashboards/index.html"> 
+<span class="menu-text">Dashboards</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../working-paper/index.html"> 
+<span class="menu-text">Working Paper</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../governance/index.html"> 
+<span class="menu-text">Governance</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../start-here/first-evidence-sprint.html">First Evidence Sprint</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../start-here/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../start-here/product-brief.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Product Brief</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../start-here/how-to-use.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to Use This Lab</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../start-here/first-evidence-sprint.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">First Evidence Sprint</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../start-here/current-status.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Current Status</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sprint-at-a-glance" id="toc-sprint-at-a-glance" class="nav-link active" data-scroll-target="#sprint-at-a-glance">Sprint at a glance</a></li>
+  <li><a href="#claims-under-test" id="toc-claims-under-test" class="nav-link" data-scroll-target="#claims-under-test">Claims under test</a></li>
+  <li><a href="#the-fieldwork-workflow" id="toc-the-fieldwork-workflow" class="nav-link" data-scroll-target="#the-fieldwork-workflow">The fieldwork workflow</a>
+  <ul class="collapse">
+  <li><a href="#how-to-conduct-an-interview" id="toc-how-to-conduct-an-interview" class="nav-link" data-scroll-target="#how-to-conduct-an-interview">1 · How to conduct an interview</a></li>
+  <li><a href="#how-to-enter-raw-interview-data" id="toc-how-to-enter-raw-interview-data" class="nav-link" data-scroll-target="#how-to-enter-raw-interview-data">2 · How to enter raw interview data</a></li>
+  <li><a href="#how-to-map-interview-data-into-processed-evidence" id="toc-how-to-map-interview-data-into-processed-evidence" class="nav-link" data-scroll-target="#how-to-map-interview-data-into-processed-evidence">3 · How to map interview data into processed evidence</a></li>
+  <li><a href="#how-to-run-pytest-and-quarto-render" id="toc-how-to-run-pytest-and-quarto-render" class="nav-link" data-scroll-target="#how-to-run-pytest-and-quarto-render">4 · How to run pytest and quarto render</a></li>
+  <li><a href="#how-to-review-results" id="toc-how-to-review-results" class="nav-link" data-scroll-target="#how-to-review-results">5 · How to review results</a></li>
+  </ul></li>
+  <li><a href="#what-not-to-conclude-yet" id="toc-what-not-to-conclude-yet" class="nav-link" data-scroll-target="#what-not-to-conclude-yet">What not to conclude yet</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">First Evidence Sprint</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">The first real fieldwork — turning discovery interviews into structured evidence</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="page-context">
+<div class="pc-crumb">
+<p>Start Here <span class="sep">›</span> First Evidence Sprint</p>
+</div>
+<div class="pc-supports">
+<p><strong>This page runs the first evidence sprint.</strong> It is the working interface for collecting real discovery evidence in the audit and professional-services segments.</p>
+</div>
+<div class="pc-row">
+<p><span class="chip chip-grade-c no-dot">Planned · v0.1</span> <span class="chip chip-neutral no-dot">No interviews logged yet</span> <span class="pc-next"><a href="../templates/discovery_interview_script.html">Open the interview script</a></span></p>
+</div>
+</div>
+<p>This is the moment the lab stops running on synthetic data and starts collecting <strong>real</strong> discovery evidence. It changes no scoring model, no dashboards, and no confidence grades — it only collects evidence. The full plan also lives in the repo at <code>docs/FIRST_EVIDENCE_SPRINT.md</code>; this page is its working, in-browser version.</p>
+<section id="sprint-at-a-glance" class="level2">
+<h2 class="anchored" data-anchor-id="sprint-at-a-glance">Sprint at a glance</h2>
+<div class="purpose-grid">
+<div class="pg-cell">
+<div class="pg-label">
+<p>Goal</p>
+</div>
+<div class="pg-val">
+<p>First real evidence on the <a href="../decisions/market-entry.html">Market Entry</a> and <a href="../decisions/positioning.html">Positioning</a> claims — signal, not verdicts.</p>
+</div>
+</div>
+<div class="pg-cell">
+<div class="pg-label">
+<p>Target segments</p>
+</div>
+<div class="pg-val">
+<p>Audit firms · Professional services firms</p>
+</div>
+</div>
+<div class="pg-cell">
+<div class="pg-label">
+<p>Interview target</p>
+</div>
+<div class="pg-val">
+<p>8–10 total (~5 audit + ~4 professional services)</p>
+</div>
+</div>
+<div class="pg-cell">
+<div class="pg-label">
+<p>Minimum evidence threshold</p>
+</div>
+<div class="pg-val">
+<p>≥ 3 per segment with <code>evidence_quality_score ≥ 40</code> and <code>bias_risk ≤ 66</code></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-important no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Sprint goal.</strong> Replace the “no real evidence yet” state on the Decision 1 and Decision 2 claims with the first set of real, structured discovery evidence. <strong>Not a goal:</strong> validating any claim, moving any claim to grade A, or committing to a segment or positioning.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="claims-under-test" class="level2">
+<h2 class="anchored" data-anchor-id="claims-under-test">Claims under test</h2>
+<p>The claims below read live from <code>data/sample/claim_register.csv</code> (Decisions 1 and 2). Each is a <strong>hypothesis</strong> — the sprint gathers first signal on it, nothing more.</p>
+<div id="cell-claims-under-test" class="cell" data-execution_count="1">
+<div id="claims-under-test" class="cell-output cell-output-display" data-execution_count="1">
+<table class="table caption-top table-sm table-striped small">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Claim</th>
+<th data-quarto-table-cell-role="th">Decision</th>
+<th data-quarto-table-cell-role="th">Type</th>
+<th data-quarto-table-cell-role="th">Hypothesis</th>
+<th data-quarto-table-cell-role="th">Grade</th>
+<th data-quarto-table-cell-role="th">Real evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>H-SEG-AUDIT-01</code></td>
+<td>D1</td>
+<td>segment_pain</td>
+<td>Audit firms may have strong workflow pain.</td>
+<td><span class="chip chip-grade-d">D</span></td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td><code>H-SEG-AUDIT-02</code></td>
+<td>D1</td>
+<td>budget</td>
+<td>Audit firms may have budget for CRM/workflow tools.</td>
+<td><span class="chip chip-grade-d">D</span></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td><code>H-SEG-PROF-01</code></td>
+<td>D1</td>
+<td>segment_pain</td>
+<td>Professional services firms may need better pipeline visibility.</td>
+<td><span class="chip chip-grade-d">D</span></td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td><code>H-POS-CRM-01</code></td>
+<td>D2</td>
+<td>positioning</td>
+<td>CRM positioning may be clear but too generic.</td>
+<td><span class="chip chip-grade-d">D</span></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td><code>H-POS-REVOPS-01</code></td>
+<td>D2</td>
+<td>positioning</td>
+<td>Revenue Operations Platform positioning may better express business value.</td>
+<td><span class="chip chip-grade-d">D</span></td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td><code>H-POS-AI-01</code></td>
+<td>D2</td>
+<td>positioning</td>
+<td>AI Readiness Platform positioning may be differentiated but could overpromise.</td>
+<td><span class="chip chip-grade-d">D</span></td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td><code>H-AI-READY-01</code></td>
+<td>D2</td>
+<td>ai_readiness</td>
+<td>Target customers may lack structured customer data.</td>
+<td><span class="chip chip-grade-d">D</span></td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td><code>H-AI-READY-02</code></td>
+<td>D2</td>
+<td>ai_readiness</td>
+<td>CRM implementation may improve AI readiness.</td>
+<td><span class="chip chip-grade-d">D</span></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Decision 3 (<a href="../decisions/gtm-evidence-gate.html">GTM Evidence Gate</a>) is <em>observed</em> via the <code>sales_cycle_signal</code> and follow-up permission, but is not a primary target this sprint.</p>
+</section>
+<section id="the-fieldwork-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="the-fieldwork-workflow">The fieldwork workflow</h2>
+<div class="lifecycle">
+<li>
+<span class="stage"><span class="num">1</span>Conduct interview</span>
+</li>
+<li>
+<span class="arrow">→</span><span class="stage"><span class="num">2</span>Enter raw data</span>
+</li>
+<li>
+<span class="arrow">→</span><span class="stage"><span class="num">3</span>Map to evidence</span>
+</li>
+<li>
+<span class="arrow">→</span><span class="stage"><span class="num">4</span>Review claims</span>
+</li>
+<li>
+<span class="arrow">→</span><span class="stage is-loop"><span class="num">5</span>Decide if status moves</span>
+</li>
+</div>
+<section id="how-to-conduct-an-interview" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-conduct-an-interview">1 · How to conduct an interview</h3>
+<ol type="1">
+<li>Run the call with the <a href="../templates/discovery_interview_script.html"><strong>discovery interview script</strong></a> (~40 min, 13 sections from respondent context to permission to follow up). Every question maps to a decision, a claim, and a CSV field.</li>
+<li>Run the <a href="../templates/positioning_message_test.html"><strong>positioning message test</strong></a> inside the call to test the three framings (CRM · Revenue Operations · AI Readiness).</li>
+<li>Score the interview the same day with the <a href="../templates/discovery_interview_scoring_guide.html"><strong>scoring guide</strong></a> — anchored 0–100 rubrics for every signal, plus quality and bias.</li>
+</ol>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Interviewer discipline.</strong> Do not lead the witness; ask open questions first. Record what was actually said (verbatim in <code>notes</code>). One interview is a single data point — it never validates a claim. Leave a field blank if it was not covered; <strong>do not fabricate it</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="how-to-enter-raw-interview-data" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-enter-raw-interview-data">2 · How to enter raw interview data</h3>
+<p>Add <strong>one row per interview</strong> to <code>data/raw/discovery_interviews.csv</code>, filling every covered field:</p>
+<pre class="text"><code>interview_id, date, company_segment, company_size, respondent_role, decision_linked, claim_linked,
+pain_score, budget_signal, urgency_signal, current_tooling, crm_maturity, workflow_maturity,
+ai_readiness_maturity, positioning_preference, willingness_to_pay_signal, sales_cycle_signal, notes,
+evidence_quality_score, bias_risk, supports_or_refutes</code></pre>
+<p>All signal scores are <strong>0–100</strong> (see the scoring guide). Set <code>decision_linked</code>, <code>claim_linked</code>, and <code>supports_or_refutes</code> (<code>supports</code> / <code>refutes</code> / <code>mixed</code> / <code>neutral</code>) for the primary claim.</p>
+</section>
+<section id="how-to-map-interview-data-into-processed-evidence" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-map-interview-data-into-processed-evidence">3 · How to map interview data into processed evidence</h3>
+<p>Using the evidence-capture step, add <strong>one row per claim</strong> the interview bears on to <code>data/processed/discovery_evidence.csv</code>:</p>
+<pre class="text"><code>evidence_id, interview_id, decision_id, claim_id, source_type, source_name, date_collected,
+quality_score, bias_risk, supports_or_refutes, evidence_summary, confidence_impact, notes</code></pre>
+<p>Apply the conversions from the scoring guide:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Raw interview field (0–100)</th>
+<th>Processed field</th>
+<th>Conversion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>evidence_quality_score</code></td>
+<td><code>quality_score</code></td>
+<td>÷ 100 → 0.0–1.0</td>
+</tr>
+<tr class="even">
+<td><code>bias_risk</code></td>
+<td><code>bias_risk</code></td>
+<td><code>low</code> (0–33) · <code>medium</code> (34–66) · <code>high</code> (67–100)</td>
+</tr>
+<tr class="odd">
+<td><code>supports_or_refutes</code></td>
+<td><code>supports_or_refutes</code></td>
+<td>copy unchanged</td>
+</tr>
+</tbody>
+</table>
+<p>Set <code>source_type = interview</code> and <code>confidence_impact</code> = <code>raises</code> / <code>lowers</code> / <code>none</code> (direction only — never a grade). The <a href="../evidence/evidence-register.html">Evidence Register</a> is where these records land.</p>
+</section>
+<section id="how-to-run-pytest-and-quarto-render" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-run-pytest-and-quarto-render">4 · How to run pytest and quarto render</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> .venv/bin/activate</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pytest</span>            <span class="co"># validators check columns, grades (A–D), supports/refutes, and score ranges</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render     <span class="co"># the decision + Claims &amp; Confidence pages recompute from the new records</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Both must pass before you trust anything. A red suite is a hard stop.</p>
+</section>
+<section id="how-to-review-results" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-review-results">5 · How to review results</h3>
+<ul>
+<li><a href="../evidence/claims-confidence.html"><strong>Claims &amp; Confidence</strong></a> — each tested claim now shows a real evidence count and a supports/refutes split instead of “none yet”.</li>
+<li><a href="../decisions/market-entry.html"><strong>Market Entry</strong></a> and <a href="../decisions/positioning.html"><strong>Positioning</strong></a> — the claim cards reflect the new evidence.</li>
+<li><a href="../start-here/current-status.html"><strong>Current Status</strong></a> — the top-level read of where the decisions stand.</li>
+<li>Ask, per claim: did independent interviews <em>converge</em>, or does the signal conflict?</li>
+</ul>
+</section>
+</section>
+<section id="what-not-to-conclude-yet" class="level2">
+<h2 class="anchored" data-anchor-id="what-not-to-conclude-yet">What not to conclude yet</h2>
+<div class="callout callout-style-simple callout-warning no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<ul>
+<li><strong>Do not</strong> declare a first-target segment or a positioning — a handful of interviews is grade-C signal at best.</li>
+<li><strong>Do not</strong> move any claim to grade A (validated); that needs a pilot with measured impact.</li>
+<li><strong>Do not</strong> treat a stated positioning preference as a won deal.</li>
+<li><strong>Do not</strong> let an enthusiastic-but-biased interview carry a claim — that is what <code>bias_risk</code> is for.</li>
+<li>If a claim’s <code>evidence_needed_for_B</code> bar is genuinely met, change its grade <strong>deliberately</strong> and record why (a note or an ADR). Grade changes are decisions, not edits.</li>
+</ul>
+</div>
+</div>
+</div>
+<p><em>This sprint produces evidence, not verdicts. The lab stays at v0.1 hypothesis stage until the evidence earns otherwise.</em></p>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/gnkadimeng\.github\.io\/sigmoid-commercial-intelligence-lab\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../start-here/how-to-use.html" class="pagination-link" aria-label="How to Use This Lab">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">How to Use This Lab</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../start-here/current-status.html" class="pagination-link" aria-label="Current Status">
+        <span class="nav-page-text">Current Status</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "First Evidence Sprint"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "The first real fieldwork — turning discovery interviews into structured evidence"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>::: {.page-context}</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>::: {.pc-crumb}</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>Start Here <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"sep"</span><span class="dt">&gt;</span>›<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span> First Evidence Sprint</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>::: {.pc-supports}</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>**This page runs the first evidence sprint.** It is the working interface for collecting real</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>discovery evidence in the audit and professional-services segments.</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>::: {.pc-row}</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"chip chip-grade-c no-dot"</span><span class="dt">&gt;</span>Planned · v0.1<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"chip chip-neutral no-dot"</span><span class="dt">&gt;</span>No interviews logged yet<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"pc-next"</span><span class="dt">&gt;</span><span class="co">[</span><span class="ot">Open the interview script</span><span class="co">](../templates/discovery_interview_script.md)</span><span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>This is the moment the lab stops running on synthetic data and starts collecting **real** discovery</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>evidence. It changes no scoring model, no dashboards, and no confidence grades — it only collects</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>evidence. The full plan also lives in the repo at <span class="in">`docs/FIRST_EVIDENCE_SPRINT.md`</span>; this page is its</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>working, in-browser version.</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Sprint at a glance</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>::: {.purpose-grid}</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>::: {.pg-cell}</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>::: {.pg-label}</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>Goal</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>::: {.pg-val}</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>First real evidence on the <span class="co">[</span><span class="ot">Market Entry</span><span class="co">](../decisions/market-entry.qmd)</span> and</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Positioning</span><span class="co">](../decisions/positioning.qmd)</span> claims — signal, not verdicts.</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>::: {.pg-cell}</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>::: {.pg-label}</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>Target segments</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>::: {.pg-val}</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>Audit firms · Professional services firms</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>::: {.pg-cell}</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>::: {.pg-label}</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>Interview target</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>::: {.pg-val}</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>8–10 total (~5 audit + ~4 professional services)</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>::: {.pg-cell}</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>::: {.pg-label}</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>Minimum evidence threshold</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>::: {.pg-val}</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>≥ 3 per segment with <span class="in">`evidence_quality_score ≥ 40`</span> and <span class="in">`bias_risk ≤ 66`</span></span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>::: {.callout-important appearance="simple" icon=false}</span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>**Sprint goal.** Replace the "no real evidence yet" state on the Decision 1 and Decision 2 claims with</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>the first set of real, structured discovery evidence. **Not a goal:** validating any claim, moving any</span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>claim to grade A, or committing to a segment or positioning.</span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a><span class="fu">## Claims under test</span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>The claims below read live from <span class="in">`data/sample/claim_register.csv`</span> (Decisions 1 and 2). Each is a</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>**hypothesis** — the sprint gathers first signal on it, nothing more.</span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: claims-under-test</span></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys, pathlib</span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>_root <span class="op">=</span> pathlib.Path.cwd()</span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> _root <span class="op">!=</span> _root.parent <span class="kw">and</span> <span class="kw">not</span> (_root <span class="op">/</span> <span class="st">"src"</span>).is_dir():</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>    _root <span class="op">=</span> _root.parent</span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a>sys.path.insert(<span class="dv">0</span>, <span class="bu">str</span>(_root))</span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> HTML</span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> src.registers <span class="im">import</span> load_claim_register, claim_evidence_counts, _grade_chip, _esc</span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>claims <span class="op">=</span> load_claim_register()</span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>under_test <span class="op">=</span> claims[claims[<span class="st">"decision_id"</span>].isin([<span class="st">"D1"</span>, <span class="st">"D2"</span>])]</span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> []</span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _, c <span class="kw">in</span> under_test.iterrows():</span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>    counts <span class="op">=</span> claim_evidence_counts(c[<span class="st">"claim_id"</span>])</span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>    rows.append(</span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>        <span class="st">"&lt;tr&gt;"</span></span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>        <span class="ss">f'&lt;td&gt;&lt;code&gt;</span><span class="sc">{</span>_esc(c[<span class="st">"claim_id"</span>])<span class="sc">}</span><span class="ss">&lt;/code&gt;&lt;/td&gt;'</span></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>        <span class="ss">f'&lt;td&gt;</span><span class="sc">{</span>_esc(c[<span class="st">"decision_id"</span>])<span class="sc">}</span><span class="ss">&lt;/td&gt;'</span></span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a>        <span class="ss">f'&lt;td&gt;</span><span class="sc">{</span>_esc(c[<span class="st">"claim_type"</span>])<span class="sc">}</span><span class="ss">&lt;/td&gt;'</span></span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>        <span class="ss">f'&lt;td&gt;</span><span class="sc">{</span>_esc(c[<span class="st">"claim_text"</span>])<span class="sc">}</span><span class="ss">&lt;/td&gt;'</span></span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a>        <span class="ss">f'&lt;td&gt;</span><span class="sc">{</span>_grade_chip(c[<span class="st">"current_confidence_grade"</span>])<span class="sc">}</span><span class="ss">&lt;/td&gt;'</span></span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>        <span class="ss">f'&lt;td&gt;</span><span class="sc">{</span>counts[<span class="st">"total"</span>]<span class="sc">}</span><span class="ss">&lt;/td&gt;'</span></span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>        <span class="st">"&lt;/tr&gt;"</span></span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a>HTML(</span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a>    <span class="st">'&lt;table class="table"&gt;&lt;thead&gt;&lt;tr&gt;'</span></span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a>    <span class="st">'&lt;th&gt;Claim&lt;/th&gt;&lt;th&gt;Decision&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Hypothesis&lt;/th&gt;&lt;th&gt;Grade&lt;/th&gt;'</span></span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>    <span class="st">'&lt;th&gt;Real evidence&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;'</span> <span class="op">+</span> <span class="st">""</span>.join(rows) <span class="op">+</span> <span class="st">'&lt;/tbody&gt;&lt;/table&gt;'</span></span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a>Decision 3 (<span class="co">[</span><span class="ot">GTM Evidence Gate</span><span class="co">](../decisions/gtm-evidence-gate.qmd)</span>) is *observed* via the</span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a><span class="in">`sales_cycle_signal`</span> and follow-up permission, but is not a primary target this sprint.</span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a><span class="fu">## The fieldwork workflow</span></span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a>::: {.lifecycle}</span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"stage"</span><span class="dt">&gt;&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"num"</span><span class="dt">&gt;</span>1<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>Conduct interview<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"arrow"</span><span class="dt">&gt;</span>→<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"stage"</span><span class="dt">&gt;&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"num"</span><span class="dt">&gt;</span>2<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>Enter raw data<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"arrow"</span><span class="dt">&gt;</span>→<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"stage"</span><span class="dt">&gt;&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"num"</span><span class="dt">&gt;</span>3<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>Map to evidence<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"arrow"</span><span class="dt">&gt;</span>→<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"stage"</span><span class="dt">&gt;&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"num"</span><span class="dt">&gt;</span>4<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>Review claims<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">li</span><span class="dt">&gt;&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"arrow"</span><span class="dt">&gt;</span>→<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"stage is-loop"</span><span class="dt">&gt;&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"num"</span><span class="dt">&gt;</span>5<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>Decide if status moves<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;&lt;/</span><span class="kw">li</span><span class="dt">&gt;</span></span>
+<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1 · How to conduct an interview</span></span>
+<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Run the call with the <span class="co">[</span><span class="ot">**discovery interview script**</span><span class="co">](../templates/discovery_interview_script.md)</span></span>
+<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a>   (~40 min, 13 sections from respondent context to permission to follow up). Every question maps to a</span>
+<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a>   decision, a claim, and a CSV field.</span>
+<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run the <span class="co">[</span><span class="ot">**positioning message test**</span><span class="co">](../templates/positioning_message_test.md)</span> inside the call to</span>
+<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a>   test the three framings (CRM · Revenue Operations · AI Readiness).</span>
+<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Score the interview the same day with the</span>
+<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a>   <span class="co">[</span><span class="ot">**scoring guide**</span><span class="co">](../templates/discovery_interview_scoring_guide.md)</span> — anchored 0–100 rubrics for</span>
+<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a>   every signal, plus quality and bias.</span>
+<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-135"><a href="#cb4-135" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple" icon=false}</span>
+<span id="cb4-136"><a href="#cb4-136" aria-hidden="true" tabindex="-1"></a>**Interviewer discipline.** Do not lead the witness; ask open questions first. Record what was</span>
+<span id="cb4-137"><a href="#cb4-137" aria-hidden="true" tabindex="-1"></a>actually said (verbatim in <span class="in">`notes`</span>). One interview is a single data point — it never validates a</span>
+<span id="cb4-138"><a href="#cb4-138" aria-hidden="true" tabindex="-1"></a>claim. Leave a field blank if it was not covered; **do not fabricate it**.</span>
+<span id="cb4-139"><a href="#cb4-139" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2 · How to enter raw interview data</span></span>
+<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-143"><a href="#cb4-143" aria-hidden="true" tabindex="-1"></a>Add **one row per interview** to <span class="in">`data/raw/discovery_interviews.csv`</span>, filling every covered field:</span>
+<span id="cb4-144"><a href="#cb4-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-145"><a href="#cb4-145" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb4-146"><a href="#cb4-146" aria-hidden="true" tabindex="-1"></a><span class="in">interview_id, date, company_segment, company_size, respondent_role, decision_linked, claim_linked,</span></span>
+<span id="cb4-147"><a href="#cb4-147" aria-hidden="true" tabindex="-1"></a><span class="in">pain_score, budget_signal, urgency_signal, current_tooling, crm_maturity, workflow_maturity,</span></span>
+<span id="cb4-148"><a href="#cb4-148" aria-hidden="true" tabindex="-1"></a><span class="in">ai_readiness_maturity, positioning_preference, willingness_to_pay_signal, sales_cycle_signal, notes,</span></span>
+<span id="cb4-149"><a href="#cb4-149" aria-hidden="true" tabindex="-1"></a><span class="in">evidence_quality_score, bias_risk, supports_or_refutes</span></span>
+<span id="cb4-150"><a href="#cb4-150" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-151"><a href="#cb4-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-152"><a href="#cb4-152" aria-hidden="true" tabindex="-1"></a>All signal scores are **0–100** (see the scoring guide). Set <span class="in">`decision_linked`</span>, <span class="in">`claim_linked`</span>, and</span>
+<span id="cb4-153"><a href="#cb4-153" aria-hidden="true" tabindex="-1"></a><span class="in">`supports_or_refutes`</span> (<span class="in">`supports`</span> / <span class="in">`refutes`</span> / <span class="in">`mixed`</span> / <span class="in">`neutral`</span>) for the primary claim.</span>
+<span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3 · How to map interview data into processed evidence</span></span>
+<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-157"><a href="#cb4-157" aria-hidden="true" tabindex="-1"></a>Using the evidence-capture step, add **one row per claim** the interview bears on to</span>
+<span id="cb4-158"><a href="#cb4-158" aria-hidden="true" tabindex="-1"></a><span class="in">`data/processed/discovery_evidence.csv`</span>:</span>
+<span id="cb4-159"><a href="#cb4-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-160"><a href="#cb4-160" aria-hidden="true" tabindex="-1"></a><span class="in">```text</span></span>
+<span id="cb4-161"><a href="#cb4-161" aria-hidden="true" tabindex="-1"></a><span class="in">evidence_id, interview_id, decision_id, claim_id, source_type, source_name, date_collected,</span></span>
+<span id="cb4-162"><a href="#cb4-162" aria-hidden="true" tabindex="-1"></a><span class="in">quality_score, bias_risk, supports_or_refutes, evidence_summary, confidence_impact, notes</span></span>
+<span id="cb4-163"><a href="#cb4-163" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-164"><a href="#cb4-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-165"><a href="#cb4-165" aria-hidden="true" tabindex="-1"></a>Apply the conversions from the scoring guide:</span>
+<span id="cb4-166"><a href="#cb4-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-167"><a href="#cb4-167" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Raw interview field (0–100) <span class="pp">|</span> Processed field <span class="pp">|</span> Conversion <span class="pp">|</span></span>
+<span id="cb4-168"><a href="#cb4-168" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb4-169"><a href="#cb4-169" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`evidence_quality_score`</span> <span class="pp">|</span> <span class="in">`quality_score`</span> <span class="pp">|</span> ÷ 100 → 0.0–1.0 <span class="pp">|</span></span>
+<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`bias_risk`</span> <span class="pp">|</span> <span class="in">`bias_risk`</span> <span class="pp">|</span> <span class="in">`low`</span> (0–33) · <span class="in">`medium`</span> (34–66) · <span class="in">`high`</span> (67–100) <span class="pp">|</span></span>
+<span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="in">`supports_or_refutes`</span> <span class="pp">|</span> <span class="in">`supports_or_refutes`</span> <span class="pp">|</span> copy unchanged <span class="pp">|</span></span>
+<span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a>Set <span class="in">`source_type = interview`</span> and <span class="in">`confidence_impact`</span> = <span class="in">`raises`</span> / <span class="in">`lowers`</span> / <span class="in">`none`</span> (direction only —</span>
+<span id="cb4-174"><a href="#cb4-174" aria-hidden="true" tabindex="-1"></a>never a grade). The <span class="co">[</span><span class="ot">Evidence Register</span><span class="co">](../evidence/evidence-register.qmd)</span> is where these records land.</span>
+<span id="cb4-175"><a href="#cb4-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-176"><a href="#cb4-176" aria-hidden="true" tabindex="-1"></a><span class="fu">### 4 · How to run pytest and quarto render</span></span>
+<span id="cb4-177"><a href="#cb4-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-178"><a href="#cb4-178" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb4-179"><a href="#cb4-179" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> .venv/bin/activate</span>
+<span id="cb4-180"><a href="#cb4-180" aria-hidden="true" tabindex="-1"></a><span class="ex">pytest</span>            <span class="co"># validators check columns, grades (A–D), supports/refutes, and score ranges</span></span>
+<span id="cb4-181"><a href="#cb4-181" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render     <span class="co"># the decision + Claims &amp; Confidence pages recompute from the new records</span></span>
+<span id="cb4-182"><a href="#cb4-182" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a>Both must pass before you trust anything. A red suite is a hard stop.</span>
+<span id="cb4-185"><a href="#cb4-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-186"><a href="#cb4-186" aria-hidden="true" tabindex="-1"></a><span class="fu">### 5 · How to review results</span></span>
+<span id="cb4-187"><a href="#cb4-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-188"><a href="#cb4-188" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">**Claims &amp; Confidence**</span><span class="co">](../evidence/claims-confidence.qmd)</span> — each tested claim now shows a real</span>
+<span id="cb4-189"><a href="#cb4-189" aria-hidden="true" tabindex="-1"></a>  evidence count and a supports/refutes split instead of "none yet".</span>
+<span id="cb4-190"><a href="#cb4-190" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">**Market Entry**</span><span class="co">](../decisions/market-entry.qmd)</span> and</span>
+<span id="cb4-191"><a href="#cb4-191" aria-hidden="true" tabindex="-1"></a>  <span class="co">[</span><span class="ot">**Positioning**</span><span class="co">](../decisions/positioning.qmd)</span> — the claim cards reflect the new evidence.</span>
+<span id="cb4-192"><a href="#cb4-192" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">**Current Status**</span><span class="co">](current-status.qmd)</span> — the top-level read of where the decisions stand.</span>
+<span id="cb4-193"><a href="#cb4-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ask, per claim: did independent interviews *converge*, or does the signal conflict?</span>
+<span id="cb4-194"><a href="#cb4-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-195"><a href="#cb4-195" aria-hidden="true" tabindex="-1"></a><span class="fu">## What not to conclude yet</span></span>
+<span id="cb4-196"><a href="#cb4-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-197"><a href="#cb4-197" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning appearance="simple" icon=false}</span>
+<span id="cb4-198"><a href="#cb4-198" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Do not** declare a first-target segment or a positioning — a handful of interviews is grade-C</span>
+<span id="cb4-199"><a href="#cb4-199" aria-hidden="true" tabindex="-1"></a>  signal at best.</span>
+<span id="cb4-200"><a href="#cb4-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Do not** move any claim to grade A (validated); that needs a pilot with measured impact.</span>
+<span id="cb4-201"><a href="#cb4-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Do not** treat a stated positioning preference as a won deal.</span>
+<span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Do not** let an enthusiastic-but-biased interview carry a claim — that is what <span class="in">`bias_risk`</span> is for.</span>
+<span id="cb4-203"><a href="#cb4-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If a claim's <span class="in">`evidence_needed_for_B`</span> bar is genuinely met, change its grade **deliberately** and</span>
+<span id="cb4-204"><a href="#cb4-204" aria-hidden="true" tabindex="-1"></a>  record why (a note or an ADR). Grade changes are decisions, not edits.</span>
+<span id="cb4-205"><a href="#cb4-205" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a>*This sprint produces evidence, not verdicts. The lab stays at v0.1 hypothesis stage until the</span>
+<span id="cb4-208"><a href="#cb4-208" aria-hidden="true" tabindex="-1"></a>evidence earns otherwise.*</span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Sigmoid Analytica — Commercial Intelligence Lab · v0.1 (hypothesis stage)</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Governed by the Commercial Intelligence Specification (CIS)</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
