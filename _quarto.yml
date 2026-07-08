@@ -9,6 +9,7 @@ project:
     - "evidence/*.qmd"
     - "frameworks/index.qmd"
     - "dashboards/*.qmd"
+    - "commercial-health/*.qmd"
     - "working-paper/*.qmd"
     - "governance/*.qmd"
     - "cis/commercial-intelligence-specification.md"
@@ -47,6 +48,8 @@ website:
         file: frameworks/index.qmd
       - text: "Dashboards"
         file: dashboards/index.qmd
+      - text: "Commercial Health"
+        file: commercial-health/index.qmd
       - text: "Working Paper"
         file: working-paper/index.qmd
       - text: "Governance"

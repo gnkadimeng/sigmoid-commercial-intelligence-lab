@@ -1,0 +1,195 @@
+---
+title: "Commercial Health Check"
+subtitle: "Score your Commercial Health — the leading indicator of whether you'll grow"
+page-layout: full
+---
+
+::: {.page-context}
+::: {.pc-crumb}
+Commercial Health <span class="sep">›</span> The Check
+:::
+::: {.pc-supports}
+**This is the reference implementation of the [Commercial Health Index Specification](../governance/index.qmd).**
+Rate the statements; your score computes live in your browser.
+:::
+::: {.pc-row}
+<span class="chip chip-grade-c no-dot">Self-assessment · confidence grade C</span>
+<span class="chip chip-neutral no-dot">7 dimensions · 21 statements</span>
+:::
+:::
+
+Financial statements measure your past. **Commercial Health measures your future** — your ability to
+find, win, keep, and grow customers. Rate each statement from **1 (strongly disagree)** to **5
+(strongly agree)**. Nothing is sent anywhere; the score is computed in your browser from the
+[canonical framework](../frameworks/index.qmd).
+
+```{python}
+#| label: chi-data
+#| echo: false
+import sys, pathlib, json
+_root = pathlib.Path.cwd()
+while _root != _root.parent and not (_root / "src").is_dir():
+    _root = _root.parent
+sys.path.insert(0, str(_root))
+from src.chi import load_chi
+from IPython.display import HTML
+HTML('<script id="chi-data" type="application/json">' + json.dumps(load_chi()) + '</script>')
+```
+
+```{=html}
+<style>
+.chi-app { display:grid; grid-template-columns:1.5fr 1fr; gap:2rem; align-items:start; margin:1rem 0 1.6rem; }
+.chi-col-head { font-family:var(--sig-serif); font-size:1.4rem; font-weight:600; color:var(--sig-ink-strong); margin:0 0 .6rem; }
+.chi-dim-head { font-weight:700; color:var(--sig-ink-strong); margin:1.2rem 0 .4rem; font-size:1.02rem; border-bottom:1px solid var(--sig-border); padding-bottom:.3rem; }
+.chi-q { display:grid; grid-template-columns:1fr auto; gap:.5rem 1rem; align-items:center; padding:.4rem 0; border-bottom:1px solid #eef2f7; }
+.chi-q-text { font-size:.92rem; color:var(--sig-ink); }
+.chi-scale { display:flex; gap:.1rem; }
+.chi-scale label { display:inline-flex; flex-direction:column; align-items:center; cursor:pointer; font-size:.72rem; color:var(--sig-muted); width:30px; }
+.chi-scale input { cursor:pointer; }
+.chi-result { position:sticky; top:1rem; }
+.chi-bars { display:grid; gap:.5rem; margin:1rem 0 1.2rem; }
+.chi-bar-row { display:grid; grid-template-columns:150px 1fr 40px; align-items:center; gap:.6rem; }
+.chi-bar-name { font-size:.86rem; color:var(--sig-ink); }
+.chi-bar-track { height:11px; background:#eef2f7; border-radius:999px; overflow:hidden; }
+.chi-bar-fill { height:100%; background:linear-gradient(90deg,#8CC63F,#5E8E28); border-radius:999px; transition:width .25s ease; }
+.chi-bar-score { font-weight:700; font-variant-numeric:tabular-nums; text-align:right; color:var(--sig-ink-strong); }
+.chi-gaps { background:#f4f8fc; border:1px solid #cfe0f1; border-radius:.6rem; padding:1rem 1.2rem; }
+@media (max-width:900px){ .chi-app{ grid-template-columns:1fr } .chi-result{ position:static } }
+</style>
+
+<div class="chi-app">
+  <div>
+    <div class="chi-col-head">Take the check</div>
+    <div id="chi-form"></div>
+  </div>
+  <div class="chi-result">
+    <div class="chi-col-head">Your result</div>
+    <div class="metric-row">
+      <div class="metric is-accent">
+        <div class="metric-label">Commercial Health Index</div>
+        <div class="metric-value" id="chi-score">&mdash;</div>
+        <div class="metric-sub" id="chi-conf"></div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Maturity band</div>
+        <div class="metric-value" style="font-size:1.2rem" id="chi-band">&mdash;</div>
+        <div class="metric-sub" id="chi-band-meaning"></div>
+      </div>
+    </div>
+    <div class="chi-bars" id="chi-bars"></div>
+    <div class="chi-gaps" id="chi-gaps"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  function init() {
+    var el = document.getElementById("chi-data");
+    var form = document.getElementById("chi-form");
+    if (!el || !form) return;
+    var CHI = JSON.parse(el.textContent);
+    var labels = (CHI.answer_scale && CHI.answer_scale.labels) || {};
+    CHI.dimensions.forEach(function (d) {
+      var h = document.createElement("div"); h.className = "chi-dim-head"; h.textContent = d.name;
+      form.appendChild(h);
+      d.statements.forEach(function (s, i) {
+        var row = document.createElement("div"); row.className = "chi-q";
+        var t = document.createElement("div"); t.className = "chi-q-text"; t.textContent = s;
+        var scale = document.createElement("div"); scale.className = "chi-scale";
+        for (var v = 1; v <= 5; v++) {
+          var lab = document.createElement("label"); lab.title = labels[v] || v;
+          var input = document.createElement("input");
+          input.type = "radio"; input.name = d.id + "_" + i; input.value = v;
+          if (v === 3) input.checked = true;
+          var num = document.createElement("span"); num.textContent = v;
+          lab.appendChild(input); lab.appendChild(num); scale.appendChild(lab);
+        }
+        row.appendChild(t); row.appendChild(scale); form.appendChild(row);
+      });
+    });
+    function bandFor(score) {
+      for (var i = 0; i < CHI.bands.length; i++) {
+        var b = CHI.bands[i]; if (score >= b.min && score <= b.max) return b;
+      }
+      return CHI.bands[CHI.bands.length - 1];
+    }
+    function compute() {
+      var wsum = 0, wtot = 0, dims = [];
+      CHI.dimensions.forEach(function (d) {
+        var vals = d.statements.map(function (s, i) {
+          var sel = form.querySelector('input[name="' + d.id + "_" + i + '"]:checked');
+          return ((sel ? +sel.value : 3) - 1) / 4 * 100;
+        });
+        var score = vals.reduce(function (a, b) { return a + b; }, 0) / vals.length;
+        dims.push({ name: d.name, score: score, next_move: d.next_move });
+        wsum += d.weight * score; wtot += d.weight;
+      });
+      var chi = Math.round((wsum / wtot) * 10) / 10, band = bandFor(chi);
+      var gaps = dims.slice().sort(function (a, b) { return a.score - b.score; }).slice(0, 2);
+      document.getElementById("chi-score").innerHTML = Math.round(chi) + '<span style="font-size:1rem;color:var(--sig-muted)"> / 100</span>';
+      document.getElementById("chi-conf").textContent = "Confidence " + (CHI.confidence_self_report || "C") + " · self-reported";
+      document.getElementById("chi-band").textContent = "Level " + band.level + " · " + band.name;
+      document.getElementById("chi-band-meaning").textContent = band.meaning || "";
+      document.getElementById("chi-bars").innerHTML = dims.map(function (d) {
+        return '<div class="chi-bar-row"><div class="chi-bar-name">' + d.name + '</div><div class="chi-bar-track"><div class="chi-bar-fill" style="width:' + d.score + '%"></div></div><div class="chi-bar-score">' + Math.round(d.score) + '</div></div>';
+      }).join("");
+      document.getElementById("chi-gaps").innerHTML = '<strong>Start here — your two weakest dimensions:</strong><ul style="margin:.5rem 0 0">' + gaps.map(function (g) {
+        return "<li><strong>" + g.name + "</strong> (" + Math.round(g.score) + " / 100) — " + g.next_move + "</li>";
+      }).join("") + "</ul>";
+    }
+    form.addEventListener("change", compute);
+    compute();
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
+})();
+</script>
+```
+
+::: {.callout-note appearance="simple" icon=false}
+**This score is grade C — indicative, self-reported.** It's an honest starting point, not a verdict.
+To reach grade B or A, the same dimensions are *measured* from your CRM data over time (see the
+[Commercial Health Index Specification](../governance/index.qmd)). Want the walkthrough that turns your
+weakest dimensions into a plan?
+[Book a Commercial Health walkthrough](mailto:info@sa-informatics.com?subject=Commercial%20Health%20walkthrough).
+:::
+
+## How the score works
+
+Transparent by design — the engine below is the tested `src/chi.py` computing a worked example, so you
+can see exactly how a business's answers become a score.
+
+```{python}
+#| label: worked-example
+#| echo: false
+from src.chi import commercial_health_index
+
+sample = {  # an illustrative business (synthetic — for demonstration only)
+    "D1": [4, 3, 2], "D2": [3, 2, 3], "D3": [2, 3, 2], "D4": [2, 2, 1],
+    "D5": [3, 3, 2], "D6": [2, 2, 3], "D7": [3, 2, 3],
+}
+res = commercial_health_index(sample)
+rows = "".join(
+    f"<tr><td>{d['name']}</td><td style='text-align:right'>{d['score']:.0f}</td></tr>"
+    for d in res["dimensions"]
+)
+HTML(
+    f"<p><strong>Worked example (illustrative):</strong> a business answering as above scores "
+    f"<strong>CHI {res['chi']:.0f} / 100</strong> — Level {res['band']['level']} · {res['band']['name']} "
+    f"(confidence {res['confidence']}). Weakest: "
+    + ", ".join(f"{g['name']} ({g['score']:.0f})" for g in res['gaps']) + "."
+    + "<table class='table' style='margin-top:.6rem;max-width:420px'><thead><tr><th>Dimension</th>"
+      "<th style='text-align:right'>Score</th></tr></thead><tbody>" + rows + "</tbody></table>"
+)
+```
+
+- **Indicator:** each answer `1..5` → `(answer − 1) / 4 × 100`.
+- **Dimension:** the mean of its three indicator scores.
+- **Commercial Health Index:** the weighted mean of the seven dimensions (equal weight at v0.1).
+- **Confidence:** self-assessment is capped at grade **C**; measured data raises it toward **B/A**.
+
+## Related
+
+- [Commercial Health Index Specification](../governance/index.qmd) — the canonical definition.
+- [The frameworks](../frameworks/index.qmd) — where the CHI weights and statements live as data.
+- [Decisions](../decisions/index.qmd) — the decisions a healthier commercial system supports.

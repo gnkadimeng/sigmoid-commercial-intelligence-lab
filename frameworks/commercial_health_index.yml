@@ -1,0 +1,108 @@
+# Framework: Commercial Health Index (CHI)
+# Reference implementation of the Commercial Health Index Specification (CHI-S v0.1).
+# Seven dimensions, each with three self-assessed statements (rated 1..5).
+# Weights are DATA — tune here, not in code. src/chi.py reads this shape.
+
+id: commercial_health_index
+version: "0.1.0"
+status: draft
+question: "How healthy is this business's ability to find, win, keep, and grow customers?"
+scale: "0..100"
+lifecycle_stage: model
+
+# Confidence ceiling for self-assessment mode (CIS grades). Measured mode raises this later.
+confidence_self_report: "C"
+
+answer_scale:
+  min: 1          # 1 = strongly disagree
+  max: 5          # 5 = strongly agree
+  labels:
+    1: "Strongly disagree"
+    2: "Disagree"
+    3: "Neutral"
+    4: "Agree"
+    5: "Strongly agree"
+
+# Seven dimensions (canonical, from The Sigmoid Commercial System, Part IV). Equal weight at v0.1.
+dimensions:
+  - id: D1
+    name: "Lead Quality"
+    weight: 0.142857
+    definition: "Attracts the right customers, from sources it understands."
+    statements:
+      - "We have a clear definition of our ideal customer, and most of our leads match it."
+      - "We know which lead sources produce customers who stay and grow."
+      - "We de-prioritise or turn away leads that don't fit."
+    next_move: "Define the ICP; track lead source to outcome."
+
+  - id: D2
+    name: "Sales Effectiveness"
+    weight: 0.142857
+    definition: "Converts the right opportunities, through a repeatable process."
+    statements:
+      - "Our team follows one consistent sales process."
+      - "We know our conversion rate at each stage of the pipeline."
+      - "We win the majority of the opportunities we choose to pursue."
+    next_move: "Adopt one process; measure stage conversion."
+
+  - id: D3
+    name: "Relationship Quality"
+    weight: 0.142857
+    definition: "Relationships are strong, current, and not locked in one person's head."
+    statements:
+      - "Customer history and context are captured and available to the whole team."
+      - "Relationships survive when an individual salesperson leaves."
+      - "We follow up when we say we will."
+    next_move: "Make follow-up a system, not a memory."
+
+  - id: D4
+    name: "Customer Retention"
+    weight: 0.142857
+    definition: "Keeps customers and detects risk early."
+    statements:
+      - "We can identify customers at risk of leaving before they leave."
+      - "We have a deliberate renewal / retention process."
+      - "We know why customers leave, from evidence, not assumption."
+    next_move: "Build early-warning and a renewal process."
+
+  - id: D5
+    name: "Customer Growth"
+    weight: 0.142857
+    definition: "Existing relationships grow in value over time."
+    statements:
+      - "We actively grow existing accounts (upsell / cross-sell)."
+      - "We segment customers and treat high-value relationships differently."
+      - "A meaningful share of revenue comes from existing customers growing."
+    next_move: "Segment by value; plan expansion."
+
+  - id: D6
+    name: "Revenue Predictability"
+    weight: 0.142857
+    definition: "Forecasts are reliable and the pipeline is honest."
+    statements:
+      - "Our forecasts are usually close to actual results."
+      - "Our pipeline reflects reality, not optimism."
+      - "Leaders can see commercial performance without asking for a report."
+    next_move: "Clean the pipeline; compare forecast to actual."
+
+  - id: D7
+    name: "Decision Quality"
+    weight: 0.142857
+    definition: "Commercial decisions are made from evidence and reviewed."
+    statements:
+      - "Important commercial decisions are made from evidence, not memory."
+      - "We can explain why we pursued (or dropped) an opportunity."
+      - "We review past decisions and learn from them."
+    next_move: "Record decision rationale and review it."
+
+# Interpretation bands — map the 0..100 score onto the SCS commercial-maturity ladder.
+bands:
+  - { min: 0,  max: 20,  level: 1, name: "Reactive",              meaning: "Commercial decisions are ad hoc, from memory." }
+  - { min: 21, max: 40,  level: 2, name: "Organised",             meaning: "Process exists; decisions rest on opinion." }
+  - { min: 41, max: 60,  level: 3, name: "Measured",              meaning: "Performance is tracked; metrics inform decisions." }
+  - { min: 61, max: 80,  level: 4, name: "Evidence-Driven",       meaning: "Decisions made from evidence, with confidence." }
+  - { min: 81, max: 100, level: 5, name: "Commercial Intelligence", meaning: "The business improves by design." }
+
+notes:
+  - "Weights are a v0.1 hypothesis (equal); tune as evidence links dimensions to outcomes."
+  - "Self-assessment mode is capped at confidence grade C — see the CHI Specification."
