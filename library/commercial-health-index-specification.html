@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Commercial Health Index — Specification – Sigmoid Commercial Intelligence Lab</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../library/commercial-messaging-framework.html" rel="next">
+<link href="../library/the-sigmoid-commercial-system.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d81872f4fb7d233155e3781d0c3f48fd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Sigmoid CIL</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../start-here/index.html"> 
+<span class="menu-text">Start Here</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../decisions/index.html"> 
+<span class="menu-text">Decisions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../evidence/index.html"> 
+<span class="menu-text">Evidence</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../frameworks/index.html"> 
+<span class="menu-text">Frameworks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../dashboards/index.html"> 
+<span class="menu-text">Dashboards</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../commercial-health/index.html"> 
+<span class="menu-text">Commercial Health</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../library/index.html" aria-current="page"> 
+<span class="menu-text">Library</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../working-paper/index.html"> 
+<span class="menu-text">Working Paper</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../governance/index.html"> 
+<span class="menu-text">Governance</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../library/commercial-health-index-specification.html">Commercial Health Index — Specification</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../library/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../library/the-sigmoid-commercial-system.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Sigmoid Commercial System</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../library/commercial-health-index-specification.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Commercial Health Index — Specification</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../library/commercial-messaging-framework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Commercial Messaging Framework</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../library/commercial-knowledge-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Commercial Knowledge Base</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../library/sigmoid-commercial-system-one-pager.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The System — At a Glance</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
+  <li><a href="#scope-principles" id="toc-scope-principles" class="nav-link" data-scroll-target="#scope-principles">2. Scope &amp; Principles</a></li>
+  <li><a href="#the-commercial-health-model" id="toc-the-commercial-health-model" class="nav-link" data-scroll-target="#the-commercial-health-model">3. The Commercial Health Model</a></li>
+  <li><a href="#indicators" id="toc-indicators" class="nav-link" data-scroll-target="#indicators">4. Indicators</a></li>
+  <li><a href="#assessment-questions" id="toc-assessment-questions" class="nav-link" data-scroll-target="#assessment-questions">5. Assessment Questions</a></li>
+  <li><a href="#scoring-model" id="toc-scoring-model" class="nav-link" data-scroll-target="#scoring-model">6. Scoring Model</a></li>
+  <li><a href="#weighting-model" id="toc-weighting-model" class="nav-link" data-scroll-target="#weighting-model">7. Weighting Model</a></li>
+  <li><a href="#evidence-confidence-model" id="toc-evidence-confidence-model" class="nav-link" data-scroll-target="#evidence-confidence-model">8. Evidence &amp; Confidence Model</a></li>
+  <li><a href="#interpretation-model" id="toc-interpretation-model" class="nav-link" data-scroll-target="#interpretation-model">9. Interpretation Model</a></li>
+  <li><a href="#improvement-model" id="toc-improvement-model" class="nav-link" data-scroll-target="#improvement-model">10. Improvement Model</a></li>
+  <li><a href="#implementations" id="toc-implementations" class="nav-link" data-scroll-target="#implementations">11. Implementations</a></li>
+  <li><a href="#data-model" id="toc-data-model" class="nav-link" data-scroll-target="#data-model">12. Data Model</a></li>
+  <li><a href="#governance-versioning-validation" id="toc-governance-versioning-validation" class="nav-link" data-scroll-target="#governance-versioning-validation">13. Governance, Versioning &amp; Validation</a></li>
+  <li><a href="#relationship-to-the-scs-and-cis" id="toc-relationship-to-the-scs-and-cis" class="nav-link" data-scroll-target="#relationship-to-the-scs-and-cis">14. Relationship to the SCS and CIS</a></li>
+  <li><a href="#success-criteria" id="toc-success-criteria" class="nav-link" data-scroll-target="#success-criteria">15. Success Criteria</a></li>
+  <li><a href="#future-work" id="toc-future-work" class="nav-link" data-scroll-target="#future-work">16. Future Work</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Commercial Health Index — Specification</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">One specification, many implementations — the canonical definition of Commercial Health</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Version:</strong> 0.1 (Draft) · <strong>Status:</strong> Product Specification · <strong>Authors:</strong> Sigmoid Analytica <strong>Inherits from:</strong> <em>The Sigmoid Commercial System</em>, Part IV · aligned with the <em>Commercial Intelligence Specification</em> (CIS).</p>
+<blockquote class="blockquote">
+<p><strong>This is the canonical definition of the Commercial Health Index (CHI).</strong> Every place a Commercial Health score appears — the website assessment, the CRM dashboard, onboarding, consulting, executive reports — MUST compute it from this specification. One definition; many surfaces. Where a surface and this document disagree, this document governs.</p>
+</blockquote>
+<hr>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
+<p><em>The Sigmoid Commercial System</em> argues that Commercial Health is observable and can be measured. This specification makes that operational: it defines <strong>what the Commercial Health Index measures, how it is scored, how confident we are in it, how it is interpreted, and what to do to improve it</strong> — in a way that is independent of any single implementation.</p>
+<p>The CHI turns a promise (“score your Commercial Health”) into a product. It also changes the sales conversation from <em>“here is our CRM”</em> to <em>“your Commercial Health score is 48/100 — here is why, here is what to improve first, and here is how the platform helps.”</em> That is consultative, and it is only possible if the score means the same thing everywhere. This document guarantees that.</p>
+</section>
+<section id="scope-principles" class="level2">
+<h2 class="anchored" data-anchor-id="scope-principles">2. Scope &amp; Principles</h2>
+<p>The CHI Specification governs the measurement of Commercial Health for an organisation. It defines the model, scoring, evidence, confidence, interpretation, and improvement logic. It does <strong>not</strong> prescribe a user interface; it prescribes the numbers and their meaning.</p>
+<p>Governing principles (inherited from the SCS and CIS):</p>
+<ol type="1">
+<li><strong>Transparent</strong> — no black box. Every score can be explained down to its inputs.</li>
+<li><strong>Evidence-graded</strong> — a score always carries how it was derived and how confident we are.</li>
+<li><strong>Observable</strong> — every dimension reduces to indicators that can be seen or measured.</li>
+<li><strong>Improvable</strong> — every score points to a next action, not just a grade.</li>
+<li><strong>Weights are data</strong> — weightings are declared, versioned, and tunable, never hidden.</li>
+<li><strong>Opinion → evidence</strong> — the CHI is designed to graduate from self-report to measurement.</li>
+</ol>
+</section>
+<section id="the-commercial-health-model" class="level2">
+<h2 class="anchored" data-anchor-id="the-commercial-health-model">3. The Commercial Health Model</h2>
+<p>Commercial Health is composed of <strong>seven dimensions</strong> (the canonical set from SCS Part IV). Each is scored 0–100; the CHI is their weighted mean.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Dimension</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D1</td>
+<td><strong>Lead Quality</strong></td>
+<td>The degree to which the organisation attracts the right customers, from sources it understands.</td>
+</tr>
+<tr class="even">
+<td>D2</td>
+<td><strong>Sales Effectiveness</strong></td>
+<td>The degree to which the right opportunities are converted, through a repeatable process.</td>
+</tr>
+<tr class="odd">
+<td>D3</td>
+<td><strong>Relationship Quality</strong></td>
+<td>The strength, currency, and continuity of customer relationships.</td>
+</tr>
+<tr class="even">
+<td>D4</td>
+<td><strong>Customer Retention</strong></td>
+<td>The organisation’s ability to keep customers and detect risk early.</td>
+</tr>
+<tr class="odd">
+<td>D5</td>
+<td><strong>Customer Growth</strong></td>
+<td>The degree to which existing relationships grow in value over time.</td>
+</tr>
+<tr class="even">
+<td>D6</td>
+<td><strong>Revenue Predictability</strong></td>
+<td>The reliability of forecasts and the honesty of the pipeline.</td>
+</tr>
+<tr class="odd">
+<td>D7</td>
+<td><strong>Decision Quality</strong></td>
+<td>The degree to which commercial decisions are made from evidence and reviewed.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="indicators" class="level2">
+<h2 class="anchored" data-anchor-id="indicators">4. Indicators</h2>
+<p>Each dimension is expressed through <strong>indicators</strong>. There are two kinds, and the CHI supports both:</p>
+<ul>
+<li><strong>Self-assessed indicators</strong> — statements a person rates (the basis of the website assessment).</li>
+<li><strong>Measured signals</strong> — quantities computed from data (the basis of the CRM dashboard).</li>
+</ul>
+<p>The same dimension can be scored either way; the difference is <em>confidence</em> (Section 8).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dim</th>
+<th>Self-assessed indicators (rate 1–5)</th>
+<th>Measured signals (from data)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>D1</strong></td>
+<td>Clear ICP and most leads match it · we know which sources produce customers who stay · we de-prioritise poor-fit leads</td>
+<td>lead→customer rate by source · % leads matching ICP · cost per won customer</td>
+</tr>
+<tr class="even">
+<td><strong>D2</strong></td>
+<td>One consistent sales process · we know stage-by-stage conversion · we win most opportunities we pursue</td>
+<td>stage conversion rates · overall win rate · sales-cycle length</td>
+</tr>
+<tr class="odd">
+<td><strong>D3</strong></td>
+<td>History available to the whole team · relationships survive staff leaving · we follow up when we say</td>
+<td>follow-up completion rate · time-to-follow-up · % contacts with recent activity</td>
+</tr>
+<tr class="even">
+<td><strong>D4</strong></td>
+<td>We spot at-risk customers early · we have a renewal process · we know why customers leave</td>
+<td>churn rate · early-warning coverage · renewal rate</td>
+</tr>
+<tr class="odd">
+<td><strong>D5</strong></td>
+<td>We actively grow accounts · we segment by value · existing customers drive real revenue</td>
+<td>expansion revenue % · net revenue retention · share of revenue from existing customers</td>
+</tr>
+<tr class="even">
+<td><strong>D6</strong></td>
+<td>Forecasts are usually close · pipeline reflects reality · leaders see performance without asking</td>
+<td>forecast vs actual variance · pipeline coverage ratio · stale-deal %</td>
+</tr>
+<tr class="odd">
+<td><strong>D7</strong></td>
+<td>Decisions made from evidence not memory · we can explain why we pursued/dropped deals · we review past decisions</td>
+<td>% decisions with recorded rationale · decision-review cadence · evidence coverage</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="assessment-questions" class="level2">
+<h2 class="anchored" data-anchor-id="assessment-questions">5. Assessment Questions</h2>
+<p>The <strong>self-assessment instrument</strong> is the canonical question set (used directly by the website assessment and onboarding). Each dimension has three statements, rated <strong>1 (strongly disagree)</strong> to <strong>5 (strongly agree)</strong>. The 21 statements are those listed as <em>self-assessed indicators</em> in Section 4. Implementations MUST use these exact statements so scores are comparable across surfaces.</p>
+</section>
+<section id="scoring-model" class="level2">
+<h2 class="anchored" data-anchor-id="scoring-model">6. Scoring Model</h2>
+<p>The scoring is transparent and deterministic.</p>
+<ul>
+<li><strong>Indicator score.</strong> A self-assessed answer <code>a ∈ {1..5}</code> → <code>(a − 1) / 4 × 100</code> (a value 0–100). A measured signal is mapped to 0–100 by its declared rubric/benchmark (Section 13).</li>
+<li><strong>Dimension score</strong> <code>Dᵢ</code> = the mean of that dimension’s indicator scores.</li>
+<li><strong>Commercial Health Index</strong> <code>CHI</code> = the <strong>weighted mean</strong> of the seven dimension scores using the weights in Section 7.</li>
+<li>All scores are reported on <strong>0–100</strong>, rounded to the nearest whole number, alongside their confidence (Section 8).</li>
+</ul>
+<pre><code>indicator (0–100) → dimension = mean(indicators) → CHI = Σ(wᵢ · Dᵢ)</code></pre>
+</section>
+<section id="weighting-model" class="level2">
+<h2 class="anchored" data-anchor-id="weighting-model">7. Weighting Model</h2>
+<p>Weights are <strong>declared data</strong>, not hidden logic. At v0.1 the seven dimensions are <strong>equally weighted</strong> (1/7 each). This is a starting hypothesis; weights MUST be versioned and MAY be tuned as evidence accumulates about which dimensions most predict commercial outcomes.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dim</th>
+<th>D1</th>
+<th>D2</th>
+<th>D3</th>
+<th>D4</th>
+<th>D5</th>
+<th>D6</th>
+<th>D7</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Weight (v0.1)</td>
+<td>0.143</td>
+<td>0.143</td>
+<td>0.143</td>
+<td>0.143</td>
+<td>0.143</td>
+<td>0.143</td>
+<td>0.143</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="evidence-confidence-model" class="level2">
+<h2 class="anchored" data-anchor-id="evidence-confidence-model">8. Evidence &amp; Confidence Model</h2>
+<p>Borrowing directly from the CIS: <strong>a CHI score is never just a number — it carries a confidence grade</strong> that reflects the evidence behind it.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Evidence behind a score</th>
+<th>Confidence grade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Self-report only (assessment)</td>
+<td><strong>C — Indicative</strong></td>
+</tr>
+<tr class="even">
+<td>A single measured signal</td>
+<td><strong>B — Substantiated</strong></td>
+</tr>
+<tr class="odd">
+<td>Converged, benchmarked measured signals</td>
+<td><strong>A — Validated</strong></td>
+</tr>
+<tr class="even">
+<td>No usable input</td>
+<td><strong>D — Hypothesis</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Each <strong>dimension</strong> reports its own confidence, and the <strong>overall CHI</strong> reports the lowest confidence among the dimensions that materially drive it. A score is always shown as <em>value + grade</em> — e.g., <strong>“CHI 48 (grade C, self-reported).”</strong> This is what keeps the index honest and consultative: we never imply more certainty than the evidence supports.</p>
+</section>
+<section id="interpretation-model" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation-model">9. Interpretation Model</h2>
+<p>The CHI maps onto the SCS commercial-maturity ladder, so a score is a diagnosis and a next step — not a grade to feel good or bad about.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>CHI</th>
+<th>Band</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0–20</td>
+<td><strong>1 · Reactive</strong></td>
+<td>Commercial decisions are ad hoc, from memory</td>
+</tr>
+<tr class="even">
+<td>21–40</td>
+<td><strong>2 · Organised</strong></td>
+<td>Process exists; decisions rest on opinion</td>
+</tr>
+<tr class="odd">
+<td>41–60</td>
+<td><strong>3 · Measured</strong></td>
+<td>Performance is tracked; metrics inform decisions</td>
+</tr>
+<tr class="even">
+<td>61–80</td>
+<td><strong>4 · Evidence-Driven</strong></td>
+<td>Decisions made from evidence, with confidence</td>
+</tr>
+<tr class="odd">
+<td>81–100</td>
+<td><strong>5 · Commercial Intelligence</strong></td>
+<td>The business improves by design</td>
+</tr>
+</tbody>
+</table>
+<p>Interpretation MUST always surface the <strong>lowest-scoring dimensions</strong> as the priority. The index is a map of where to improve.</p>
+</section>
+<section id="improvement-model" class="level2">
+<h2 class="anchored" data-anchor-id="improvement-model">10. Improvement Model</h2>
+<p>For every dimension, the specification defines the <strong>next move</strong> that raises it — and names how the Sigmoid platform helps. This is what turns a score into a conversation.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dim</th>
+<th>If it’s low, the next move…</th>
+<th>…and the platform helps by</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D1 Lead Quality</td>
+<td>Define the ICP; track source → outcome</td>
+<td>Capturing lead source and linking it to won/lost</td>
+</tr>
+<tr class="even">
+<td>D2 Sales Effectiveness</td>
+<td>Adopt one process; measure stage conversion</td>
+<td>Enforcing stages and computing conversion</td>
+</tr>
+<tr class="odd">
+<td>D3 Relationship Quality</td>
+<td>Make follow-up a system, not a memory</td>
+<td>Follow-up tasks, cadences, shared history</td>
+</tr>
+<tr class="even">
+<td>D4 Customer Retention</td>
+<td>Build early-warning + a renewal process</td>
+<td>Engagement signals and at-risk flags</td>
+</tr>
+<tr class="odd">
+<td>D5 Customer Growth</td>
+<td>Segment by value; plan expansion</td>
+<td>Account segmentation and whitespace views</td>
+</tr>
+<tr class="even">
+<td>D6 Revenue Predictability</td>
+<td>Clean the pipeline; compare forecast to actual</td>
+<td>Pipeline hygiene and forecast-vs-actual</td>
+</tr>
+<tr class="odd">
+<td>D7 Decision Quality</td>
+<td>Record decision rationale; review it</td>
+<td>Evidence capture and decision provenance</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="implementations" class="level2">
+<h2 class="anchored" data-anchor-id="implementations">11. Implementations</h2>
+<p><strong>One specification, many implementations.</strong> Each surface computes the <em>same</em> CHI from <em>this</em> document.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Implementation</th>
+<th>Mode</th>
+<th>Confidence</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Website assessment</strong></td>
+<td>Self-assessed (21 questions)</td>
+<td>C</td>
+<td>Lead magnet; instant score + top gaps + book a walkthrough</td>
+</tr>
+<tr class="even">
+<td><strong>CRM dashboard</strong></td>
+<td>Measured from CRM data</td>
+<td>B → A over time</td>
+<td>Live Commercial Health, tracked like financial health</td>
+</tr>
+<tr class="odd">
+<td><strong>Onboarding</strong></td>
+<td>Self-assessed baseline</td>
+<td>C</td>
+<td>Sets the customer’s improvement priorities from day one</td>
+</tr>
+<tr class="even">
+<td><strong>Consulting engagement</strong></td>
+<td>Self + measured + interviews</td>
+<td>up to A</td>
+<td>Full diagnosis and an improvement roadmap</td>
+</tr>
+<tr class="odd">
+<td><strong>Executive report</strong></td>
+<td>Measured, over time</td>
+<td>B/A</td>
+<td>CHI trend beside financial health, for leadership</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>sales motion</strong> the CHI enables: <em>“Your Commercial Health is 48 (grade C). Your weakest dimensions are Retention and Revenue Predictability. Here’s why, here’s what to fix first, and here’s exactly how the platform moves those two.”</em></p>
+</section>
+<section id="data-model" class="level2">
+<h2 class="anchored" data-anchor-id="data-model">12. Data Model</h2>
+<p>For measured mode, each dimension declares its <strong>required inputs</strong> (no hidden variables, per the CIS). Where inputs are unavailable, the dimension falls back to self-assessed mode and its confidence drops to C. Implementations MUST record which mode produced each dimension score.</p>
+</section>
+<section id="governance-versioning-validation" class="level2">
+<h2 class="anchored" data-anchor-id="governance-versioning-validation">13. Governance, Versioning &amp; Validation</h2>
+<ul>
+<li>The CHI model, indicators, questions, and weights are <strong>versioned</strong>; changes are made deliberately and recorded (append-only, like the CIS).</li>
+<li>Weight and rubric changes require a rationale and, ideally, evidence.</li>
+<li>The scoring logic MUST be covered by automated tests (ranges 0–100, missing-value safety, determinism) — the same testing standard as every Sigmoid framework.</li>
+<li>Validation follows the CIS validation model: logical (the maths runs), statistical (do the dimensions predict outcomes?), and continuous (has new evidence changed the weights?).</li>
+</ul>
+</section>
+<section id="relationship-to-the-scs-and-cis" class="level2">
+<h2 class="anchored" data-anchor-id="relationship-to-the-scs-and-cis">14. Relationship to the SCS and CIS</h2>
+<ul>
+<li><strong>SCS Part IV</strong> defines <em>what</em> Commercial Health is. This spec defines <em>how it is measured.</em></li>
+<li>The <strong>CIS</strong> governs how evidence and confidence work; the CHI adopts its evidence and confidence model wholesale.</li>
+<li>The <strong>Commercial Intelligence Lab</strong> is the natural home of the reference implementation: the seven dimensions and weights as a framework YAML, the scoring as a tested function, the assessment as an interactive page.</li>
+</ul>
+</section>
+<section id="success-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="success-criteria">15. Success Criteria</h2>
+<p>A CHI implementation compliant with this specification shall:</p>
+<ol type="1">
+<li>Produce the same score from the same inputs, on any surface.</li>
+<li>Always report a score <em>with</em> its confidence grade.</li>
+<li>Explain any score down to its indicators.</li>
+<li>Surface the lowest dimensions as the improvement priority.</li>
+<li>Support both self-assessed and measured modes, and record which was used.</li>
+<li>Improve over time as inputs move from opinion to evidence.</li>
+</ol>
+</section>
+<section id="future-work" class="level2">
+<h2 class="anchored" data-anchor-id="future-work">16. Future Work</h2>
+<ul>
+<li>Empirically tune the dimension weights against real commercial outcomes.</li>
+<li>Define benchmark rubrics for each measured signal (industry / segment).</li>
+<li>Add automated confidence computation from data coverage.</li>
+<li>Longitudinal CHI (trend, velocity of improvement) as a leading indicator in its own right.</li>
+</ul>
+<hr>
+<p><em>Commercial Health is the organising idea behind everything Sigmoid does. Competitors can copy CRM features, dashboards, even AI. They cannot easily copy a rigorously defined, consistently implemented, evidence-graded measure of a business’s ability to grow. This specification is how we make that measure real — and keep it ours.</em></p>
+
+
+<!-- -->
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/gnkadimeng\.github\.io\/sigmoid-commercial-intelligence-lab\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../library/the-sigmoid-commercial-system.html" class="pagination-link" aria-label="The Sigmoid Commercial System">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The Sigmoid Commercial System</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../library/commercial-messaging-framework.html" class="pagination-link" aria-label="Commercial Messaging Framework">
+        <span class="nav-page-text">Commercial Messaging Framework</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Commercial Health Index — Specification"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "One specification, many implementations — the canonical definition of Commercial Health"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>**Version:** 0.1 (Draft) · **Status:** Product Specification · **Authors:** Sigmoid Analytica</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>**Inherits from:** *The Sigmoid Commercial System*, Part IV · aligned with the *Commercial Intelligence</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>Specification* (CIS).</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **This is the canonical definition of the Commercial Health Index (CHI).** Every place a Commercial</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Health score appears — the website assessment, the CRM dashboard, onboarding, consulting, executive</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; reports — MUST compute it from this specification. One definition; many surfaces. Where a surface and</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; this document disagree, this document governs.</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Introduction</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>*The Sigmoid Commercial System* argues that Commercial Health is observable and can be measured. This</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>specification makes that operational: it defines **what the Commercial Health Index measures, how it is</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>scored, how confident we are in it, how it is interpreted, and what to do to improve it** — in a way</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>that is independent of any single implementation.</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>The CHI turns a promise ("score your Commercial Health") into a product. It also changes the sales</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>conversation from *"here is our CRM"* to *"your Commercial Health score is 48/100 — here is why, here is</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>what to improve first, and here is how the platform helps."* That is consultative, and it is only</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>possible if the score means the same thing everywhere. This document guarantees that.</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. Scope &amp; Principles</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>The CHI Specification governs the measurement of Commercial Health for an organisation. It defines the</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>model, scoring, evidence, confidence, interpretation, and improvement logic. It does **not** prescribe a</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>user interface; it prescribes the numbers and their meaning.</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>Governing principles (inherited from the SCS and CIS):</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Transparent** — no black box. Every score can be explained down to its inputs.</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Evidence-graded** — a score always carries how it was derived and how confident we are.</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Observable** — every dimension reduces to indicators that can be seen or measured.</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Improvable** — every score points to a next action, not just a grade.</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Weights are data** — weightings are declared, versioned, and tunable, never hidden.</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Opinion → evidence** — the CHI is designed to graduate from self-report to measurement.</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. The Commercial Health Model</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>Commercial Health is composed of **seven dimensions** (the canonical set from SCS Part IV). Each is</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>scored 0–100; the CHI is their weighted mean.</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> # <span class="pp">|</span> Dimension <span class="pp">|</span> Definition <span class="pp">|</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> D1 <span class="pp">|</span> **Lead Quality** <span class="pp">|</span> The degree to which the organisation attracts the right customers, from sources it understands. <span class="pp">|</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> D2 <span class="pp">|</span> **Sales Effectiveness** <span class="pp">|</span> The degree to which the right opportunities are converted, through a repeatable process. <span class="pp">|</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> D3 <span class="pp">|</span> **Relationship Quality** <span class="pp">|</span> The strength, currency, and continuity of customer relationships. <span class="pp">|</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> D4 <span class="pp">|</span> **Customer Retention** <span class="pp">|</span> The organisation's ability to keep customers and detect risk early. <span class="pp">|</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> D5 <span class="pp">|</span> **Customer Growth** <span class="pp">|</span> The degree to which existing relationships grow in value over time. <span class="pp">|</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> D6 <span class="pp">|</span> **Revenue Predictability** <span class="pp">|</span> The reliability of forecasts and the honesty of the pipeline. <span class="pp">|</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> D7 <span class="pp">|</span> **Decision Quality** <span class="pp">|</span> The degree to which commercial decisions are made from evidence and reviewed. <span class="pp">|</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. Indicators</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>Each dimension is expressed through **indicators**. There are two kinds, and the CHI supports both:</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Self-assessed indicators** — statements a person rates (the basis of the website assessment).</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Measured signals** — quantities computed from data (the basis of the CRM dashboard).</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>The same dimension can be scored either way; the difference is *confidence* (Section 8).</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Dim <span class="pp">|</span> Self-assessed indicators (rate 1–5) <span class="pp">|</span> Measured signals (from data) <span class="pp">|</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **D1** <span class="pp">|</span> Clear ICP and most leads match it · we know which sources produce customers who stay · we de-prioritise poor-fit leads <span class="pp">|</span> lead→customer rate by source · % leads matching ICP · cost per won customer <span class="pp">|</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **D2** <span class="pp">|</span> One consistent sales process · we know stage-by-stage conversion · we win most opportunities we pursue <span class="pp">|</span> stage conversion rates · overall win rate · sales-cycle length <span class="pp">|</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **D3** <span class="pp">|</span> History available to the whole team · relationships survive staff leaving · we follow up when we say <span class="pp">|</span> follow-up completion rate · time-to-follow-up · % contacts with recent activity <span class="pp">|</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **D4** <span class="pp">|</span> We spot at-risk customers early · we have a renewal process · we know why customers leave <span class="pp">|</span> churn rate · early-warning coverage · renewal rate <span class="pp">|</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **D5** <span class="pp">|</span> We actively grow accounts · we segment by value · existing customers drive real revenue <span class="pp">|</span> expansion revenue % · net revenue retention · share of revenue from existing customers <span class="pp">|</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **D6** <span class="pp">|</span> Forecasts are usually close · pipeline reflects reality · leaders see performance without asking <span class="pp">|</span> forecast vs actual variance · pipeline coverage ratio · stale-deal % <span class="pp">|</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **D7** <span class="pp">|</span> Decisions made from evidence not memory · we can explain why we pursued/dropped deals · we review past decisions <span class="pp">|</span> % decisions with recorded rationale · decision-review cadence · evidence coverage <span class="pp">|</span></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Assessment Questions</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>The **self-assessment instrument** is the canonical question set (used directly by the website</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>assessment and onboarding). Each dimension has three statements, rated **1 (strongly disagree)** to</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>**5 (strongly agree)**. The 21 statements are those listed as *self-assessed indicators* in Section 4.</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>Implementations MUST use these exact statements so scores are comparable across surfaces.</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="fu">## 6. Scoring Model</span></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>The scoring is transparent and deterministic.</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Indicator score.** A self-assessed answer <span class="in">`a ∈ {1..5}`</span> → <span class="in">`(a − 1) / 4 × 100`</span> (a value 0–100). A</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>  measured signal is mapped to 0–100 by its declared rubric/benchmark (Section 13).</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Dimension score** <span class="in">`Dᵢ`</span> = the mean of that dimension's indicator scores.</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Commercial Health Index** `CHI` = the **weighted mean** of the seven dimension scores using the</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>  weights in Section 7.</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>All scores are reported on **0–100**, rounded to the nearest whole number, alongside their confidence</span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>  (Section 8).</span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="in">indicator (0–100) → dimension = mean(indicators) → CHI = Σ(wᵢ · Dᵢ)</span></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7. Weighting Model</span></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>Weights are **declared data**, not hidden logic. At v0.1 the seven dimensions are **equally weighted**</span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>(1/7 each). This is a starting hypothesis; weights MUST be versioned and MAY be tuned as evidence</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>accumulates about which dimensions most predict commercial outcomes.</span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Dim <span class="pp">|</span> D1 <span class="pp">|</span> D2 <span class="pp">|</span> D3 <span class="pp">|</span> D4 <span class="pp">|</span> D5 <span class="pp">|</span> D6 <span class="pp">|</span> D7 <span class="pp">|</span></span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|---|---|---|---|</span></span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Weight (v0.1) <span class="pp">|</span> 0.143 <span class="pp">|</span> 0.143 <span class="pp">|</span> 0.143 <span class="pp">|</span> 0.143 <span class="pp">|</span> 0.143 <span class="pp">|</span> 0.143 <span class="pp">|</span> 0.143 <span class="pp">|</span></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="fu">## 8. Evidence &amp; Confidence Model</span></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>Borrowing directly from the CIS: **a CHI score is never just a number — it carries a confidence grade**</span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>that reflects the evidence behind it.</span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Evidence behind a score <span class="pp">|</span> Confidence grade <span class="pp">|</span></span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Self-report only (assessment) <span class="pp">|</span> **C — Indicative** <span class="pp">|</span></span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> A single measured signal <span class="pp">|</span> **B — Substantiated** <span class="pp">|</span></span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Converged, benchmarked measured signals <span class="pp">|</span> **A — Validated** <span class="pp">|</span></span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> No usable input <span class="pp">|</span> **D — Hypothesis** <span class="pp">|</span></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>Each **dimension** reports its own confidence, and the **overall CHI** reports the lowest confidence</span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>among the dimensions that materially drive it. A score is always shown as *value + grade* — e.g.,</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>**"CHI 48 (grade C, self-reported)."** This is what keeps the index honest and consultative: we never</span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>imply more certainty than the evidence supports.</span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a><span class="fu">## 9. Interpretation Model</span></span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>The CHI maps onto the SCS commercial-maturity ladder, so a score is a diagnosis and a next step — not a</span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>grade to feel good or bad about.</span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> CHI <span class="pp">|</span> Band <span class="pp">|</span> Meaning <span class="pp">|</span></span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 0–20 <span class="pp">|</span> **1 · Reactive** <span class="pp">|</span> Commercial decisions are ad hoc, from memory <span class="pp">|</span></span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 21–40 <span class="pp">|</span> **2 · Organised** <span class="pp">|</span> Process exists; decisions rest on opinion <span class="pp">|</span></span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 41–60 <span class="pp">|</span> **3 · Measured** <span class="pp">|</span> Performance is tracked; metrics inform decisions <span class="pp">|</span></span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 61–80 <span class="pp">|</span> **4 · Evidence-Driven** <span class="pp">|</span> Decisions made from evidence, with confidence <span class="pp">|</span></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 81–100 <span class="pp">|</span> **5 · Commercial Intelligence** <span class="pp">|</span> The business improves by design <span class="pp">|</span></span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>Interpretation MUST always surface the **lowest-scoring dimensions** as the priority. The index is a map</span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>of where to improve.</span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a><span class="fu">## 10. Improvement Model</span></span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>For every dimension, the specification defines the **next move** that raises it — and names how the</span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>Sigmoid platform helps. This is what turns a score into a conversation.</span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Dim <span class="pp">|</span> If it's low, the next move… <span class="pp">|</span> …and the platform helps by <span class="pp">|</span></span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|</span></span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> D1 Lead Quality <span class="pp">|</span> Define the ICP; track source → outcome <span class="pp">|</span> Capturing lead source and linking it to won/lost <span class="pp">|</span></span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> D2 Sales Effectiveness <span class="pp">|</span> Adopt one process; measure stage conversion <span class="pp">|</span> Enforcing stages and computing conversion <span class="pp">|</span></span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> D3 Relationship Quality <span class="pp">|</span> Make follow-up a system, not a memory <span class="pp">|</span> Follow-up tasks, cadences, shared history <span class="pp">|</span></span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> D4 Customer Retention <span class="pp">|</span> Build early-warning + a renewal process <span class="pp">|</span> Engagement signals and at-risk flags <span class="pp">|</span></span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> D5 Customer Growth <span class="pp">|</span> Segment by value; plan expansion <span class="pp">|</span> Account segmentation and whitespace views <span class="pp">|</span></span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> D6 Revenue Predictability <span class="pp">|</span> Clean the pipeline; compare forecast to actual <span class="pp">|</span> Pipeline hygiene and forecast-vs-actual <span class="pp">|</span></span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> D7 Decision Quality <span class="pp">|</span> Record decision rationale; review it <span class="pp">|</span> Evidence capture and decision provenance <span class="pp">|</span></span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a><span class="fu">## 11. Implementations</span></span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>**One specification, many implementations.** Each surface computes the *same* CHI from *this* document.</span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Implementation <span class="pp">|</span> Mode <span class="pp">|</span> Confidence <span class="pp">|</span> Purpose <span class="pp">|</span></span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|---|---|</span></span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Website assessment** <span class="pp">|</span> Self-assessed (21 questions) <span class="pp">|</span> C <span class="pp">|</span> Lead magnet; instant score + top gaps + book a walkthrough <span class="pp">|</span></span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **CRM dashboard** <span class="pp">|</span> Measured from CRM data <span class="pp">|</span> B → A over time <span class="pp">|</span> Live Commercial Health, tracked like financial health <span class="pp">|</span></span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Onboarding** <span class="pp">|</span> Self-assessed baseline <span class="pp">|</span> C <span class="pp">|</span> Sets the customer's improvement priorities from day one <span class="pp">|</span></span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Consulting engagement** <span class="pp">|</span> Self + measured + interviews <span class="pp">|</span> up to A <span class="pp">|</span> Full diagnosis and an improvement roadmap <span class="pp">|</span></span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Executive report** <span class="pp">|</span> Measured, over time <span class="pp">|</span> B/A <span class="pp">|</span> CHI trend beside financial health, for leadership <span class="pp">|</span></span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>The **sales motion** the CHI enables: *"Your Commercial Health is 48 (grade C). Your weakest dimensions</span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>are Retention and Revenue Predictability. Here's why, here's what to fix first, and here's exactly how</span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>the platform moves those two."*</span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a><span class="fu">## 12. Data Model</span></span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a>For measured mode, each dimension declares its **required inputs** (no hidden variables, per the CIS).</span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a>Where inputs are unavailable, the dimension falls back to self-assessed mode and its confidence drops</span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a>to C. Implementations MUST record which mode produced each dimension score.</span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a><span class="fu">## 13. Governance, Versioning &amp; Validation</span></span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The CHI model, indicators, questions, and weights are **versioned**; changes are made deliberately and</span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a>  recorded (append-only, like the CIS).</span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Weight and rubric changes require a rationale and, ideally, evidence.</span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The scoring logic MUST be covered by automated tests (ranges 0–100, missing-value safety, determinism)</span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>  — the same testing standard as every Sigmoid framework.</span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Validation follows the CIS validation model: logical (the maths runs), statistical (do the dimensions</span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>  predict outcomes?), and continuous (has new evidence changed the weights?).</span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a><span class="fu">## 14. Relationship to the SCS and CIS</span></span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**SCS Part IV** defines *what* Commercial Health is. This spec defines *how it is measured.*</span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The **CIS** governs how evidence and confidence work; the CHI adopts its evidence and confidence</span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a>  model wholesale.</span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The **Commercial Intelligence Lab** is the natural home of the reference implementation: the seven</span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>  dimensions and weights as a framework YAML, the scoring as a tested function, the assessment as an</span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a>  interactive page.</span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a><span class="fu">## 15. Success Criteria</span></span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>A CHI implementation compliant with this specification shall:</span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Produce the same score from the same inputs, on any surface.</span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Always report a score *with* its confidence grade.</span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Explain any score down to its indicators.</span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Surface the lowest dimensions as the improvement priority.</span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Support both self-assessed and measured modes, and record which was used.</span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Improve over time as inputs move from opinion to evidence.</span>
+<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a><span class="fu">## 16. Future Work</span></span>
+<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Empirically tune the dimension weights against real commercial outcomes.</span>
+<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Define benchmark rubrics for each measured signal (industry / segment).</span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Add automated confidence computation from data coverage.</span>
+<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Longitudinal CHI (trend, velocity of improvement) as a leading indicator in its own right.</span>
+<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a>*Commercial Health is the organising idea behind everything Sigmoid does. Competitors can copy CRM</span>
+<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a>features, dashboards, even AI. They cannot easily copy a rigorously defined, consistently implemented,</span>
+<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a>evidence-graded measure of a business's ability to grow. This specification is how we make that measure</span>
+<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a>real — and keep it ours.*</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Sigmoid Analytica — Commercial Intelligence Lab · v0.1 (hypothesis stage)</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Governed by the Commercial Intelligence Specification (CIS)</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

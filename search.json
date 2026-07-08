@@ -573,6 +573,479 @@
     ]
   },
   {
+    "objectID": "library/sigmoid-commercial-system-one-pager.html",
+    "href": "library/sigmoid-commercial-system-one-pager.html",
+    "title": "The Sigmoid Commercial System — At a Glance",
+    "section": "",
+    "text": "One page. Keep it open. The full document is The Sigmoid Commercial System; this is the summary the team works from.",
+    "crumbs": [
+      "Library",
+      "The System — At a Glance"
+    ]
+  },
+  {
+    "objectID": "library/sigmoid-commercial-system-one-pager.html#the-core-idea",
+    "href": "library/sigmoid-commercial-system-one-pager.html#the-core-idea",
+    "title": "The Sigmoid Commercial System — At a Glance",
+    "section": "The core idea",
+    "text": "The core idea\n\nWe exist to help organisations make better commercial decisions through evidence. Revenue, retention, and growth are all outcomes of commercial decisions.\n\nA business is not a set of departments — it is a living commercial system.",
+    "crumbs": [
+      "Library",
+      "The System — At a Glance"
+    ]
+  },
+  {
+    "objectID": "library/sigmoid-commercial-system-one-pager.html#the-five-commercial-questions",
+    "href": "library/sigmoid-commercial-system-one-pager.html#the-five-commercial-questions",
+    "title": "The Sigmoid Commercial System — At a Glance",
+    "section": "The five commercial questions",
+    "text": "The five commercial questions\nEverything we build, say, or measure serves one of these: Find · Win · Keep · Grow customers — and Decide better.",
+    "crumbs": [
+      "Library",
+      "The System — At a Glance"
+    ]
+  },
+  {
+    "objectID": "library/sigmoid-commercial-system-one-pager.html#commercial-health-what-we-measure",
+    "href": "library/sigmoid-commercial-system-one-pager.html#commercial-health-what-we-measure",
+    "title": "The Sigmoid Commercial System — At a Glance",
+    "section": "Commercial Health — what we measure",
+    "text": "Commercial Health — what we measure\nThe leading indicator financial statements can’t give you. Seven observable, improvable dimensions:\nLead Quality · Sales Effectiveness · Relationship Quality · Customer Retention · Customer Growth · Revenue Predictability · Decision Quality.",
+    "crumbs": [
+      "Library",
+      "The System — At a Glance"
+    ]
+  },
+  {
+    "objectID": "library/sigmoid-commercial-system-one-pager.html#the-commercial-learning-loop-how-we-improve-it",
+    "href": "library/sigmoid-commercial-system-one-pager.html#the-commercial-learning-loop-how-we-improve-it",
+    "title": "The Sigmoid Commercial System — At a Glance",
+    "section": "The Commercial Learning Loop — how we improve it",
+    "text": "The Commercial Learning Loop — how we improve it\nEvidence → Insight → Decision → Action → Outcome → Learning → (better) Evidence\nInformation tells us what happened; evidence explains why. Businesses that learn faster improve faster. Everything we build exists to make this loop turn faster and more honestly.",
+    "crumbs": [
+      "Library",
+      "The System — At a Glance"
+    ]
+  },
+  {
+    "objectID": "library/sigmoid-commercial-system-one-pager.html#commercial-maturity-where-a-business-is",
+    "href": "library/sigmoid-commercial-system-one-pager.html#commercial-maturity-where-a-business-is",
+    "title": "The Sigmoid Commercial System — At a Glance",
+    "section": "Commercial Maturity — where a business is",
+    "text": "Commercial Maturity — where a business is\n1 Reactive → 2 Organised → 3 Measured → 4 Evidence-Driven → 5 Commercial Intelligence. It’s about how decisions are made, not company size or software spend.",
+    "crumbs": [
+      "Library",
+      "The System — At a Glance"
+    ]
+  },
+  {
+    "objectID": "library/sigmoid-commercial-system-one-pager.html#the-ten-principles",
+    "href": "library/sigmoid-commercial-system-one-pager.html#the-ten-principles",
+    "title": "The Sigmoid Commercial System — At a Glance",
+    "section": "The ten principles",
+    "text": "The ten principles\n\nBusinesses are commercial systems. 2. Every outcome is the result of previous decisions.\nBetter evidence → better decisions. 4. Better decisions → healthier businesses.\nCustomer relationships are measurable. 6. Follow-up is a competitive advantage.\nAI should strengthen human judgement. 8. Revenue is earned through consistent execution.\nLearning is a commercial capability. 10. Evidence over opinion.",
+    "crumbs": [
+      "Library",
+      "The System — At a Glance"
+    ]
+  },
+  {
+    "objectID": "library/sigmoid-commercial-system-one-pager.html#how-everything-inherits-from-the-scs",
+    "href": "library/sigmoid-commercial-system-one-pager.html#how-everything-inherits-from-the-scs",
+    "title": "The Sigmoid Commercial System — At a Glance",
+    "section": "How everything inherits from the SCS",
+    "text": "How everything inherits from the SCS\n\n\n\n\n\n\n\nWe do…\n…relationship to the system\n\n\n\n\nSigmoid CRM\nimplements the system\n\n\nCommercial Health / the Index\nmeasures the system\n\n\nCommercial Intelligence Lab\nevaluates decisions within the system\n\n\nContent\nteaches the system\n\n\nConsulting\nimproves the system\n\n\nAI\naugments the system\n\n\nResearch\nvalidates and evolves the system",
+    "crumbs": [
+      "Library",
+      "The System — At a Glance"
+    ]
+  },
+  {
+    "objectID": "library/sigmoid-commercial-system-one-pager.html#the-one-test-for-anything-we-build-write-or-ship",
+    "href": "library/sigmoid-commercial-system-one-pager.html#the-one-test-for-anything-we-build-write-or-ship",
+    "title": "The Sigmoid Commercial System — At a Glance",
+    "section": "The one test — for anything we build, write, or ship",
+    "text": "The one test — for anything we build, write, or ship\n\nDoes this help someone make a better commercial decision? If yes, it belongs at Sigmoid. If no, it doesn’t.",
+    "crumbs": [
+      "Library",
+      "The System — At a Glance"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html",
+    "href": "library/commercial-messaging-framework.html",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "",
+    "text": "Version: 1.0 · Status: Working document · Owner: [Name] · Last updated: [Date] Scope: The commercial voice of Sigmoid — expressed primarily through Sigmoid CRM, consistent with the wider Sigmoid Analytica promise, we make the world transparent. Inherits from: The Sigmoid Commercial System (the foundational document). The SCS is the worldview; this framework turns it into words.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#how-to-use-this-framework",
+    "href": "library/commercial-messaging-framework.html#how-to-use-this-framework",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "How to use this framework",
+    "text": "How to use this framework\nOur Content Strategy answers why we create content. This framework answers the harder, more important question:\n\nWhat exactly are we going to say — repeatedly — until the market associates us with it?\n\nIt is the bridge between strategy and every post, article, talk, and sales conversation. It is not a campaign; it is a vocabulary and a set of ideas we repeat on purpose until they become ours in the market’s mind.\nRead Parts A–C in order:\n\nPart A — The Foundation: the one idea we want to own and the architecture beneath it.\nPart B — The Toolkit: nine reservoirs of raw material for content.\nPart C — Putting it to work: how to turn the toolkit into content, our elevator pitches, and the rules of consistency.\n\nThe golden rule: don’t start with the product. Start with commerce. Every business exists to answer five questions —\n\nHow do we find customers?\nHow do we win customers?\nHow do we keep customers?\nHow do we grow customers?\nHow do we make better decisions?\n\nEverything Sigmoid CRM does fits into one of those. So does everything we say.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#the-big-idea-we-want-to-own-commercial-health",
+    "href": "library/commercial-messaging-framework.html#the-big-idea-we-want-to-own-commercial-health",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "1. The Big Idea we want to own: Commercial Health",
+    "text": "1. The Big Idea we want to own: Commercial Health\nMost brands publish random advice and are remembered for nothing. Great brands own one idea. Ours is Commercial Health.\nEvery business measures its financial health, its operational health, and increasingly its employee health. Almost no one measures their commercial health — yet every business has it, and it determines whether they grow or quietly decline.\n\nPositioning statement. Sigmoid helps businesses measure, understand, and improve their Commercial Health — their ability to find, win, keep, and grow customers.\n\nThis is our unifying concept. Instead of publishing scattered CRM tips, we become the company that helps organisations improve their Commercial Health. Every article, post, conversation, and product capability reinforces that single idea — which makes our messaging coherent and easy to remember.\n\nCommercial Health, made measurable\nBecause we are an evidence-led company, we don’t leave “health” as a metaphor. Commercial Health is defined canonically in The Sigmoid Commercial System as seven observable dimensions — and what can be observed can be improved:\n\n\n\n\n\n\n\nDimension\nWhat it reflects\n\n\n\n\nLead Quality\nAre we attracting the right customers?\n\n\nSales Effectiveness\nDo we convert the right opportunities?\n\n\nRelationship Quality\nAre our customer relationships strong and current?\n\n\nCustomer Retention\nDo customers stay?\n\n\nCustomer Growth\nDo relationships grow in value over time?\n\n\nRevenue Predictability\nCan we forecast with confidence?\n\n\nDecision Quality\nAre our commercial decisions consistently good?\n\n\n\nTogether these form a Commercial Health check — a diagnostic a business can run on itself. It is a content engine, a sales conversation starter, and, in time, a product capability. When someone asks “what does Sigmoid do?”, the honest answer is: we make your Commercial Health visible, and help you improve it.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#the-message-house",
+    "href": "library/commercial-messaging-framework.html#the-message-house",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "2. The Message House",
+    "text": "2. The Message House\nEverything in this framework ladders up to Commercial Health. If a message doesn’t, it’s off-brand.\n                         COMMERCIAL HEALTH\n              the one idea we want the market to give us\n                                │\n        ┌───────────┬───────────┼───────────┬────────────┐\n      FIND         WIN         KEEP        GROW         DECIDE\n    customers    customers   customers   customers      better\n        │            │           │           │             │\n  ┌─────┴────────────┴───────────┴───────────┴─────────────┴─────┐\n  │  Raw material (Part B):                                       │\n  │  Beliefs · Journey · Problems · Questions · Myths ·           │\n  │  Jobs-to-be-done · Outcomes · Signature ideas                │\n  └───────────────────────────────┬──────────────────────────────┘\n                                   │\n                      Spoken in plain vocabulary,\n                      backed by evidence, not hype\n\nApex: the single idea (Commercial Health).\nPillars: the five commercial questions — every message serves one.\nFoundation: the toolkit — the reservoirs we draw from to make each pillar concrete.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#our-view-of-the-world-beliefs",
+    "href": "library/commercial-messaging-framework.html#our-view-of-the-world-beliefs",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "3. Our View of the World — Beliefs",
+    "text": "3. Our View of the World — Beliefs\nThought leadership begins with beliefs, not products. State them plainly and people immediately understand what Sigmoid stands for.\nWe believe…\n\nBusinesses don’t fail because they lack data — they fail because they don’t know what their data is telling them.\nBusinesses don’t need more software. They need better commercial decisions.\nCustomer relationships are a business asset — yet most businesses manage them like an address book.\nThe quality of a business is reflected in the quality of its customer relationships.\nRevenue growth isn’t luck. It’s the result of thousands of better commercial decisions.\nAI shouldn’t replace people. It should help them make better decisions.\nA CRM shouldn’t just record yesterday. It should improve tomorrow.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#the-commercial-journey-our-messaging-map",
+    "href": "library/commercial-messaging-framework.html#the-commercial-journey-our-messaging-map",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "4. The Commercial Journey — our messaging map",
+    "text": "4. The Commercial Journey — our messaging map\nDon’t think in features. Think in the journey every business runs, again and again. Each stage has problems; every problem becomes content.\nFind customers → Qualify → Build relationships → Close → Deliver\n      → Retain → Grow → Learn → (repeat)\nThis map is how we organise everything else: a post, an article, or a customer story can always be placed at a stage — and a stage always maps to one of the five commercial questions.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#commercial-problems-by-stage",
+    "href": "library/commercial-messaging-framework.html#commercial-problems-by-stage",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "5. Commercial Problems — by stage",
+    "text": "5. Commercial Problems — by stage\nWe spend our time here, because problems are what customers actually feel. Think business, not software.\nFinding customers — wrong customers · expensive leads · poor referrals · weak marketing · no differentiation.\nQualifying customers — everyone treated the same · reps chase every lead · time wasted · poor discovery · wrong opportunities.\nBuilding relationships — slow follow-up · inconsistent communication · lost trust · no customer history · staff leave and relationships disappear with them.\nClosing sales — deals stall and nobody knows why · discounting · decision-makers disappear · competitors arrive late and win.\nRetention — customers quietly leave · nobody notices · complaints ignored · no engagement · no renewal process.\nGrowth — no upselling · existing customers forgotten · no cross-selling · no segmentation.\nEach bullet is a post. Each cluster is an article. Each stage is a campaign.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#commercial-questions",
+    "href": "library/commercial-messaging-framework.html#commercial-questions",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "6. Commercial Questions",
+    "text": "6. Commercial Questions\nPossibly our strongest content, because people search LinkedIn and Google with questions, not features. Answer one a week.\n\nWhy do businesses lose customers?\nWhy do customers stop replying?\nWhy do good salespeople fail?\nWhy are forecasts wrong?\nWhy do customers choose competitors?\nHow do businesses actually grow?\nWhy do businesses buy CRM and never use it?\nWhy does follow-up fail?\nWhy do referrals dry up?\nWhy do sales meetings waste time?",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#myths-vs-reality",
+    "href": "library/commercial-messaging-framework.html#myths-vs-reality",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "7. Myths vs Reality",
+    "text": "7. Myths vs Reality\nPeople love a myth, well corrected. It’s memorable and it positions us as the ones who see clearly.\n\n\n\n\n\n\n\nMyth\nReality\n\n\n\n\nCRM improves sales.\nCRM only improves sales when people use it consistently.\n\n\nMore leads create more revenue.\nBetter conversion often creates more revenue.\n\n\nCustomers leave because of price.\nCustomers often leave because they feel forgotten.\n\n\nAI replaces salespeople.\nAI helps salespeople make better decisions.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#jobs-to-be-done",
+    "href": "library/commercial-messaging-framework.html#jobs-to-be-done",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "8. Jobs To Be Done",
+    "text": "8. Jobs To Be Done\nForget software. What job is the customer hiring us to do? Say it in their words.\n\n“I need to know who to call.”\n“I need to know which deals matter.”\n“I need better forecasts.”\n“I need my team to follow one sales process.”\n“I need to stop losing customers.”\n“I need to grow existing accounts.”\n“I need visibility.”",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#outcomes",
+    "href": "library/commercial-messaging-framework.html#outcomes",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "9. Outcomes",
+    "text": "9. Outcomes\nCustomers don’t buy CRM. They buy the result. Lead with the outcome, always.\nMore sales · better relationships · predictable growth · less wasted effort · more confidence · faster follow-up · happier customers · better decisions.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#vocabulary-the-words-we-use-and-the-ones-we-avoid",
+    "href": "library/commercial-messaging-framework.html#vocabulary-the-words-we-use-and-the-ones-we-avoid",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "10. Vocabulary — the words we use, and the ones we avoid",
+    "text": "10. Vocabulary — the words we use, and the ones we avoid\nAlmost nobody documents this, and it’s why most B2B messaging sounds the same. Until the market understands what we do, we speak the customer’s language, not the industry’s.\n\n\n\n\n\n\n\nUse (the customer’s words)\nAvoid (until we’ve earned them)\n\n\n\n\nCustomers · Leads · Sales · Growth\nCommercial intelligence · Digital transformation\n\n\nRelationships · Follow-up · Revenue\nAI-powered ecosystem · Revenue operating system\n\n\nOpportunities · Business · Decisions\nCustomer orchestration · Data democratization · Next-generation platform\n\n\n\n“Commercial Health” is the one elevated term we deliberately teach — because we define it, own it, and make it concrete.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#signature-ideas-our-intellectual-property",
+    "href": "library/commercial-messaging-framework.html#signature-ideas-our-intellectual-property",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "11. Signature Ideas — our intellectual property",
+    "text": "11. Signature Ideas — our intellectual property\nA handful of sharp lines we repeat until people quote them back to us. These become ours.\n\nEvery business is a commercial system.\nCustomer relationships are measurable.\nFollow-up is a competitive advantage.\nEvery lost customer leaves evidence.\nRevenue is the outcome of better decisions.\nClean customer data creates better business decisions.\n⭐ Manage customers with evidence, not memory.\n\nThe last one is our flagship — it fuses our two beliefs (evidence over opinion; relationships as an asset) into six words, and it points straight at Commercial Health.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#from-framework-to-content",
+    "href": "library/commercial-messaging-framework.html#from-framework-to-content",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "12. From framework to content",
+    "text": "12. From framework to content\nThis is the recipe that turns the toolkit into a repeatable content machine — and the direct bridge to the Content Strategy’s pillars. To build any piece:\n\nPick a stage of the commercial journey (Section 4) → this sets the topic.\nName the problem the customer feels there (Section 5) → this earns attention.\nOpen with a belief or a myth (Sections 3, 7) → this sets our point of view.\nFrame it as a question or a job (Sections 6, 8) → this matches how they search and think.\nLand on the outcome (Section 9) → this is what they actually want.\nClose with a signature idea (Section 11) → this is what they remember.\nTie it to Commercial Health → this is what makes it ours, not generic CRM advice.\n\n\nWorked example. Stage: Retention. Problem: customers quietly leave. Myth: “customers leave over price.” Reality: they leave because they feel forgotten. Job: “I need to stop losing customers.” Outcome: happier customers who stay. Signature idea: every lost customer leaves evidence. Commercial Health tie-in: retention is a vital sign — and it’s measurable.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#messaging-assets-how-we-describe-ourselves",
+    "href": "library/commercial-messaging-framework.html#messaging-assets-how-we-describe-ourselves",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "13. Messaging assets — how we describe ourselves",
+    "text": "13. Messaging assets — how we describe ourselves\nConsistent descriptions, ready to paste into a bio, a deck, or a first conversation.\n\nOne-liner: Sigmoid CRM helps businesses improve their Commercial Health — so they win more customers, keep them longer, and grow them.\nShort (a sentence more): Most businesses manage customer relationships from memory. Sigmoid CRM helps them manage with evidence — making their Commercial Health visible so they can find, win, keep, and grow customers with confidence.\nMedium (for an About section): Sigmoid CRM is an analytics-native CRM built on one belief: revenue is the outcome of better commercial decisions. We help businesses see their Commercial Health — lead quality, conversion, follow-up, retention, growth — and improve it, using clean data and evidence rather than opinion and memory. Part of Sigmoid Analytica: we make the world transparent.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#message-discipline-the-rules-of-consistency",
+    "href": "library/commercial-messaging-framework.html#message-discipline-the-rules-of-consistency",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "14. Message discipline — the rules of consistency",
+    "text": "14. Message discipline — the rules of consistency\nMessaging works through repetition and restraint. The framework only pays off if we hold the line.\n\nOne big idea. Everything ladders to Commercial Health. If it doesn’t, it doesn’t ship.\nRepeat on purpose. The signature ideas and vocabulary are said again and again, not reinvented.\nProblem before product. We talk about the customer’s commercial problem far more than our features.\nPlain words. We use the customer’s vocabulary; we avoid the jargon list until we’ve earned it.\nEvidence, not hype. We say what we can support and how sure we are — the honesty is the brand.\nOutcome first. We lead with what the customer gets, not what the software has.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-messaging-framework.html#in-one-line",
+    "href": "library/commercial-messaging-framework.html#in-one-line",
+    "title": "Sigmoid — Commercial Messaging Framework",
+    "section": "In one line",
+    "text": "In one line\nSigmoid is the company that helps businesses manage customers with evidence, not memory — and measure and improve their Commercial Health. Say that, in a hundred ways, until the market says it back.",
+    "crumbs": [
+      "Library",
+      "Commercial Messaging Framework"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html",
+    "href": "library/commercial-health-index-specification.html",
+    "title": "Commercial Health Index — Specification",
+    "section": "",
+    "text": "Version: 0.1 (Draft) · Status: Product Specification · Authors: Sigmoid Analytica Inherits from: The Sigmoid Commercial System, Part IV · aligned with the Commercial Intelligence Specification (CIS).",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#introduction",
+    "href": "library/commercial-health-index-specification.html#introduction",
+    "title": "Commercial Health Index — Specification",
+    "section": "1. Introduction",
+    "text": "1. Introduction\nThe Sigmoid Commercial System argues that Commercial Health is observable and can be measured. This specification makes that operational: it defines what the Commercial Health Index measures, how it is scored, how confident we are in it, how it is interpreted, and what to do to improve it — in a way that is independent of any single implementation.\nThe CHI turns a promise (“score your Commercial Health”) into a product. It also changes the sales conversation from “here is our CRM” to “your Commercial Health score is 48/100 — here is why, here is what to improve first, and here is how the platform helps.” That is consultative, and it is only possible if the score means the same thing everywhere. This document guarantees that.",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#scope-principles",
+    "href": "library/commercial-health-index-specification.html#scope-principles",
+    "title": "Commercial Health Index — Specification",
+    "section": "2. Scope & Principles",
+    "text": "2. Scope & Principles\nThe CHI Specification governs the measurement of Commercial Health for an organisation. It defines the model, scoring, evidence, confidence, interpretation, and improvement logic. It does not prescribe a user interface; it prescribes the numbers and their meaning.\nGoverning principles (inherited from the SCS and CIS):\n\nTransparent — no black box. Every score can be explained down to its inputs.\nEvidence-graded — a score always carries how it was derived and how confident we are.\nObservable — every dimension reduces to indicators that can be seen or measured.\nImprovable — every score points to a next action, not just a grade.\nWeights are data — weightings are declared, versioned, and tunable, never hidden.\nOpinion → evidence — the CHI is designed to graduate from self-report to measurement.",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#the-commercial-health-model",
+    "href": "library/commercial-health-index-specification.html#the-commercial-health-model",
+    "title": "Commercial Health Index — Specification",
+    "section": "3. The Commercial Health Model",
+    "text": "3. The Commercial Health Model\nCommercial Health is composed of seven dimensions (the canonical set from SCS Part IV). Each is scored 0–100; the CHI is their weighted mean.\n\n\n\n\n\n\n\n\n#\nDimension\nDefinition\n\n\n\n\nD1\nLead Quality\nThe degree to which the organisation attracts the right customers, from sources it understands.\n\n\nD2\nSales Effectiveness\nThe degree to which the right opportunities are converted, through a repeatable process.\n\n\nD3\nRelationship Quality\nThe strength, currency, and continuity of customer relationships.\n\n\nD4\nCustomer Retention\nThe organisation’s ability to keep customers and detect risk early.\n\n\nD5\nCustomer Growth\nThe degree to which existing relationships grow in value over time.\n\n\nD6\nRevenue Predictability\nThe reliability of forecasts and the honesty of the pipeline.\n\n\nD7\nDecision Quality\nThe degree to which commercial decisions are made from evidence and reviewed.",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#indicators",
+    "href": "library/commercial-health-index-specification.html#indicators",
+    "title": "Commercial Health Index — Specification",
+    "section": "4. Indicators",
+    "text": "4. Indicators\nEach dimension is expressed through indicators. There are two kinds, and the CHI supports both:\n\nSelf-assessed indicators — statements a person rates (the basis of the website assessment).\nMeasured signals — quantities computed from data (the basis of the CRM dashboard).\n\nThe same dimension can be scored either way; the difference is confidence (Section 8).\n\n\n\n\n\n\n\n\nDim\nSelf-assessed indicators (rate 1–5)\nMeasured signals (from data)\n\n\n\n\nD1\nClear ICP and most leads match it · we know which sources produce customers who stay · we de-prioritise poor-fit leads\nlead→customer rate by source · % leads matching ICP · cost per won customer\n\n\nD2\nOne consistent sales process · we know stage-by-stage conversion · we win most opportunities we pursue\nstage conversion rates · overall win rate · sales-cycle length\n\n\nD3\nHistory available to the whole team · relationships survive staff leaving · we follow up when we say\nfollow-up completion rate · time-to-follow-up · % contacts with recent activity\n\n\nD4\nWe spot at-risk customers early · we have a renewal process · we know why customers leave\nchurn rate · early-warning coverage · renewal rate\n\n\nD5\nWe actively grow accounts · we segment by value · existing customers drive real revenue\nexpansion revenue % · net revenue retention · share of revenue from existing customers\n\n\nD6\nForecasts are usually close · pipeline reflects reality · leaders see performance without asking\nforecast vs actual variance · pipeline coverage ratio · stale-deal %\n\n\nD7\nDecisions made from evidence not memory · we can explain why we pursued/dropped deals · we review past decisions\n% decisions with recorded rationale · decision-review cadence · evidence coverage",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#assessment-questions",
+    "href": "library/commercial-health-index-specification.html#assessment-questions",
+    "title": "Commercial Health Index — Specification",
+    "section": "5. Assessment Questions",
+    "text": "5. Assessment Questions\nThe self-assessment instrument is the canonical question set (used directly by the website assessment and onboarding). Each dimension has three statements, rated 1 (strongly disagree) to 5 (strongly agree). The 21 statements are those listed as self-assessed indicators in Section 4. Implementations MUST use these exact statements so scores are comparable across surfaces.",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#scoring-model",
+    "href": "library/commercial-health-index-specification.html#scoring-model",
+    "title": "Commercial Health Index — Specification",
+    "section": "6. Scoring Model",
+    "text": "6. Scoring Model\nThe scoring is transparent and deterministic.\n\nIndicator score. A self-assessed answer a ∈ {1..5} → (a − 1) / 4 × 100 (a value 0–100). A measured signal is mapped to 0–100 by its declared rubric/benchmark (Section 13).\nDimension score Dᵢ = the mean of that dimension’s indicator scores.\nCommercial Health Index CHI = the weighted mean of the seven dimension scores using the weights in Section 7.\nAll scores are reported on 0–100, rounded to the nearest whole number, alongside their confidence (Section 8).\n\nindicator (0–100) → dimension = mean(indicators) → CHI = Σ(wᵢ · Dᵢ)",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#weighting-model",
+    "href": "library/commercial-health-index-specification.html#weighting-model",
+    "title": "Commercial Health Index — Specification",
+    "section": "7. Weighting Model",
+    "text": "7. Weighting Model\nWeights are declared data, not hidden logic. At v0.1 the seven dimensions are equally weighted (1/7 each). This is a starting hypothesis; weights MUST be versioned and MAY be tuned as evidence accumulates about which dimensions most predict commercial outcomes.\n\n\n\n\n\n\n\n\n\n\n\n\n\nDim\nD1\nD2\nD3\nD4\nD5\nD6\nD7\n\n\n\n\nWeight (v0.1)\n0.143\n0.143\n0.143\n0.143\n0.143\n0.143\n0.143",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#evidence-confidence-model",
+    "href": "library/commercial-health-index-specification.html#evidence-confidence-model",
+    "title": "Commercial Health Index — Specification",
+    "section": "8. Evidence & Confidence Model",
+    "text": "8. Evidence & Confidence Model\nBorrowing directly from the CIS: a CHI score is never just a number — it carries a confidence grade that reflects the evidence behind it.\n\n\n\nEvidence behind a score\nConfidence grade\n\n\n\n\nSelf-report only (assessment)\nC — Indicative\n\n\nA single measured signal\nB — Substantiated\n\n\nConverged, benchmarked measured signals\nA — Validated\n\n\nNo usable input\nD — Hypothesis\n\n\n\nEach dimension reports its own confidence, and the overall CHI reports the lowest confidence among the dimensions that materially drive it. A score is always shown as value + grade — e.g., “CHI 48 (grade C, self-reported).” This is what keeps the index honest and consultative: we never imply more certainty than the evidence supports.",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#interpretation-model",
+    "href": "library/commercial-health-index-specification.html#interpretation-model",
+    "title": "Commercial Health Index — Specification",
+    "section": "9. Interpretation Model",
+    "text": "9. Interpretation Model\nThe CHI maps onto the SCS commercial-maturity ladder, so a score is a diagnosis and a next step — not a grade to feel good or bad about.\n\n\n\n\n\n\n\n\nCHI\nBand\nMeaning\n\n\n\n\n0–20\n1 · Reactive\nCommercial decisions are ad hoc, from memory\n\n\n21–40\n2 · Organised\nProcess exists; decisions rest on opinion\n\n\n41–60\n3 · Measured\nPerformance is tracked; metrics inform decisions\n\n\n61–80\n4 · Evidence-Driven\nDecisions made from evidence, with confidence\n\n\n81–100\n5 · Commercial Intelligence\nThe business improves by design\n\n\n\nInterpretation MUST always surface the lowest-scoring dimensions as the priority. The index is a map of where to improve.",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#improvement-model",
+    "href": "library/commercial-health-index-specification.html#improvement-model",
+    "title": "Commercial Health Index — Specification",
+    "section": "10. Improvement Model",
+    "text": "10. Improvement Model\nFor every dimension, the specification defines the next move that raises it — and names how the Sigmoid platform helps. This is what turns a score into a conversation.\n\n\n\n\n\n\n\n\nDim\nIf it’s low, the next move…\n…and the platform helps by\n\n\n\n\nD1 Lead Quality\nDefine the ICP; track source → outcome\nCapturing lead source and linking it to won/lost\n\n\nD2 Sales Effectiveness\nAdopt one process; measure stage conversion\nEnforcing stages and computing conversion\n\n\nD3 Relationship Quality\nMake follow-up a system, not a memory\nFollow-up tasks, cadences, shared history\n\n\nD4 Customer Retention\nBuild early-warning + a renewal process\nEngagement signals and at-risk flags\n\n\nD5 Customer Growth\nSegment by value; plan expansion\nAccount segmentation and whitespace views\n\n\nD6 Revenue Predictability\nClean the pipeline; compare forecast to actual\nPipeline hygiene and forecast-vs-actual\n\n\nD7 Decision Quality\nRecord decision rationale; review it\nEvidence capture and decision provenance",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#implementations",
+    "href": "library/commercial-health-index-specification.html#implementations",
+    "title": "Commercial Health Index — Specification",
+    "section": "11. Implementations",
+    "text": "11. Implementations\nOne specification, many implementations. Each surface computes the same CHI from this document.\n\n\n\n\n\n\n\n\n\nImplementation\nMode\nConfidence\nPurpose\n\n\n\n\nWebsite assessment\nSelf-assessed (21 questions)\nC\nLead magnet; instant score + top gaps + book a walkthrough\n\n\nCRM dashboard\nMeasured from CRM data\nB → A over time\nLive Commercial Health, tracked like financial health\n\n\nOnboarding\nSelf-assessed baseline\nC\nSets the customer’s improvement priorities from day one\n\n\nConsulting engagement\nSelf + measured + interviews\nup to A\nFull diagnosis and an improvement roadmap\n\n\nExecutive report\nMeasured, over time\nB/A\nCHI trend beside financial health, for leadership\n\n\n\nThe sales motion the CHI enables: “Your Commercial Health is 48 (grade C). Your weakest dimensions are Retention and Revenue Predictability. Here’s why, here’s what to fix first, and here’s exactly how the platform moves those two.”",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#data-model",
+    "href": "library/commercial-health-index-specification.html#data-model",
+    "title": "Commercial Health Index — Specification",
+    "section": "12. Data Model",
+    "text": "12. Data Model\nFor measured mode, each dimension declares its required inputs (no hidden variables, per the CIS). Where inputs are unavailable, the dimension falls back to self-assessed mode and its confidence drops to C. Implementations MUST record which mode produced each dimension score.",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#governance-versioning-validation",
+    "href": "library/commercial-health-index-specification.html#governance-versioning-validation",
+    "title": "Commercial Health Index — Specification",
+    "section": "13. Governance, Versioning & Validation",
+    "text": "13. Governance, Versioning & Validation\n\nThe CHI model, indicators, questions, and weights are versioned; changes are made deliberately and recorded (append-only, like the CIS).\nWeight and rubric changes require a rationale and, ideally, evidence.\nThe scoring logic MUST be covered by automated tests (ranges 0–100, missing-value safety, determinism) — the same testing standard as every Sigmoid framework.\nValidation follows the CIS validation model: logical (the maths runs), statistical (do the dimensions predict outcomes?), and continuous (has new evidence changed the weights?).",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#relationship-to-the-scs-and-cis",
+    "href": "library/commercial-health-index-specification.html#relationship-to-the-scs-and-cis",
+    "title": "Commercial Health Index — Specification",
+    "section": "14. Relationship to the SCS and CIS",
+    "text": "14. Relationship to the SCS and CIS\n\nSCS Part IV defines what Commercial Health is. This spec defines how it is measured.\nThe CIS governs how evidence and confidence work; the CHI adopts its evidence and confidence model wholesale.\nThe Commercial Intelligence Lab is the natural home of the reference implementation: the seven dimensions and weights as a framework YAML, the scoring as a tested function, the assessment as an interactive page.",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#success-criteria",
+    "href": "library/commercial-health-index-specification.html#success-criteria",
+    "title": "Commercial Health Index — Specification",
+    "section": "15. Success Criteria",
+    "text": "15. Success Criteria\nA CHI implementation compliant with this specification shall:\n\nProduce the same score from the same inputs, on any surface.\nAlways report a score with its confidence grade.\nExplain any score down to its indicators.\nSurface the lowest dimensions as the improvement priority.\nSupport both self-assessed and measured modes, and record which was used.\nImprove over time as inputs move from opinion to evidence.",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
+    "objectID": "library/commercial-health-index-specification.html#future-work",
+    "href": "library/commercial-health-index-specification.html#future-work",
+    "title": "Commercial Health Index — Specification",
+    "section": "16. Future Work",
+    "text": "16. Future Work\n\nEmpirically tune the dimension weights against real commercial outcomes.\nDefine benchmark rubrics for each measured signal (industry / segment).\nAdd automated confidence computation from data coverage.\nLongitudinal CHI (trend, velocity of improvement) as a leading indicator in its own right.\n\n\nCommercial Health is the organising idea behind everything Sigmoid does. Competitors can copy CRM features, dashboards, even AI. They cannot easily copy a rigorously defined, consistently implemented, evidence-graded measure of a business’s ability to grow. This specification is how we make that measure real — and keep it ours.",
+    "crumbs": [
+      "Library",
+      "Commercial Health Index — Specification"
+    ]
+  },
+  {
     "objectID": "dashboards/positioning-dashboard.html",
     "href": "dashboards/positioning-dashboard.html",
     "title": "Positioning Dashboard",
@@ -1397,6 +1870,193 @@
     "title": "Commercial Health Check",
     "section": "Related",
     "text": "Related\n\nCommercial Health Index Specification — the canonical definition.\nThe frameworks — where the CHI weights and statements live as data.\nDecisions — the decisions a healthier commercial system supports."
+  },
+  {
+    "objectID": "library/commercial-knowledge-base.html",
+    "href": "library/commercial-knowledge-base.html",
+    "title": "The Sigmoid Commercial Knowledge Base",
+    "section": "",
+    "text": "Version: 0.1 (Draft) · Status: Working document · Owner: [Name] · Last updated: [Date] Inherits from: The Sigmoid Commercial System · feeds The Sigmoid Editorial System.",
+    "crumbs": [
+      "Library",
+      "Commercial Knowledge Base"
+    ]
+  },
+  {
+    "objectID": "library/commercial-knowledge-base.html#what-this-is",
+    "href": "library/commercial-knowledge-base.html#what-this-is",
+    "title": "The Sigmoid Commercial Knowledge Base",
+    "section": "What this is",
+    "text": "What this is\nEvery idea we teach is a concept. This document is the organised list of them — the syllabus behind all our content, courses, and product explanations.\nTwo rules make it powerful:\n\nEvery concept is a content atom. One concept becomes an article, a LinkedIn post, a carousel, a webinar, a customer guide, a course lesson, a book chapter, and a feature explanation.\nEvery concept has a home in the system. Concepts are grouped by the Sigmoid Commercial System — the five commercial questions and the commercial journey — so nothing is off-topic and every piece of content can name its lineage (see The Sigmoid Editorial System, §2).\n\nConcepts are grouped A–H and numbered, so each has a stable id (e.g. B-07 Lead Quality) the editorial system can track. This is a living taxonomy: the list below is the comprehensive core (~180 concepts) and is designed to grow toward the full 300–500 as we teach.",
+    "crumbs": [
+      "Library",
+      "Commercial Knowledge Base"
+    ]
+  },
+  {
+    "objectID": "library/commercial-knowledge-base.html#a-foundations-the-system-itself",
+    "href": "library/commercial-knowledge-base.html#a-foundations-the-system-itself",
+    "title": "The Sigmoid Commercial Knowledge Base",
+    "section": "A · Foundations — the system itself",
+    "text": "A · Foundations — the system itself\nThe concepts that describe how commerce works. These frame everything else.\nA-01 Commercial system · A-02 Commercial health · A-03 Commercial maturity · A-04 Commercial capability · A-05 The commercial learning loop · A-06 Information vs evidence · A-07 Decision quality · A-08 Confidence · A-09 Commercial intelligence · A-10 Evidence over opinion · A-11 Leading vs lagging indicators · A-12 Revenue as an outcome of decisions · A-13 Relationships as assets · A-14 Learning as a commercial capability · A-15 Commercial execution.",
+    "crumbs": [
+      "Library",
+      "Commercial Knowledge Base"
+    ]
+  },
+  {
+    "objectID": "library/commercial-knowledge-base.html#b-find-customers-acquire",
+    "href": "library/commercial-knowledge-base.html#b-find-customers-acquire",
+    "title": "The Sigmoid Commercial Knowledge Base",
+    "section": "B · Find customers — Acquire",
+    "text": "B · Find customers — Acquire\nHow the right customers are attracted.\nB-01 Ideal Customer Profile (ICP) · B-02 Market segmentation · B-03 Targeting · B-04 Positioning · B-05 Differentiation · B-06 Value proposition · B-07 Lead quality · B-08 Lead sources · B-09 Demand generation · B-10 Inbound · B-11 Outbound / prospecting · B-12 Referrals · B-13 Partnerships / channel · B-14 Brand awareness · B-15 Content marketing · B-16 Cost per lead · B-17 Marketing-qualified lead (MQL) · B-18 Total addressable market (TAM) · B-19 Buyer personas · B-20 Message-market fit.",
+    "crumbs": [
+      "Library",
+      "Commercial Knowledge Base"
+    ]
+  },
+  {
+    "objectID": "library/commercial-knowledge-base.html#c-win-customers-qualify-sell",
+    "href": "library/commercial-knowledge-base.html#c-win-customers-qualify-sell",
+    "title": "The Sigmoid Commercial Knowledge Base",
+    "section": "C · Win customers — Qualify & Sell",
+    "text": "C · Win customers — Qualify & Sell\nHow opportunities become customers.\nC-01 Lead qualification · C-02 Discovery · C-03 BANT (Budget, Authority, Need, Timing) · C-04 MEDDICC · C-05 Sales process · C-06 Sales stages · C-07 Pipeline · C-08 Opportunity · C-09 Buying committee / roles · C-10 Decision-maker · C-11 Champion · C-12 Economic buyer · C-13 Objection handling · C-14 Discounting · C-15 Proposal · C-16 Negotiation · C-17 Conversion / close rate · C-18 Win/loss analysis · C-19 Sales-cycle length · C-20 Deal velocity · C-21 Sales-qualified lead (SQL) · C-22 Competitor displacement · C-23 Buying signals · C-24 Sales enablement · C-25 Follow-up (in-deal).",
+    "crumbs": [
+      "Library",
+      "Commercial Knowledge Base"
+    ]
+  },
+  {
+    "objectID": "library/commercial-knowledge-base.html#d-keep-customers-deliver-retain",
+    "href": "library/commercial-knowledge-base.html#d-keep-customers-deliver-retain",
+    "title": "The Sigmoid Commercial Knowledge Base",
+    "section": "D · Keep customers — Deliver & Retain",
+    "text": "D · Keep customers — Deliver & Retain\nHow customers are kept, and how risk is seen early.\nD-01 Onboarding · D-02 Delivery / fulfilment · D-03 Customer experience (CX) · D-04 Customer success · D-05 Follow-up discipline · D-06 Communication cadence · D-07 Customer history / context · D-08 Relationship continuity · D-09 Engagement · D-10 Customer satisfaction (CSAT) · D-11 Net Promoter Score (NPS) · D-12 Complaints handling · D-13 Churn · D-14 Churn prediction · D-15 At-risk signals / early warning · D-16 Renewal · D-17 Retention rate · D-18 Win-back / save · D-19 Trust · D-20 Service-level expectations.",
+    "crumbs": [
+      "Library",
+      "Commercial Knowledge Base"
+    ]
+  },
+  {
+    "objectID": "library/commercial-knowledge-base.html#e-grow-customers-grow",
+    "href": "library/commercial-knowledge-base.html#e-grow-customers-grow",
+    "title": "The Sigmoid Commercial Knowledge Base",
+    "section": "E · Grow customers — Grow",
+    "text": "E · Grow customers — Grow\nHow relationships grow in value over time.\nE-01 Account management · E-02 Upsell · E-03 Cross-sell · E-04 Expansion revenue · E-05 Customer segmentation (value tiers) · E-06 Key accounts · E-07 Account planning · E-08 Customer Lifetime Value (CLV) · E-09 Net revenue retention (NRR) · E-10 Advocacy · E-11 Referral generation · E-12 Whitespace analysis · E-13 Share of wallet · E-14 Loyalty.",
+    "crumbs": [
+      "Library",
+      "Commercial Knowledge Base"
+    ]
+  },
+  {
+    "objectID": "library/commercial-knowledge-base.html#f-decide-better-measure-improve",
+    "href": "library/commercial-knowledge-base.html#f-decide-better-measure-improve",
+    "title": "The Sigmoid Commercial Knowledge Base",
+    "section": "F · Decide better — Measure & Improve",
+    "text": "F · Decide better — Measure & Improve\nHow the business sees itself and improves its decisions.\nF-01 Commercial metrics · F-02 Pipeline health · F-03 Forecasting · F-04 Forecast accuracy · F-05 Revenue predictability · F-06 Dashboards · F-07 Decision frameworks · F-08 Hypotheses · F-09 Evidence register · F-10 Validation · F-11 Message / A-B testing · F-12 Attribution · F-13 Cohort analysis · F-14 Sensitivity analysis · F-15 Confidence grades · F-16 Provenance · F-17 Commercial review cadence · F-18 Benchmarking · F-19 Prioritisation · F-20 Scenario planning.",
+    "crumbs": [
+      "Library",
+      "Commercial Knowledge Base"
+    ]
+  },
+  {
+    "objectID": "library/commercial-knowledge-base.html#g-data-ai-technology",
+    "href": "library/commercial-knowledge-base.html#g-data-ai-technology",
+    "title": "The Sigmoid Commercial Knowledge Base",
+    "section": "G · Data, AI & technology",
+    "text": "G · Data, AI & technology\nThe tools that support the system — never replace it.\nG-01 CRM · G-02 Data quality · G-03 Clean customer data · G-04 Single view of the customer · G-05 Customer data platform · G-06 Analytics · G-07 Reporting · G-08 Predictive models · G-09 AI augmentation · G-10 AI vs automation · G-11 Explainability · G-12 Decision support · G-13 Integrations · G-14 Data governance · G-15 Human-in-the-loop.",
+    "crumbs": [
+      "Library",
+      "Commercial Knowledge Base"
+    ]
+  },
+  {
+    "objectID": "library/commercial-knowledge-base.html#h-themes-beliefs-the-angles-we-own",
+    "href": "library/commercial-knowledge-base.html#h-themes-beliefs-the-angles-we-own",
+    "title": "The Sigmoid Commercial Knowledge Base",
+    "section": "H · Themes & beliefs — the angles we own",
+    "text": "H · Themes & beliefs — the angles we own\nCross-cutting ideas that carry our point of view (our signature ideas live here).\nH-01 Manage customers with evidence, not memory · H-02 Follow-up is a competitive advantage · H-03 Every lost customer leaves evidence · H-04 Clean data creates better decisions · H-05 Customer relationships are measurable · H-06 AI should strengthen human judgement · H-07 Every business is a commercial system · H-08 Commercial Health as a vital sign · H-09 The South African commercial reality · H-10 Opinion → evidence.",
+    "crumbs": [
+      "Library",
+      "Commercial Knowledge Base"
+    ]
+  },
+  {
+    "objectID": "library/commercial-knowledge-base.html#how-each-concept-becomes-content",
+    "href": "library/commercial-knowledge-base.html#how-each-concept-becomes-content",
+    "title": "The Sigmoid Commercial Knowledge Base",
+    "section": "How each concept becomes content",
+    "text": "How each concept becomes content\nEvery entry above is a reusable atom. The editorial system draws from it and expands it into formats:\n\n\n\n\n\n\n\nFrom one concept…\n…we can produce\n\n\n\n\ne.g. B-07 Lead Quality\na LinkedIn post · a carousel · an article · a webinar · a customer guide · a course lesson · a chapter · a product-feature explanation\n\n\n\nThat is the leverage: write the concept once, teach it many ways. A single well-understood concept can fuel a month of content across channels — and the same concept explains a product capability to a buyer.",
+    "crumbs": [
+      "Library",
+      "Commercial Knowledge Base"
+    ]
+  },
+  {
+    "objectID": "library/commercial-knowledge-base.html#using-and-growing-the-taxonomy",
+    "href": "library/commercial-knowledge-base.html#using-and-growing-the-taxonomy",
+    "title": "The Sigmoid Commercial Knowledge Base",
+    "section": "Using and growing the taxonomy",
+    "text": "Using and growing the taxonomy\n\nTag every piece of content with its concept id(s). Over time this shows what we’ve taught, what we’ve over-covered, and the gaps.\nAdd concepts as the market teaches us — new objections, new questions, new language captured as evidence become new entries. The Knowledge Base grows the way the SCS says everything should: from evidence.\nThe Academy modules (Commercial Health, Decisions, Learning, Systems, Intelligence, AI, Analytics) are simply clusters of these concepts, sequenced.",
+    "crumbs": [
+      "Library",
+      "Commercial Knowledge Base"
+    ]
+  },
+  {
+    "objectID": "library/index.html",
+    "href": "library/index.html",
+    "title": "Library",
+    "section": "",
+    "text": "Library › Overview\n\n\nThis is the thinking behind everything Sigmoid does. The documents below define how we understand commerce, measure it, and talk about it.\n\n\nFoundational doctrine Start with the System",
+    "crumbs": [
+      "Library",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "library/index.html#the-documents",
+    "href": "library/index.html#the-documents",
+    "title": "Library",
+    "section": "The documents",
+    "text": "The documents\n\n\n\nThe worldview\n\n\nThe Sigmoid Commercial System\n\n\nThe foundational document: businesses are commercial systems, outcomes are the result of decisions, and better evidence makes healthier businesses.\n\nRead the system \n\n\n\nMeasurement\n\n\nCommercial Health Index — Specification\n\n\nThe canonical definition of Commercial Health: seven dimensions, indicators, scoring, evidence, confidence, and interpretation. One spec, many implementations.\n\nRead the specification \n\n\n\nLanguage\n\n\nCommercial Messaging Framework\n\n\nWhat we say, repeatedly, until the market associates us with it — beliefs, questions, myths, signature ideas, and the vocabulary we use.\n\nRead the framework \n\n\n\nSyllabus\n\n\nCommercial Knowledge Base\n\n\nThe taxonomy of commercial concepts — the ~180-concept syllabus behind every article, post, course, and product explanation.\n\nBrowse the taxonomy \n\n\n\nQuick reference\n\n\nThe System — At a Glance\n\n\nOne page: the core idea, the five questions, Commercial Health, the learning loop, the maturity ladder, and the ten principles.\n\nOpen the one-pager \n\n\n\nTry it\n\n\nCommercial Health Check\n\n\nThe specification, made real: score your Commercial Health live, see your maturity band, and find your weakest dimensions.\n\nTake the check \n\n\n\n\n\n\n\n\nHow to read the set. Start with The Sigmoid Commercial System (the worldview). Commercial Health is how we measure it; the Messaging Framework is how we talk about it; the Knowledge Base is the syllabus for teaching it; the Health Check is the system made usable. Each inherits from the one before it.",
+    "crumbs": [
+      "Library",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "library/the-sigmoid-commercial-system.html",
+    "href": "library/the-sigmoid-commercial-system.html",
+    "title": "The Sigmoid Commercial System",
+    "section": "",
+    "text": "Version: 1.0 · Status: Foundational document · Owner: [Name] · Last updated: [Date]",
+    "crumbs": [
+      "Library",
+      "The Sigmoid Commercial System"
+    ]
+  },
+  {
+    "objectID": "library/the-sigmoid-commercial-system.html#preface",
+    "href": "library/the-sigmoid-commercial-system.html#preface",
+    "title": "The Sigmoid Commercial System",
+    "section": "Preface",
+    "text": "Preface\nBusinesses have never had more customer data than they do today. Yet many still struggle to answer simple questions:\n\nWhy are we losing customers?\nWhy are some salespeople consistently successful and others not?\nWhich customers should we focus on?\nWhy are our forecasts inaccurate?\nWhy does growth feel unpredictable?\n\nMost organisations collect information. Few transform that information into evidence. Fewer still use that evidence to improve their commercial decisions.\nThe Sigmoid Commercial System (SCS) was developed to address this gap. It is a practical framework for understanding how businesses grow, how commercial performance can be measured, and how better evidence leads to better decisions.\nIt is not a CRM methodology. It is not a sales methodology. It is a way of understanding commerce itself — and, from that understanding, a way of building healthier businesses.",
+    "crumbs": [
+      "Library",
+      "The Sigmoid Commercial System"
+    ]
+  },
+  {
+    "objectID": "library/the-sigmoid-commercial-system.html#what-this-means-how-everything-inherits-from-the-scs",
+    "href": "library/the-sigmoid-commercial-system.html#what-this-means-how-everything-inherits-from-the-scs",
+    "title": "The Sigmoid Commercial System",
+    "section": "What this means — how everything inherits from the SCS",
+    "text": "What this means — how everything inherits from the SCS\nThis document is the foundation. Everything Sigmoid produces should trace back to it:\n\n\n\n\n\n\n\nSigmoid does…\n…relationship to the system\n\n\n\n\nCRM (Sigmoid CRM)\nimplements the system\n\n\nCommercial Health\nmeasures the system\n\n\nCommercial Intelligence Lab\nevaluates decisions within the system\n\n\nContent\nteaches the system\n\n\nConsulting\nimproves the system\n\n\nAI\naugments the system\n\n\nResearch\nvalidates and evolves the system\n\n\n\nAnd it gives us one test for everything we build, write, or ship:\n\nDoes this help someone make a better commercial decision?\nIf the answer is yes, it belongs at Sigmoid. If the answer is no, it doesn’t.\n\nOur mission follows directly: to help organisations make better commercial decisions through evidence. Sometimes that means CRM software. Sometimes analytics. Sometimes AI. Sometimes a decision framework. Technology is never the purpose — it is one of the tools. The purpose does not change.",
+    "crumbs": [
+      "Library",
+      "The Sigmoid Commercial System"
+    ]
   },
   {
     "objectID": "working-paper/02-problem-context.html",

@@ -158,6 +158,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Commercial Health</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../library/index.html"> 
+<span class="menu-text">Library</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../working-paper/index.html"> 
 <span class="menu-text">Working Paper</span></a>
   </li>  
@@ -226,7 +230,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Commercial Health <span class="sep">›</span> The Check</p>
 </div>
 <div class="pc-supports">
-<p><strong>This is the reference implementation of the <a href="../governance/index.html">Commercial Health Index Specification</a>.</strong> Rate the statements; your score computes live in your browser.</p>
+<p><strong>This is the reference implementation of the <a href="../library/commercial-health-index-specification.html">Commercial Health Index Specification</a>.</strong> Rate the statements; your score computes live in your browser.</p>
 </div>
 <div class="pc-row">
 <p><span class="chip chip-grade-c no-dot">Self-assessment · confidence grade C</span> <span class="chip chip-neutral no-dot">7 dimensions · 21 statements</span></p>
@@ -235,7 +239,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Financial statements measure your past. <strong>Commercial Health measures your future</strong> — your ability to find, win, keep, and grow customers. Rate each statement from <strong>1 (strongly disagree)</strong> to <strong>5 (strongly agree)</strong>. Nothing is sent anywhere; the score is computed in your browser from the <a href="../frameworks/index.html">canonical framework</a>.</p>
 <div id="cell-chi-data" class="cell" data-execution_count="1">
 <div id="chi-data" class="cell-output cell-output-display" data-execution_count="1">
-<script id="chi-data" type="application/json">{"id": "commercial_health_index", "version": "0.1.0", "status": "draft", "question": "How healthy is this business's ability to find, win, keep, and grow customers?", "scale": "0..100", "lifecycle_stage": "model", "confidence_self_report": "C", "answer_scale": {"min": 1, "max": 5, "labels": {"1": "Strongly disagree", "2": "Disagree", "3": "Neutral", "4": "Agree", "5": "Strongly agree"}}, "dimensions": [{"id": "D1", "name": "Lead Quality", "weight": 0.142857, "definition": "Attracts the right customers, from sources it understands.", "statements": ["We have a clear definition of our ideal customer, and most of our leads match it.", "We know which lead sources produce customers who stay and grow.", "We de-prioritise or turn away leads that don't fit."], "next_move": "Define the ICP; track lead source to outcome."}, {"id": "D2", "name": "Sales Effectiveness", "weight": 0.142857, "definition": "Converts the right opportunities, through a repeatable process.", "statements": ["Our team follows one consistent sales process.", "We know our conversion rate at each stage of the pipeline.", "We win the majority of the opportunities we choose to pursue."], "next_move": "Adopt one process; measure stage conversion."}, {"id": "D3", "name": "Relationship Quality", "weight": 0.142857, "definition": "Relationships are strong, current, and not locked in one person's head.", "statements": ["Customer history and context are captured and available to the whole team.", "Relationships survive when an individual salesperson leaves.", "We follow up when we say we will."], "next_move": "Make follow-up a system, not a memory."}, {"id": "D4", "name": "Customer Retention", "weight": 0.142857, "definition": "Keeps customers and detects risk early.", "statements": ["We can identify customers at risk of leaving before they leave.", "We have a deliberate renewal / retention process.", "We know why customers leave, from evidence, not assumption."], "next_move": "Build early-warning and a renewal process."}, {"id": "D5", "name": "Customer Growth", "weight": 0.142857, "definition": "Existing relationships grow in value over time.", "statements": ["We actively grow existing accounts (upsell / cross-sell).", "We segment customers and treat high-value relationships differently.", "A meaningful share of revenue comes from existing customers growing."], "next_move": "Segment by value; plan expansion."}, {"id": "D6", "name": "Revenue Predictability", "weight": 0.142857, "definition": "Forecasts are reliable and the pipeline is honest.", "statements": ["Our forecasts are usually close to actual results.", "Our pipeline reflects reality, not optimism.", "Leaders can see commercial performance without asking for a report."], "next_move": "Clean the pipeline; compare forecast to actual."}, {"id": "D7", "name": "Decision Quality", "weight": 0.142857, "definition": "Commercial decisions are made from evidence and reviewed.", "statements": ["Important commercial decisions are made from evidence, not memory.", "We can explain why we pursued (or dropped) an opportunity.", "We review past decisions and learn from them."], "next_move": "Record decision rationale and review it."}], "bands": [{"min": 0, "max": 20, "level": 1, "name": "Reactive", "meaning": "Commercial decisions are ad hoc, from memory."}, {"min": 21, "max": 40, "level": 2, "name": "Organised", "meaning": "Process exists; decisions rest on opinion."}, {"min": 41, "max": 60, "level": 3, "name": "Measured", "meaning": "Performance is tracked; metrics inform decisions."}, {"min": 61, "max": 80, "level": 4, "name": "Evidence-Driven", "meaning": "Decisions made from evidence, with confidence."}, {"min": 81, "max": 100, "level": 5, "name": "Commercial Intelligence", "meaning": "The business improves by design."}], "notes": ["Weights are a v0.1 hypothesis (equal); tune as evidence links dimensions to outcomes.", "Self-assessment mode is capped at confidence grade C \u2014 see the CHI Specification."]}</script>
+<script id="chi-data" type="application/json">{"id": "commercial_health_index", "version": "0.1.0", "status": "draft", "question": "How healthy is this business's ability to find, win, keep, and grow customers?", "scale": "0..100", "lifecycle_stage": "model", "confidence_self_report": "C", "answer_scale": {"min": 1, "max": 5, "labels": {"1": "Strongly disagree", "2": "Disagree", "3": "Neutral", "4": "Agree", "5": "Strongly agree"}}, "dimensions": [{"id": "D1", "name": "Lead Quality", "weight": 0.142857, "definition": "Attracts the right customers, from sources it understands.", "statements": ["We have a clear definition of our ideal customer, and most of our leads match it.", "We know which lead sources produce customers who stay and grow.", "We de-prioritise or turn away leads that don't fit."], "next_move": "Define the ICP; track lead source to outcome."}, {"id": "D2", "name": "Sales Effectiveness", "weight": 0.142857, "definition": "Converts the right opportunities, through a repeatable process.", "statements": ["Our team follows one consistent sales process.", "We know our conversion rate at each stage of the pipeline.", "We win the majority of the opportunities we choose to pursue."], "next_move": "Adopt one process; measure stage conversion."}, {"id": "D3", "name": "Relationship Quality", "weight": 0.142857, "definition": "Relationships are strong, current, and not locked in one person's head.", "statements": ["Customer history and context are captured and available to the whole team.", "Relationships survive when an individual salesperson leaves.", "We follow up when we say we will."], "next_move": "Make follow-up a system, not a memory."}, {"id": "D4", "name": "Customer Retention", "weight": 0.142857, "definition": "Keeps customers and detects risk early.", "statements": ["We can identify customers at risk of leaving before they leave.", "We have a deliberate renewal / retention process.", "We know why customers leave, from evidence, not assumption."], "next_move": "Build early-warning and a renewal process."}, {"id": "D5", "name": "Customer Growth", "weight": 0.142857, "definition": "Existing relationships grow in value over time.", "statements": ["We actively grow existing accounts (upsell / cross-sell).", "We segment customers and treat high-value relationships differently.", "A meaningful share of revenue comes from existing customers growing."], "next_move": "Segment by value; plan expansion."}, {"id": "D6", "name": "Revenue Predictability", "weight": 0.142857, "definition": "Forecasts are reliable and the pipeline is honest.", "statements": ["Our forecasts are usually close to actual results.", "Our pipeline reflects reality, not optimism.", "Leaders can see commercial performance without asking for a report."], "next_move": "Clean the pipeline; compare forecast to actual."}, {"id": "D7", "name": "Decision Quality", "weight": 0.142857, "definition": "Commercial decisions are made from evidence and reviewed.", "statements": ["Important commercial decisions are made from evidence, not memory.", "We can explain why we pursued (or dropped) an opportunity.", "We review past decisions and learn from them."], "next_move": "Record decision rationale and review it."}], "bands": [{"min": 0, "max": 20, "level": 1, "name": "Reactive", "meaning": "Commercial decisions are ad hoc, from memory."}, {"min": 21, "max": 40, "level": 2, "name": "Organised", "meaning": "Process exists; decisions rest on opinion."}, {"min": 41, "max": 60, "level": 3, "name": "Measured", "meaning": "Performance is tracked; metrics inform decisions."}, {"min": 61, "max": 80, "level": 4, "name": "Evidence-Driven", "meaning": "Decisions made from evidence, with confidence."}, {"min": 81, "max": 100, "level": 5, "name": "Commercial Intelligence", "meaning": "The business improves by design."}], "measured_mode": {"input": "data/sample/commercial_health_measured.csv", "raises_confidence_to": "B or A"}, "notes": ["Weights are a v0.1 hypothesis (equal); tune as evidence links dimensions to outcomes.", "Self-assessment mode is capped at confidence grade C \u2014 see the CHI Specification.", "Measured mode overrides self-report per dimension and carries its higher confidence (B/A)."]}</script>
 </div>
 </div>
 <style>
@@ -255,6 +259,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 .chi-bar-fill { height:100%; background:linear-gradient(90deg,#8CC63F,#5E8E28); border-radius:999px; transition:width .25s ease; }
 .chi-bar-score { font-weight:700; font-variant-numeric:tabular-nums; text-align:right; color:var(--sig-ink-strong); }
 .chi-gaps { background:#f4f8fc; border:1px solid #cfe0f1; border-radius:.6rem; padding:1rem 1.2rem; }
+.chi-lead { margin-top:1.1rem; background:var(--sig-surface); border:1px solid var(--sig-border); border-radius:.6rem; padding:1rem 1.2rem; }
+.chi-lead-head { font-weight:700; color:var(--sig-ink-strong); margin-bottom:.5rem; }
+.chi-lead input { width:100%; padding:.55rem .7rem; border:1px solid var(--sig-border); border-radius:.4rem; font:inherit; margin-bottom:.6rem; box-sizing:border-box; }
+.chi-lead .btn-cil { width:100%; justify-content:center; }
+.chi-lead-note { font-size:.78rem; color:var(--sig-muted); margin-top:.5rem; }
 @media (max-width:900px){ .chi-app{ grid-template-columns:1fr } .chi-result{ position:static } }
 </style>
 
@@ -279,6 +288,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>
     <div class="chi-bars" id="chi-bars"></div>
     <div class="chi-gaps" id="chi-gaps"></div>
+    <div class="chi-lead">
+      <div class="chi-lead-head">Get your results &amp; a walkthrough</div>
+      <input id="chi-email" type="email" placeholder="Your work email (optional)" autocomplete="email">
+      <a id="chi-mailto" class="btn-cil btn-cil-primary" href="mailto:info@sa-informatics.com">Email my results to Sigmoid</a>
+      <div class="chi-lead-note">Opens your email app with your score pre-filled — nothing is sent automatically.</div>
+    </div>
   </div>
 </div>
 
@@ -337,8 +352,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       document.getElementById("chi-gaps").innerHTML = '<strong>Start here — your two weakest dimensions:</strong><ul style="margin:.5rem 0 0">' + gaps.map(function (g) {
         return "<li><strong>" + g.name + "</strong> (" + Math.round(g.score) + " / 100) — " + g.next_move + "</li>";
       }).join("") + "</ul>";
+      var email = (document.getElementById("chi-email") || {}).value || "";
+      var body = "My Commercial Health Index: " + Math.round(chi) + "/100 (Level " + band.level + " · " + band.name + ").\n\n"
+        + "Weakest dimensions:\n"
+        + gaps.map(function (g) { return "- " + g.name + " (" + Math.round(g.score) + "/100): " + g.next_move; }).join("\n")
+        + "\n\nAll seven dimensions:\n"
+        + dims.map(function (d) { return "- " + d.name + ": " + Math.round(d.score) + "/100"; }).join("\n")
+        + (email ? "\n\nPlease reply to: " + email : "")
+        + "\n\nI'd like a Commercial Health walkthrough.";
+      var mailto = "mailto:info@sa-informatics.com?subject="
+        + encodeURIComponent("Commercial Health results — walkthrough request")
+        + "&body=" + encodeURIComponent(body);
+      var btn = document.getElementById("chi-mailto");
+      if (btn) btn.setAttribute("href", mailto);
     }
     form.addEventListener("change", compute);
+    var em = document.getElementById("chi-email");
+    if (em) em.addEventListener("input", compute);
     compute();
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
@@ -351,7 +381,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>This score is grade C — indicative, self-reported.</strong> It’s an honest starting point, not a verdict. To reach grade B or A, the same dimensions are <em>measured</em> from your CRM data over time (see the <a href="../governance/index.html">Commercial Health Index Specification</a>). Want the walkthrough that turns your weakest dimensions into a plan? <a href="mailto:info@sa-informatics.com?subject=Commercial%20Health%20walkthrough">Book a Commercial Health walkthrough</a>.</p>
+<p><strong>This score is grade C — indicative, self-reported.</strong> It’s an honest starting point, not a verdict. To reach grade B or A, the same dimensions are <em>measured</em> from your CRM data over time (see the <a href="../library/commercial-health-index-specification.html">Commercial Health Index Specification</a>). Use <strong>Email my results</strong> above to send your score to us and request a walkthrough.</p>
 </div>
 </div>
 </div>
@@ -411,7 +441,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="related" class="level2">
 <h2 class="anchored" data-anchor-id="related">Related</h2>
 <ul>
-<li><a href="../governance/index.html">Commercial Health Index Specification</a> — the canonical definition.</li>
+<li><a href="../library/commercial-health-index-specification.html">Commercial Health Index Specification</a> — the canonical definition.</li>
 <li><a href="../frameworks/index.html">The frameworks</a> — where the CHI weights and statements live as data.</li>
 <li><a href="../decisions/index.html">Decisions</a> — the decisions a healthier commercial system supports.</li>
 </ul>
@@ -889,7 +919,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Commercial Health <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"sep"</span><span class="dt">&gt;</span>›<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span> The Check</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>::: {.pc-supports}</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>**This is the reference implementation of the [Commercial Health Index Specification](../governance/index.qmd).**</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>**This is the reference implementation of the [Commercial Health Index Specification](../library/commercial-health-index-specification.qmd).**</span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Rate the statements; your score computes live in your browser.</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>::: {.pc-row}</span>
@@ -934,145 +964,170 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="in">.chi-bar-fill { height:100%; background:linear-gradient(90deg,#8CC63F,#5E8E28); border-radius:999px; transition:width .25s ease; }</span></span>
 <span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="in">.chi-bar-score { font-weight:700; font-variant-numeric:tabular-nums; text-align:right; color:var(--sig-ink-strong); }</span></span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="in">.chi-gaps { background:#f4f8fc; border:1px solid #cfe0f1; border-radius:.6rem; padding:1rem 1.2rem; }</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="in">@media (max-width:900px){ .chi-app{ grid-template-columns:1fr } .chi-result{ position:static } }</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/style&gt;</span></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;div class="chi-app"&gt;</span></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="in">  &lt;div&gt;</span></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;div class="chi-col-head"&gt;Take the check&lt;/div&gt;</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;div id="chi-form"&gt;&lt;/div&gt;</span></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="in">  &lt;/div&gt;</span></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="in">  &lt;div class="chi-result"&gt;</span></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;div class="chi-col-head"&gt;Your result&lt;/div&gt;</span></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;div class="metric-row"&gt;</span></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="in">      &lt;div class="metric is-accent"&gt;</span></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="in">        &lt;div class="metric-label"&gt;Commercial Health Index&lt;/div&gt;</span></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="in">        &lt;div class="metric-value" id="chi-score"&gt;&amp;mdash;&lt;/div&gt;</span></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="in">        &lt;div class="metric-sub" id="chi-conf"&gt;&lt;/div&gt;</span></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="in">      &lt;/div&gt;</span></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="in">      &lt;div class="metric"&gt;</span></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="in">        &lt;div class="metric-label"&gt;Maturity band&lt;/div&gt;</span></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="in">        &lt;div class="metric-value" style="font-size:1.2rem" id="chi-band"&gt;&amp;mdash;&lt;/div&gt;</span></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="in">        &lt;div class="metric-sub" id="chi-band-meaning"&gt;&lt;/div&gt;</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="in">.chi-lead { margin-top:1.1rem; background:var(--sig-surface); border:1px solid var(--sig-border); border-radius:.6rem; padding:1rem 1.2rem; }</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="in">.chi-lead-head { font-weight:700; color:var(--sig-ink-strong); margin-bottom:.5rem; }</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="in">.chi-lead input { width:100%; padding:.55rem .7rem; border:1px solid var(--sig-border); border-radius:.4rem; font:inherit; margin-bottom:.6rem; box-sizing:border-box; }</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="in">.chi-lead .btn-cil { width:100%; justify-content:center; }</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="in">.chi-lead-note { font-size:.78rem; color:var(--sig-muted); margin-top:.5rem; }</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="in">@media (max-width:900px){ .chi-app{ grid-template-columns:1fr } .chi-result{ position:static } }</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/style&gt;</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;div class="chi-app"&gt;</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="in">  &lt;div&gt;</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;div class="chi-col-head"&gt;Take the check&lt;/div&gt;</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;div id="chi-form"&gt;&lt;/div&gt;</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="in">  &lt;/div&gt;</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="in">  &lt;div class="chi-result"&gt;</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;div class="chi-col-head"&gt;Your result&lt;/div&gt;</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;div class="metric-row"&gt;</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="in">      &lt;div class="metric is-accent"&gt;</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="in">        &lt;div class="metric-label"&gt;Commercial Health Index&lt;/div&gt;</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="in">        &lt;div class="metric-value" id="chi-score"&gt;&amp;mdash;&lt;/div&gt;</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="in">        &lt;div class="metric-sub" id="chi-conf"&gt;&lt;/div&gt;</span></span>
 <span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="in">      &lt;/div&gt;</span></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;/div&gt;</span></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;div class="chi-bars" id="chi-bars"&gt;&lt;/div&gt;</span></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;div class="chi-gaps" id="chi-gaps"&gt;&lt;/div&gt;</span></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="in">  &lt;/div&gt;</span></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/div&gt;</span></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;script&gt;</span></span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="in">(function () {</span></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="in">  function init() {</span></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="in">    var el = document.getElementById("chi-data");</span></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="in">    var form = document.getElementById("chi-form");</span></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="in">    if (!el || !form) return;</span></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="in">    var CHI = JSON.parse(el.textContent);</span></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="in">    var labels = (CHI.answer_scale &amp;&amp; CHI.answer_scale.labels) || {};</span></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="in">    CHI.dimensions.forEach(function (d) {</span></span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="in">      var h = document.createElement("div"); h.className = "chi-dim-head"; h.textContent = d.name;</span></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="in">      form.appendChild(h);</span></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="in">      d.statements.forEach(function (s, i) {</span></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="in">        var row = document.createElement("div"); row.className = "chi-q";</span></span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="in">        var t = document.createElement("div"); t.className = "chi-q-text"; t.textContent = s;</span></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="in">        var scale = document.createElement("div"); scale.className = "chi-scale";</span></span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="in">        for (var v = 1; v &lt;= 5; v++) {</span></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="in">          var lab = document.createElement("label"); lab.title = labels[v] || v;</span></span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="in">          var input = document.createElement("input");</span></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="in">          input.type = "radio"; input.name = d.id + "_" + i; input.value = v;</span></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="in">          if (v === 3) input.checked = true;</span></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="in">          var num = document.createElement("span"); num.textContent = v;</span></span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="in">          lab.appendChild(input); lab.appendChild(num); scale.appendChild(lab);</span></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="in">        }</span></span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="in">        row.appendChild(t); row.appendChild(scale); form.appendChild(row);</span></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="in">      });</span></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="in">    });</span></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="in">    function bandFor(score) {</span></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="in">      for (var i = 0; i &lt; CHI.bands.length; i++) {</span></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="in">        var b = CHI.bands[i]; if (score &gt;= b.min &amp;&amp; score &lt;= b.max) return b;</span></span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="in">      }</span></span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="in">      return CHI.bands[CHI.bands.length - 1];</span></span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="in">    }</span></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="in">    function compute() {</span></span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="in">      var wsum = 0, wtot = 0, dims = [];</span></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="in">      CHI.dimensions.forEach(function (d) {</span></span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="in">        var vals = d.statements.map(function (s, i) {</span></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="in">          var sel = form.querySelector('input[name="' + d.id + "_" + i + '"]:checked');</span></span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="in">          return ((sel ? +sel.value : 3) - 1) / 4 * 100;</span></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="in">        });</span></span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="in">        var score = vals.reduce(function (a, b) { return a + b; }, 0) / vals.length;</span></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="in">        dims.push({ name: d.name, score: score, next_move: d.next_move });</span></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="in">        wsum += d.weight * score; wtot += d.weight;</span></span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="in">      });</span></span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="in">      var chi = Math.round((wsum / wtot) * 10) / 10, band = bandFor(chi);</span></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="in">      var gaps = dims.slice().sort(function (a, b) { return a.score - b.score; }).slice(0, 2);</span></span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="in">      document.getElementById("chi-score").innerHTML = Math.round(chi) + '&lt;span style="font-size:1rem;color:var(--sig-muted)"&gt; / 100&lt;/span&gt;';</span></span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="in">      document.getElementById("chi-conf").textContent = "Confidence " + (CHI.confidence_self_report || "C") + " · self-reported";</span></span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="in">      document.getElementById("chi-band").textContent = "Level " + band.level + " · " + band.name;</span></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="in">      document.getElementById("chi-band-meaning").textContent = band.meaning || "";</span></span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="in">      document.getElementById("chi-bars").innerHTML = dims.map(function (d) {</span></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="in">        return '&lt;div class="chi-bar-row"&gt;&lt;div class="chi-bar-name"&gt;' + d.name + '&lt;/div&gt;&lt;div class="chi-bar-track"&gt;&lt;div class="chi-bar-fill" style="width:' + d.score + '%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="chi-bar-score"&gt;' + Math.round(d.score) + '&lt;/div&gt;&lt;/div&gt;';</span></span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="in">      }).join("");</span></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="in">      document.getElementById("chi-gaps").innerHTML = '&lt;strong&gt;Start here — your two weakest dimensions:&lt;/strong&gt;&lt;ul style="margin:.5rem 0 0"&gt;' + gaps.map(function (g) {</span></span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="in">        return "&lt;li&gt;&lt;strong&gt;" + g.name + "&lt;/strong&gt; (" + Math.round(g.score) + " / 100) — " + g.next_move + "&lt;/li&gt;";</span></span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="in">      }).join("") + "&lt;/ul&gt;";</span></span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="in">    }</span></span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="in">    form.addEventListener("change", compute);</span></span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="in">    compute();</span></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="in">  }</span></span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="in">  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);</span></span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="in">  else init();</span></span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="in">})();</span></span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/script&gt;</span></span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple" icon=false}</span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>**This score is grade C — indicative, self-reported.** It's an honest starting point, not a verdict.</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>To reach grade B or A, the same dimensions are *measured* from your CRM data over time (see the</span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Commercial Health Index Specification</span><span class="co">](../governance/index.qmd)</span>). Want the walkthrough that turns your</span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>weakest dimensions into a plan?</span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Book a Commercial Health walkthrough</span><span class="co">](mailto:info@sa-informatics.com?subject=Commercial%20Health%20walkthrough)</span>.</span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="fu">## How the score works</span></span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>Transparent by design — the engine below is the tested <span class="in">`src/chi.py`</span> computing a worked example, so you</span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>can see exactly how a business's answers become a score.</span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: worked-example</span></span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> src.chi <span class="im">import</span> commercial_health_index</span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> {  <span class="co"># an illustrative business (synthetic — for demonstration only)</span></span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>    <span class="st">"D1"</span>: [<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>], <span class="st">"D2"</span>: [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>], <span class="st">"D3"</span>: [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>], <span class="st">"D4"</span>: [<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>    <span class="st">"D5"</span>: [<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>], <span class="st">"D6"</span>: [<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>], <span class="st">"D7"</span>: [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> commercial_health_index(sample)</span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> <span class="st">""</span>.join(</span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"&lt;tr&gt;&lt;td&gt;</span><span class="sc">{</span>d[<span class="st">'name'</span>]<span class="sc">}</span><span class="ss">&lt;/td&gt;&lt;td style='text-align:right'&gt;</span><span class="sc">{</span>d[<span class="st">'score'</span>]<span class="sc">:.0f}</span><span class="ss">&lt;/td&gt;&lt;/tr&gt;"</span></span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> d <span class="kw">in</span> res[<span class="st">"dimensions"</span>]</span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>HTML(</span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"&lt;p&gt;&lt;strong&gt;Worked example (illustrative):&lt;/strong&gt; a business answering as above scores "</span></span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"&lt;strong&gt;CHI </span><span class="sc">{</span>res[<span class="st">'chi'</span>]<span class="sc">:.0f}</span><span class="ss"> / 100&lt;/strong&gt; — Level </span><span class="sc">{</span>res[<span class="st">'band'</span>][<span class="st">'level'</span>]<span class="sc">}</span><span class="ss"> · </span><span class="sc">{</span>res[<span class="st">'band'</span>][<span class="st">'name'</span>]<span class="sc">}</span><span class="ss"> "</span></span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"(confidence </span><span class="sc">{</span>res[<span class="st">'confidence'</span>]<span class="sc">}</span><span class="ss">). Weakest: "</span></span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> <span class="st">", "</span>.join(<span class="ss">f"</span><span class="sc">{</span>g[<span class="st">'name'</span>]<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span>g[<span class="st">'score'</span>]<span class="sc">:.0f}</span><span class="ss">)"</span> <span class="cf">for</span> g <span class="kw">in</span> res[<span class="st">'gaps'</span>]) <span class="op">+</span> <span class="st">"."</span></span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> <span class="st">"&lt;table class='table' style='margin-top:.6rem;max-width:420px'&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Dimension&lt;/th&gt;"</span></span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;th style='text-align:right'&gt;Score&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;"</span> <span class="op">+</span> rows <span class="op">+</span> <span class="st">"&lt;/tbody&gt;&lt;/table&gt;"</span></span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Indicator:** each answer <span class="in">`1..5`</span> → <span class="in">`(answer − 1) / 4 × 100`</span>.</span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Dimension:** the mean of its three indicator scores.</span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Commercial Health Index:** the weighted mean of the seven dimensions (equal weight at v0.1).</span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Confidence:** self-assessment is capped at grade **C**; measured data raises it toward **B/A**.</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="fu">## Related</span></span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Commercial Health Index Specification</span><span class="co">](../governance/index.qmd)</span> — the canonical definition.</span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">The frameworks</span><span class="co">](../frameworks/index.qmd)</span> — where the CHI weights and statements live as data.</span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Decisions</span><span class="co">](../decisions/index.qmd)</span> — the decisions a healthier commercial system supports.</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="in">      &lt;div class="metric"&gt;</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="in">        &lt;div class="metric-label"&gt;Maturity band&lt;/div&gt;</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a><span class="in">        &lt;div class="metric-value" style="font-size:1.2rem" id="chi-band"&gt;&amp;mdash;&lt;/div&gt;</span></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="in">        &lt;div class="metric-sub" id="chi-band-meaning"&gt;&lt;/div&gt;</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="in">      &lt;/div&gt;</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;/div&gt;</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;div class="chi-bars" id="chi-bars"&gt;&lt;/div&gt;</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;div class="chi-gaps" id="chi-gaps"&gt;&lt;/div&gt;</span></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;div class="chi-lead"&gt;</span></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a><span class="in">      &lt;div class="chi-lead-head"&gt;Get your results &amp;amp; a walkthrough&lt;/div&gt;</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="in">      &lt;input id="chi-email" type="email" placeholder="Your work email (optional)" autocomplete="email" /&gt;</span></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="in">      &lt;a id="chi-mailto" class="btn-cil btn-cil-primary" href="mailto:info@sa-informatics.com"&gt;Email my results to Sigmoid&lt;/a&gt;</span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="in">      &lt;div class="chi-lead-note"&gt;Opens your email app with your score pre-filled — nothing is sent automatically.&lt;/div&gt;</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;/div&gt;</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="in">  &lt;/div&gt;</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/div&gt;</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;script&gt;</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="in">(function () {</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="in">  function init() {</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="in">    var el = document.getElementById("chi-data");</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="in">    var form = document.getElementById("chi-form");</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="in">    if (!el || !form) return;</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a><span class="in">    var CHI = JSON.parse(el.textContent);</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="in">    var labels = (CHI.answer_scale &amp;&amp; CHI.answer_scale.labels) || {};</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="in">    CHI.dimensions.forEach(function (d) {</span></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="in">      var h = document.createElement("div"); h.className = "chi-dim-head"; h.textContent = d.name;</span></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a><span class="in">      form.appendChild(h);</span></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="in">      d.statements.forEach(function (s, i) {</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a><span class="in">        var row = document.createElement("div"); row.className = "chi-q";</span></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="in">        var t = document.createElement("div"); t.className = "chi-q-text"; t.textContent = s;</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="in">        var scale = document.createElement("div"); scale.className = "chi-scale";</span></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="in">        for (var v = 1; v &lt;= 5; v++) {</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a><span class="in">          var lab = document.createElement("label"); lab.title = labels[v] || v;</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="in">          var input = document.createElement("input");</span></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="in">          input.type = "radio"; input.name = d.id + "_" + i; input.value = v;</span></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="in">          if (v === 3) input.checked = true;</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="in">          var num = document.createElement("span"); num.textContent = v;</span></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="in">          lab.appendChild(input); lab.appendChild(num); scale.appendChild(lab);</span></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="in">        }</span></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="in">        row.appendChild(t); row.appendChild(scale); form.appendChild(row);</span></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="in">      });</span></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="in">    });</span></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="in">    function bandFor(score) {</span></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="in">      for (var i = 0; i &lt; CHI.bands.length; i++) {</span></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="in">        var b = CHI.bands[i]; if (score &gt;= b.min &amp;&amp; score &lt;= b.max) return b;</span></span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="in">      }</span></span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a><span class="in">      return CHI.bands[CHI.bands.length - 1];</span></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="in">    }</span></span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="in">    function compute() {</span></span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="in">      var wsum = 0, wtot = 0, dims = [];</span></span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a><span class="in">      CHI.dimensions.forEach(function (d) {</span></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="in">        var vals = d.statements.map(function (s, i) {</span></span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="in">          var sel = form.querySelector('input[name="' + d.id + "_" + i + '"]:checked');</span></span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="in">          return ((sel ? +sel.value : 3) - 1) / 4 * 100;</span></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a><span class="in">        });</span></span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="in">        var score = vals.reduce(function (a, b) { return a + b; }, 0) / vals.length;</span></span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="in">        dims.push({ name: d.name, score: score, next_move: d.next_move });</span></span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="in">        wsum += d.weight * score; wtot += d.weight;</span></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="in">      });</span></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="in">      var chi = Math.round((wsum / wtot) * 10) / 10, band = bandFor(chi);</span></span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="in">      var gaps = dims.slice().sort(function (a, b) { return a.score - b.score; }).slice(0, 2);</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a><span class="in">      document.getElementById("chi-score").innerHTML = Math.round(chi) + '&lt;span style="font-size:1rem;color:var(--sig-muted)"&gt; / 100&lt;/span&gt;';</span></span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a><span class="in">      document.getElementById("chi-conf").textContent = "Confidence " + (CHI.confidence_self_report || "C") + " · self-reported";</span></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="in">      document.getElementById("chi-band").textContent = "Level " + band.level + " · " + band.name;</span></span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a><span class="in">      document.getElementById("chi-band-meaning").textContent = band.meaning || "";</span></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a><span class="in">      document.getElementById("chi-bars").innerHTML = dims.map(function (d) {</span></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="in">        return '&lt;div class="chi-bar-row"&gt;&lt;div class="chi-bar-name"&gt;' + d.name + '&lt;/div&gt;&lt;div class="chi-bar-track"&gt;&lt;div class="chi-bar-fill" style="width:' + d.score + '%"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="chi-bar-score"&gt;' + Math.round(d.score) + '&lt;/div&gt;&lt;/div&gt;';</span></span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="in">      }).join("");</span></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="in">      document.getElementById("chi-gaps").innerHTML = '&lt;strong&gt;Start here — your two weakest dimensions:&lt;/strong&gt;&lt;ul style="margin:.5rem 0 0"&gt;' + gaps.map(function (g) {</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="in">        return "&lt;li&gt;&lt;strong&gt;" + g.name + "&lt;/strong&gt; (" + Math.round(g.score) + " / 100) — " + g.next_move + "&lt;/li&gt;";</span></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="in">      }).join("") + "&lt;/ul&gt;";</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="in">      var email = (document.getElementById("chi-email") || {}).value || "";</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="in">      var body = "My Commercial Health Index: " + Math.round(chi) + "/100 (Level " + band.level + " · " + band.name + ").\n\n"</span></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="in">        + "Weakest dimensions:\n"</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="in">        + gaps.map(function (g) { return "- " + g.name + " (" + Math.round(g.score) + "/100): " + g.next_move; }).join("\n")</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="in">        + "\n\nAll seven dimensions:\n"</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="in">        + dims.map(function (d) { return "- " + d.name + ": " + Math.round(d.score) + "/100"; }).join("\n")</span></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a><span class="in">        + (email ? "\n\nPlease reply to: " + email : "")</span></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="in">        + "\n\nI'd like a Commercial Health walkthrough.";</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="in">      var mailto = "mailto:info@sa-informatics.com?subject="</span></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="in">        + encodeURIComponent("Commercial Health results — walkthrough request")</span></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="in">        + "&amp;body=" + encodeURIComponent(body);</span></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="in">      var btn = document.getElementById("chi-mailto");</span></span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="in">      if (btn) btn.setAttribute("href", mailto);</span></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="in">    }</span></span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="in">    form.addEventListener("change", compute);</span></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="in">    var em = document.getElementById("chi-email");</span></span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="in">    if (em) em.addEventListener("input", compute);</span></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="in">    compute();</span></span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="in">  }</span></span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="in">  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);</span></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="in">  else init();</span></span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="in">})();</span></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/script&gt;</span></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>::: {.callout-note appearance="simple" icon=false}</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>**This score is grade C — indicative, self-reported.** It's an honest starting point, not a verdict.</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>To reach grade B or A, the same dimensions are *measured* from your CRM data over time (see the</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Commercial Health Index Specification</span><span class="co">](../library/commercial-health-index-specification.qmd)</span>). Use</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>**Email my results** above to send your score to us and request a walkthrough.</span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a><span class="fu">## How the score works</span></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>Transparent by design — the engine below is the tested <span class="in">`src/chi.py`</span> computing a worked example, so you</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>can see exactly how a business's answers become a score.</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: worked-example</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> src.chi <span class="im">import</span> commercial_health_index</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> {  <span class="co"># an illustrative business (synthetic — for demonstration only)</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>    <span class="st">"D1"</span>: [<span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">2</span>], <span class="st">"D2"</span>: [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>], <span class="st">"D3"</span>: [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">2</span>], <span class="st">"D4"</span>: [<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>    <span class="st">"D5"</span>: [<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>], <span class="st">"D6"</span>: [<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>], <span class="st">"D7"</span>: [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> commercial_health_index(sample)</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> <span class="st">""</span>.join(</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"&lt;tr&gt;&lt;td&gt;</span><span class="sc">{</span>d[<span class="st">'name'</span>]<span class="sc">}</span><span class="ss">&lt;/td&gt;&lt;td style='text-align:right'&gt;</span><span class="sc">{</span>d[<span class="st">'score'</span>]<span class="sc">:.0f}</span><span class="ss">&lt;/td&gt;&lt;/tr&gt;"</span></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> d <span class="kw">in</span> res[<span class="st">"dimensions"</span>]</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>HTML(</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"&lt;p&gt;&lt;strong&gt;Worked example (illustrative):&lt;/strong&gt; a business answering as above scores "</span></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"&lt;strong&gt;CHI </span><span class="sc">{</span>res[<span class="st">'chi'</span>]<span class="sc">:.0f}</span><span class="ss"> / 100&lt;/strong&gt; — Level </span><span class="sc">{</span>res[<span class="st">'band'</span>][<span class="st">'level'</span>]<span class="sc">}</span><span class="ss"> · </span><span class="sc">{</span>res[<span class="st">'band'</span>][<span class="st">'name'</span>]<span class="sc">}</span><span class="ss"> "</span></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"(confidence </span><span class="sc">{</span>res[<span class="st">'confidence'</span>]<span class="sc">}</span><span class="ss">). Weakest: "</span></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> <span class="st">", "</span>.join(<span class="ss">f"</span><span class="sc">{</span>g[<span class="st">'name'</span>]<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span>g[<span class="st">'score'</span>]<span class="sc">:.0f}</span><span class="ss">)"</span> <span class="cf">for</span> g <span class="kw">in</span> res[<span class="st">'gaps'</span>]) <span class="op">+</span> <span class="st">"."</span></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>    <span class="op">+</span> <span class="st">"&lt;table class='table' style='margin-top:.6rem;max-width:420px'&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Dimension&lt;/th&gt;"</span></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>      <span class="st">"&lt;th style='text-align:right'&gt;Score&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;"</span> <span class="op">+</span> rows <span class="op">+</span> <span class="st">"&lt;/tbody&gt;&lt;/table&gt;"</span></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Indicator:** each answer <span class="in">`1..5`</span> → <span class="in">`(answer − 1) / 4 × 100`</span>.</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Dimension:** the mean of its three indicator scores.</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Commercial Health Index:** the weighted mean of the seven dimensions (equal weight at v0.1).</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Confidence:** self-assessment is capped at grade **C**; measured data raises it toward **B/A**.</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="fu">## Related</span></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Commercial Health Index Specification</span><span class="co">](../library/commercial-health-index-specification.qmd)</span> — the canonical definition.</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">The frameworks</span><span class="co">](../frameworks/index.qmd)</span> — where the CHI weights and statements live as data.</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Decisions</span><span class="co">](../decisions/index.qmd)</span> — the decisions a healthier commercial system supports.</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

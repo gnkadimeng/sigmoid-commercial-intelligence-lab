@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Sigmoid — Commercial Messaging Framework – Sigmoid Commercial Intelligence Lab</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../library/commercial-knowledge-base.html" rel="next">
+<link href="../library/commercial-health-index-specification.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d81872f4fb7d233155e3781d0c3f48fd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Sigmoid CIL</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../start-here/index.html"> 
+<span class="menu-text">Start Here</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../decisions/index.html"> 
+<span class="menu-text">Decisions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../evidence/index.html"> 
+<span class="menu-text">Evidence</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../frameworks/index.html"> 
+<span class="menu-text">Frameworks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../dashboards/index.html"> 
+<span class="menu-text">Dashboards</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../commercial-health/index.html"> 
+<span class="menu-text">Commercial Health</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../library/index.html" aria-current="page"> 
+<span class="menu-text">Library</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../working-paper/index.html"> 
+<span class="menu-text">Working Paper</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../governance/index.html"> 
+<span class="menu-text">Governance</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img" aria-label="GitHub repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../library/commercial-messaging-framework.html">Commercial Messaging Framework</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../library/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../library/the-sigmoid-commercial-system.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Sigmoid Commercial System</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../library/commercial-health-index-specification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Commercial Health Index — Specification</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../library/commercial-messaging-framework.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Commercial Messaging Framework</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../library/commercial-knowledge-base.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Commercial Knowledge Base</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../library/sigmoid-commercial-system-one-pager.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The System — At a Glance</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#how-to-use-this-framework" id="toc-how-to-use-this-framework" class="nav-link active" data-scroll-target="#how-to-use-this-framework">How to use this framework</a></li>
+  <li><a href="#part-a-the-foundation" id="toc-part-a-the-foundation" class="nav-link" data-scroll-target="#part-a-the-foundation">Part A — The Foundation</a>
+  <ul class="collapse">
+  <li><a href="#the-big-idea-we-want-to-own-commercial-health" id="toc-the-big-idea-we-want-to-own-commercial-health" class="nav-link" data-scroll-target="#the-big-idea-we-want-to-own-commercial-health">1. The Big Idea we want to own: <strong>Commercial Health</strong></a>
+  <ul class="collapse">
+  <li><a href="#commercial-health-made-measurable" id="toc-commercial-health-made-measurable" class="nav-link" data-scroll-target="#commercial-health-made-measurable">Commercial Health, made measurable</a></li>
+  </ul></li>
+  <li><a href="#the-message-house" id="toc-the-message-house" class="nav-link" data-scroll-target="#the-message-house">2. The Message House</a></li>
+  </ul></li>
+  <li><a href="#part-b-the-messaging-toolkit" id="toc-part-b-the-messaging-toolkit" class="nav-link" data-scroll-target="#part-b-the-messaging-toolkit">Part B — The Messaging Toolkit</a>
+  <ul class="collapse">
+  <li><a href="#our-view-of-the-world-beliefs" id="toc-our-view-of-the-world-beliefs" class="nav-link" data-scroll-target="#our-view-of-the-world-beliefs">3. Our View of the World — Beliefs</a></li>
+  <li><a href="#the-commercial-journey-our-messaging-map" id="toc-the-commercial-journey-our-messaging-map" class="nav-link" data-scroll-target="#the-commercial-journey-our-messaging-map">4. The Commercial Journey — our messaging map</a></li>
+  <li><a href="#commercial-problems-by-stage" id="toc-commercial-problems-by-stage" class="nav-link" data-scroll-target="#commercial-problems-by-stage">5. Commercial Problems — by stage</a></li>
+  <li><a href="#commercial-questions" id="toc-commercial-questions" class="nav-link" data-scroll-target="#commercial-questions">6. Commercial Questions</a></li>
+  <li><a href="#myths-vs-reality" id="toc-myths-vs-reality" class="nav-link" data-scroll-target="#myths-vs-reality">7. Myths vs Reality</a></li>
+  <li><a href="#jobs-to-be-done" id="toc-jobs-to-be-done" class="nav-link" data-scroll-target="#jobs-to-be-done">8. Jobs To Be Done</a></li>
+  <li><a href="#outcomes" id="toc-outcomes" class="nav-link" data-scroll-target="#outcomes">9. Outcomes</a></li>
+  <li><a href="#vocabulary-the-words-we-use-and-the-ones-we-avoid" id="toc-vocabulary-the-words-we-use-and-the-ones-we-avoid" class="nav-link" data-scroll-target="#vocabulary-the-words-we-use-and-the-ones-we-avoid">10. Vocabulary — the words we use, and the ones we avoid</a></li>
+  <li><a href="#signature-ideas-our-intellectual-property" id="toc-signature-ideas-our-intellectual-property" class="nav-link" data-scroll-target="#signature-ideas-our-intellectual-property">11. Signature Ideas — our intellectual property</a></li>
+  </ul></li>
+  <li><a href="#part-c-putting-it-to-work" id="toc-part-c-putting-it-to-work" class="nav-link" data-scroll-target="#part-c-putting-it-to-work">Part C — Putting it to work</a>
+  <ul class="collapse">
+  <li><a href="#from-framework-to-content" id="toc-from-framework-to-content" class="nav-link" data-scroll-target="#from-framework-to-content">12. From framework to content</a></li>
+  <li><a href="#messaging-assets-how-we-describe-ourselves" id="toc-messaging-assets-how-we-describe-ourselves" class="nav-link" data-scroll-target="#messaging-assets-how-we-describe-ourselves">13. Messaging assets — how we describe ourselves</a></li>
+  <li><a href="#message-discipline-the-rules-of-consistency" id="toc-message-discipline-the-rules-of-consistency" class="nav-link" data-scroll-target="#message-discipline-the-rules-of-consistency">14. Message discipline — the rules of consistency</a></li>
+  <li><a href="#in-one-line" id="toc-in-one-line" class="nav-link" data-scroll-target="#in-one-line">In one line</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Sigmoid — Commercial Messaging Framework</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">What we say, repeatedly, until the market associates us with it</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Version:</strong> 1.0 · <strong>Status:</strong> Working document · <strong>Owner:</strong> [Name] · <strong>Last updated:</strong> [Date] <strong>Scope:</strong> The commercial voice of Sigmoid — expressed primarily through <strong>Sigmoid CRM</strong>, consistent with the wider Sigmoid Analytica promise, <em>we make the world transparent.</em> <strong>Inherits from:</strong> <em>The Sigmoid Commercial System</em> (the foundational document). The SCS is the worldview; this framework turns it into words.</p>
+<hr>
+<section id="how-to-use-this-framework" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use-this-framework">How to use this framework</h2>
+<p>Our Content Strategy answers <strong>why</strong> we create content. This framework answers the harder, more important question:</p>
+<blockquote class="blockquote">
+<p><strong>What exactly are we going to say — repeatedly — until the market associates us with it?</strong></p>
+</blockquote>
+<p>It is the bridge between strategy and every post, article, talk, and sales conversation. It is not a campaign; it is a <strong>vocabulary and a set of ideas we repeat on purpose</strong> until they become ours in the market’s mind.</p>
+<p>Read Parts A–C in order:</p>
+<ul>
+<li><strong>Part A — The Foundation:</strong> the one idea we want to own and the architecture beneath it.</li>
+<li><strong>Part B — The Toolkit:</strong> nine reservoirs of raw material for content.</li>
+<li><strong>Part C — Putting it to work:</strong> how to turn the toolkit into content, our elevator pitches, and the rules of consistency.</li>
+</ul>
+<p><strong>The golden rule:</strong> <em>don’t start with the product. Start with commerce.</em> Every business exists to answer five questions —</p>
+<ol type="1">
+<li>How do we <strong>find</strong> customers?</li>
+<li>How do we <strong>win</strong> customers?</li>
+<li>How do we <strong>keep</strong> customers?</li>
+<li>How do we <strong>grow</strong> customers?</li>
+<li>How do we make <strong>better decisions</strong>?</li>
+</ol>
+<p>Everything Sigmoid CRM does fits into one of those. So does everything we say.</p>
+<hr>
+</section>
+<section id="part-a-the-foundation" class="level1">
+<h1>Part A — The Foundation</h1>
+<section id="the-big-idea-we-want-to-own-commercial-health" class="level2">
+<h2 class="anchored" data-anchor-id="the-big-idea-we-want-to-own-commercial-health">1. The Big Idea we want to own: <strong>Commercial Health</strong></h2>
+<p>Most brands publish random advice and are remembered for nothing. Great brands own <strong>one idea</strong>. Ours is <strong>Commercial Health</strong>.</p>
+<p>Every business measures its <strong>financial</strong> health, its <strong>operational</strong> health, and increasingly its <strong>employee</strong> health. Almost no one measures their <strong>commercial</strong> health — yet every business has it, and it determines whether they grow or quietly decline.</p>
+<blockquote class="blockquote">
+<p><strong>Positioning statement.</strong> <em>Sigmoid helps businesses measure, understand, and improve their Commercial Health — their ability to find, win, keep, and grow customers.</em></p>
+</blockquote>
+<p>This is our unifying concept. Instead of publishing scattered CRM tips, we become <strong>the company that helps organisations improve their Commercial Health.</strong> Every article, post, conversation, and product capability reinforces that single idea — which makes our messaging coherent and easy to remember.</p>
+<section id="commercial-health-made-measurable" class="level3">
+<h3 class="anchored" data-anchor-id="commercial-health-made-measurable">Commercial Health, made measurable</h3>
+<p>Because we are an evidence-led company, we don’t leave “health” as a metaphor. Commercial Health is defined canonically in <em>The Sigmoid Commercial System</em> as <strong>seven observable dimensions</strong> — and what can be observed can be improved:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>What it reflects</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Lead Quality</strong></td>
+<td>Are we attracting the right customers?</td>
+</tr>
+<tr class="even">
+<td><strong>Sales Effectiveness</strong></td>
+<td>Do we convert the right opportunities?</td>
+</tr>
+<tr class="odd">
+<td><strong>Relationship Quality</strong></td>
+<td>Are our customer relationships strong and current?</td>
+</tr>
+<tr class="even">
+<td><strong>Customer Retention</strong></td>
+<td>Do customers stay?</td>
+</tr>
+<tr class="odd">
+<td><strong>Customer Growth</strong></td>
+<td>Do relationships grow in value over time?</td>
+</tr>
+<tr class="even">
+<td><strong>Revenue Predictability</strong></td>
+<td>Can we forecast with confidence?</td>
+</tr>
+<tr class="odd">
+<td><strong>Decision Quality</strong></td>
+<td>Are our commercial decisions consistently good?</td>
+</tr>
+</tbody>
+</table>
+<p>Together these form a <strong>Commercial Health check</strong> — a diagnostic a business can run on itself. It is a content engine, a sales conversation starter, and, in time, a product capability. When someone asks “what does Sigmoid do?”, the honest answer is: <em>we make your Commercial Health visible, and help you improve it.</em></p>
+</section>
+</section>
+<section id="the-message-house" class="level2">
+<h2 class="anchored" data-anchor-id="the-message-house">2. The Message House</h2>
+<p>Everything in this framework ladders up to Commercial Health. If a message doesn’t, it’s off-brand.</p>
+<pre><code>                         COMMERCIAL HEALTH
+              the one idea we want the market to give us
+                                │
+        ┌───────────┬───────────┼───────────┬────────────┐
+      FIND         WIN         KEEP        GROW         DECIDE
+    customers    customers   customers   customers      better
+        │            │           │           │             │
+  ┌─────┴────────────┴───────────┴───────────┴─────────────┴─────┐
+  │  Raw material (Part B):                                       │
+  │  Beliefs · Journey · Problems · Questions · Myths ·           │
+  │  Jobs-to-be-done · Outcomes · Signature ideas                │
+  └───────────────────────────────┬──────────────────────────────┘
+                                   │
+                      Spoken in plain vocabulary,
+                      backed by evidence, not hype</code></pre>
+<ul>
+<li><strong>Apex:</strong> the single idea (Commercial Health).</li>
+<li><strong>Pillars:</strong> the five commercial questions — every message serves one.</li>
+<li><strong>Foundation:</strong> the toolkit — the reservoirs we draw from to make each pillar concrete.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="part-b-the-messaging-toolkit" class="level1">
+<h1>Part B — The Messaging Toolkit</h1>
+<p>Nine reservoirs. Each one alone is worth hundreds of pieces of content.</p>
+<section id="our-view-of-the-world-beliefs" class="level2">
+<h2 class="anchored" data-anchor-id="our-view-of-the-world-beliefs">3. Our View of the World — Beliefs</h2>
+<p>Thought leadership begins with beliefs, not products. State them plainly and people immediately understand what Sigmoid stands for.</p>
+<p><strong>We believe…</strong></p>
+<ul>
+<li>Businesses don’t fail because they lack data — they fail because they don’t know what their data is telling them.</li>
+<li>Businesses don’t need more software. They need better commercial decisions.</li>
+<li>Customer relationships are a business asset — yet most businesses manage them like an address book.</li>
+<li>The quality of a business is reflected in the quality of its customer relationships.</li>
+<li>Revenue growth isn’t luck. It’s the result of thousands of better commercial decisions.</li>
+<li>AI shouldn’t replace people. It should help them make better decisions.</li>
+<li>A CRM shouldn’t just record yesterday. It should improve tomorrow.</li>
+</ul>
+</section>
+<section id="the-commercial-journey-our-messaging-map" class="level2">
+<h2 class="anchored" data-anchor-id="the-commercial-journey-our-messaging-map">4. The Commercial Journey — our messaging map</h2>
+<p>Don’t think in features. Think in the journey every business runs, again and again. Each stage has problems; every problem becomes content.</p>
+<pre><code>Find customers → Qualify → Build relationships → Close → Deliver
+      → Retain → Grow → Learn → (repeat)</code></pre>
+<p>This map is how we organise everything else: a post, an article, or a customer story can always be placed at a stage — and a stage always maps to one of the five commercial questions.</p>
+</section>
+<section id="commercial-problems-by-stage" class="level2">
+<h2 class="anchored" data-anchor-id="commercial-problems-by-stage">5. Commercial Problems — by stage</h2>
+<p>We spend our time here, because problems are what customers actually feel. Think business, not software.</p>
+<p><strong>Finding customers</strong> — wrong customers · expensive leads · poor referrals · weak marketing · no differentiation.</p>
+<p><strong>Qualifying customers</strong> — everyone treated the same · reps chase every lead · time wasted · poor discovery · wrong opportunities.</p>
+<p><strong>Building relationships</strong> — slow follow-up · inconsistent communication · lost trust · no customer history · staff leave and relationships disappear with them.</p>
+<p><strong>Closing sales</strong> — deals stall and nobody knows why · discounting · decision-makers disappear · competitors arrive late and win.</p>
+<p><strong>Retention</strong> — customers quietly leave · nobody notices · complaints ignored · no engagement · no renewal process.</p>
+<p><strong>Growth</strong> — no upselling · existing customers forgotten · no cross-selling · no segmentation.</p>
+<p><em>Each bullet is a post. Each cluster is an article. Each stage is a campaign.</em></p>
+</section>
+<section id="commercial-questions" class="level2">
+<h2 class="anchored" data-anchor-id="commercial-questions">6. Commercial Questions</h2>
+<p>Possibly our strongest content, because people search LinkedIn and Google with <strong>questions</strong>, not features. Answer one a week.</p>
+<ul>
+<li>Why do businesses lose customers?</li>
+<li>Why do customers stop replying?</li>
+<li>Why do good salespeople fail?</li>
+<li>Why are forecasts wrong?</li>
+<li>Why do customers choose competitors?</li>
+<li>How do businesses actually grow?</li>
+<li>Why do businesses buy CRM and never use it?</li>
+<li>Why does follow-up fail?</li>
+<li>Why do referrals dry up?</li>
+<li>Why do sales meetings waste time?</li>
+</ul>
+</section>
+<section id="myths-vs-reality" class="level2">
+<h2 class="anchored" data-anchor-id="myths-vs-reality">7. Myths vs Reality</h2>
+<p>People love a myth, well corrected. It’s memorable and it positions us as the ones who see clearly.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Myth</th>
+<th>Reality</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CRM improves sales.</td>
+<td>CRM only improves sales when people use it consistently.</td>
+</tr>
+<tr class="even">
+<td>More leads create more revenue.</td>
+<td>Better conversion often creates more revenue.</td>
+</tr>
+<tr class="odd">
+<td>Customers leave because of price.</td>
+<td>Customers often leave because they feel forgotten.</td>
+</tr>
+<tr class="even">
+<td>AI replaces salespeople.</td>
+<td>AI helps salespeople make better decisions.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="jobs-to-be-done" class="level2">
+<h2 class="anchored" data-anchor-id="jobs-to-be-done">8. Jobs To Be Done</h2>
+<p>Forget software. What <strong>job</strong> is the customer hiring us to do? Say it in their words.</p>
+<ul>
+<li>“I need to know who to call.”</li>
+<li>“I need to know which deals matter.”</li>
+<li>“I need better forecasts.”</li>
+<li>“I need my team to follow one sales process.”</li>
+<li>“I need to stop losing customers.”</li>
+<li>“I need to grow existing accounts.”</li>
+<li>“I need visibility.”</li>
+</ul>
+</section>
+<section id="outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="outcomes">9. Outcomes</h2>
+<p>Customers don’t buy CRM. They buy the result. Lead with the outcome, always.</p>
+<p>More sales · better relationships · predictable growth · less wasted effort · more confidence · faster follow-up · happier customers · better decisions.</p>
+</section>
+<section id="vocabulary-the-words-we-use-and-the-ones-we-avoid" class="level2">
+<h2 class="anchored" data-anchor-id="vocabulary-the-words-we-use-and-the-ones-we-avoid">10. Vocabulary — the words we use, and the ones we avoid</h2>
+<p>Almost nobody documents this, and it’s why most B2B messaging sounds the same. Until the market understands what we do, we speak the customer’s language, not the industry’s.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Use (the customer’s words)</th>
+<th>Avoid (until we’ve earned them)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Customers · Leads · Sales · Growth</td>
+<td>Commercial intelligence · Digital transformation</td>
+</tr>
+<tr class="even">
+<td>Relationships · Follow-up · Revenue</td>
+<td>AI-powered ecosystem · Revenue operating system</td>
+</tr>
+<tr class="odd">
+<td>Opportunities · Business · Decisions</td>
+<td>Customer orchestration · Data democratization · Next-generation platform</td>
+</tr>
+</tbody>
+</table>
+<p><em>“Commercial Health” is the one elevated term we deliberately teach — because we define it, own it, and make it concrete.</em></p>
+</section>
+<section id="signature-ideas-our-intellectual-property" class="level2">
+<h2 class="anchored" data-anchor-id="signature-ideas-our-intellectual-property">11. Signature Ideas — our intellectual property</h2>
+<p>A handful of sharp lines we repeat until people quote them back to us. These become ours.</p>
+<ul>
+<li><strong>Every business is a commercial system.</strong></li>
+<li><strong>Customer relationships are measurable.</strong></li>
+<li><strong>Follow-up is a competitive advantage.</strong></li>
+<li><strong>Every lost customer leaves evidence.</strong></li>
+<li><strong>Revenue is the outcome of better decisions.</strong></li>
+<li><strong>Clean customer data creates better business decisions.</strong></li>
+<li><strong>⭐ Manage customers with evidence, not memory.</strong></li>
+</ul>
+<p>The last one is our flagship — it fuses our two beliefs (evidence over opinion; relationships as an asset) into six words, and it points straight at Commercial Health.</p>
+<hr>
+</section>
+</section>
+<section id="part-c-putting-it-to-work" class="level1">
+<h1>Part C — Putting it to work</h1>
+<section id="from-framework-to-content" class="level2">
+<h2 class="anchored" data-anchor-id="from-framework-to-content">12. From framework to content</h2>
+<p>This is the recipe that turns the toolkit into a repeatable content machine — and the direct bridge to the Content Strategy’s pillars. To build any piece:</p>
+<ol type="1">
+<li><strong>Pick a stage</strong> of the commercial journey (Section 4) → this sets the topic.</li>
+<li><strong>Name the problem</strong> the customer feels there (Section 5) → this earns attention.</li>
+<li><strong>Open with a belief or a myth</strong> (Sections 3, 7) → this sets our point of view.</li>
+<li><strong>Frame it as a question or a job</strong> (Sections 6, 8) → this matches how they search and think.</li>
+<li><strong>Land on the outcome</strong> (Section 9) → this is what they actually want.</li>
+<li><strong>Close with a signature idea</strong> (Section 11) → this is what they remember.</li>
+<li><strong>Tie it to Commercial Health</strong> → this is what makes it <em>ours</em>, not generic CRM advice.</li>
+</ol>
+<blockquote class="blockquote">
+<p><strong>Worked example.</strong> <em>Stage:</em> Retention. <em>Problem:</em> customers quietly leave. <em>Myth:</em> “customers leave over price.” <em>Reality:</em> they leave because they feel forgotten. <em>Job:</em> “I need to stop losing customers.” <em>Outcome:</em> happier customers who stay. <em>Signature idea:</em> every lost customer leaves evidence. <em>Commercial Health tie-in:</em> retention is a vital sign — and it’s measurable.</p>
+</blockquote>
+</section>
+<section id="messaging-assets-how-we-describe-ourselves" class="level2">
+<h2 class="anchored" data-anchor-id="messaging-assets-how-we-describe-ourselves">13. Messaging assets — how we describe ourselves</h2>
+<p>Consistent descriptions, ready to paste into a bio, a deck, or a first conversation.</p>
+<ul>
+<li><strong>One-liner:</strong> <em>Sigmoid CRM helps businesses improve their Commercial Health — so they win more customers, keep them longer, and grow them.</em></li>
+<li><strong>Short (a sentence more):</strong> <em>Most businesses manage customer relationships from memory. Sigmoid CRM helps them manage with evidence — making their Commercial Health visible so they can find, win, keep, and grow customers with confidence.</em></li>
+<li><strong>Medium (for an About section):</strong> <em>Sigmoid CRM is an analytics-native CRM built on one belief: revenue is the outcome of better commercial decisions. We help businesses see their Commercial Health — lead quality, conversion, follow-up, retention, growth — and improve it, using clean data and evidence rather than opinion and memory. Part of Sigmoid Analytica: we make the world transparent.</em></li>
+</ul>
+</section>
+<section id="message-discipline-the-rules-of-consistency" class="level2">
+<h2 class="anchored" data-anchor-id="message-discipline-the-rules-of-consistency">14. Message discipline — the rules of consistency</h2>
+<p>Messaging works through <strong>repetition and restraint</strong>. The framework only pays off if we hold the line.</p>
+<ul>
+<li><strong>One big idea.</strong> Everything ladders to Commercial Health. If it doesn’t, it doesn’t ship.</li>
+<li><strong>Repeat on purpose.</strong> The signature ideas and vocabulary are said again and again, not reinvented.</li>
+<li><strong>Problem before product.</strong> We talk about the customer’s commercial problem far more than our features.</li>
+<li><strong>Plain words.</strong> We use the customer’s vocabulary; we avoid the jargon list until we’ve earned it.</li>
+<li><strong>Evidence, not hype.</strong> We say what we can support and how sure we are — the honesty <em>is</em> the brand.</li>
+<li><strong>Outcome first.</strong> We lead with what the customer gets, not what the software has.</li>
+</ul>
+<hr>
+</section>
+<section id="in-one-line" class="level2">
+<h2 class="anchored" data-anchor-id="in-one-line">In one line</h2>
+<p>Sigmoid is the company that helps businesses <strong>manage customers with evidence, not memory</strong> — and measure and improve their <strong>Commercial Health.</strong> Say that, in a hundred ways, until the market says it back.</p>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/gnkadimeng\.github\.io\/sigmoid-commercial-intelligence-lab\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../library/commercial-health-index-specification.html" class="pagination-link" aria-label="Commercial Health Index — Specification">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Commercial Health Index — Specification</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../library/commercial-knowledge-base.html" class="pagination-link" aria-label="Commercial Knowledge Base">
+        <span class="nav-page-text">Commercial Knowledge Base</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Sigmoid — Commercial Messaging Framework"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "What we say, repeatedly, until the market associates us with it"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>**Version:** 1.0 · **Status:** Working document · **Owner:** [Name] · **Last updated:** <span class="co">[</span><span class="ot">Date</span><span class="co">]</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>**Scope:** The commercial voice of Sigmoid — expressed primarily through **Sigmoid CRM**, consistent</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>with the wider Sigmoid Analytica promise, *we make the world transparent.*</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>**Inherits from:** *The Sigmoid Commercial System* (the foundational document). The SCS is the</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>worldview; this framework turns it into words.</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## How to use this framework</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>Our Content Strategy answers **why** we create content. This framework answers the harder,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>more important question:</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **What exactly are we going to say — repeatedly — until the market associates us with it?**</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>It is the bridge between strategy and every post, article, talk, and sales conversation. It is not a</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>campaign; it is a **vocabulary and a set of ideas we repeat on purpose** until they become ours in the</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>market's mind.</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>Read Parts A–C in order:</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Part A — The Foundation:** the one idea we want to own and the architecture beneath it.</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Part B — The Toolkit:** nine reservoirs of raw material for content.</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Part C — Putting it to work:** how to turn the toolkit into content, our elevator pitches, and the</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  rules of consistency.</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>**The golden rule:** *don't start with the product. Start with commerce.* Every business exists to</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>answer five questions —</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>How do we **find** customers?</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>How do we **win** customers?</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>How do we **keep** customers?</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>How do we **grow** customers?</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>How do we make **better decisions**?</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>Everything Sigmoid CRM does fits into one of those. So does everything we say.</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="fu"># Part A — The Foundation</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. The Big Idea we want to own: **Commercial Health**</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>Most brands publish random advice and are remembered for nothing. Great brands own **one idea**. Ours</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>is **Commercial Health**.</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>Every business measures its **financial** health, its **operational** health, and increasingly its</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>**employee** health. Almost no one measures their **commercial** health — yet every business has it,</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>and it determines whether they grow or quietly decline.</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Positioning statement.** *Sigmoid helps businesses measure, understand, and improve their</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Commercial Health — their ability to find, win, keep, and grow customers.*</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>This is our unifying concept. Instead of publishing scattered CRM tips, we become **the company that</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>helps organisations improve their Commercial Health.** Every article, post, conversation, and product</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>capability reinforces that single idea — which makes our messaging coherent and easy to remember.</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="fu">### Commercial Health, made measurable</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>Because we are an evidence-led company, we don't leave "health" as a metaphor. Commercial Health is</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>defined canonically in *The Sigmoid Commercial System* as **seven observable dimensions** — and what</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>can be observed can be improved:</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Dimension <span class="pp">|</span> What it reflects <span class="pp">|</span></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Lead Quality** <span class="pp">|</span> Are we attracting the right customers? <span class="pp">|</span></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Sales Effectiveness** <span class="pp">|</span> Do we convert the right opportunities? <span class="pp">|</span></span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Relationship Quality** <span class="pp">|</span> Are our customer relationships strong and current? <span class="pp">|</span></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Customer Retention** <span class="pp">|</span> Do customers stay? <span class="pp">|</span></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Customer Growth** <span class="pp">|</span> Do relationships grow in value over time? <span class="pp">|</span></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Revenue Predictability** <span class="pp">|</span> Can we forecast with confidence? <span class="pp">|</span></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Decision Quality** <span class="pp">|</span> Are our commercial decisions consistently good? <span class="pp">|</span></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>Together these form a **Commercial Health check** — a diagnostic a business can run on itself. It is a</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>content engine, a sales conversation starter, and, in time, a product capability. When someone asks</span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>"what does Sigmoid do?", the honest answer is: *we make your Commercial Health visible, and help you</span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>improve it.*</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. The Message House</span></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>Everything in this framework ladders up to Commercial Health. If a message doesn't, it's off-brand.</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a><span class="in">                         COMMERCIAL HEALTH</span></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a><span class="in">              the one idea we want the market to give us</span></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a><span class="in">                                │</span></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a><span class="in">        ┌───────────┬───────────┼───────────┬────────────┐</span></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a><span class="in">      FIND         WIN         KEEP        GROW         DECIDE</span></span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a><span class="in">    customers    customers   customers   customers      better</span></span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a><span class="in">        │            │           │           │             │</span></span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a><span class="in">  ┌─────┴────────────┴───────────┴───────────┴─────────────┴─────┐</span></span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a><span class="in">  │  Raw material (Part B):                                       │</span></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a><span class="in">  │  Beliefs · Journey · Problems · Questions · Myths ·           │</span></span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a><span class="in">  │  Jobs-to-be-done · Outcomes · Signature ideas                │</span></span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="in">  └───────────────────────────────┬──────────────────────────────┘</span></span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a><span class="in">                                   │</span></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="in">                      Spoken in plain vocabulary,</span></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a><span class="in">                      backed by evidence, not hype</span></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Apex:** the single idea (Commercial Health).</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Pillars:** the five commercial questions — every message serves one.</span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Foundation:** the toolkit — the reservoirs we draw from to make each pillar concrete.</span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a><span class="fu"># Part B — The Messaging Toolkit</span></span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>Nine reservoirs. Each one alone is worth hundreds of pieces of content.</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Our View of the World — Beliefs</span></span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>Thought leadership begins with beliefs, not products. State them plainly and people immediately</span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>understand what Sigmoid stands for.</span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>**We believe…**</span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Businesses don't fail because they lack data — they fail because they don't know what their data is</span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>  telling them.</span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Businesses don't need more software. They need better commercial decisions.</span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Customer relationships are a business asset — yet most businesses manage them like an address book.</span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The quality of a business is reflected in the quality of its customer relationships.</span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Revenue growth isn't luck. It's the result of thousands of better commercial decisions.</span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AI shouldn't replace people. It should help them make better decisions.</span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A CRM shouldn't just record yesterday. It should improve tomorrow.</span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a><span class="fu">## 4. The Commercial Journey — our messaging map</span></span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>Don't think in features. Think in the journey every business runs, again and again. Each stage has</span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>problems; every problem becomes content.</span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a><span class="in">Find customers → Qualify → Build relationships → Close → Deliver</span></span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a><span class="in">      → Retain → Grow → Learn → (repeat)</span></span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>This map is how we organise everything else: a post, an article, or a customer story can always be</span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>placed at a stage — and a stage always maps to one of the five commercial questions.</span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a><span class="fu">## 5. Commercial Problems — by stage</span></span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>We spend our time here, because problems are what customers actually feel. Think business, not</span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>software.</span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>**Finding customers** — wrong customers · expensive leads · poor referrals · weak marketing · no</span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>differentiation.</span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a>**Qualifying customers** — everyone treated the same · reps chase every lead · time wasted · poor</span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a>discovery · wrong opportunities.</span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a>**Building relationships** — slow follow-up · inconsistent communication · lost trust · no customer</span>
+<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a>history · staff leave and relationships disappear with them.</span>
+<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>**Closing sales** — deals stall and nobody knows why · discounting · decision-makers disappear ·</span>
+<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a>competitors arrive late and win.</span>
+<span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a>**Retention** — customers quietly leave · nobody notices · complaints ignored · no engagement · no</span>
+<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a>renewal process.</span>
+<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a>**Growth** — no upselling · existing customers forgotten · no cross-selling · no segmentation.</span>
+<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a>*Each bullet is a post. Each cluster is an article. Each stage is a campaign.*</span>
+<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a><span class="fu">## 6. Commercial Questions</span></span>
+<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a>Possibly our strongest content, because people search LinkedIn and Google with **questions**, not</span>
+<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a>features. Answer one a week.</span>
+<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Why do businesses lose customers?</span>
+<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Why do customers stop replying?</span>
+<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Why do good salespeople fail?</span>
+<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Why are forecasts wrong?</span>
+<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Why do customers choose competitors?</span>
+<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>How do businesses actually grow?</span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Why do businesses buy CRM and never use it?</span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Why does follow-up fail?</span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Why do referrals dry up?</span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Why do sales meetings waste time?</span>
+<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a><span class="fu">## 7. Myths vs Reality</span></span>
+<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a>People love a myth, well corrected. It's memorable and it positions us as the ones who see clearly.</span>
+<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Myth <span class="pp">|</span> Reality <span class="pp">|</span></span>
+<span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> CRM improves sales. <span class="pp">|</span> CRM only improves sales when people use it consistently. <span class="pp">|</span></span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> More leads create more revenue. <span class="pp">|</span> Better conversion often creates more revenue. <span class="pp">|</span></span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Customers leave because of price. <span class="pp">|</span> Customers often leave because they feel forgotten. <span class="pp">|</span></span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> AI replaces salespeople. <span class="pp">|</span> AI helps salespeople make better decisions. <span class="pp">|</span></span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a><span class="fu">## 8. Jobs To Be Done</span></span>
+<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a>Forget software. What **job** is the customer hiring us to do? Say it in their words.</span>
+<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"I need to know who to call."</span>
+<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"I need to know which deals matter."</span>
+<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"I need better forecasts."</span>
+<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"I need my team to follow one sales process."</span>
+<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"I need to stop losing customers."</span>
+<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"I need to grow existing accounts."</span>
+<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"I need visibility."</span>
+<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a><span class="fu">## 9. Outcomes</span></span>
+<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a>Customers don't buy CRM. They buy the result. Lead with the outcome, always.</span>
+<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a>More sales · better relationships · predictable growth · less wasted effort · more confidence · faster</span>
+<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a>follow-up · happier customers · better decisions.</span>
+<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a><span class="fu">## 10. Vocabulary — the words we use, and the ones we avoid</span></span>
+<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a>Almost nobody documents this, and it's why most B2B messaging sounds the same. Until the market</span>
+<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a>understands what we do, we speak the customer's language, not the industry's.</span>
+<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Use (the customer's words) <span class="pp">|</span> Avoid (until we've earned them) <span class="pp">|</span></span>
+<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Customers · Leads · Sales · Growth <span class="pp">|</span> Commercial intelligence · Digital transformation <span class="pp">|</span></span>
+<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Relationships · Follow-up · Revenue <span class="pp">|</span> AI-powered ecosystem · Revenue operating system <span class="pp">|</span></span>
+<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Opportunities · Business · Decisions <span class="pp">|</span> Customer orchestration · Data democratization · Next-generation platform <span class="pp">|</span></span>
+<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a>*"Commercial Health" is the one elevated term we deliberately teach — because we define it, own it, and</span>
+<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a>make it concrete.*</span>
+<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a><span class="fu">## 11. Signature Ideas — our intellectual property</span></span>
+<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a>A handful of sharp lines we repeat until people quote them back to us. These become ours.</span>
+<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Every business is a commercial system.**</span>
+<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Customer relationships are measurable.**</span>
+<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Follow-up is a competitive advantage.**</span>
+<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Every lost customer leaves evidence.**</span>
+<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Revenue is the outcome of better decisions.**</span>
+<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Clean customer data creates better business decisions.**</span>
+<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**⭐ Manage customers with evidence, not memory.**</span>
+<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a>The last one is our flagship — it fuses our two beliefs (evidence over opinion; relationships as an</span>
+<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a>asset) into six words, and it points straight at Commercial Health.</span>
+<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a><span class="fu"># Part C — Putting it to work</span></span>
+<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a><span class="fu">## 12. From framework to content</span></span>
+<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a>This is the recipe that turns the toolkit into a repeatable content machine — and the direct bridge to</span>
+<span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a>the Content Strategy's pillars. To build any piece:</span>
+<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Pick a stage** of the commercial journey (Section 4) → this sets the topic.</span>
+<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Name the problem** the customer feels there (Section 5) → this earns attention.</span>
+<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Open with a belief or a myth** (Sections 3, 7) → this sets our point of view.</span>
+<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Frame it as a question or a job** (Sections 6, 8) → this matches how they search and think.</span>
+<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Land on the outcome** (Section 9) → this is what they actually want.</span>
+<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Close with a signature idea** (Section 11) → this is what they remember.</span>
+<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span>**Tie it to Commercial Health** → this is what makes it *ours*, not generic CRM advice.</span>
+<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; **Worked example.** *Stage:* Retention. *Problem:* customers quietly leave. *Myth:* "customers leave</span></span>
+<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; over price." *Reality:* they leave because they feel forgotten. *Job:* "I need to stop losing</span></span>
+<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; customers." *Outcome:* happier customers who stay. *Signature idea:* every lost customer leaves</span></span>
+<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; evidence. *Commercial Health tie-in:* retention is a vital sign — and it's measurable.</span></span>
+<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a><span class="fu">## 13. Messaging assets — how we describe ourselves</span></span>
+<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a>Consistent descriptions, ready to paste into a bio, a deck, or a first conversation.</span>
+<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-270"><a href="#cb3-270" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**One-liner:** *Sigmoid CRM helps businesses improve their Commercial Health — so they win more</span>
+<span id="cb3-271"><a href="#cb3-271" aria-hidden="true" tabindex="-1"></a>  customers, keep them longer, and grow them.*</span>
+<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Short (a sentence more):** *Most businesses manage customer relationships from memory. Sigmoid CRM</span>
+<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a>  helps them manage with evidence — making their Commercial Health visible so they can find, win,</span>
+<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a>  keep, and grow customers with confidence.*</span>
+<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Medium (for an About section):** *Sigmoid CRM is an analytics-native CRM built on one belief:</span>
+<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a>  revenue is the outcome of better commercial decisions. We help businesses see their Commercial</span>
+<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a>  Health — lead quality, conversion, follow-up, retention, growth — and improve it, using clean data</span>
+<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a>  and evidence rather than opinion and memory. Part of Sigmoid Analytica: we make the world</span>
+<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a>  transparent.*</span>
+<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-281"><a href="#cb3-281" aria-hidden="true" tabindex="-1"></a><span class="fu">## 14. Message discipline — the rules of consistency</span></span>
+<span id="cb3-282"><a href="#cb3-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-283"><a href="#cb3-283" aria-hidden="true" tabindex="-1"></a>Messaging works through **repetition and restraint**. The framework only pays off if we hold the line.</span>
+<span id="cb3-284"><a href="#cb3-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-285"><a href="#cb3-285" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**One big idea.** Everything ladders to Commercial Health. If it doesn't, it doesn't ship.</span>
+<span id="cb3-286"><a href="#cb3-286" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Repeat on purpose.** The signature ideas and vocabulary are said again and again, not reinvented.</span>
+<span id="cb3-287"><a href="#cb3-287" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Problem before product.** We talk about the customer's commercial problem far more than our</span>
+<span id="cb3-288"><a href="#cb3-288" aria-hidden="true" tabindex="-1"></a>  features.</span>
+<span id="cb3-289"><a href="#cb3-289" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Plain words.** We use the customer's vocabulary; we avoid the jargon list until we've earned it.</span>
+<span id="cb3-290"><a href="#cb3-290" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Evidence, not hype.** We say what we can support and how sure we are — the honesty *is* the brand.</span>
+<span id="cb3-291"><a href="#cb3-291" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Outcome first.** We lead with what the customer gets, not what the software has.</span>
+<span id="cb3-292"><a href="#cb3-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-293"><a href="#cb3-293" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb3-294"><a href="#cb3-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a><span class="fu">## In one line</span></span>
+<span id="cb3-296"><a href="#cb3-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a>Sigmoid is the company that helps businesses **manage customers with evidence, not memory** — and</span>
+<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a>measure and improve their **Commercial Health.** Say that, in a hundred ways, until the market says it</span>
+<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a>back.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Sigmoid Analytica — Commercial Intelligence Lab · v0.1 (hypothesis stage)</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Governed by the Commercial Intelligence Specification (CIS)</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
