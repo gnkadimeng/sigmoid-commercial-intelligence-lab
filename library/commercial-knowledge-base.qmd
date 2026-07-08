@@ -1,0 +1,134 @@
+---
+title: "The Sigmoid Commercial Knowledge Base"
+subtitle: "The taxonomy of commercial concepts — the syllabus for everything we teach"
+---
+
+**Version:** 0.1 (Draft) · **Status:** Working document · **Owner:** [Name] · **Last updated:** [Date]
+**Inherits from:** *The Sigmoid Commercial System* · feeds *The Sigmoid Editorial System*.
+
+---
+
+## What this is
+
+Every idea we teach is a **concept.** This document is the organised list of them — the syllabus behind
+all our content, courses, and product explanations.
+
+Two rules make it powerful:
+
+1. **Every concept is a content atom.** One concept becomes an article, a LinkedIn post, a carousel, a
+   webinar, a customer guide, a course lesson, a book chapter, *and* a feature explanation.
+2. **Every concept has a home in the system.** Concepts are grouped by the Sigmoid Commercial System —
+   the five commercial questions and the commercial journey — so nothing is off-topic and every piece
+   of content can name its lineage (see *The Sigmoid Editorial System*, §2).
+
+Concepts are grouped **A–H** and numbered, so each has a stable id (e.g. `B-07 Lead Quality`) the
+editorial system can track. This is a living taxonomy: the list below is the comprehensive core
+(~180 concepts) and is designed to grow toward the full 300–500 as we teach.
+
+---
+
+## A · Foundations — the system itself
+
+*The concepts that describe how commerce works. These frame everything else.*
+
+A-01 Commercial system · A-02 Commercial health · A-03 Commercial maturity ·
+A-04 Commercial capability · A-05 The commercial learning loop · A-06 Information vs evidence ·
+A-07 Decision quality · A-08 Confidence · A-09 Commercial intelligence · A-10 Evidence over opinion ·
+A-11 Leading vs lagging indicators · A-12 Revenue as an outcome of decisions ·
+A-13 Relationships as assets · A-14 Learning as a commercial capability · A-15 Commercial execution.
+
+## B · Find customers — Acquire
+
+*How the right customers are attracted.*
+
+B-01 Ideal Customer Profile (ICP) · B-02 Market segmentation · B-03 Targeting · B-04 Positioning ·
+B-05 Differentiation · B-06 Value proposition · B-07 Lead quality · B-08 Lead sources ·
+B-09 Demand generation · B-10 Inbound · B-11 Outbound / prospecting · B-12 Referrals ·
+B-13 Partnerships / channel · B-14 Brand awareness · B-15 Content marketing · B-16 Cost per lead ·
+B-17 Marketing-qualified lead (MQL) · B-18 Total addressable market (TAM) · B-19 Buyer personas ·
+B-20 Message-market fit.
+
+## C · Win customers — Qualify & Sell
+
+*How opportunities become customers.*
+
+C-01 Lead qualification · C-02 Discovery · C-03 BANT (Budget, Authority, Need, Timing) ·
+C-04 MEDDICC · C-05 Sales process · C-06 Sales stages · C-07 Pipeline · C-08 Opportunity ·
+C-09 Buying committee / roles · C-10 Decision-maker · C-11 Champion · C-12 Economic buyer ·
+C-13 Objection handling · C-14 Discounting · C-15 Proposal · C-16 Negotiation ·
+C-17 Conversion / close rate · C-18 Win/loss analysis · C-19 Sales-cycle length · C-20 Deal velocity ·
+C-21 Sales-qualified lead (SQL) · C-22 Competitor displacement · C-23 Buying signals ·
+C-24 Sales enablement · C-25 Follow-up (in-deal).
+
+## D · Keep customers — Deliver & Retain
+
+*How customers are kept, and how risk is seen early.*
+
+D-01 Onboarding · D-02 Delivery / fulfilment · D-03 Customer experience (CX) · D-04 Customer success ·
+D-05 Follow-up discipline · D-06 Communication cadence · D-07 Customer history / context ·
+D-08 Relationship continuity · D-09 Engagement · D-10 Customer satisfaction (CSAT) ·
+D-11 Net Promoter Score (NPS) · D-12 Complaints handling · D-13 Churn · D-14 Churn prediction ·
+D-15 At-risk signals / early warning · D-16 Renewal · D-17 Retention rate · D-18 Win-back / save ·
+D-19 Trust · D-20 Service-level expectations.
+
+## E · Grow customers — Grow
+
+*How relationships grow in value over time.*
+
+E-01 Account management · E-02 Upsell · E-03 Cross-sell · E-04 Expansion revenue ·
+E-05 Customer segmentation (value tiers) · E-06 Key accounts · E-07 Account planning ·
+E-08 Customer Lifetime Value (CLV) · E-09 Net revenue retention (NRR) · E-10 Advocacy ·
+E-11 Referral generation · E-12 Whitespace analysis · E-13 Share of wallet · E-14 Loyalty.
+
+## F · Decide better — Measure & Improve
+
+*How the business sees itself and improves its decisions.*
+
+F-01 Commercial metrics · F-02 Pipeline health · F-03 Forecasting · F-04 Forecast accuracy ·
+F-05 Revenue predictability · F-06 Dashboards · F-07 Decision frameworks · F-08 Hypotheses ·
+F-09 Evidence register · F-10 Validation · F-11 Message / A-B testing · F-12 Attribution ·
+F-13 Cohort analysis · F-14 Sensitivity analysis · F-15 Confidence grades · F-16 Provenance ·
+F-17 Commercial review cadence · F-18 Benchmarking · F-19 Prioritisation · F-20 Scenario planning.
+
+## G · Data, AI & technology
+
+*The tools that support the system — never replace it.*
+
+G-01 CRM · G-02 Data quality · G-03 Clean customer data · G-04 Single view of the customer ·
+G-05 Customer data platform · G-06 Analytics · G-07 Reporting · G-08 Predictive models ·
+G-09 AI augmentation · G-10 AI vs automation · G-11 Explainability · G-12 Decision support ·
+G-13 Integrations · G-14 Data governance · G-15 Human-in-the-loop.
+
+## H · Themes & beliefs — the angles we own
+
+*Cross-cutting ideas that carry our point of view (our signature ideas live here).*
+
+H-01 Manage customers with evidence, not memory · H-02 Follow-up is a competitive advantage ·
+H-03 Every lost customer leaves evidence · H-04 Clean data creates better decisions ·
+H-05 Customer relationships are measurable · H-06 AI should strengthen human judgement ·
+H-07 Every business is a commercial system · H-08 Commercial Health as a vital sign ·
+H-09 The South African commercial reality · H-10 Opinion → evidence.
+
+---
+
+## How each concept becomes content
+
+Every entry above is a reusable atom. The editorial system draws from it and expands it into formats:
+
+| From one concept… | …we can produce |
+|---|---|
+| e.g. **B-07 Lead Quality** | a LinkedIn post · a carousel · an article · a webinar · a customer guide · a course lesson · a chapter · a product-feature explanation |
+
+That is the leverage: **write the concept once, teach it many ways.** A single well-understood concept
+can fuel a month of content across channels — and the same concept explains a product capability to a
+buyer.
+
+## Using and growing the taxonomy
+
+- **Tag every piece of content** with its concept id(s). Over time this shows what we've taught, what
+  we've over-covered, and the gaps.
+- **Add concepts as the market teaches us** — new objections, new questions, new language captured as
+  evidence become new entries. The Knowledge Base grows the way the SCS says everything should:
+  from evidence.
+- **The Academy modules** (Commercial Health, Decisions, Learning, Systems, Intelligence, AI,
+  Analytics) are simply clusters of these concepts, sequenced.

@@ -1,0 +1,321 @@
+---
+title: "The Sigmoid Commercial System"
+subtitle: "An evidence-based framework for building healthier businesses"
+---
+
+**Version:** 1.0 · **Status:** Foundational document · **Owner:** [Name] · **Last updated:** [Date]
+
+> **This is the root document.** Everything Sigmoid builds, writes, researches, or sells inherits from
+> the ideas set out here. Where a product decision, a piece of content, or a strategy disagrees with
+> this document, this document governs the *thinking*; the artifact is adjusted, not the system.
+
+---
+
+## Preface
+
+Businesses have never had more customer data than they do today. Yet many still struggle to answer
+simple questions:
+
+- Why are we losing customers?
+- Why are some salespeople consistently successful and others not?
+- Which customers should we focus on?
+- Why are our forecasts inaccurate?
+- Why does growth feel unpredictable?
+
+Most organisations **collect information**. Few transform that information into **evidence**. Fewer
+still use that evidence to **improve their commercial decisions**.
+
+The Sigmoid Commercial System (SCS) was developed to address this gap. It is a practical framework for
+understanding how businesses grow, how commercial performance can be measured, and how better evidence
+leads to better decisions.
+
+It is not a CRM methodology. It is not a sales methodology. **It is a way of understanding commerce
+itself** — and, from that understanding, a way of building healthier businesses.
+
+---
+
+# Part I — The Nature of Commerce
+
+Every business exists to create value for customers.
+
+Whether it sells software, manufactures products, provides professional services, or operates a mine,
+every organisation faces the same commercial challenge: it must **find** customers, **earn their
+trust**, **deliver value**, **retain their business**, and **grow** those relationships over time.
+
+Success is rarely determined by a single event. It is the result of **thousands of commercial
+decisions** made every day:
+
+- Which customers should we pursue?
+- Which opportunities deserve attention?
+- Which proposal should we submit?
+- Should we discount?
+- Which customers are at risk?
+- Where should we invest next?
+
+Every one of these decisions shapes the future of the business. Businesses often describe the results
+as luck, experience, or instinct. We see them differently:
+
+> Revenue is the outcome of commercial decisions.
+> Customer retention is the outcome of commercial decisions.
+> Growth is the outcome of commercial decisions.
+
+Even failure is usually the accumulated result of commercial decisions that were delayed, uninformed,
+or simply wrong.
+
+The central question, therefore, is not *"how do we make better software?"* It is:
+
+> **How do we help organisations make better commercial decisions?**
+
+That question is the reason the SCS exists.
+
+---
+
+# Part II — Businesses Are Commercial Systems
+
+A business is not a collection of departments. It is a **living commercial system** in which every part
+influences the others.
+
+- Marketing influences lead quality.
+- Lead quality influences sales.
+- Sales influence customer experience.
+- Customer experience influences retention.
+- Retention influences growth.
+- Growth influences investment.
+- Investment creates new opportunities.
+
+Customers do not appear by chance. Sales do not happen in isolation. Loyalty is not automatic. Growth
+is not accidental. Everything is connected — and the connections form a cycle:
+
+```
+        Customers
+           ↓
+       Relationships
+           ↓
+        Decisions
+           ↓
+         Actions
+           ↓
+        Outcomes
+           ↓
+        Learning
+           ↓
+        Customers  (repeat)
+```
+
+Seeing the business as a system is the first shift the SCS asks for. Once you see the system, you stop
+treating symptoms in one department and start improving the flows between them.
+
+---
+
+# Part III — The Five Commercial Questions
+
+Beneath the system are five questions every business answers continuously, whether it realises it or
+not:
+
+1. How do we **find** customers?
+2. How do we **win** customers?
+3. How do we **keep** customers?
+4. How do we **grow** customers?
+5. How do we make **better decisions**?
+
+Everything in commerce maps to one of these. They are the load-bearing pillars of the SCS: every
+capability, every metric, every decision, and every tool exists to help a business answer one of them
+better. The fifth question sits beneath the other four — because *how well you decide* determines how
+well you find, win, keep, and grow.
+
+---
+
+# Part IV — Commercial Health
+
+Financial statements describe what has **already happened**. They are the accounting of the past.
+
+**Commercial Health describes whether the business is likely to succeed tomorrow.** It is the leading
+indicator that financial statements cannot provide.
+
+Commercial Health reflects an organisation's ability to:
+
+- Attract the right customers.
+- Convert opportunities into sales.
+- Build strong customer relationships.
+- Retain customers.
+- Grow existing accounts.
+- Predict future revenue.
+- Learn from commercial performance.
+
+Commercial Health is not a single metric. It is a **system of dimensions**, each observable and each
+improvable:
+
+| Dimension | What it reflects |
+|---|---|
+| **Lead Quality** | Are we attracting the right customers? |
+| **Sales Effectiveness** | Do we convert the right opportunities? |
+| **Relationship Quality** | Are our customer relationships strong and current? |
+| **Customer Retention** | Do customers stay? |
+| **Customer Growth** | Do relationships grow in value over time? |
+| **Revenue Predictability** | Can we forecast with confidence? |
+| **Decision Quality** | Are our commercial decisions consistently good? |
+
+Because these dimensions are observable, Commercial Health can be **measured** — and what can be
+measured can be **improved**. Over time, the SCS expresses Commercial Health as a score, so a business
+can see its condition, track it, and act on it, the way it already does with financial health.
+
+Commercial Health is the central framework of the SCS. Everything else exists to move it.
+
+---
+
+# Part V — The Commercial Learning Loop
+
+If Commercial Health is what we improve, the **Commercial Learning Loop** is *how* we improve it. It is
+the most important model in the system.
+
+```
+   Evidence
+      ↓
+   Insight
+      ↓
+   Decision
+      ↓
+   Action
+      ↓
+   Outcome
+      ↓
+   Learning
+      ↓
+   Evidence  (repeat)
+```
+
+The loop turns on a distinction most businesses miss:
+
+> **Information tells us what happened. Evidence helps explain why it happened.**
+
+Businesses collect enormous amounts of information — customer records, emails, meetings, sales
+activities, invoices, support requests — and most of it is never transformed into evidence. That is why
+businesses do not improve simply because they have more data. **They improve because they understand
+what their data means.**
+
+Evidence creates insight; insight improves decisions; decisions drive actions; actions create
+outcomes; outcomes generate new evidence — and the cycle repeats. **Businesses that learn faster
+improve faster.**
+
+Everything Sigmoid builds — CRM, analytics, AI, audits, dashboards, the Commercial Intelligence Lab —
+exists to make this loop turn faster and more honestly.
+
+---
+
+# Part VI — Commercial Capabilities
+
+Businesses do not improve by intention. They improve by developing **capabilities** — repeatable
+strengths that raise Commercial Health. The SCS names eight:
+
+- **Acquire** — attract the right customers.
+- **Qualify** — focus effort on the opportunities that matter.
+- **Sell** — convert opportunities into customers, consistently.
+- **Deliver** — keep the promises that were made.
+- **Retain** — keep customers, and notice early when they are at risk.
+- **Grow** — expand relationships in value over time.
+- **Measure** — see commercial performance clearly and honestly.
+- **Improve** — turn what is measured into better decisions.
+
+Each capability can be assessed, developed, and strengthened. Together they are the practical means by
+which a business raises its Commercial Health.
+
+---
+
+# Part VII — Commercial Maturity
+
+Not every business operates the loop equally well. Commercial maturity describes how consistently and
+how evidence-led a business's commercial decisions are. The SCS defines five levels, so an
+organisation can locate itself and see the next step.
+
+| Level | Name | How the business decides |
+|---|---|---|
+| **1** | **Reactive** | Decisions made ad hoc, from memory and instinct. |
+| **2** | **Organised** | Consistent processes exist, but decisions rest on opinion. |
+| **3** | **Measured** | Performance is tracked; decisions use metrics. |
+| **4** | **Evidence-Driven** | Decisions are made from evidence, with explicit confidence. |
+| **5** | **Commercial Intelligence** | The learning loop is systematic; the business improves by design. |
+
+Maturity is not about company size or software spend. It is about **how decisions are made.** The goal
+of the SCS is to move an organisation up this ladder.
+
+---
+
+# Part VIII — Decision Frameworks
+
+The SCS becomes practical at the point of decision. The same commercial decisions recur in every
+business:
+
+- Which **lead** do we pursue?
+- Which **customer** do we prioritise?
+- Which **proposal** do we submit?
+- Which **opportunity** do we back?
+- Which **investment** do we make?
+
+The SCS approach to each is the same: **decide with evidence, and be explicit about confidence.** A
+good decision names the question, the evidence behind it, the reasoning used, and how sure we are — so
+it can be reviewed, learned from, and improved. This is where structured decision frameworks, and in
+time AI, help: not by making the decision for us, but by making the evidence and the confidence
+visible. (This is the discipline the Commercial Intelligence Lab operationalises.)
+
+---
+
+# Part IX — The Role of Technology
+
+Technology is where most companies begin. In the SCS, it comes last — on purpose.
+
+> **CRM is not the system. CRM supports the system.**
+
+Analytics supports the system. AI supports the system. Every tool exists to help the business run the
+Commercial Learning Loop and raise its Commercial Health:
+
+- **CRM** captures the relationships and activity that become evidence.
+- **Analytics** turns that evidence into insight.
+- **AI** strengthens human judgement at the point of decision — it does not replace it.
+
+Technology **enables**; it does not replace thinking. A business does not become healthier because it
+owns more software. It becomes healthier because it consistently makes better commercial decisions —
+and uses technology to do so.
+
+---
+
+# Part X — The Sigmoid Principles
+
+The system reduces to ten principles. Everything above is their explanation; everything Sigmoid does is
+their application.
+
+1. **Businesses are commercial systems.**
+2. **Every commercial outcome is the result of previous decisions.**
+3. **Better evidence leads to better decisions.**
+4. **Better decisions improve Commercial Health.**
+5. **Customer relationships are measurable.**
+6. **Follow-up is a competitive advantage.**
+7. **AI should strengthen human judgement.**
+8. **Revenue is earned through consistent commercial execution.**
+9. **Learning is a commercial capability.**
+10. **Evidence over opinion.**
+
+---
+
+## What this means — how everything inherits from the SCS
+
+This document is the foundation. Everything Sigmoid produces should trace back to it:
+
+| Sigmoid does… | …relationship to the system |
+|---|---|
+| **CRM (Sigmoid CRM)** | *implements* the system |
+| **Commercial Health** | *measures* the system |
+| **Commercial Intelligence Lab** | *evaluates decisions within* the system |
+| **Content** | *teaches* the system |
+| **Consulting** | *improves* the system |
+| **AI** | *augments* the system |
+| **Research** | *validates and evolves* the system |
+
+And it gives us one test for everything we build, write, or ship:
+
+> **Does this help someone make a better commercial decision?**
+>
+> If the answer is yes, it belongs at Sigmoid. If the answer is no, it doesn't.
+
+Our mission follows directly: **to help organisations make better commercial decisions through
+evidence.** Sometimes that means CRM software. Sometimes analytics. Sometimes AI. Sometimes a decision
+framework. Technology is never the purpose — it is one of the tools. The purpose does not change.

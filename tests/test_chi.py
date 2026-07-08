@@ -7,8 +7,10 @@ from src.chi import (
     commercial_health_index,
     interpret_band,
     load_chi,
+    load_measured,
     score_dimension,
 )
+from src.utils import load_sample
 
 FW = load_chi()
 DIM_IDS = [d["id"] for d in FW["dimensions"]]
@@ -135,3 +137,39 @@ def test_chi_no_input_is_none():
     result = commercial_health_index({}, FW)
     assert result["chi"] is None
     assert result["band"] is None
+
+
+# --- measured mode (Phase 9) ------------------------------------------------
+
+def test_measured_overrides_self_report_and_raises_confidence():
+    responses = all_answers(3)                       # self-report → 50, grade C
+    measured = {"D1": {"score": 90, "confidence": "B", "source": "crm"}}
+    result = commercial_health_index(responses, FW, measured)
+    d1 = next(d for d in result["dimensions"] if d["id"] == "D1")
+    assert d1["score"] == 90 and d1["mode"] == "measured" and d1["confidence"] == "B"
+
+
+def test_overall_confidence_is_lowest_of_contributing_dimensions():
+    # one self-assessed dimension caps the whole index at C, even with measured others
+    responses = all_answers(3)
+    measured = {d["id"]: {"score": 70, "confidence": "B"} for d in FW["dimensions"][1:]}
+    result = commercial_health_index(responses, FW, measured)
+    assert result["confidence"] == "C"               # D1 is still self-reported
+
+
+def test_all_measured_raises_overall_to_b():
+    measured = {d["id"]: {"score": 70, "confidence": "B"} for d in FW["dimensions"]}
+    result = commercial_health_index({}, FW, measured)
+    assert result["confidence"] == "B"
+    assert result["chi"] == pytest.approx(70, abs=0.5)
+
+
+def test_measured_template_loads_empty():
+    # header-only template → no measured data yet → self-assessment stays in force
+    assert load_measured() == {}
+
+
+def test_measured_csv_has_expected_columns():
+    df = load_sample("commercial_health_measured.csv")
+    for col in ["business_id", "dimension_id", "score", "confidence", "source", "as_of"]:
+        assert col in df.columns

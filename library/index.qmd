@@ -1,0 +1,89 @@
+---
+title: "Library"
+subtitle: "The Sigmoid Commercial System — the doctrine, in one place"
+---
+
+::: {.page-context}
+::: {.pc-crumb}
+Library <span class="sep">›</span> Overview
+:::
+::: {.pc-supports}
+**This is the thinking behind everything Sigmoid does.** The documents below define how we understand
+commerce, measure it, and talk about it.
+:::
+::: {.pc-row}
+<span class="chip chip-neutral no-dot">Foundational doctrine</span>
+<span class="pc-next">[Start with the System](the-sigmoid-commercial-system.qmd)</span>
+:::
+:::
+
+::: {.section-lead}
+Most companies sell a product. We teach a discipline. These documents are that discipline — a way of
+understanding commerce as a system, measuring its health, and improving it with evidence. Everything
+else Sigmoid builds inherits from them.
+:::
+
+## The documents
+
+::: {.cil-cards}
+::: {.cil-card}
+<div class="card-kicker">The worldview</div>
+<h3>The Sigmoid Commercial System</h3>
+<p>The foundational document: businesses are commercial systems, outcomes are the result of decisions,
+and better evidence makes healthier businesses.</p>
+<span class="card-go">Read the system</span>
+[](the-sigmoid-commercial-system.qmd){.stretched-link aria-label="Open The Sigmoid Commercial System"}
+:::
+
+::: {.cil-card}
+<div class="card-kicker">Measurement</div>
+<h3>Commercial Health Index — Specification</h3>
+<p>The canonical definition of Commercial Health: seven dimensions, indicators, scoring, evidence,
+confidence, and interpretation. One spec, many implementations.</p>
+<span class="card-go">Read the specification</span>
+[](commercial-health-index-specification.qmd){.stretched-link aria-label="Open the CHI Specification"}
+:::
+
+::: {.cil-card}
+<div class="card-kicker">Language</div>
+<h3>Commercial Messaging Framework</h3>
+<p>What we say, repeatedly, until the market associates us with it — beliefs, questions, myths,
+signature ideas, and the vocabulary we use.</p>
+<span class="card-go">Read the framework</span>
+[](commercial-messaging-framework.qmd){.stretched-link aria-label="Open the Messaging Framework"}
+:::
+
+::: {.cil-card}
+<div class="card-kicker">Syllabus</div>
+<h3>Commercial Knowledge Base</h3>
+<p>The taxonomy of commercial concepts — the ~180-concept syllabus behind every article, post, course,
+and product explanation.</p>
+<span class="card-go">Browse the taxonomy</span>
+[](commercial-knowledge-base.qmd){.stretched-link aria-label="Open the Knowledge Base"}
+:::
+
+::: {.cil-card}
+<div class="card-kicker">Quick reference</div>
+<h3>The System — At a Glance</h3>
+<p>One page: the core idea, the five questions, Commercial Health, the learning loop, the maturity
+ladder, and the ten principles.</p>
+<span class="card-go">Open the one-pager</span>
+[](sigmoid-commercial-system-one-pager.qmd){.stretched-link aria-label="Open the one-pager"}
+:::
+
+::: {.cil-card}
+<div class="card-kicker">Try it</div>
+<h3>Commercial Health Check</h3>
+<p>The specification, made real: score your Commercial Health live, see your maturity band, and find
+your weakest dimensions.</p>
+<span class="card-go">Take the check</span>
+[](../commercial-health/index.qmd){.stretched-link aria-label="Open the Commercial Health Check"}
+:::
+:::
+
+::: {.callout-note appearance="simple" icon=false}
+**How to read the set.** Start with *The Sigmoid Commercial System* (the worldview). *Commercial Health*
+is how we measure it; the *Messaging Framework* is how we talk about it; the *Knowledge Base* is the
+syllabus for teaching it; the *Health Check* is the system made usable. Each inherits from the one
+before it.
+:::

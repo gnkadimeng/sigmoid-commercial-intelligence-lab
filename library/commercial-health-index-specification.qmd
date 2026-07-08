@@ -1,0 +1,223 @@
+---
+title: "Commercial Health Index — Specification"
+subtitle: "One specification, many implementations — the canonical definition of Commercial Health"
+---
+
+**Version:** 0.1 (Draft) · **Status:** Product Specification · **Authors:** Sigmoid Analytica
+**Inherits from:** *The Sigmoid Commercial System*, Part IV · aligned with the *Commercial Intelligence
+Specification* (CIS).
+
+> **This is the canonical definition of the Commercial Health Index (CHI).** Every place a Commercial
+> Health score appears — the website assessment, the CRM dashboard, onboarding, consulting, executive
+> reports — MUST compute it from this specification. One definition; many surfaces. Where a surface and
+> this document disagree, this document governs.
+
+---
+
+## 1. Introduction
+
+*The Sigmoid Commercial System* argues that Commercial Health is observable and can be measured. This
+specification makes that operational: it defines **what the Commercial Health Index measures, how it is
+scored, how confident we are in it, how it is interpreted, and what to do to improve it** — in a way
+that is independent of any single implementation.
+
+The CHI turns a promise ("score your Commercial Health") into a product. It also changes the sales
+conversation from *"here is our CRM"* to *"your Commercial Health score is 48/100 — here is why, here is
+what to improve first, and here is how the platform helps."* That is consultative, and it is only
+possible if the score means the same thing everywhere. This document guarantees that.
+
+## 2. Scope & Principles
+
+The CHI Specification governs the measurement of Commercial Health for an organisation. It defines the
+model, scoring, evidence, confidence, interpretation, and improvement logic. It does **not** prescribe a
+user interface; it prescribes the numbers and their meaning.
+
+Governing principles (inherited from the SCS and CIS):
+
+1. **Transparent** — no black box. Every score can be explained down to its inputs.
+2. **Evidence-graded** — a score always carries how it was derived and how confident we are.
+3. **Observable** — every dimension reduces to indicators that can be seen or measured.
+4. **Improvable** — every score points to a next action, not just a grade.
+5. **Weights are data** — weightings are declared, versioned, and tunable, never hidden.
+6. **Opinion → evidence** — the CHI is designed to graduate from self-report to measurement.
+
+## 3. The Commercial Health Model
+
+Commercial Health is composed of **seven dimensions** (the canonical set from SCS Part IV). Each is
+scored 0–100; the CHI is their weighted mean.
+
+| # | Dimension | Definition |
+|---|---|---|
+| D1 | **Lead Quality** | The degree to which the organisation attracts the right customers, from sources it understands. |
+| D2 | **Sales Effectiveness** | The degree to which the right opportunities are converted, through a repeatable process. |
+| D3 | **Relationship Quality** | The strength, currency, and continuity of customer relationships. |
+| D4 | **Customer Retention** | The organisation's ability to keep customers and detect risk early. |
+| D5 | **Customer Growth** | The degree to which existing relationships grow in value over time. |
+| D6 | **Revenue Predictability** | The reliability of forecasts and the honesty of the pipeline. |
+| D7 | **Decision Quality** | The degree to which commercial decisions are made from evidence and reviewed. |
+
+## 4. Indicators
+
+Each dimension is expressed through **indicators**. There are two kinds, and the CHI supports both:
+
+- **Self-assessed indicators** — statements a person rates (the basis of the website assessment).
+- **Measured signals** — quantities computed from data (the basis of the CRM dashboard).
+
+The same dimension can be scored either way; the difference is *confidence* (Section 8).
+
+| Dim | Self-assessed indicators (rate 1–5) | Measured signals (from data) |
+|---|---|---|
+| **D1** | Clear ICP and most leads match it · we know which sources produce customers who stay · we de-prioritise poor-fit leads | lead→customer rate by source · % leads matching ICP · cost per won customer |
+| **D2** | One consistent sales process · we know stage-by-stage conversion · we win most opportunities we pursue | stage conversion rates · overall win rate · sales-cycle length |
+| **D3** | History available to the whole team · relationships survive staff leaving · we follow up when we say | follow-up completion rate · time-to-follow-up · % contacts with recent activity |
+| **D4** | We spot at-risk customers early · we have a renewal process · we know why customers leave | churn rate · early-warning coverage · renewal rate |
+| **D5** | We actively grow accounts · we segment by value · existing customers drive real revenue | expansion revenue % · net revenue retention · share of revenue from existing customers |
+| **D6** | Forecasts are usually close · pipeline reflects reality · leaders see performance without asking | forecast vs actual variance · pipeline coverage ratio · stale-deal % |
+| **D7** | Decisions made from evidence not memory · we can explain why we pursued/dropped deals · we review past decisions | % decisions with recorded rationale · decision-review cadence · evidence coverage |
+
+## 5. Assessment Questions
+
+The **self-assessment instrument** is the canonical question set (used directly by the website
+assessment and onboarding). Each dimension has three statements, rated **1 (strongly disagree)** to
+**5 (strongly agree)**. The 21 statements are those listed as *self-assessed indicators* in Section 4.
+Implementations MUST use these exact statements so scores are comparable across surfaces.
+
+## 6. Scoring Model
+
+The scoring is transparent and deterministic.
+
+- **Indicator score.** A self-assessed answer `a ∈ {1..5}` → `(a − 1) / 4 × 100` (a value 0–100). A
+  measured signal is mapped to 0–100 by its declared rubric/benchmark (Section 13).
+- **Dimension score** `Dᵢ` = the mean of that dimension's indicator scores.
+- **Commercial Health Index** `CHI` = the **weighted mean** of the seven dimension scores using the
+  weights in Section 7.
+- All scores are reported on **0–100**, rounded to the nearest whole number, alongside their confidence
+  (Section 8).
+
+```
+indicator (0–100) → dimension = mean(indicators) → CHI = Σ(wᵢ · Dᵢ)
+```
+
+## 7. Weighting Model
+
+Weights are **declared data**, not hidden logic. At v0.1 the seven dimensions are **equally weighted**
+(1/7 each). This is a starting hypothesis; weights MUST be versioned and MAY be tuned as evidence
+accumulates about which dimensions most predict commercial outcomes.
+
+| Dim | D1 | D2 | D3 | D4 | D5 | D6 | D7 |
+|---|---|---|---|---|---|---|---|
+| Weight (v0.1) | 0.143 | 0.143 | 0.143 | 0.143 | 0.143 | 0.143 | 0.143 |
+
+## 8. Evidence & Confidence Model
+
+Borrowing directly from the CIS: **a CHI score is never just a number — it carries a confidence grade**
+that reflects the evidence behind it.
+
+| Evidence behind a score | Confidence grade |
+|---|---|
+| Self-report only (assessment) | **C — Indicative** |
+| A single measured signal | **B — Substantiated** |
+| Converged, benchmarked measured signals | **A — Validated** |
+| No usable input | **D — Hypothesis** |
+
+Each **dimension** reports its own confidence, and the **overall CHI** reports the lowest confidence
+among the dimensions that materially drive it. A score is always shown as *value + grade* — e.g.,
+**"CHI 48 (grade C, self-reported)."** This is what keeps the index honest and consultative: we never
+imply more certainty than the evidence supports.
+
+## 9. Interpretation Model
+
+The CHI maps onto the SCS commercial-maturity ladder, so a score is a diagnosis and a next step — not a
+grade to feel good or bad about.
+
+| CHI | Band | Meaning |
+|---|---|---|
+| 0–20 | **1 · Reactive** | Commercial decisions are ad hoc, from memory |
+| 21–40 | **2 · Organised** | Process exists; decisions rest on opinion |
+| 41–60 | **3 · Measured** | Performance is tracked; metrics inform decisions |
+| 61–80 | **4 · Evidence-Driven** | Decisions made from evidence, with confidence |
+| 81–100 | **5 · Commercial Intelligence** | The business improves by design |
+
+Interpretation MUST always surface the **lowest-scoring dimensions** as the priority. The index is a map
+of where to improve.
+
+## 10. Improvement Model
+
+For every dimension, the specification defines the **next move** that raises it — and names how the
+Sigmoid platform helps. This is what turns a score into a conversation.
+
+| Dim | If it's low, the next move… | …and the platform helps by |
+|---|---|---|
+| D1 Lead Quality | Define the ICP; track source → outcome | Capturing lead source and linking it to won/lost |
+| D2 Sales Effectiveness | Adopt one process; measure stage conversion | Enforcing stages and computing conversion |
+| D3 Relationship Quality | Make follow-up a system, not a memory | Follow-up tasks, cadences, shared history |
+| D4 Customer Retention | Build early-warning + a renewal process | Engagement signals and at-risk flags |
+| D5 Customer Growth | Segment by value; plan expansion | Account segmentation and whitespace views |
+| D6 Revenue Predictability | Clean the pipeline; compare forecast to actual | Pipeline hygiene and forecast-vs-actual |
+| D7 Decision Quality | Record decision rationale; review it | Evidence capture and decision provenance |
+
+## 11. Implementations
+
+**One specification, many implementations.** Each surface computes the *same* CHI from *this* document.
+
+| Implementation | Mode | Confidence | Purpose |
+|---|---|---|---|
+| **Website assessment** | Self-assessed (21 questions) | C | Lead magnet; instant score + top gaps + book a walkthrough |
+| **CRM dashboard** | Measured from CRM data | B → A over time | Live Commercial Health, tracked like financial health |
+| **Onboarding** | Self-assessed baseline | C | Sets the customer's improvement priorities from day one |
+| **Consulting engagement** | Self + measured + interviews | up to A | Full diagnosis and an improvement roadmap |
+| **Executive report** | Measured, over time | B/A | CHI trend beside financial health, for leadership |
+
+The **sales motion** the CHI enables: *"Your Commercial Health is 48 (grade C). Your weakest dimensions
+are Retention and Revenue Predictability. Here's why, here's what to fix first, and here's exactly how
+the platform moves those two."*
+
+## 12. Data Model
+
+For measured mode, each dimension declares its **required inputs** (no hidden variables, per the CIS).
+Where inputs are unavailable, the dimension falls back to self-assessed mode and its confidence drops
+to C. Implementations MUST record which mode produced each dimension score.
+
+## 13. Governance, Versioning & Validation
+
+- The CHI model, indicators, questions, and weights are **versioned**; changes are made deliberately and
+  recorded (append-only, like the CIS).
+- Weight and rubric changes require a rationale and, ideally, evidence.
+- The scoring logic MUST be covered by automated tests (ranges 0–100, missing-value safety, determinism)
+  — the same testing standard as every Sigmoid framework.
+- Validation follows the CIS validation model: logical (the maths runs), statistical (do the dimensions
+  predict outcomes?), and continuous (has new evidence changed the weights?).
+
+## 14. Relationship to the SCS and CIS
+
+- **SCS Part IV** defines *what* Commercial Health is. This spec defines *how it is measured.*
+- The **CIS** governs how evidence and confidence work; the CHI adopts its evidence and confidence
+  model wholesale.
+- The **Commercial Intelligence Lab** is the natural home of the reference implementation: the seven
+  dimensions and weights as a framework YAML, the scoring as a tested function, the assessment as an
+  interactive page.
+
+## 15. Success Criteria
+
+A CHI implementation compliant with this specification shall:
+
+1. Produce the same score from the same inputs, on any surface.
+2. Always report a score *with* its confidence grade.
+3. Explain any score down to its indicators.
+4. Surface the lowest dimensions as the improvement priority.
+5. Support both self-assessed and measured modes, and record which was used.
+6. Improve over time as inputs move from opinion to evidence.
+
+## 16. Future Work
+
+- Empirically tune the dimension weights against real commercial outcomes.
+- Define benchmark rubrics for each measured signal (industry / segment).
+- Add automated confidence computation from data coverage.
+- Longitudinal CHI (trend, velocity of improvement) as a leading indicator in its own right.
+
+---
+
+*Commercial Health is the organising idea behind everything Sigmoid does. Competitors can copy CRM
+features, dashboards, even AI. They cannot easily copy a rigorously defined, consistently implemented,
+evidence-graded measure of a business's ability to grow. This specification is how we make that measure
+real — and keep it ours.*

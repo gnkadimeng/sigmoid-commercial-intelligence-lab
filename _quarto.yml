@@ -10,6 +10,7 @@ project:
     - "frameworks/index.qmd"
     - "dashboards/*.qmd"
     - "commercial-health/*.qmd"
+    - "library/*.qmd"
     - "working-paper/*.qmd"
     - "governance/*.qmd"
     - "cis/commercial-intelligence-specification.md"
@@ -50,6 +51,8 @@ website:
         file: dashboards/index.qmd
       - text: "Commercial Health"
         file: commercial-health/index.qmd
+      - text: "Library"
+        file: library/index.qmd
       - text: "Working Paper"
         file: working-paper/index.qmd
       - text: "Governance"
@@ -167,6 +170,23 @@ website:
               file: docs/decision-records/ADR-0002-cis-as-governance-model.md
         - text: "Testing Standard"
           file: governance/testing-standard.qmd
+
+    - id: library
+      title: "Library"
+      style: floating
+      contents:
+        - text: "Overview"
+          file: library/index.qmd
+        - text: "The Sigmoid Commercial System"
+          file: library/the-sigmoid-commercial-system.qmd
+        - text: "Commercial Health Index — Specification"
+          file: library/commercial-health-index-specification.qmd
+        - text: "Commercial Messaging Framework"
+          file: library/commercial-messaging-framework.qmd
+        - text: "Commercial Knowledge Base"
+          file: library/commercial-knowledge-base.qmd
+        - text: "The System — At a Glance"
+          file: library/sigmoid-commercial-system-one-pager.qmd
 
   page-footer:
     left: "Sigmoid Analytica — Commercial Intelligence Lab · v0.1 (hypothesis stage)"

@@ -103,6 +103,15 @@ bands:
   - { min: 61, max: 80,  level: 4, name: "Evidence-Driven",       meaning: "Decisions made from evidence, with confidence." }
   - { min: 81, max: 100, level: 5, name: "Commercial Intelligence", meaning: "The business improves by design." }
 
+# Measured mode (Phase 9): a dimension score can also be supplied from data, which raises its
+# confidence. Provide measured scores in data/sample/commercial_health_measured.csv with columns
+# business_id, dimension_id, score (0..100), confidence (B|A), source, as_of. Empty until real data
+# exists — the index then stays self-assessed (grade C). See the Commercial Health Index Specification.
+measured_mode:
+  input: "data/sample/commercial_health_measured.csv"
+  raises_confidence_to: "B or A"
+
 notes:
   - "Weights are a v0.1 hypothesis (equal); tune as evidence links dimensions to outcomes."
   - "Self-assessment mode is capped at confidence grade C — see the CHI Specification."
+  - "Measured mode overrides self-report per dimension and carries its higher confidence (B/A)."

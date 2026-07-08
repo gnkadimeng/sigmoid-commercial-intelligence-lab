@@ -1,0 +1,65 @@
+---
+title: "The Sigmoid Commercial System — At a Glance"
+subtitle: "How the SCS governs our work"
+---
+
+**One page. Keep it open.** The full document is *The Sigmoid Commercial System*; this is the summary
+the team works from.
+
+## The core idea
+
+> We exist to help organisations make **better commercial decisions through evidence.**
+> Revenue, retention, and growth are all **outcomes of commercial decisions.**
+
+A business is not a set of departments — it is a **living commercial system.**
+
+## The five commercial questions
+
+Everything we build, say, or measure serves one of these:
+**Find · Win · Keep · Grow customers — and Decide better.**
+
+## Commercial Health — what we measure
+
+The leading indicator financial statements can't give you. Seven observable, improvable dimensions:
+
+**Lead Quality · Sales Effectiveness · Relationship Quality · Customer Retention · Customer Growth ·
+Revenue Predictability · Decision Quality.**
+
+## The Commercial Learning Loop — how we improve it
+
+```
+Evidence → Insight → Decision → Action → Outcome → Learning → (better) Evidence
+```
+
+*Information tells us what happened; evidence explains why.* Businesses that learn faster improve
+faster. Everything we build exists to make this loop turn faster and more honestly.
+
+## Commercial Maturity — where a business is
+
+**1 Reactive → 2 Organised → 3 Measured → 4 Evidence-Driven → 5 Commercial Intelligence.**
+It's about *how decisions are made*, not company size or software spend.
+
+## The ten principles
+
+1. Businesses are commercial systems. 2. Every outcome is the result of previous decisions.
+3. Better evidence → better decisions. 4. Better decisions → healthier businesses.
+5. Customer relationships are measurable. 6. Follow-up is a competitive advantage.
+7. AI should strengthen human judgement. 8. Revenue is earned through consistent execution.
+9. Learning is a commercial capability. 10. **Evidence over opinion.**
+
+## How everything inherits from the SCS
+
+| We do… | …relationship to the system |
+|---|---|
+| **Sigmoid CRM** | implements the system |
+| **Commercial Health / the Index** | measures the system |
+| **Commercial Intelligence Lab** | evaluates decisions within the system |
+| **Content** | teaches the system |
+| **Consulting** | improves the system |
+| **AI** | augments the system |
+| **Research** | validates and evolves the system |
+
+## The one test — for anything we build, write, or ship
+
+> **Does this help someone make a better commercial decision?**
+> If yes, it belongs at Sigmoid. If no, it doesn't.

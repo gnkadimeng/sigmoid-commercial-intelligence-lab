@@ -1,0 +1,299 @@
+---
+title: "Sigmoid — Commercial Messaging Framework"
+subtitle: "What we say, repeatedly, until the market associates us with it"
+---
+
+**Version:** 1.0 · **Status:** Working document · **Owner:** [Name] · **Last updated:** [Date]
+**Scope:** The commercial voice of Sigmoid — expressed primarily through **Sigmoid CRM**, consistent
+with the wider Sigmoid Analytica promise, *we make the world transparent.*
+**Inherits from:** *The Sigmoid Commercial System* (the foundational document). The SCS is the
+worldview; this framework turns it into words.
+
+---
+
+## How to use this framework
+
+Our Content Strategy answers **why** we create content. This framework answers the harder,
+more important question:
+
+> **What exactly are we going to say — repeatedly — until the market associates us with it?**
+
+It is the bridge between strategy and every post, article, talk, and sales conversation. It is not a
+campaign; it is a **vocabulary and a set of ideas we repeat on purpose** until they become ours in the
+market's mind.
+
+Read Parts A–C in order:
+
+- **Part A — The Foundation:** the one idea we want to own and the architecture beneath it.
+- **Part B — The Toolkit:** nine reservoirs of raw material for content.
+- **Part C — Putting it to work:** how to turn the toolkit into content, our elevator pitches, and the
+  rules of consistency.
+
+**The golden rule:** *don't start with the product. Start with commerce.* Every business exists to
+answer five questions —
+
+1. How do we **find** customers?
+2. How do we **win** customers?
+3. How do we **keep** customers?
+4. How do we **grow** customers?
+5. How do we make **better decisions**?
+
+Everything Sigmoid CRM does fits into one of those. So does everything we say.
+
+---
+
+# Part A — The Foundation
+
+## 1. The Big Idea we want to own: **Commercial Health**
+
+Most brands publish random advice and are remembered for nothing. Great brands own **one idea**. Ours
+is **Commercial Health**.
+
+Every business measures its **financial** health, its **operational** health, and increasingly its
+**employee** health. Almost no one measures their **commercial** health — yet every business has it,
+and it determines whether they grow or quietly decline.
+
+> **Positioning statement.** *Sigmoid helps businesses measure, understand, and improve their
+> Commercial Health — their ability to find, win, keep, and grow customers.*
+
+This is our unifying concept. Instead of publishing scattered CRM tips, we become **the company that
+helps organisations improve their Commercial Health.** Every article, post, conversation, and product
+capability reinforces that single idea — which makes our messaging coherent and easy to remember.
+
+### Commercial Health, made measurable
+
+Because we are an evidence-led company, we don't leave "health" as a metaphor. Commercial Health is
+defined canonically in *The Sigmoid Commercial System* as **seven observable dimensions** — and what
+can be observed can be improved:
+
+| Dimension | What it reflects |
+|---|---|
+| **Lead Quality** | Are we attracting the right customers? |
+| **Sales Effectiveness** | Do we convert the right opportunities? |
+| **Relationship Quality** | Are our customer relationships strong and current? |
+| **Customer Retention** | Do customers stay? |
+| **Customer Growth** | Do relationships grow in value over time? |
+| **Revenue Predictability** | Can we forecast with confidence? |
+| **Decision Quality** | Are our commercial decisions consistently good? |
+
+Together these form a **Commercial Health check** — a diagnostic a business can run on itself. It is a
+content engine, a sales conversation starter, and, in time, a product capability. When someone asks
+"what does Sigmoid do?", the honest answer is: *we make your Commercial Health visible, and help you
+improve it.*
+
+## 2. The Message House
+
+Everything in this framework ladders up to Commercial Health. If a message doesn't, it's off-brand.
+
+```
+                         COMMERCIAL HEALTH
+              the one idea we want the market to give us
+                                │
+        ┌───────────┬───────────┼───────────┬────────────┐
+      FIND         WIN         KEEP        GROW         DECIDE
+    customers    customers   customers   customers      better
+        │            │           │           │             │
+  ┌─────┴────────────┴───────────┴───────────┴─────────────┴─────┐
+  │  Raw material (Part B):                                       │
+  │  Beliefs · Journey · Problems · Questions · Myths ·           │
+  │  Jobs-to-be-done · Outcomes · Signature ideas                │
+  └───────────────────────────────┬──────────────────────────────┘
+                                   │
+                      Spoken in plain vocabulary,
+                      backed by evidence, not hype
+```
+
+- **Apex:** the single idea (Commercial Health).
+- **Pillars:** the five commercial questions — every message serves one.
+- **Foundation:** the toolkit — the reservoirs we draw from to make each pillar concrete.
+
+---
+
+# Part B — The Messaging Toolkit
+
+Nine reservoirs. Each one alone is worth hundreds of pieces of content.
+
+## 3. Our View of the World — Beliefs
+
+Thought leadership begins with beliefs, not products. State them plainly and people immediately
+understand what Sigmoid stands for.
+
+**We believe…**
+
+- Businesses don't fail because they lack data — they fail because they don't know what their data is
+  telling them.
+- Businesses don't need more software. They need better commercial decisions.
+- Customer relationships are a business asset — yet most businesses manage them like an address book.
+- The quality of a business is reflected in the quality of its customer relationships.
+- Revenue growth isn't luck. It's the result of thousands of better commercial decisions.
+- AI shouldn't replace people. It should help them make better decisions.
+- A CRM shouldn't just record yesterday. It should improve tomorrow.
+
+## 4. The Commercial Journey — our messaging map
+
+Don't think in features. Think in the journey every business runs, again and again. Each stage has
+problems; every problem becomes content.
+
+```
+Find customers → Qualify → Build relationships → Close → Deliver
+      → Retain → Grow → Learn → (repeat)
+```
+
+This map is how we organise everything else: a post, an article, or a customer story can always be
+placed at a stage — and a stage always maps to one of the five commercial questions.
+
+## 5. Commercial Problems — by stage
+
+We spend our time here, because problems are what customers actually feel. Think business, not
+software.
+
+**Finding customers** — wrong customers · expensive leads · poor referrals · weak marketing · no
+differentiation.
+
+**Qualifying customers** — everyone treated the same · reps chase every lead · time wasted · poor
+discovery · wrong opportunities.
+
+**Building relationships** — slow follow-up · inconsistent communication · lost trust · no customer
+history · staff leave and relationships disappear with them.
+
+**Closing sales** — deals stall and nobody knows why · discounting · decision-makers disappear ·
+competitors arrive late and win.
+
+**Retention** — customers quietly leave · nobody notices · complaints ignored · no engagement · no
+renewal process.
+
+**Growth** — no upselling · existing customers forgotten · no cross-selling · no segmentation.
+
+*Each bullet is a post. Each cluster is an article. Each stage is a campaign.*
+
+## 6. Commercial Questions
+
+Possibly our strongest content, because people search LinkedIn and Google with **questions**, not
+features. Answer one a week.
+
+- Why do businesses lose customers?
+- Why do customers stop replying?
+- Why do good salespeople fail?
+- Why are forecasts wrong?
+- Why do customers choose competitors?
+- How do businesses actually grow?
+- Why do businesses buy CRM and never use it?
+- Why does follow-up fail?
+- Why do referrals dry up?
+- Why do sales meetings waste time?
+
+## 7. Myths vs Reality
+
+People love a myth, well corrected. It's memorable and it positions us as the ones who see clearly.
+
+| Myth | Reality |
+|---|---|
+| CRM improves sales. | CRM only improves sales when people use it consistently. |
+| More leads create more revenue. | Better conversion often creates more revenue. |
+| Customers leave because of price. | Customers often leave because they feel forgotten. |
+| AI replaces salespeople. | AI helps salespeople make better decisions. |
+
+## 8. Jobs To Be Done
+
+Forget software. What **job** is the customer hiring us to do? Say it in their words.
+
+- "I need to know who to call."
+- "I need to know which deals matter."
+- "I need better forecasts."
+- "I need my team to follow one sales process."
+- "I need to stop losing customers."
+- "I need to grow existing accounts."
+- "I need visibility."
+
+## 9. Outcomes
+
+Customers don't buy CRM. They buy the result. Lead with the outcome, always.
+
+More sales · better relationships · predictable growth · less wasted effort · more confidence · faster
+follow-up · happier customers · better decisions.
+
+## 10. Vocabulary — the words we use, and the ones we avoid
+
+Almost nobody documents this, and it's why most B2B messaging sounds the same. Until the market
+understands what we do, we speak the customer's language, not the industry's.
+
+| Use (the customer's words) | Avoid (until we've earned them) |
+|---|---|
+| Customers · Leads · Sales · Growth | Commercial intelligence · Digital transformation |
+| Relationships · Follow-up · Revenue | AI-powered ecosystem · Revenue operating system |
+| Opportunities · Business · Decisions | Customer orchestration · Data democratization · Next-generation platform |
+
+*"Commercial Health" is the one elevated term we deliberately teach — because we define it, own it, and
+make it concrete.*
+
+## 11. Signature Ideas — our intellectual property
+
+A handful of sharp lines we repeat until people quote them back to us. These become ours.
+
+- **Every business is a commercial system.**
+- **Customer relationships are measurable.**
+- **Follow-up is a competitive advantage.**
+- **Every lost customer leaves evidence.**
+- **Revenue is the outcome of better decisions.**
+- **Clean customer data creates better business decisions.**
+- **⭐ Manage customers with evidence, not memory.**
+
+The last one is our flagship — it fuses our two beliefs (evidence over opinion; relationships as an
+asset) into six words, and it points straight at Commercial Health.
+
+---
+
+# Part C — Putting it to work
+
+## 12. From framework to content
+
+This is the recipe that turns the toolkit into a repeatable content machine — and the direct bridge to
+the Content Strategy's pillars. To build any piece:
+
+1. **Pick a stage** of the commercial journey (Section 4) → this sets the topic.
+2. **Name the problem** the customer feels there (Section 5) → this earns attention.
+3. **Open with a belief or a myth** (Sections 3, 7) → this sets our point of view.
+4. **Frame it as a question or a job** (Sections 6, 8) → this matches how they search and think.
+5. **Land on the outcome** (Section 9) → this is what they actually want.
+6. **Close with a signature idea** (Section 11) → this is what they remember.
+7. **Tie it to Commercial Health** → this is what makes it *ours*, not generic CRM advice.
+
+> **Worked example.** *Stage:* Retention. *Problem:* customers quietly leave. *Myth:* "customers leave
+> over price." *Reality:* they leave because they feel forgotten. *Job:* "I need to stop losing
+> customers." *Outcome:* happier customers who stay. *Signature idea:* every lost customer leaves
+> evidence. *Commercial Health tie-in:* retention is a vital sign — and it's measurable.
+
+## 13. Messaging assets — how we describe ourselves
+
+Consistent descriptions, ready to paste into a bio, a deck, or a first conversation.
+
+- **One-liner:** *Sigmoid CRM helps businesses improve their Commercial Health — so they win more
+  customers, keep them longer, and grow them.*
+- **Short (a sentence more):** *Most businesses manage customer relationships from memory. Sigmoid CRM
+  helps them manage with evidence — making their Commercial Health visible so they can find, win,
+  keep, and grow customers with confidence.*
+- **Medium (for an About section):** *Sigmoid CRM is an analytics-native CRM built on one belief:
+  revenue is the outcome of better commercial decisions. We help businesses see their Commercial
+  Health — lead quality, conversion, follow-up, retention, growth — and improve it, using clean data
+  and evidence rather than opinion and memory. Part of Sigmoid Analytica: we make the world
+  transparent.*
+
+## 14. Message discipline — the rules of consistency
+
+Messaging works through **repetition and restraint**. The framework only pays off if we hold the line.
+
+- **One big idea.** Everything ladders to Commercial Health. If it doesn't, it doesn't ship.
+- **Repeat on purpose.** The signature ideas and vocabulary are said again and again, not reinvented.
+- **Problem before product.** We talk about the customer's commercial problem far more than our
+  features.
+- **Plain words.** We use the customer's vocabulary; we avoid the jargon list until we've earned it.
+- **Evidence, not hype.** We say what we can support and how sure we are — the honesty *is* the brand.
+- **Outcome first.** We lead with what the customer gets, not what the software has.
+
+---
+
+## In one line
+
+Sigmoid is the company that helps businesses **manage customers with evidence, not memory** — and
+measure and improve their **Commercial Health.** Say that, in a hundred ways, until the market says it
+back.
