@@ -1,0 +1,149 @@
+---
+title: "The Message House"
+subtitle: "Every message ladders up to Commercial Health — pick a pillar to see what to say"
+page-layout: full
+---
+
+::: {.page-context}
+::: {.pc-crumb}
+Library <span class="sep">›</span> The Message House
+:::
+::: {.pc-supports}
+**Interactive navigator for the [Commercial Messaging Framework](commercial-messaging-framework.qmd).**
+Click a pillar to filter the toolkit to only the on-brand material for it.
+:::
+::: {.pc-row}
+<span class="chip chip-neutral no-dot">Apex · 5 pillars · 8 reservoirs</span>
+:::
+:::
+
+The rule of the framework is simple: **if a message doesn't ladder up to Commercial Health, it's
+off-brand.** This tool makes that rule usable — choose a pillar (one of the five commercial questions)
+and it surfaces only the beliefs, problems, questions, myths, jobs-to-be-done, outcomes, and signature
+ideas that serve it.
+
+```{python}
+#| label: mh-data
+#| echo: false
+import sys, pathlib, json, yaml
+_root = pathlib.Path.cwd()
+while _root != _root.parent and not (_root / "src").is_dir():
+    _root = _root.parent
+sys.path.insert(0, str(_root))
+from IPython.display import HTML
+data = yaml.safe_load((_root / "frameworks" / "message_house.yml").read_text())
+HTML('<script id="mh-data" type="application/json">' + json.dumps(data) + '</script>')
+```
+
+```{=html}
+<style>
+.mh-house { max-width:900px; margin:1rem auto 0; text-align:center; }
+.mh-apex { display:inline-block; background:linear-gradient(180deg,#9BD351,#5E8E28); color:#fff; border:none; border-radius:.7rem; padding:.9rem 1.6rem; cursor:pointer; box-shadow:var(--sig-shadow-sm); }
+.mh-apex .mh-apex-name { font-weight:800; font-size:1.25rem; letter-spacing:.01em; }
+.mh-apex .mh-apex-line { font-size:.8rem; opacity:.9; }
+.mh-apex[aria-pressed="true"] { outline:3px solid rgba(140,198,63,.4); }
+.mh-stem { width:2px; height:20px; background:var(--sig-border); margin:0 auto; }
+.mh-pillars { display:grid; grid-template-columns:repeat(5,1fr); gap:.6rem; margin:.4rem 0 1rem; }
+.mh-pillar { background:var(--sig-surface); border:1px solid var(--sig-border); border-radius:.6rem; padding:.7rem .4rem; cursor:pointer; transition:transform .12s ease, border-color .12s ease, background .12s ease; }
+.mh-pillar:hover { transform:translateY(-2px); border-color:#8CC63F; }
+.mh-pillar .mh-p-name { font-weight:800; color:var(--sig-ink-strong); font-size:1rem; }
+.mh-pillar .mh-p-sub { font-size:.72rem; color:var(--sig-muted); }
+.mh-pillar .mh-p-q { font-size:.7rem; color:var(--sig-muted); margin-top:.3rem; line-height:1.2; }
+.mh-pillar[aria-pressed="true"] { background:#eef6e1; border-color:#8CC63F; box-shadow:0 0 0 2px rgba(140,198,63,.25); }
+.mh-foundation { background:var(--sig-surface-2); border:1px dashed var(--sig-border); border-radius:.5rem; padding:.55rem .8rem; font-size:.8rem; color:var(--sig-ink); }
+.mh-foundation strong { color:var(--sig-ink-strong); }
+.mh-base { font-size:.8rem; color:var(--sig-muted); font-style:italic; margin:.6rem 0 0; }
+.mh-detail { max-width:900px; margin:1.6rem auto 0; background:var(--sig-surface); border:1px solid var(--sig-border); border-radius:.7rem; padding:1.2rem 1.4rem; box-shadow:var(--sig-shadow-sm); }
+.mh-detail h3 { margin:.1rem 0 .1rem; }
+.mh-q { color:var(--sig-muted); margin:0 0 1rem; }
+.mh-cat { margin:.9rem 0; }
+.mh-cat-label { font-size:.74rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--sig-accent-deep); margin-bottom:.3rem; }
+.mh-cat ul { margin:0; padding-left:1.1rem; }
+.mh-cat li { margin:.2rem 0; }
+.mh-hint { font-size:.85rem; color:var(--sig-muted); }
+.mh-cta { display:inline-flex; margin-top:.4rem; }
+@media (max-width:640px){ .mh-pillars{ grid-template-columns:repeat(2,1fr) } }
+</style>
+
+<div class="mh-house">
+  <button class="mh-apex" id="mh-apex" aria-pressed="true">
+    <div class="mh-apex-name" id="mh-apex-name">Commercial Health</div>
+    <div class="mh-apex-line" id="mh-apex-line"></div>
+  </button>
+  <div class="mh-stem"></div>
+  <div class="mh-pillars" id="mh-pillars"></div>
+  <div class="mh-foundation" id="mh-foundation"></div>
+  <div class="mh-base" id="mh-base"></div>
+</div>
+
+<div class="mh-detail" id="mh-detail"></div>
+
+<script>
+(function () {
+  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+  function init() {
+    var el = document.getElementById("mh-data"); if (!el) return;
+    var D = JSON.parse(el.textContent);
+    document.getElementById("mh-apex-line").textContent = D.apex.line;
+    document.getElementById("mh-base").textContent = D.base;
+    document.getElementById("mh-foundation").innerHTML =
+      "<strong>Raw material:</strong> " + D.toolkit.map(function(c){ return c.label; }).join(" · ");
+
+    var pillars = document.getElementById("mh-pillars");
+    D.pillars.forEach(function (p) {
+      var b = document.createElement("button");
+      b.className = "mh-pillar"; b.setAttribute("data-pillar", p.id); b.setAttribute("aria-pressed", "false");
+      b.innerHTML = '<div class="mh-p-name">' + esc(p.name) + '</div><div class="mh-p-sub">' + esc(p.sub) +
+        '</div><div class="mh-p-q">' + esc(p.question) + '</div>';
+      pillars.appendChild(b);
+    });
+
+    var apexBtn = document.getElementById("mh-apex");
+    var detail = document.getElementById("mh-detail");
+
+    function clearPressed() {
+      apexBtn.setAttribute("aria-pressed", "false");
+      Array.prototype.forEach.call(pillars.children, function (c) { c.setAttribute("aria-pressed", "false"); });
+    }
+    function showApex() {
+      clearPressed(); apexBtn.setAttribute("aria-pressed", "true");
+      detail.innerHTML = '<h3>Commercial Health</h3><p class="mh-q">' + esc(D.apex.line) + '</p><p>' +
+        esc(D.apex.meaning) + '</p><p class="mh-hint">Select a pillar above to see the on-brand material that serves it.</p>' +
+        '<a class="btn-cil btn-cil-primary mh-cta" href="' + D.apex.link + '">' + esc(D.apex.link_text) + '</a>';
+    }
+    function showPillar(id, btn) {
+      clearPressed(); if (btn) btn.setAttribute("aria-pressed", "true");
+      var p = D.pillars.filter(function (x) { return x.id === id; })[0];
+      var html = '<h3>' + esc(p.name) + ' <span style="color:var(--sig-muted);font-weight:400">' + esc(p.sub) +
+        '</span></h3><p class="mh-q">' + esc(p.question) + '</p>';
+      var any = false;
+      D.toolkit.forEach(function (cat) {
+        var items = cat.items.filter(function (it) { return (it.pillars || []).indexOf(id) !== -1; });
+        if (!items.length) return;
+        any = true;
+        html += '<div class="mh-cat"><div class="mh-cat-label">' + esc(cat.label) + '</div><ul>' +
+          items.map(function (it) { return "<li>" + esc(it.text) + "</li>"; }).join("") + "</ul></div>";
+      });
+      if (!any) html += '<p class="mh-hint">No material tagged to this pillar yet.</p>';
+      detail.innerHTML = html;
+    }
+
+    apexBtn.addEventListener("click", showApex);
+    pillars.addEventListener("click", function (e) {
+      var b = e.target.closest(".mh-pillar"); if (!b) return;
+      showPillar(b.getAttribute("data-pillar"), b);
+    });
+    showApex();
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
+})();
+</script>
+```
+
+::: {.callout-note appearance="simple" icon=false}
+**How to use it.** Pick the pillar you want to write about — the panel shows every belief, problem,
+question, myth, job-to-be-done, outcome, and signature idea that ladders to it. Everything you see is,
+by construction, on-brand. Turn any item into a post with the recipe in
+[The Sigmoid Editorial System](../library/index.qmd).
+:::

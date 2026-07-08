@@ -183,6 +183,8 @@ website:
           file: library/commercial-health-index-specification.qmd
         - text: "Commercial Messaging Framework"
           file: library/commercial-messaging-framework.qmd
+        - text: "The Message House (interactive)"
+          file: library/message-house.qmd
         - text: "Commercial Knowledge Base"
           file: library/commercial-knowledge-base.qmd
         - text: "The System — At a Glance"

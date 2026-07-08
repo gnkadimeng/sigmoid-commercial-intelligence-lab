@@ -1,0 +1,109 @@
+# The Message House — canonical data for the interactive navigator.
+# Apex = Commercial Health. Pillars = the five commercial questions. Every toolkit item is tagged
+# with the pillar(s) it serves, so the navigator can only surface on-brand material.
+# First-pass pillar mapping — refine the `pillars` tags as judgement improves.
+
+id: message_house
+version: "0.1.0"
+
+apex:
+  name: "Commercial Health"
+  line: "the one idea we want the market to give us"
+  meaning: >
+    Every message ladders up to Commercial Health — a business's ability to find, win, keep, and grow
+    customers. If a message doesn't ladder here, it's off-brand.
+  link: "../commercial-health/"
+  link_text: "Take the Commercial Health Check"
+
+base: "Spoken in plain vocabulary, backed by evidence, not hype."
+
+pillars:
+  - { id: find,   name: "FIND",   sub: "customers", question: "How do we find customers?" }
+  - { id: win,    name: "WIN",    sub: "customers", question: "How do we win customers?" }
+  - { id: keep,   name: "KEEP",   sub: "customers", question: "How do we keep customers?" }
+  - { id: grow,   name: "GROW",   sub: "customers", question: "How do we grow customers?" }
+  - { id: decide, name: "DECIDE", sub: "better",    question: "How do we make better decisions?" }
+
+# Toolkit reservoirs (Part B of the Messaging Framework). Each item: text + the pillar(s) it serves.
+toolkit:
+  - key: beliefs
+    label: "Beliefs"
+    desc: "What we believe about commerce."
+    items:
+      - { text: "Businesses don't fail because they lack data — they fail because they don't know what it's telling them.", pillars: [decide] }
+      - { text: "Businesses don't need more software. They need better commercial decisions.", pillars: [decide] }
+      - { text: "Customer relationships are a business asset — most manage them like an address book.", pillars: [keep] }
+      - { text: "The quality of a business is reflected in the quality of its customer relationships.", pillars: [keep] }
+      - { text: "Revenue growth isn't luck. It's the result of thousands of better commercial decisions.", pillars: [decide, grow] }
+      - { text: "AI shouldn't replace people. It should help them make better decisions.", pillars: [decide] }
+      - { text: "A CRM shouldn't just record yesterday. It should improve tomorrow.", pillars: [decide] }
+
+  - key: problems
+    label: "Problems"
+    desc: "The pains customers actually feel."
+    items:
+      - { text: "Attracting the wrong customers; expensive leads; no differentiation.", pillars: [find] }
+      - { text: "Weak marketing and poor referrals.", pillars: [find] }
+      - { text: "Reps chase every lead; poor discovery; time wasted on wrong opportunities.", pillars: [win] }
+      - { text: "Deals stall and nobody knows why; discounting; competitors win late.", pillars: [win] }
+      - { text: "Slow, inconsistent follow-up; lost trust; no customer history.", pillars: [keep] }
+      - { text: "Staff leave and the relationships leave with them.", pillars: [keep] }
+      - { text: "Customers quietly leave; nobody notices; no renewal process.", pillars: [keep] }
+      - { text: "No upsell or cross-sell; existing customers forgotten; no segmentation.", pillars: [grow] }
+
+  - key: questions
+    label: "Questions"
+    desc: "How buyers actually search."
+    items:
+      - { text: "Why do referrals dry up?", pillars: [find] }
+      - { text: "Why do good salespeople fail?", pillars: [win] }
+      - { text: "Why do customers choose competitors?", pillars: [win] }
+      - { text: "Why do sales meetings waste time?", pillars: [win] }
+      - { text: "Why do businesses lose customers?", pillars: [keep] }
+      - { text: "Why do customers stop replying?", pillars: [keep] }
+      - { text: "Why does follow-up fail?", pillars: [keep] }
+      - { text: "How do businesses actually grow?", pillars: [grow] }
+      - { text: "Why are forecasts wrong?", pillars: [decide] }
+      - { text: "Why do businesses buy CRM and never use it?", pillars: [decide] }
+
+  - key: myths
+    label: "Myths → Reality"
+    desc: "Comfortable beliefs, corrected."
+    items:
+      - { text: "More leads create more revenue → better conversion often creates more revenue.", pillars: [win, find] }
+      - { text: "Customers leave because of price → they often leave because they feel forgotten.", pillars: [keep] }
+      - { text: "CRM improves sales → only when people use it consistently.", pillars: [decide] }
+      - { text: "AI replaces salespeople → AI helps salespeople make better decisions.", pillars: [decide] }
+
+  - key: jtbd
+    label: "Jobs to be done"
+    desc: "In the customer's words."
+    items:
+      - { text: "“I need to know who to call.”", pillars: [find, win] }
+      - { text: "“I need to know which deals matter.”", pillars: [win] }
+      - { text: "“I need my team to follow one sales process.”", pillars: [win] }
+      - { text: "“I need to stop losing customers.”", pillars: [keep] }
+      - { text: "“I need to grow existing accounts.”", pillars: [grow] }
+      - { text: "“I need better forecasts.”", pillars: [decide] }
+      - { text: "“I need visibility.”", pillars: [decide] }
+
+  - key: outcomes
+    label: "Outcomes"
+    desc: "What they actually buy."
+    items:
+      - { text: "More sales; less wasted effort.", pillars: [find, win] }
+      - { text: "Faster follow-up; happier customers; better relationships.", pillars: [keep] }
+      - { text: "Predictable growth.", pillars: [grow] }
+      - { text: "More confidence; better decisions.", pillars: [decide] }
+
+  - key: signature_ideas
+    label: "Signature ideas"
+    desc: "The lines we want quoted back to us."
+    items:
+      - { text: "Customer relationships are measurable.", pillars: [keep] }
+      - { text: "Follow-up is a competitive advantage.", pillars: [keep] }
+      - { text: "Every lost customer leaves evidence.", pillars: [keep] }
+      - { text: "Every business is a commercial system.", pillars: [decide] }
+      - { text: "Revenue is the outcome of better decisions.", pillars: [decide] }
+      - { text: "Clean customer data creates better business decisions.", pillars: [decide] }
+      - { text: "Manage customers with evidence, not memory.", pillars: [decide] }

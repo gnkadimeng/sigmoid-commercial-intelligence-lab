@@ -54,6 +54,15 @@ signature ideas, and the vocabulary we use.</p>
 :::
 
 ::: {.cil-card}
+<div class="card-kicker">Interactive</div>
+<h3>The Message House</h3>
+<p>The framework made usable: pick one of the five pillars and see only the on-brand beliefs, questions,
+myths, and signature ideas that ladder up to Commercial Health.</p>
+<span class="card-go">Open the navigator</span>
+[](message-house.qmd){.stretched-link aria-label="Open the interactive Message House"}
+:::
+
+::: {.cil-card}
 <div class="card-kicker">Syllabus</div>
 <h3>Commercial Knowledge Base</h3>
 <p>The taxonomy of commercial concepts — the ~180-concept syllabus behind every article, post, course,
